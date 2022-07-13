@@ -1,0 +1,72 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+html {
+    font-size: 10px !important;
+}
+
+@media (max-width: 767px) {
+    .d-xs-none {
+        display: none !important;
+    }
+}
+
+.position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.MuiFormControlLabel-root {
+    font-size: 16px !important;
+}
+
+.MuiOutlinedInput-input {
+    font-size: 16px !important;
+}
+
+.MuiCalendarPicker-root .PrivatePickersFadeTransitionGroup-root {
+    font-size: 14px;
+}
+
+.MuiCalendarPicker-root .MuiPickersDay-root {
+    font-size: 14px !important;
+}
+
+.MuiCalendarPicker-root .MuiTypography-root.MuiTypography-caption {
+    font-size: 14px !important;
+}
+
+.react-tel-input .special-label {
+    background-color: #ffffff61 !important;
+}
+
+/* Abe Added */
+.Toastify__toast-container {
+    font-size: 16px !important;
+}
+.css-qivjh0-MuiStepLabel-label {
+    font-size: 16px !important;
+}
+
+.sc-dmRaPn div {
+    font-size: 16px !important;
+    justify-content: center;
+}
+
+.datatable-element-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end */
+
+#cc-number,
+#expiry,
+#cvc {
+    /* background-color: #083e4f; */
+    border-radius: 20px;
+    padding: 7px 16px;
+}
