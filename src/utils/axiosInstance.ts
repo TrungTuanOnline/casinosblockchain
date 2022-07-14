@@ -6,7 +6,7 @@ const instance: AxiosInstance = Axios.create({
 
 instance.defaults.headers.common["Content-Type"] = "application/json";
 
-instance.interceptors.request.use(req => {
+instance.interceptors.request.use((req: any) => {
     const token: string | null = localStorage.getItem("token");
     if (token) req.headers.common["x-auth-token"] = token;
     return req;
