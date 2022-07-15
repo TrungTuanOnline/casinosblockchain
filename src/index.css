@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.divHasTempBG {
+    background: url(../src/Assets/images/tempBG1.png), radial-gradient(100% 100% at 100% 100%, #2f0857 0%, #000331 100%);
+    
+  
+}

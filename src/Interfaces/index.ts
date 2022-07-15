@@ -1,0 +1,40 @@
+export interface ISiteSummaryObj {
+    rank: number,
+    // logo: da,
+    name: string,
+    link: string,
+    bonus: string | null,
+    rating: string,
+    features: string[]
+}
+
+export interface ISiteSubInfoObj {
+    name: string,
+    link: string,
+    about: string,
+    overview: {
+        established: string | null,
+        licence: string | null,
+        bonus: string | null,
+        wageringRequrement: string | null,
+        noDepositFaucet: string | null,
+        liveChat: string
+    },
+    rating: {
+        bonus: string,
+        lookAndFeel: string,
+        LicenceAndSafety: string,
+        gameSelection: string,
+        paymentOption: string,
+        customerSupport: string,
+        customerReview: string,
+        total: string
+    }
+}
+
+
+export interface IPopularCasinoObj {
+    name: string,
+    about: string,
+    // link: string
+}
