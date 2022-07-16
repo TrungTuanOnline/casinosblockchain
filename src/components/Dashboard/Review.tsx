@@ -86,10 +86,10 @@ const Review = () => {
                 <div className="text-gray-400 text-md mt-5 flex justify-center">
                     Play any of your favorite games using a variety of supported cryptocurrencies.
                 </div>
-                <div className="mt-5 grid grid-cols-3 gap-3 px-10">
+                <div className="mt-5 grid grid-cols-3 gap-5 px-10">
                     {PopularCasinoInfos.map((data: IPopularCasinoObj, index: number) => {
                         return (
-                            <PopularCasinoCard data={data}/>
+                            <PopularCasinoCard key={index} data={data}/>
                         )
                     })}
                 </div>

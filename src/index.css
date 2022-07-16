@@ -4,6 +4,52 @@
 
 .divHasTempBG {
     background: url(../src/Assets/images/tempBG1.png), radial-gradient(100% 100% at 100% 100%, #2f0857 0%, #000331 100%);
-    
-  
+}
+
+#tempBG2-1 {
+    background: #f4f6f9;
+    background-image: url(../src/Assets/images/tempBG2-1.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#tempBG2-2 {
+    background: #f4f6f9;
+    background-image: url(../src/Assets/images/tempBG2-2.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#tempBG2-3 {
+    background: #f4f6f9;
+    background-image: url(../src/Assets/images/tempBG2-3.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#tempBG2-4 {
+    background: #f4f6f9;
+    background-image: url(../src/Assets/images/tempBG2-4.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#tempBG2-5 {
+    background: #f4f6f9;
+    background-image: url(../src/Assets/images/tempBG2-5.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#tempBG2-6 {
+    background: #f4f6f9;
+    background-image: url(../src/Assets/images/tempBG2-6.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
 }
