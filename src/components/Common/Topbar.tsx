@@ -333,10 +333,10 @@ const TopBar = () => {
                                 <ID className="w-6 rounded-full"/>
                                 <span className="ml-3">Indonesia</span>
                             </MenuItem>
-                            {/* <MenuItem onClick={() => {changeLanguage("Korean")}}>
+                            <MenuItem onClick={() => {changeLanguage("Korean")}}>
                                 <KR className="w-6 rounded-full"/>
                                 <span className="ml-3">한국어</span>
-                            </MenuItem> */}
+                            </MenuItem>
                             <MenuItem onClick={() => {changeLanguage("Portuguese")}}>
                                 <PT className="w-6 rounded-full"/>
                                 <span className="ml-3">Português</span>

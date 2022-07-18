@@ -13,7 +13,7 @@ import rankFirstImg from "../../Assets/images/rank-first.png";
 import rankSecondImg from "../../Assets/images/rank-second.png";
 import rankThirdImg from "../../Assets/images/rank-third.png";
 import giftImg from "../../Assets/images/gift.png";
-import logoImg from "../../Assets/images/logo-bc-game.png";
+import logoImg from "../../Assets/images/logos/bc-game.png";
 
 
 import { ISiteSummaryObj, ISiteSubInfoObj } from "../../Interfaces";
