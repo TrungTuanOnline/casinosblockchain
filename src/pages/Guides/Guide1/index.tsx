@@ -1,5 +1,5 @@
 import Header from "../../../components/Header"
-import MainPage from "./MainPage"
+import MainPage from "../../../components/Guides/Guide1/MainPage"
 
 const Guide1 = () => {
     return (
