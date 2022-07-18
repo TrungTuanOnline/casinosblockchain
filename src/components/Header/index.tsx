@@ -11,11 +11,11 @@ import { US, FR, ID, KR, PT, ES, TR, VN } from 'country-flag-icons/react/1x1';
 
 const useStyles = makeStyles({
     menuPaper: {
-      backgroundColor: "rgb(231 229 228) !important"
+        backgroundColor: "rgb(231 229 228) !important"
     }
 });
 
-const TopBar = () => {
+const Header = () => {
     const { t, i18n } = useTranslation();
 
     const [openBonusMenu, setOpenBonusMenu] = useState(false);
@@ -64,69 +64,69 @@ const TopBar = () => {
         }
         setChoosedLanguage(country);
     }
-    
+
     const changeLanguageIcon = () => {
         switch (choosedLanguage) {
             case "English":
                 return (
                     <div className="flex flex-row w-32">
-                        <US className="w-6 rounded-full"/>
+                        <US className="w-6 rounded-full" />
                         <span className="ml-1">English</span>
                     </div>
                 );
             case "French":
                 return (
                     <div className="flex flex-row w-32">
-                        <FR className="w-6 rounded-full"/>
+                        <FR className="w-6 rounded-full" />
                         <span className="ml-1">Français</span>
                     </div>
                 );
             case "Indonesian":
                 return (
                     <div className="flex flex-row w-32">
-                        <ID className="w-6 rounded-full"/>
+                        <ID className="w-6 rounded-full" />
                         <span className="ml-1">Indonesia</span>
                     </div>
                 );
             case "Korean":
                 return (
                     <div className="flex flex-row w-32">
-                        <KR className="w-6 rounded-full"/>
+                        <KR className="w-6 rounded-full" />
                         <span className="ml-1">한국어</span>
                     </div>
                 );
             case "Portuguese":
                 return (
                     <div className="flex flex-row w-32">
-                        <PT className="w-6 rounded-full"/>
+                        <PT className="w-6 rounded-full" />
                         <span className="ml-1">Português</span>
                     </div>
                 );
             case "Spanish":
                 return (
                     <div className="flex flex-row w-32">
-                        <ES className="w-6 rounded-full"/>
+                        <ES className="w-6 rounded-full" />
                         <span className="ml-1">Español</span>
                     </div>
                 );
             case "Turkish":
                 return (
                     <div className="flex flex-row w-32">
-                        <TR className="w-6 rounded-full"/>
+                        <TR className="w-6 rounded-full" />
                         <span className="ml-1">Türk</span>
                     </div>
                 );
             case "Vietnamese":
                 return (
                     <div className="flex flex-row w-32">
-                        <VN className="w-6 rounded-full"/>
+                        <VN className="w-6 rounded-full" />
                         <span className="ml-1">Tiếng Việt</span>
                     </div>
                 );
             default:
                 return (
                     <div className="flex flex-row w-32">
-                        <US className="w-6 rounded-full"/>
+                        <US className="w-6 rounded-full" />
                         <span className="ml-1">English</span>
                     </div>
                 );
@@ -153,16 +153,16 @@ const TopBar = () => {
                         <Button
                             className="text-white hover:text-amber-500"
                             endIcon={(openBonusMenu || overBonusMenu) ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                            onMouseEnter={() => {setOpenBonusMenu(true)}}
-                            onMouseLeave={() => {setOpenBonusMenu(false)}}
+                            onMouseEnter={() => { setOpenBonusMenu(true) }}
+                            onMouseLeave={() => { setOpenBonusMenu(false) }}
                         >
                             BONUSES
                         </Button>
-                        { (openBonusMenu || overBonusMenu) &&
-                            <div 
+                        {(openBonusMenu || overBonusMenu) &&
+                            <div
                                 className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded"
-                                onMouseEnter={() => {setOverBonusMenu(true)}}
-                                onMouseLeave={() => {setOverBonusMenu(false)}}
+                                onMouseEnter={() => { setOverBonusMenu(true) }}
+                                onMouseLeave={() => { setOverBonusMenu(false) }}
                             >
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Bitcoin Free Spins
@@ -177,16 +177,16 @@ const TopBar = () => {
                         <Button
                             className="text-white hover:text-amber-500"
                             endIcon={(openCryptoCurrencyMenu || overCryptoCurrencyMenu) ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                            onMouseEnter={() => {setOpenCryptoCurrencyMenu(true)}}
-                            onMouseLeave={() => {setOpenCryptoCurrencyMenu(false)}}
+                            onMouseEnter={() => { setOpenCryptoCurrencyMenu(true) }}
+                            onMouseLeave={() => { setOpenCryptoCurrencyMenu(false) }}
                         >
                             CRYPTOCURRENCIES
                         </Button>
-                        { (openCryptoCurrencyMenu || overCryptoCurrencyMenu) &&
-                            <div 
+                        {(openCryptoCurrencyMenu || overCryptoCurrencyMenu) &&
+                            <div
                                 className="absolute flex flex-col gap-y-2 w-32 right-2.5 bg-neutral-800 py-2 rounded"
-                                onMouseEnter={() => {setOverCryptoCurrencyMenu(true)}}
-                                onMouseLeave={() => {setOverCryptoCurrencyMenu(false)}}
+                                onMouseEnter={() => { setOverCryptoCurrencyMenu(true) }}
+                                onMouseLeave={() => { setOverCryptoCurrencyMenu(false) }}
                             >
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Bitcoin
@@ -219,16 +219,16 @@ const TopBar = () => {
                         <Button
                             className="text-white hover:text-amber-500"
                             endIcon={(openGameMenu || overGameMenu) ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                            onMouseEnter={() => {setOpenGameMenu(true)}}
-                            onMouseLeave={() => {setOpenGameMenu(false)}}
+                            onMouseEnter={() => { setOpenGameMenu(true) }}
+                            onMouseLeave={() => { setOpenGameMenu(false) }}
                         >
                             GAMES
                         </Button>
-                        { (openGameMenu || overGameMenu) &&
-                            <div 
+                        {(openGameMenu || overGameMenu) &&
+                            <div
                                 className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded"
-                                onMouseEnter={() => {setOverGameMenu(true)}}
-                                onMouseLeave={() => {setOverGameMenu(false)}}
+                                onMouseEnter={() => { setOverGameMenu(true) }}
+                                onMouseLeave={() => { setOverGameMenu(false) }}
                             >
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Crash
@@ -249,7 +249,7 @@ const TopBar = () => {
                                     Dice
                                 </Link>
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
-                                    Plinko 
+                                    Plinko
                                 </Link>
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Poker
@@ -258,28 +258,30 @@ const TopBar = () => {
                         }
                     </div>
                     <div className="relative">
-                        <Button
-                            className="text-white hover:text-amber-500"
-                        >
-                            PROVIDERS
-                        </Button>
+                        <Link to="/game-providers">
+                            <Button
+                                className="text-white hover:text-amber-500"
+                            >
+                                PROVIDERS
+                            </Button>
+                        </Link>
                     </div>
                     <div className="relative">
                         <Button
                             className="text-white hover:text-amber-500"
                             endIcon={(openGuideMenu || overGuideMenu) ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                            onMouseEnter={() => {setOpenGuideMenu(true)}}
-                            onMouseLeave={() => {setOpenGuideMenu(false)}}
+                            onMouseEnter={() => { setOpenGuideMenu(true) }}
+                            onMouseLeave={() => { setOpenGuideMenu(false) }}
                         >
                             GUIDES
                         </Button>
-                        { (openGuideMenu || overGuideMenu) &&
-                            <div 
+                        {(openGuideMenu || overGuideMenu) &&
+                            <div
                                 className="absolute flex flex-col gap-y-2 w-36 right-1 bg-neutral-800 py-2 rounded"
-                                onMouseEnter={() => {setOverGuideMenu(true)}}
-                                onMouseLeave={() => {setOverGuideMenu(false)}}
+                                onMouseEnter={() => { setOverGuideMenu(true) }}
+                                onMouseLeave={() => { setOverGuideMenu(false) }}
                             >
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/best-bitcoin-wallet-for-online-gambling' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Best Bitcoin Wallet for Online Gambling
                                 </Link>
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
@@ -304,62 +306,62 @@ const TopBar = () => {
                             aria-controls={Boolean(languageMenu) ? 'language-menu' : undefined}
                             aria-haspopup="true"
                             aria-expanded={Boolean(languageMenu) ? 'true' : undefined}
-                            onClick={(event: React.MouseEvent<HTMLButtonElement>) => {setLanguageMenu(event.currentTarget)}}
+                            onClick={(event: React.MouseEvent<HTMLButtonElement>) => { setLanguageMenu(event.currentTarget) }}
                         >
-                            {choosedLanguage ? 
+                            {choosedLanguage ?
                                 changeLanguageIcon() :
-                                <US className="w-6 rounded-full"/>
+                                <US className="w-6 rounded-full" />
                             }
                         </Button>
                         <Menu
                             id="language-menu"
                             anchorEl={languageMenu}
                             open={Boolean(languageMenu)}
-                            onClose={() => {setLanguageMenu(null)}}
+                            onClose={() => { setLanguageMenu(null) }}
                             MenuListProps={{
-                            'aria-labelledby': 'basic-button',
+                                'aria-labelledby': 'basic-button',
                             }}
-                            classes={{paper: classes.menuPaper}}
+                            classes={{ paper: classes.menuPaper }}
                         >
-                            <MenuItem onClick={() => {changeLanguage("English")}}>
-                                <US className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("English") }}>
+                                <US className="w-6 rounded-full" />
                                 <span className="ml-3">English</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("French")}}>
-                                <FR className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("French") }}>
+                                <FR className="w-6 rounded-full" />
                                 <span className="ml-3">Français</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("Indonesian")}}>
-                                <ID className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Indonesian") }}>
+                                <ID className="w-6 rounded-full" />
                                 <span className="ml-3">Indonesia</span>
                             </MenuItem>
                             {/* <MenuItem onClick={() => {changeLanguage("Korean")}}>
                                 <KR className="w-6 rounded-full"/>
                                 <span className="ml-3">한국어</span>
                             </MenuItem> */}
-                            <MenuItem onClick={() => {changeLanguage("Portuguese")}}>
-                                <PT className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Portuguese") }}>
+                                <PT className="w-6 rounded-full" />
                                 <span className="ml-3">Português</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("Spanish")}}>
-                                <ES className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Spanish") }}>
+                                <ES className="w-6 rounded-full" />
                                 <span className="ml-3">Español</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("Turkish")}}>
-                                <TR className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Turkish") }}>
+                                <TR className="w-6 rounded-full" />
                                 <span className="ml-3">Türk</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("Vietnamese")}}>
-                                <VN className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Vietnamese") }}>
+                                <VN className="w-6 rounded-full" />
                                 <span className="ml-3">Tiếng Việt</span>
                             </MenuItem>
                         </Menu>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     )
 }
 
-export default TopBar;
+export default Header;
