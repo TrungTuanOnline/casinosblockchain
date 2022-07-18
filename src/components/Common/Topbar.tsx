@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     }
 });
 
-const Header = () => {
+const Topbar = () => {
     const { t, i18n } = useTranslation();
 
     const [openBonusMenu, setOpenBonusMenu] = useState(false);
@@ -365,4 +365,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Topbar;
