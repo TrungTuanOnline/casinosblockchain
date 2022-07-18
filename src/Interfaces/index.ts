@@ -8,6 +8,15 @@ export interface ISiteSummaryObj {
     features: string[]
 }
 
+export interface ISiteRankBlogCardObj {
+    rank: number,
+    // logo: da,
+    name: string,
+    link: string,
+    bonus: string | null,
+    features: string[]
+}
+
 export interface ISiteSubInfoObj {
     name: string,
     link: string,

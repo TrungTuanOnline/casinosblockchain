@@ -43,7 +43,7 @@ const SiteSummaryCard = (props: IProps) => {
                     {summaryData.rank === 1 && <img className="h-8" src={rankFirstImg}></img>}
                     {summaryData.rank === 2 && <img className="h-8" src={rankSecondImg}></img>}
                     {summaryData.rank === 3 && <img className="h-8" src={rankThirdImg}></img>}
-                    {summaryData.rank > 3 && 
+                    {summaryData.rank > 3 &&
                         <div className="w-7 h-7 rounded-full bg-gray-500 flex items-center justify-center">
                             {summaryData.rank}
                         </div>}
@@ -58,22 +58,22 @@ const SiteSummaryCard = (props: IProps) => {
                     </div>
                 </div>
                 <div className="w-40 flex items-center justify-start">
-                    { summaryData.bonus &&
-                        <Button 
-                            className="w-36 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between gap-x-2"
-                            endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400"/>}
+                    {summaryData.bonus &&
+                        <Button
+                            className="w-28 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between gap-x-2"
+                            endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400" />}
                         >
                             <img className="h-3" src={giftImg}></img>
                             <span className="text-sm text-black">{summaryData.bonus}</span>
                         </Button>
                     }
                 </div>
-                <div className="w-20 flex flex-col items-start justify-center">
+                <div className="w-40 flex flex-col items-start justify-center">
                     {summaryData.features.length > 0 && <div className="text-sm">{summaryData.features[0]}</div>}
                     {summaryData.features.length > 1 && <div className="text-sm">{summaryData.features[1]}</div>}
                 </div>
-                <div className="w-20 flex items-center justify-center relative">
-                    <CircularProgress size={56} thickness={2} sx={{color: 'green'}} variant="determinate" value={Number(summaryData.rating) * 20} />
+                <div className="w-40 flex items-center justify-center relative">
+                    <CircularProgress size={56} thickness={2} sx={{ color: 'green' }} variant="determinate" value={Number(summaryData.rating) * 20} />
                     <div className="absolute flex items-center justify-center inset-0 text-sm">{summaryData.rating}/5%</div>
                 </div>
                 <div className="w-44 flex items-center justify-center">
@@ -81,8 +81,8 @@ const SiteSummaryCard = (props: IProps) => {
                         className="text-black"
                         variant="contained"
                         color="inherit"
-                        endIcon={props.openSubInfoIndex === props.siteIndex ? <KeyboardArrowUp/> : <KeyboardArrowDown/>}
-                        onClick={() => {onQuickFact()}}
+                        endIcon={props.openSubInfoIndex === props.siteIndex ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+                        onClick={() => { onQuickFact() }}
                     >
                         QUICK FACTS
                     </Button>
@@ -92,22 +92,22 @@ const SiteSummaryCard = (props: IProps) => {
                         className="text-white"
                         variant="contained"
                         color="primary"
-                        startIcon={<OpenInNewIcon/>}
+                        startIcon={<OpenInNewIcon />}
                         href="/"
                         target="_BLANK"
                     >
                         VISIT WEBSITE
                     </Button>
-                </div>            
+                </div>
             </div>
             {props.openSubInfoIndex === props.siteIndex &&
                 <SiteSubInfoCard
                     subinfoData={subInfoData}
                 />
             }
-            
+
         </React.Fragment>
-        
+
     )
 }
 

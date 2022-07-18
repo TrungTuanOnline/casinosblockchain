@@ -147,7 +147,7 @@ const Topbar = () => {
                             href="/"
                             className="text-white hover:text-amber-500"
                         >
-                            CASINOS
+                            {t("title1")}
                         </Button>
                     </div>
                     <div className="relative">
@@ -157,7 +157,7 @@ const Topbar = () => {
                             onMouseEnter={() => { setOpenBonusMenu(true) }}
                             onMouseLeave={() => { setOpenBonusMenu(false) }}
                         >
-                            BONUSES
+                            {t("title2")}
                         </Button>
                         {(openBonusMenu || overBonusMenu) &&
                             <div
@@ -166,10 +166,10 @@ const Topbar = () => {
                                 onMouseLeave={() => { setOverBonusMenu(false) }}
                             >
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
-                                    Bitcoin Free Spins
+                                    {t("title3")}
                                 </Link>
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
-                                    Bitcoin Faucets
+                                    {t("title4")}
                                 </Link>
                             </div>
                         }
@@ -181,7 +181,7 @@ const Topbar = () => {
                             onMouseEnter={() => { setOpenCryptoCurrencyMenu(true) }}
                             onMouseLeave={() => { setOpenCryptoCurrencyMenu(false) }}
                         >
-                            CRYPTOCURRENCIES
+                            {t("title5")}
                         </Button>
                         {(openCryptoCurrencyMenu || overCryptoCurrencyMenu) &&
                             <div
@@ -223,7 +223,7 @@ const Topbar = () => {
                             onMouseEnter={() => { setOpenGameMenu(true) }}
                             onMouseLeave={() => { setOpenGameMenu(false) }}
                         >
-                            GAMES
+                            {t("title6")}
                         </Button>
                         {(openGameMenu || overGameMenu) &&
                             <div
@@ -263,7 +263,7 @@ const Topbar = () => {
                             <Button
                                 className="text-white hover:text-amber-500"
                             >
-                                PROVIDERS
+                                {t("title7")}
                             </Button>
                         </Link>
                     </div>
@@ -274,22 +274,22 @@ const Topbar = () => {
                             onMouseEnter={() => { setOpenGuideMenu(true) }}
                             onMouseLeave={() => { setOpenGuideMenu(false) }}
                         >
-                            GUIDES
+                            {t("title8")}
                         </Button>
                         {(openGuideMenu || overGuideMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-36 right-1 bg-neutral-800 py-2 rounded"
+                                className="absolute flex flex-col gap-y-2 w-36 right-1 bg-neutral-800 py-2 rounded z-10"
                                 onMouseEnter={() => { setOverGuideMenu(true) }}
                                 onMouseLeave={() => { setOverGuideMenu(false) }}
                             >
                                 <Link to='/best-bitcoin-wallet-for-online-gambling' className=" px-2 text-white text-sm hover:bg-neutral-700">
-                                    Best Bitcoin Wallet for Online Gambling
+                                    {t("title9")}
                                 </Link>
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
-                                    What Are the Top Stablecoin Casinos?
+                                    {t("title10")}
                                 </Link>
                                 <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
-                                    Your Ultimate Guide to MetaMask Gambling
+                                    {t("title11")}
                                 </Link>
                             </div>
                         }
@@ -298,7 +298,7 @@ const Topbar = () => {
                         <Button
                             className="text-white hover:text-amber-500"
                         >
-                            NEWS
+                            {t("title12")}
                         </Button>
                     </div>
                     <div className="relative">

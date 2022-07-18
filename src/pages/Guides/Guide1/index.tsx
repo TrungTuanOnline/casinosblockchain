@@ -3,7 +3,7 @@ import MainPage from "../../../components/Guides/Guide1/MainPage";
 
 const Guide1 = () => {
     return (
-        <div className="select-none">
+        <div>
             <Topbar />
             <MainPage />
         </div>

@@ -106,7 +106,7 @@ const SiteInfos = () => {
                         <div className="w-64 flex flex-row justify-start">
                             Name
                         </div>
-                        <div className="w-24 flex items-center justify-start">
+                        <div className="w-32 flex items-center justify-start">
                             Bonus
                         </div>
                         <div className="w-40 flex items-start justify-start">
