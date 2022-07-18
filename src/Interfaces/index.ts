@@ -38,3 +38,39 @@ export interface IPopularCasinoObj {
     about: string,
     // link: string
 }
+
+export interface IPopularCasinoObj {
+    name: string,
+    about: string,
+    // link: string
+}
+
+export interface ISortStringObj {
+    id: number,
+    str: string,
+    Link: string
+}
+
+export interface IMainCardDataObj {
+    id: string,
+    logo: any,
+    title: string,
+    miniTitle: string,
+    link: string,
+    gameLogos: Array<IGameLogos>,
+    count: number | null
+}
+
+export interface ITopSectionCardDataObj {
+    id: number,
+    logo: any,
+    title: string,
+    miniTitle: string,
+    gameLogos: Array<IGameLogos>,
+    count: number
+}
+
+export interface IGameLogos {
+    logo: any,
+    link: string
+}
