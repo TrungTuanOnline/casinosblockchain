@@ -10,7 +10,7 @@ interface ITopSectionCard {
 const TopSectionCard = (props: ITopSectionCard) => {
     const item = props.item;
     return (
-        <div className="w-[340px] h-[150px] md:w-[375px] md:h-[250px] rounded-md flex items-center justify-center flex-row-reverse md:flex-col gap-5" style={{ background: "linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.08) 100%)" }} >
+        <div className="w-4/5 h-[150px] md:w-[330px] md:h-[250px] rounded-md flex items-center justify-center flex-row-reverse md:flex-col gap-5" style={{ background: "linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.08) 100%)" }} >
             <div className="flex flex-row-reverse md:flex-col gap-3">
                 <div className="flex justify-between md:justify-center items-end flex-col md:flex-row">
                     <div className="max-w-[90px] md:max-w-[145px] mt-3" >

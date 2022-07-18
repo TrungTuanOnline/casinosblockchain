@@ -144,6 +144,7 @@ const Header = () => {
                 <div className="flex flex-row gap-x-2 md:gap-x-5">
                     <div className="relative">
                         <Button
+                            href="/"
                             className="text-white hover:text-amber-500"
                         >
                             CASINOS
@@ -335,12 +336,12 @@ const Header = () => {
                                 <ID className="w-6 rounded-full" />
                                 <span className="ml-3">Indonesia</span>
                             </MenuItem>
-                            {/* <MenuItem onClick={() => {changeLanguage("Korean")}}>
+                            <MenuItem onClick={() => {changeLanguage("Korean")}}>
                                 <KR className="w-6 rounded-full"/>
                                 <span className="ml-3">한국어</span>
-                            </MenuItem> */}
-                            <MenuItem onClick={() => { changeLanguage("Portuguese") }}>
-                                <PT className="w-6 rounded-full" />
+                            </MenuItem>
+                            <MenuItem onClick={() => {changeLanguage("Portuguese")}}>
+                                <PT className="w-6 rounded-full"/>
                                 <span className="ml-3">Português</span>
                             </MenuItem>
                             <MenuItem onClick={() => { changeLanguage("Spanish") }}>

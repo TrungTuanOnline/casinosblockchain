@@ -1,5 +1,5 @@
 import backgroundImg from "../../Assets/images/final_header.png"
-const CasinoTitle = () => {
+const Header = () => {
     return (
         <div className="bg-center bg-cover pt-20 pb-40 flex justify-center" style={{ backgroundImage: `url(${backgroundImg})` }}>
             <div className="flex flex-col justify-start w-11/12 gap-y-6">
@@ -36,4 +36,4 @@ const CasinoTitle = () => {
     )
 }
 
-export default CasinoTitle;
+export default Header;
