@@ -4,30 +4,32 @@ import backgroundImg from "../../../Assets/images/Header.svg"
 import { ISiteRankBlogCardObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
 
+const dummyInfos: Array<ISiteRankBlogCardObj> = [
+    {
+        rank: 1,
+        name: "BC.Game Casino",
+        link: "https://bc.game",
+        bonus: "5B",
+        features: ["Low House Edge", "Original Bonuses", "test3"]
+    },
+    {
+        rank: 2,
+        name: "second",
+        link: "https://stake.com/registration",
+        bonus: "$5,000",
+        features: ["Weekly Giveaways", "Stellar Sportsbook"]
+    },
+    {
+        rank: 3,
+        name: "third",
+        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
+        bonus: "5B",
+        features: ["Great Rewards", "Nice Payment Limits", "test4"]
+    }
+];
+
 const MainContent = () => {
-    const dummyInfos: Array<ISiteRankBlogCardObj> = [
-        {
-            rank: 1,
-            name: "BC.Game Casino",
-            link: "https://bc.game",
-            bonus: "5B",
-            features: ["Low House Edge", "Original Bonuses", "test3"]
-        },
-        {
-            rank: 2,
-            name: "second",
-            link: "https://stake.com/registration",
-            bonus: "$5,000",
-            features: ["Weekly Giveaways", "Stellar Sportsbook"]
-        },
-        {
-            rank: 3,
-            name: "third",
-            link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-            bonus: "5B",
-            features: ["Great Rewards", "Nice Payment Limits", "test4"]
-        }
-    ];
+
     return (
         <div className="xl:w-8/12 w-full h-full ">
             <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
@@ -155,6 +157,19 @@ const RightNavBar = () => {
                         </li>
                     </a>
                 </ul>
+                {/* <div className="mt-4">
+                    {dummyInfos.length > 0 &&
+                        dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                            return (
+                                <SiteRankBlogTable
+                                    key={index}
+                                    siteIndex={index}
+                                    summaryData={summaryInfo}
+                                />
+                            )
+                        })
+                    }
+                </div> */}
             </div>
         </div>
     )
