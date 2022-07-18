@@ -1,3 +1,3 @@
-export const English = { 
-    'direct_contact': "Direct Contact",
+export const English = {
+    'title1': "Direct Contact",
 }

@@ -6,7 +6,7 @@ const MainContent = () => {
             <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
                 <img src={MetamaskCasinos} className="w-full max-h-full object-cover " />
             </div>
-            <div className="blog pl-24 pt-3 w-10/12">
+            <div className="blog pl-24 pt-3 pb-16 w-10/12">
                 <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
                 <h1>Best Bitcoin Wallet for Online Gambling -2022 Top Picks</h1>
                 <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
@@ -35,7 +35,13 @@ const MainContent = () => {
                     In a time crunch? We won’t keep you waiting. These are the <b>top gamblers’ wallet options</b> for 2022:
                 </p>
                 <p className="mt-2">
-                    <b>Best Overall: </b>
+                    <b>eBst Overall: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500">Blockstream</a>
+                </p>
+                <p className="mt-2">
+                    <b>Best for Beginners: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500">Blockstream</a>
+                </p>
+                <p className="mt-2">
+                    <b>Best for Privacy: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500">Electrum</a>
                 </p>
             </div>
         </div>
