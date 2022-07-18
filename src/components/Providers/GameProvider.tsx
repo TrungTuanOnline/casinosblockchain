@@ -2,7 +2,7 @@ import MainCard from "./MainCard"
 
 import EvolutionGameLogo from "../../Assets/images/evolution-gaming-logo.png"
 import StakeNewLogo from "../../Assets/images/stake-new-logo.svg"
-import LogoBcGame from "../../Assets/images/logo-bc-game.png"
+import LogoBcGame from "../../Assets/images/logos/bc-game.png"
 import RocketPotIcon from "../../Assets/images/rocket-pot-new-logo.svg"
 import CloudbetLogo from "../../Assets/images/cloudbet-new-logo.png"
 import { IMainCardDataObj, ISortStringObj } from "../../Interfaces"

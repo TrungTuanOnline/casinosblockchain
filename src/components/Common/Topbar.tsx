@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     }
 });
 
-const Header = () => {
+const Topbar = () => {
     const { t, i18n } = useTranslation();
 
     const [openBonusMenu, setOpenBonusMenu] = useState(false);
@@ -144,6 +144,7 @@ const Header = () => {
                 <div className="flex flex-row gap-x-2 md:gap-x-5">
                     <div className="relative">
                         <Button
+                            href="/"
                             className="text-white hover:text-amber-500"
                         >
                             CASINOS
@@ -335,10 +336,10 @@ const Header = () => {
                                 <ID className="w-6 rounded-full" />
                                 <span className="ml-3">Indonesia</span>
                             </MenuItem>
-                            {/* <MenuItem onClick={() => {changeLanguage("Korean")}}>
-                                <KR className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Korean") }}>
+                                <KR className="w-6 rounded-full" />
                                 <span className="ml-3">한국어</span>
-                            </MenuItem> */}
+                            </MenuItem>
                             <MenuItem onClick={() => { changeLanguage("Portuguese") }}>
                                 <PT className="w-6 rounded-full" />
                                 <span className="ml-3">Português</span>
@@ -364,4 +365,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Topbar;

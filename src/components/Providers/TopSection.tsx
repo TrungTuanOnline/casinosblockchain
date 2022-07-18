@@ -1,7 +1,7 @@
 import backgroundImg from "../../Assets/images/Header.svg"
 import EvolutionGameLogo from "../../Assets/images/evolution-gaming-logo.png"
 import StakeNewLogo from "../../Assets/images/stake-new-logo.svg"
-import LogoBcGame from "../../Assets/images/logo-bc-game.png"
+import LogoBcGame from "../../Assets/images/logos/bc-game.png"
 import RocketPotIcon from "../../Assets/images/rocket-pot-new-logo.svg"
 import CloudbetLogo from "../../Assets/images/cloudbet-new-logo.png"
 import NetentLogo from "../../Assets/images/netent-logo.png"
@@ -63,7 +63,7 @@ const TopSection = () => {
                     <div className="text-white font-bold text-xl md:text-3xl">
                         Top Providers in Crypto Casions of 2022
                     </div>
-                    <div className="flex flex-col md:flex-row  w-full justify-start gap-6 flex-wrap mt-3">
+                    <div className="flex flex-col md:flex-row  w-full justify-between gap-6 flex-wrap mt-3">
                         {
                             TopSectionCardData.map((item: ITopSectionCardDataObj) => (
                                 <div key={item.id}>

@@ -1,10 +1,10 @@
-import Header from "../../../components/Header"
-import MainPage from "../../../components/Guides/Guide1/MainPage"
+import Topbar from "../../../components/Common/Topbar";
+import MainPage from "../../../components/Guides/Guide1/MainPage";
 
 const Guide1 = () => {
     return (
         <div className="select-none">
-            <Header />
+            <Topbar />
             <MainPage />
         </div>
     )
