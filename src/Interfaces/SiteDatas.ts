@@ -382,7 +382,7 @@ export const siteDatas: Array<ISiteInfoObj> = [
         rank: 15,
         name: "Primedice",
         link: "primedice.com",
-        logo: "/assets/images/logos/fortune-jack.png",
+        logo: "/assets/images/logos/prime-dice.png",
         bonus: "",
         features: ["Best Dice Casino", "Anonymous & Fair"],
         overview: {
