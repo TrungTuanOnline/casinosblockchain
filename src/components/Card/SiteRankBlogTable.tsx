@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 
-import KeyboardArrowRightICon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
@@ -40,7 +40,7 @@ const SiteRankBlogTable = (props: IProps) => {
                                 {summaryData.bonus &&
                                     <Button
                                         className="w-24 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
-                                        endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400" />}
+                                        endIcon={<KeyboardArrowRightIcon className="text-black rounded-full bg-orange-400" />}
                                     >
                                         <img className="h-3" src={giftImg}></img>
                                         <span className="text-xs text-black">{summaryData.bonus}</span>
@@ -54,7 +54,7 @@ const SiteRankBlogTable = (props: IProps) => {
                         {summaryData.bonus &&
                             <Button
                                 className="w-24 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
-                                endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400" />}
+                                endIcon={<KeyboardArrowRightIcon className="text-black rounded-full bg-orange-400" />}
                             >
                                 <img className="h-3" src={giftImg}></img>
                                 <span className="text-xs text-black">{summaryData.bonus}</span>

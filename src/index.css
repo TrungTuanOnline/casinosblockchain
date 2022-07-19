@@ -136,3 +136,35 @@ ol {
     margin-right: 0;
     padding-left: 40px;
 }
+
+.swiper-wrapper {
+    padding-bottom: 4px;
+}
+
+.swiper-slide {
+    width: fit-content !important;
+}
+
+
+.Swiper-prev,
+.Swiper-next {
+    position: absolute;
+    top: 50%;
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+}
+
+.Swiper-prev {
+    left: 10px;
+    right: auto;
+}
+
+.Swiper-next {
+    right: 10px;
+    left: auto;
+}
+
+.swiper-button-disabled {
+    display: none;
+}

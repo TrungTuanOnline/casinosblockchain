@@ -1,8 +1,42 @@
 import MetamaskCasinos from "../../../Assets/images/Metamask-Casinos.jpg"
 import backgroundImg from "../../../Assets/images/Header.svg"
+import giftImg from "../../../Assets/images/gift.png";
+import logoImg from "../../../Assets/images/logos/bc-game.png";
 
-import { ISiteRankBlogCardObj } from "../../../Interfaces"
+import { ISiteRankBlogCardObj, IReadMoreDataObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
+import React from "react";
+import { Button, Card, CardContent, CardMedia, Typography, CardActionArea, CardActions, IconButton, Fab } from "@mui/material"
+import { KeyboardArrowRight, ArrowRightAlt, NavigateBefore, NavigateNext } from "@mui/icons-material"
+import { Link } from "react-router-dom";
+
+import ReadMoreImg1 from "../../../Assets/images/ReadMore/1.jpg"
+import ReadMoreImg2 from "../../../Assets/images/ReadMore/2.jpg"
+import ReadMoreImg3 from "../../../Assets/images/ReadMore/3.jpg"
+import ReadMoreImg4 from "../../../Assets/images/ReadMore/4.svg"
+import ReadMoreImg5 from "../../../Assets/images/ReadMore/5.jpg"
+import ReadMoreImg6 from "../../../Assets/images/ReadMore/6.jpg"
+import ReadMoreImg7 from "../../../Assets/images/ReadMore/7.jpg"
+import ReadMoreImg8 from "../../../Assets/images/ReadMore/8.jpg"
+import ReadMoreImg9 from "../../../Assets/images/ReadMore/9.jpg"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, FreeMode } from "swiper";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
+interface IProps {
+    siteIndex: number,
+    summaryData: ISiteRankBlogCardObj
+}
+
+interface IReadMoreProps {
+    index: number,
+    item: IReadMoreDataObj
+}
 
 const dummyInfos: Array<ISiteRankBlogCardObj> = [
     {
@@ -14,7 +48,7 @@ const dummyInfos: Array<ISiteRankBlogCardObj> = [
     },
     {
         rank: 2,
-        name: "second",
+        name: "Stake Casino",
         link: "https://stake.com/registration",
         bonus: "$5,000",
         features: ["Weekly Giveaways", "Stellar Sportsbook"]
@@ -27,6 +61,81 @@ const dummyInfos: Array<ISiteRankBlogCardObj> = [
         features: ["Great Rewards", "Nice Payment Limits", "test4"]
     }
 ];
+
+const ReadMoreData: Array<IReadMoreDataObj> = [
+    {
+        id: 1,
+        image: ReadMoreImg1,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 2,
+        image: ReadMoreImg3,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 3,
+        image: ReadMoreImg4,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 4,
+        image: ReadMoreImg5,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 5,
+        image: ReadMoreImg6,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 6,
+        image: ReadMoreImg6,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 7,
+        image: ReadMoreImg7,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 8,
+        image: ReadMoreImg8,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    },
+    {
+        id: 9,
+        image: ReadMoreImg9,
+        date: "July 18, 2022",
+        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
+        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
+        link: "/is-crypto-gambling-legal"
+    }
+]
 
 const MainContent = () => {
 
@@ -98,13 +207,13 @@ const MainContent = () => {
                 <p className="my-4">Let’s break it down in more detail:</p>
                 <h3>What is a Bitcoin Wallet?</h3>
                 <h4>First things first - what even is a Bitcoin wallet?</h4>
-                <div className="w-full h-[220px] pt-[48px] px-[56px] pb-[64px] bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
-                    <p className="uppercase text-sm text-white opacity-50">In the most basic terms</p>
-                    <h2 className="text-white">
+                <div className="w-full h-[220px] p-10  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
+                    <p className="uppercase text-xs  md:text-base text-white opacity-50">In the most basic terms</p>
+                    <h2 className="text-white text-lg md:text-2xl">
                         A Bitcoin wallet is a digital storage space for your Bitcoin
                     </h2>
                 </div>
-                <p>It’s like your bank account, where you can keep, receive, and send your Bitcoin.</p>
+                <p className="mt-2">It’s like your bank account, where you can keep, receive, and send your Bitcoin.</p>
                 <p className="mt-2">But <b>unlike a bank account, a Bitcoin wallet can be decentralized</b> – meaning there is no central authority or middleman controlling your Bitcoin. Even when a central authority (like a Coinbase gambling wallet,) there are fewer restrictions – but also fewer safety measures.</p>
             </div>
         </div>
@@ -157,31 +266,163 @@ const RightNavBar = () => {
                         </li>
                     </a>
                 </ul>
-                {/* <div className="mt-4">
-                    {dummyInfos.length > 0 &&
-                        dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                            return (
-                                <SiteRankBlogTable
-                                    key={index}
-                                    siteIndex={index}
-                                    summaryData={summaryInfo}
-                                />
-                            )
-                        })
-                    }
-                </div> */}
+                {dummyInfos.length > 0 &&
+                    dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                        return (
+                            <NavBarMiniTable
+                                key={index}
+                                siteIndex={index}
+                                summaryData={summaryInfo}
+                            />
+                        )
+                    })
+                }
             </div>
         </div>
     )
 }
 
+const NavBarMiniTable = (props: IProps) => {
+    const summaryData = props.summaryData;
+    return (
+        <React.Fragment>
+            <a href={summaryData.link} target="_blank">
+                <div className="flex flex-row justify-between border border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
+                    <div className="w-full flex flex-row justify-start gap-x-4" >
+                        <div className="flex w-16 items-center justify-center">
+                            <img className=" rounded-full" src={logoImg}></img>
+                        </div>
+                        <div className="flex flex-col justify-center gap-y-0.5 w-full">
+                            <span className="text-base font-bold">{summaryData.name}</span>
+                            <div className='flex'>
+                                {summaryData.bonus &&
+                                    <Button
+                                        className="w-20 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
+                                        endIcon={<KeyboardArrowRight className="text-black text-xs rounded-full bg-orange-400" />}
+                                    >
+                                        <img className="h-3" src={giftImg}></img>
+                                        <span className="text-[10px] text-black">{summaryData.bonus}</span>
+                                    </Button>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="w-48 flex items-center justify-center">
+                        <div className='block'>
+                            <Button
+                                className="text-white text-[10px] h-8"
+                                variant="contained"
+                                size='small'
+                                color="primary"
+                                href="/"
+                                target="_BLANK"
+                            >
+                                Play
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </React.Fragment>
+    )
+}
+
+const ReadMoreCard = (props: IReadMoreProps) => {
+    const item = props.item;
+    return (
+        <Link to={item.link}>
+            <Card sx={{ maxWidth: 300 }} elevation={4}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        image={item.image}
+                        alt="Read More Image"
+                        sx={{ height: "125px" }}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom color="text.secondary" className="text-[10px]" component="p">
+                            {item.date}
+                        </Typography>
+                        <Typography variant="body2" className="font-bold mb-3" component="p" >
+                            {item.title}
+                        </Typography>
+                        <Typography gutterBottom variant={"caption"} color="text.secondary" component="p">
+                            {item.content}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions className="flex justify-between">
+                    <Button size="small" color="primary">
+                        Read More
+                    </Button>
+                    <IconButton size="small" color="primary">
+                        <ArrowRightAlt fontSize="inherit" />
+                    </IconButton>
+                </CardActions>
+            </Card>
+        </Link>
+    )
+}
+
+const ReadMoreCards = () => {
+    return (
+        <div className="w-full flex justify-center ">
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={10}
+                navigation={{
+                    prevEl: '.Swiper-prev',
+                    nextEl: '.Swiper-next'
+                }}
+                breakpoints={{
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                }}
+                modules={[Navigation]}
+            >
+                {
+                    ReadMoreData.map(((item: IReadMoreDataObj, index: number) => (
+                        <SwiperSlide key={index}>
+                            <ReadMoreCard item={item} index={index} />
+                        </SwiperSlide>
+                    )))
+                }
+                <div className="Swiper-prev">
+                    <Fab aria-label="prev" color="default" size="small">
+                        <NavigateBefore />
+                    </Fab>
+                </div>
+                <div className="Swiper-next">
+                    <Fab aria-label="next" color="default" size="small">
+                        <NavigateNext />
+                    </Fab>
+                </div>
+            </Swiper>
+        </div >
+    )
+}
+
+
 const MainPage = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
             <div className="w-full h-32 bg-black" />
-            <div className=" flex h-full w-full xl:w-11/12 gap-6 justify-center xl:mt-[-5rem]">
-                <MainContent />
-                <RightNavBar />
+            <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
+                <div className="w-full flex gap-6 justify-center">
+                    <MainContent />
+                    <RightNavBar />
+                </div>
+                <div className="p-10 w-full flex justify-center">
+                    <ReadMoreCards />
+                </div>
             </div>
         </div>
     )
