@@ -2,9 +2,13 @@ import SiteSummaryCard from "../Card/SiteSummaryCard";
 import { siteDatas } from "../../Interfaces/SiteDatas";
 import { ISiteInfoObj } from "../../Interfaces";
 import { useState } from "react";
+import { Button } from '@mui/material';
+import KeyboardArrowRightICon from '@mui/icons-material/KeyboardArrowRight';
 
 const SiteInfos = () => {
     const [openSubInfoIndex, setOpenSubInfoIndex] = useState<null | number>(null);
+    const [showSiteNumbers, setShowSiteNumbers] = useState(10);
+
     return (
         <div className="bg-gray-100 flex items-center justify-center pb-28">
             <div className="w-11/12 -mt-24">
@@ -34,16 +38,28 @@ const SiteInfos = () => {
                 }
                 { siteDatas.length > 0 &&
                     siteDatas.map((summaryInfo: ISiteInfoObj, index: number) => {
-                        return (
-                            <SiteSummaryCard
-                                key={index}
-                                siteIndex={index}
-                                openSubInfoIndex={openSubInfoIndex}
-                                setOpenSubInfoIndex={setOpenSubInfoIndex}
-                                siteData={summaryInfo}
-                            />
-                        )
+                        if (index < showSiteNumbers) {
+                            return (
+                                <SiteSummaryCard
+                                    key={index}
+                                    siteIndex={index}
+                                    openSubInfoIndex={openSubInfoIndex}
+                                    setOpenSubInfoIndex={setOpenSubInfoIndex}
+                                    siteData={summaryInfo}
+                                />
+                            )
+                        }
+                        
                     })
+                }
+                { showSiteNumbers < siteDatas.length &&
+                    <Button 
+                        className="w-full mt-10 text-black bg-white py-3 justify-center gap-x-4 rounded-lg shadow-xl hover:bg-gray-200"
+                        endIcon={<KeyboardArrowRightICon className="text-black"/>}
+                        onClick={() => {setShowSiteNumbers(showSiteNumbers + 10)}}
+                    >
+                        Show More
+                    </Button>
                 }
             </div>
             
