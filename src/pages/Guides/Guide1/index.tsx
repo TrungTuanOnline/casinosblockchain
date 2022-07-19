@@ -1,11 +1,11 @@
 import Topbar from "../../../components/Common/Topbar";
-import MainPage from "./MainPage";
+import MainPage1 from "../../../components/Guides/Guide1";
 
 const Guide1 = () => {
     return (
-        <div className="select-none">
+        <div>
             <Topbar />
-            <MainPage />
+            <MainPage1 />
         </div>
     )
 }

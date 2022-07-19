@@ -1,4 +1,4 @@
-export const English = { 
+export const English = {
     "title1": "CASINOS",
     "title2": "BONUSES",
     "title3": "Bitcoin Free Spins",

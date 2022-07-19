@@ -12,15 +12,15 @@ import Footer from "../../components/Common/Footer";
 const Casinos = () => {
     return (
         <Box className="">
-            <TopBar/>
-            <Header/>
-            <SiteInfos/>
-            <Review/>
-            <CasinoExplain/>
-            <TopDecentralizedCasinos/>
-            <BlockchainGamblingLegal/>
-            <FAQ/>
-            <Footer/>
+            <TopBar />
+            <Header />
+            <SiteInfos />
+            <Review />
+            <CasinoExplain />
+            <TopDecentralizedCasinos />
+            <BlockchainGamblingLegal />
+            <FAQ />
+            <Footer />
         </Box>
     )
 }

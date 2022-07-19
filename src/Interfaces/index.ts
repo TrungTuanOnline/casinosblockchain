@@ -67,3 +67,12 @@ export interface ISiteInfoObj {
         }
     }
 }
+
+export interface IReadMoreDataObj {
+    id: number,
+    image: any,
+    date: string,
+    title: string,
+    content: string,
+    link: string,
+}

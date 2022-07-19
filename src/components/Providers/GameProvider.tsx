@@ -135,14 +135,14 @@ const GameProvider = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-5 items-center justify-center 2xl:justify-start w-full pt-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 w-full ">
                     {
                         MainCardData.map((item: any, index: number) => (
                             item.id ?
-                                <div key={index} id={item.id} >
+                                <div key={index} id={item.id}>
                                     <MainCard item={item} />
                                 </div> :
-                                <div key={index} >
+                                <div key={index}>
                                     <MainCard item={item} />
                                 </div>
 

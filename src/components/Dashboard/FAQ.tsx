@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import QuizOutlinedIcon from '@mui/icons-material/QuizOutlined';
 
 
 const FAQ = () => {
@@ -17,9 +16,9 @@ const FAQ = () => {
                 </div>
                 <div className="w-1/2 flex flex-col gap-y-3">
                     <div className="flex flex-col border-b border-gray-400 px-1 py-2">
-                        <div 
+                        <div
                             className="text-md text-black font-medium cursor-pointer"
-                            onClick={() => {setOpenFAQ1(!openFAQ1)}}
+                            onClick={() => { setOpenFAQ1(!openFAQ1) }}
                         >
                             Are blockchain casinos better than traditional alternatives?
                         </div>
@@ -33,9 +32,9 @@ const FAQ = () => {
                         }
                     </div>
                     <div className="flex flex-col border-b border-gray-400 px-1 py-2">
-                        <div 
+                        <div
                             className="text-md text-black font-medium cursor-pointer"
-                            onClick={() => {setOpenFAQ2(!openFAQ2)}}
+                            onClick={() => { setOpenFAQ2(!openFAQ2) }}
                         >
                             Can a Bitcoin casino be considered a blockchain casino?
                         </div>
@@ -55,14 +54,14 @@ const FAQ = () => {
                         }
                     </div>
                     <div className="flex flex-col border-b border-gray-400 px-1 py-2">
-                        <div 
+                        <div
                             className="text-md text-black font-medium cursor-pointer"
-                            onClick={() => {setOpenFAQ3(!openFAQ3)}}
+                            onClick={() => { setOpenFAQ3(!openFAQ3) }}
                         >
                             Is Blockchain gambling legal?
                         </div>
                         {openFAQ3 &&
-                            <div 
+                            <div
                                 className="text-sm text-black mt-5">
                                 In short: yes. You should, however, be aware of which jurisdiction you are playing from and if the casino accepts players from it.
                                 <br></br>
@@ -75,9 +74,9 @@ const FAQ = () => {
                         }
                     </div>
                     <div className="flex flex-col border-b border-gray-400 px-1 py-2">
-                        <div 
+                        <div
                             className="text-md text-black font-medium cursor-pointer"
-                            onClick={() => {setOpenFAQ4(!openFAQ4)}}
+                            onClick={() => { setOpenFAQ4(!openFAQ4) }}
                         >
                             What is a decentralized casino?
                         </div>
@@ -94,14 +93,14 @@ const FAQ = () => {
                         }
                     </div>
                     <div className="flex flex-col border-b border-gray-400 px-1 py-2">
-                        <div 
+                        <div
                             className="text-md text-black font-medium cursor-pointer"
-                            onClick={() => {setOpenFAQ5(!openFAQ5)}}
+                            onClick={() => { setOpenFAQ5(!openFAQ5) }}
                         >
                             Are blockchain casinos safe?
                         </div>
                         {openFAQ5 &&
-                            <div 
+                            <div
                                 className="text-sm text-black mt-5">
                                 If you’re simply talking about casinos that accept Bitcoin or any other cryptocurrency as a payment method, then you should be careful and only choose trustworthy casinos. Luckily, there are quite a few. You’ll find them right here on our homepage.
                                 <br></br>
@@ -118,7 +117,7 @@ const FAQ = () => {
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
     )
 }
 

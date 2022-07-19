@@ -278,17 +278,17 @@ const Topbar = () => {
                         </Button>
                         {(openGuideMenu || overGuideMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-36 right-1 bg-neutral-800 py-2 rounded"
+                                className="absolute flex flex-col gap-y-2 w-36 right-1 bg-neutral-800 py-2 rounded z-10"
                                 onMouseEnter={() => { setOverGuideMenu(true) }}
                                 onMouseLeave={() => { setOverGuideMenu(false) }}
                             >
                                 <Link to='/best-bitcoin-wallet-for-online-gambling' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title9")}
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/stablecoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title10")}
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/metamask-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title11")}
                                 </Link>
                             </div>
@@ -336,12 +336,12 @@ const Topbar = () => {
                                 <ID className="w-6 rounded-full" />
                                 <span className="ml-3">Indonesia</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("Korean")}}>
-                                <KR className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Korean") }}>
+                                <KR className="w-6 rounded-full" />
                                 <span className="ml-3">한국어</span>
                             </MenuItem>
-                            <MenuItem onClick={() => {changeLanguage("Portuguese")}}>
-                                <PT className="w-6 rounded-full"/>
+                            <MenuItem onClick={() => { changeLanguage("Portuguese") }}>
+                                <PT className="w-6 rounded-full" />
                                 <span className="ml-3">Português</span>
                             </MenuItem>
                             <MenuItem onClick={() => { changeLanguage("Spanish") }}>

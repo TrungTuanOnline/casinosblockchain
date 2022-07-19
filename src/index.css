@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .active {
+        @apply text-[#3e47e0] !important
+    }
+}
+
 .divHasTempBG {
     background: url(../src/Assets/images/tempBG1.png), radial-gradient(100% 100% at 100% 100%, #2f0857 0%, #000331 100%);
 }
@@ -52,4 +58,124 @@
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h6 {
+    display: block;
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+li {
+    display: list-item;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+.swiper-wrapper {
+    padding-bottom: 4px;
+}
+
+.swiper-slide {
+    width: fit-content !important;
+}
+
+
+.Swiper-prev,
+.Swiper-next {
+    position: absolute;
+    top: 50%;
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+}
+
+.Swiper-prev {
+    left: 10px;
+    right: auto;
+}
+
+.Swiper-next {
+    right: 10px;
+    left: auto;
+}
+
+.swiper-button-disabled {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }

@@ -37,9 +37,9 @@ const SiteSummaryCard = (props: IProps) => {
         <React.Fragment>
             <div className="flex flex-row justify-between border-b border-l border-r border-gray-300 py-3 bg-white shadow-xl hover:bg-gray-200">
                 <div className="w-24 flex items-center justify-center">
-                    {siteData.rank === 1 && <img className="h-8" src={rankFirstImg}></img>}
-                    {siteData.rank === 2 && <img className="h-8" src={rankSecondImg}></img>}
-                    {siteData.rank === 3 && <img className="h-8" src={rankThirdImg}></img>}
+                    {siteData.rank === 1 && <img className="h-8" src={rankFirstImg} alt="CardImg"></img>}
+                    {siteData.rank === 2 && <img className="h-8" src={rankSecondImg} alt="CardImg"></img>}
+                    {siteData.rank === 3 && <img className="h-8" src={rankThirdImg} alt="CardImg"></img>}
                     {siteData.rank > 3 && 
                         <div className="w-7 h-7 rounded-full bg-gray-500 flex items-center justify-center">
                             {siteData.rank}
@@ -47,7 +47,7 @@ const SiteSummaryCard = (props: IProps) => {
                 </div>
                 <div className="w-64 flex flex-row justify-start gap-x-4">
                     <div className="flex items-center justify-center">
-                        <img className="w-16 rounded-full" src={siteData.logo} />
+                        <img className="w-16 rounded-full" src={siteData.logo} alt="CardImg" />
                     </div>
                     <div className="flex flex-col justify-center gap-y-0.5">
                         <span className="text-xl font-bold">{siteData.name}</span>
@@ -94,8 +94,8 @@ const SiteSummaryCard = (props: IProps) => {
                         className="text-black"
                         variant="contained"
                         color="inherit"
-                        endIcon={props.openSubInfoIndex === props.siteIndex ? <KeyboardArrowUp/> : <KeyboardArrowDown/>}
-                        onClick={() => {onQuickFact()}}
+                        endIcon={props.openSubInfoIndex === props.siteIndex ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+                        onClick={() => { onQuickFact() }}
                     >
                         QUICK FACTS
                     </Button>
@@ -111,16 +111,16 @@ const SiteSummaryCard = (props: IProps) => {
                     >
                         VISIT WEBSITE
                     </Button>
-                </div>            
+                </div>
             </div>
             {props.openSubInfoIndex === props.siteIndex &&
                 <SiteSubInfoCard
                     siteData={siteData}
                 />
             }
-            
+
         </React.Fragment>
-        
+
     )
 }
 
