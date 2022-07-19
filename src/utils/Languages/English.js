@@ -11,4 +11,5 @@ export const English = {
     "title10": "What Are the Top Stablecoin Casinos?",
     "title11": "Your Ultimate Guide to MetaMask Gambling",
     "title12": "NEWS",
+    "About": "ABOUT",
 }
