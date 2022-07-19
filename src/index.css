@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .active {
+        @apply text-[#3e47e0] !important
+    }
+}
+
 .divHasTempBG {
     background: url(../src/Assets/images/tempBG1.png), radial-gradient(100% 100% at 100% 100%, #2f0857 0%, #000331 100%);
 }
@@ -167,4 +173,9 @@ ol {
 
 .swiper-button-disabled {
     display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }

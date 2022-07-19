@@ -285,10 +285,10 @@ const Topbar = () => {
                                 <Link to='/best-bitcoin-wallet-for-online-gambling' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title9")}
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/stablecoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title10")}
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/metamask-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title11")}
                                 </Link>
                             </div>

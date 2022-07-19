@@ -1,11 +1,11 @@
 import Topbar from "../../../components/Common/Topbar";
-import MainPage from "../../../components/Guides/Guide1/MainPage";
+import MainPage1 from "../../../components/Guides/Guide1";
 
 const Guide1 = () => {
     return (
         <div>
             <Topbar />
-            <MainPage />
+            <MainPage1 />
         </div>
     )
 }

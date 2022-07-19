@@ -1,17 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
 import { Button } from '@mui/material';
-import CircularProgress from '@mui/material/CircularProgress';
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-import SiteSubInfoCard from './SiteSubInfoCard';
-import rankFirstImg from "../../Assets/images/rank-first.png";
-import rankSecondImg from "../../Assets/images/rank-second.png";
-import rankThirdImg from "../../Assets/images/rank-third.png";
 import giftImg from "../../Assets/images/gift.png";
 import logoImg from "../../Assets/images/logos/bc-game.png";
 
@@ -28,11 +20,11 @@ const SiteRankBlogTable = (props: IProps) => {
     const summaryData = props.summaryData;
     return (
         <React.Fragment>
-            <a href={summaryData.link} target="_blank">
+            <a href={summaryData.link} target="_blank" rel="noreferrer">
                 <div className="flex flex-row justify-between border-b border-l border-r border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
                     <div className="w-full md:w-40 flex flex-row justify-start gap-x-4" >
                         <div className="flex items-center justify-center">
-                            <img className="w-16 rounded-full" src={logoImg}></img>
+                            <img className="w-16 rounded-full" src={logoImg} alt="RankBlogImg" />
                         </div>
                         <div className="flex flex-col justify-center gap-y-0.5 w-full">
                             <span className="text-xl font-bold">{summaryData.name}</span>
@@ -42,7 +34,7 @@ const SiteRankBlogTable = (props: IProps) => {
                                         className="w-24 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
                                         endIcon={<KeyboardArrowRightIcon className="text-black rounded-full bg-orange-400" />}
                                     >
-                                        <img className="h-3" src={giftImg}></img>
+                                        <img className="h-3" src={giftImg} alt="RankBlogImg" />
                                         <span className="text-xs text-black">{summaryData.bonus}</span>
                                     </Button>
                                 }
@@ -56,7 +48,7 @@ const SiteRankBlogTable = (props: IProps) => {
                                 className="w-24 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
                                 endIcon={<KeyboardArrowRightIcon className="text-black rounded-full bg-orange-400" />}
                             >
-                                <img className="h-3" src={giftImg}></img>
+                                <img className="h-3" src={giftImg} alt="RankBlogImg" />
                                 <span className="text-xs text-black">{summaryData.bonus}</span>
                             </Button>
                         }

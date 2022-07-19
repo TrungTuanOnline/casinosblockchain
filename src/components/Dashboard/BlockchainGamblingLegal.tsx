@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@mui/material";
-import CasinoExplain from "./CasinoExplain";
 
 const BlockchainGamblingLegal = () => {
     const [readMoreGamblingLegal, setReadMoreGamblingLegal] = useState(false);
@@ -21,12 +20,12 @@ const BlockchainGamblingLegal = () => {
                         <div className="text-sm text-black">
                             As a rule-of-thumb, if fiat online gambling is legal in your country, so is blockchain gambling, although often under specific restrictions. Countries like the United States and the United Kingdom require all online casinos – including those using blockchain technology – to apply for a local gambling license.
                         </div>
-                        {readMoreGamblingLegal && 
+                        {readMoreGamblingLegal &&
                             <div className="text-sm text-black">
                                 On the other hand, in many countries where gambling is illegal, ‘cryptocurrencies’ are not legal forms of tender. Betting or playing casino games with coins such as Bitcoin may not be considered gambling because you’re not playing for ‘legal’ money.
                             </div>
                         }
-                        {readMoreGamblingLegal && 
+                        {readMoreGamblingLegal &&
                             <div className="text-sm text-black">
                                 Overall, there is no straightforward answer to the question: is blockchain gambling legal. It depends on where you live. In countries where online gambling itself is illegal, there is a seemingly clear answer: no. However, as we explained above, even in this purportedly straightforward scenario, it’s not all black-and-white.
                             </div>
@@ -46,7 +45,7 @@ const BlockchainGamblingLegal = () => {
                         Are Gambling Licenses Required for Crypto Casinos?
                     </div>
                     <div className="w-1/2 flex flex-col gap-y-3">
-                        <div className="text-sm text-black">              
+                        <div className="text-sm text-black">
                             Not exactly. Blockchain gambling still sits in a legal grey area in many countries, especially those that haven’t regulated online gambling. In such places, no local gambling licenses are available.
                         </div>
                         <div className="text-sm text-black">
@@ -57,7 +56,7 @@ const BlockchainGamblingLegal = () => {
                                 <div className="text-sm text-black">
                                     Two examples of international licenses are:
                                 </div>
-                                
+
                                 <div className="text-sm text-black">
                                     - Curaçao gambling licenses
                                 </div>
@@ -66,7 +65,7 @@ const BlockchainGamblingLegal = () => {
                                 </div>
                             </div>
                         }
-                        {readMoreGamblingLicenses && 
+                        {readMoreGamblingLicenses &&
                             <div className="text-sm text-black">
                                 Do note that neither Curaçao nor Malta cater specifically to blockchain or crypto casino players. Instead, they are more generic licenses covering online gaming, from traditional casinos to modern sports gambling websites.
                             </div>
@@ -86,7 +85,7 @@ const BlockchainGamblingLegal = () => {
                         Are Licensed Blockchain Casinos Better?
                     </div>
                     <div className="w-1/2 flex flex-col gap-y-3">
-                        <div className="text-sm text-black">              
+                        <div className="text-sm text-black">
                             Blockchain casinos? Bitcoin casinos?
                         </div>
                         <div className="text-sm text-black">
@@ -95,12 +94,12 @@ const BlockchainGamblingLegal = () => {
                         <div className="text-sm text-black">
                             It’s generally unsafe to play at crypto casinos that don’t hold a license, which is why we hardly ever recommend them. Instead, we firmly believe you should always play at licensed casinos when you have the chance.
                         </div>
-                        {readMoreBlockchainCasino && 
+                        {readMoreBlockchainCasino &&
                             <div className="text-sm text-black">
                                 But can you ever play anonymously at a licensed blockchain casino? Not quite. Licensing bodies often require the casinos to have strict customer verification procedures, to prevent identity fraud and money laundering. While disruptive, these procedures help foster a safer, more responsible gambling environment.
                             </div>
                         }
-                        {readMoreBlockchainCasino && 
+                        {readMoreBlockchainCasino &&
                             <div className="text-sm text-black">
                                 However, players looking for a genuinely anonymous blockchain gambling experience can still find it at a few reputable websites.
                             </div>

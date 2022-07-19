@@ -28,7 +28,7 @@ const MainCard = (props: any) => {
                                 item.gameLogos.map((logo: any, index: number) => (
                                     <Link to={logo.link} key={index} className="z-[5] hover:z-10">
                                         <div className="w-10 h-10 md:w-14 md:h-14 cursor-pointer  ml-[-8px]" >
-                                            <img src={logo.logo} className="w-full rounded-full hover:outline hover:outline-white outline-1" />
+                                            <img src={logo.logo} className="w-full rounded-full hover:outline hover:outline-white outline-1" alt="MainCard" />
                                         </div>
                                     </Link>
                                 ))

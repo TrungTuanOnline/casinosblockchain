@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { Button } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -40,9 +39,9 @@ const SiteSummaryCard = (props: IProps) => {
         <React.Fragment>
             <div className="flex flex-row justify-between border-b border-l border-r border-gray-300 py-3 bg-white shadow-xl hover:bg-gray-200">
                 <div className="w-24 flex items-center justify-center">
-                    {summaryData.rank === 1 && <img className="h-8" src={rankFirstImg}></img>}
-                    {summaryData.rank === 2 && <img className="h-8" src={rankSecondImg}></img>}
-                    {summaryData.rank === 3 && <img className="h-8" src={rankThirdImg}></img>}
+                    {summaryData.rank === 1 && <img className="h-8" src={rankFirstImg} alt="CardImg" />}
+                    {summaryData.rank === 2 && <img className="h-8" src={rankSecondImg} alt="CardImg" />}
+                    {summaryData.rank === 3 && <img className="h-8" src={rankThirdImg} alt="CardImg" />}
                     {summaryData.rank > 3 &&
                         <div className="w-7 h-7 rounded-full bg-gray-500 flex items-center justify-center">
                             {summaryData.rank}
@@ -50,7 +49,7 @@ const SiteSummaryCard = (props: IProps) => {
                 </div>
                 <div className="w-64 flex flex-row justify-start gap-x-4">
                     <div className="flex items-center justify-center">
-                        <img className="w-16 rounded-full" src={logoImg}></img>
+                        <img className="w-16 rounded-full" src={logoImg} alt="CardImg" />
                     </div>
                     <div className="flex flex-col justify-center gap-y-0.5">
                         <span className="text-xl font-bold">{summaryData.name}</span>
@@ -63,7 +62,7 @@ const SiteSummaryCard = (props: IProps) => {
                             className="w-28 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between gap-x-2"
                             endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400" />}
                         >
-                            <img className="h-3" src={giftImg}></img>
+                            <img className="h-3" src={giftImg} alt="CardImg" />
                             <span className="text-sm text-black">{summaryData.bonus}</span>
                         </Button>
                     }

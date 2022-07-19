@@ -1,4 +1,3 @@
-import React from "react";
 import transparencyImg from "../../Assets/images/transparency.png";
 import technologyImg from "../../Assets/images/technology.png";
 import valueImg from "../../Assets/images/value.png";
@@ -44,9 +43,9 @@ const Review = () => {
                 <div className="flex flex-row justify-between mt-5">
                     <div className="flex flex-row items-center justify-start gap-x-3">
                         <div>
-                            <img className="h-15" src={transparencyImg}></img>
+                            <img className="h-15" src={transparencyImg} alt="ReviewImg" />
                         </div>
-                        
+
                         <div className="text-white text-xl font-bold">Transparency</div>
                     </div>
                     <div className="text-sm text-white w-2/3">
@@ -56,9 +55,9 @@ const Review = () => {
                 <div className="flex flex-row justify-between">
                     <div className="flex flex-row items-center justify-start gap-x-3">
                         <div>
-                            <img className="h-15" src={technologyImg}></img>
+                            <img className="h-15" src={technologyImg} alt="ReviewImg" />
                         </div>
-                        
+
                         <div className="text-white text-xl font-bold">Technology</div>
                     </div>
                     <div className="text-sm text-white w-2/3">
@@ -68,9 +67,9 @@ const Review = () => {
                 <div className="flex flex-row justify-between">
                     <div className="flex flex-row items-center justify-start gap-x-3">
                         <div>
-                            <img className="h-15" src={valueImg}></img>
+                            <img className="h-15" src={valueImg} alt="ReviewImg" />
                         </div>
-                        
+
                         <div className="text-white text-xl font-bold">Value</div>
                     </div>
                     <div className="text-sm text-white w-2/3">
@@ -79,7 +78,7 @@ const Review = () => {
                 </div>
             </div>
             {/* Casino Games */}
-            <div  className="w-11/12 flex flex-col mt-20">
+            <div className="w-11/12 flex flex-col mt-20">
                 <div className="text-3xl font-bold text-white flex justify-center">
                     Blockchain Casino Games
                 </div>
@@ -89,7 +88,7 @@ const Review = () => {
                 <div className="mt-5 grid grid-cols-3 gap-5 px-10">
                     {PopularCasinoInfos.map((data: IPopularCasinoObj, index: number) => {
                         return (
-                            <PopularCasinoCard key={index} data={data}/>
+                            <PopularCasinoCard key={index} data={data} />
                         )
                     })}
                 </div>
