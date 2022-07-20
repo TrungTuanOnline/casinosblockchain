@@ -23,7 +23,6 @@ interface IProps {
 }
 
 const SiteSummaryCard = (props: IProps) => {
-    const siteLine = "https://" + props.siteData.link;
     const siteData = props.siteData;
 
     const onQuickFact = () => {

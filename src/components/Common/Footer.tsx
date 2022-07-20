@@ -6,7 +6,7 @@ const Footer = () => {
     const { t, i18n } = useTranslation();
 
     return (
-        <div className="bg-center bg-cover py-5 flex justify-center" style={{ backgroundImage: `url(${backgroundImg})` }}>
+        <div className="w-full bg-center bg-cover py-5 flex justify-center" style={{ backgroundImage: `url(${backgroundImg})` }}>
             <div className="flex flex-row justify-between w-11/12">
                 <div className="">
                     <Button href='/' className="text-lg text-gray-300 normal-case hover:text-amber-500">

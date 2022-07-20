@@ -7,6 +7,8 @@ import Guide2 from './pages/Guides/Guide2';
 import Guide3 from './pages/Guides/Guide3';
 import Providers from './pages/Providers';
 
+import BCGameReview from './pages/Reviews/BCGameReview';
+
 function App() {
   return (
     <div className='App'>
@@ -16,6 +18,8 @@ function App() {
         <Route path='/best-bitcoin-wallet-for-online-gambling' element={<Guide1 />} />
         <Route path='/stablecoin-casinos' element={<Guide2 />} />
         <Route path='/metamask-casinos' element={<Guide3 />} />
+
+        <Route path='/review/bc.game' element={<BCGameReview />} />
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />
     </div>

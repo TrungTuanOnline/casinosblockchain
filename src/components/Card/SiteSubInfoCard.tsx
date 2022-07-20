@@ -220,8 +220,7 @@ const SiteSubInfoCard = (props: IProps) => {
                     <div>
                         <Button
                             className="text-blue"
-                            href="/"
-                            target="_BLANK"
+                            href={"/review/" + siteData.link}
                         >
                             Read Review
                         </Button>
