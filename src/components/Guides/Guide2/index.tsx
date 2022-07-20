@@ -3,7 +3,7 @@ import backgroundImg from "../../../Assets/images/Header.svg"
 import { ISiteRankBlogCardObj, IReadMoreDataObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
 import { Fab } from "@mui/material"
-import { NavigateBefore, NavigateNext } from "@mui/icons-material"
+import { Check, NavigateBefore, NavigateNext } from "@mui/icons-material"
 
 import ReadMoreCard from "../../Card/ReadMoreCard";
 
@@ -17,13 +17,24 @@ import ReadMoreImg7 from "../../../Assets/images/ReadMore/7.jpg"
 import ReadMoreImg8 from "../../../Assets/images/ReadMore/8.jpg"
 import ReadMoreImg9 from "../../../Assets/images/ReadMore/9.jpg"
 
+import EuroBankNotes from "../../../Assets/images/Content/euro-bank-notes.jpg"
+import GoleImg from "../../../Assets/images/Content/gold.jpg"
+import BitcoinCash from "../../../Assets/images/Content/Bitcoin-cash.jpg"
+import Alpridephoto from "../../../Assets/images/Content/alpridephoto.jpg"
+import BcGame from "../../../Assets/images/Content/bcgame.png"
+import Cloudbet1 from "../../../Assets/images/Content/Cloudbet1.jpg"
+
+
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper";
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
+import { ExpandMore } from "@mui/icons-material";
 
 const dummyInfos: Array<ISiteRankBlogCardObj> = [
     {
@@ -125,6 +136,13 @@ const ReadMoreData: Array<IReadMoreDataObj> = [
 ]
 
 const MainContent = () => {
+    const [expanded, setExpanded] = useState<string | false>(false);
+
+    const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
+
     useEffect(() => {
         const sections = document.querySelectorAll("section");
         const navLi = document.querySelectorAll("div.container ul a");
@@ -152,86 +170,279 @@ const MainContent = () => {
                 <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
                     <img alt="MainPageImg" src={ReadMoreImg8} className="w-full max-h-full object-cover " />
                 </div>
-                <div className="blog pl-24 pt-3 pb-16 w-10/12">
-                    <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
-                    <h1>Best Bitcoin Wallet for Online Gambling -2022 Top Picks</h1>
-                    <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
-                    <p className="mt-2">In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
-                    <ul className="pl-8">
-                        <li>
-                            What <b>types of Bitcoin wallets</b> are there?
-                        </li>
-                        <li>
-                            The <b>features</b> to look for in a BTC wallet
-                        </li>
-                        <li>
-                            How to <b>get started</b> with a Bitcoin wallet?
-                        </li>
-                        <li>
-                            Our top <b>picks of 2022</b> (including advanced and beginner-friendly options)
-                        </li>
-                    </ul>
-                    <p className="mt-2">
-                        let's jump right in:
+                <div className="blog pl-24 pb-16 w-10/12">
+                    <p id="modified-date" className="text-sm" >
+                        Updated:&nbsp;
+                        <span>July 8, 2022</span>
                     </p>
-                    <section id="quick-picks">
-                        <h2>
-                            Best Bitcoin Gambling Wallet: Quick Picks
+                    <h1>Stablecoin Casinos: The Full Guide to Gambling with Tether, USDC, and More</h1>
+                    <p>The world of crypto is extremely new – even Bitcoin hasn’t been around for that long. And, while blockchain-based currencies offer exciting new opportunities for finance, they also have one major problem:&nbsp;</p>
+                    <p><strong>Volatility.&nbsp;</strong></p>
+                    <p>Stablecoins are here to change this. </p>
+                    <p>They are cryptocurrencies that are built to address volatility by pegging their value to another asset, like the US dollar. This makes them much more usable for everyday transactions.</p>
+                    <div className="w-full h-[220px] p-10 flex justify-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
+                        <h2 className="text-white text-lg md:text-2xl">
+                            Wherever you spend crypto, stablecoins can help you avoid price swings.
                         </h2>
-                        <p >
-                            In a time crunch? We won’t keep you waiting. These are the <b>top gamblers’ wallet options</b> for 2022:
-                        </p>
-                        <p className="mt-2">
-                            <b>eBst Overall: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500" rel="noreferrer">Blockstream</a>
-                        </p>
-                        <p className="mt-2">
-                            <b>Best for Beginners: </b><a href="https://blockstream.com/" target="_blank" rel="noreferrer" className="text-blue-500">Blockstream</a>
-                        </p>
-                        <p className="mt-2">
-                            <b>Best for Privacy: </b><a href="https://electrum.org/#home" target="_blank" rel="noreferrer" className="text-blue-500">Electrum</a>
-                        </p>
-                        <p className="mt-2">
-                            <b>Best for Mobile: </b><a href="https://brd.com" target="_blank" rel="noreferrer" className="text-blue-500">BRD</a>
-                        </p>
-                        <p className="mt-2">
-                            All of these wallets are safe, user-friendly, and allow betting. And where do you go with your Bitcoin gambling wallet? Here are our favorite crypto casinos to spend your BTC:
-                        </p>
+                    </div>
+                    <p>Because stablecoins stay around the same value, you can use them to make bets without losing money to volatility. This makes them perfect for the gambling industry, which needs to be able to trust its currency.</p>
+                    <p><strong>But which stablecoin to pick – and how do you choose a stablecoin casino to play in?</strong>&nbsp; </p>
+                    <p>Our top stablecoin casinos are: </p>
+                    <div className="mt-4">
+                        {dummyInfos.length > 0 &&
+                            dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                                return (
+                                    <SiteRankBlogTable
+                                        key={index}
+                                        siteIndex={index}
+                                        summaryData={summaryInfo}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+                    <section id="in-short">
+                        <h2>Stablecoins and Gambling: In Short	</h2>
+                        <p>Playing with stablecoins removes volatility from crypto casinos. There are three main reasons to pick USDT or DAI over traditional cryptos:</p>
+                        <ul className="is-style-dotted-list"><li><strong>Stability</strong> – as the name suggests, stablecoins are more ‘solid’, a haven from the sharp swings of other cryptos.</li><li><strong>Reduce risk</strong> – with stablecoins, you’re no longer gambling on the bet AND the price of your crypto. You can (theoretically) reduce losses – but also wins. </li><li><strong>Enjoy crypto casino perks</strong> – stablecoins are still cryptocurrencies, so you can enjoy all the perks of gambling with crypto like lower <a href="https://casinosblockchain.io/house-edge-casinos/" target="_blank" rel="noreferrer noopener">house edges</a>.</li></ul>
+                        <p>Our <strong>number one stablecoin casino</strong> is <a href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener">BC.Game</a> for the awesome game selection, social experience, and the range of cryptos they accept.</p>
                         <div className="mt-4">
                             {dummyInfos.length > 0 &&
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    return (
-                                        <SiteRankBlogTable
-                                            key={index}
-                                            siteIndex={index}
-                                            summaryData={summaryInfo}
-                                        />
-                                    )
+                                    if (index === 0) {
+                                        return (
+                                            <SiteRankBlogTable
+                                                key={index}
+                                                siteIndex={index}
+                                                summaryData={summaryInfo}
+                                            />
+                                        )
+                                    }
+                                })
+                            }
+                        </div>
+                        <p><br />Curious to learn more? Read on…</p>
+                    </section>
+                    <section id="what-are-stablecoins">
+                        <h2 >What Are Stablecoins?</h2>
+                        <p>Stablecoins are cryptocurrencies that are attached to a stable asset, usually a fiat currency.</p>
+                        <p>When you sell a volatile cryptocurrency for a stablecoin, you know that the stablecoin will maintain its value. You can then keep the stablecoin on the exchange as you prepare for your next trade.</p>
+                        <p >But, stablecoins are useful beyond trading, too.</p>
+                        <div className="w-full h-[220px] p-10 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
+                            <p className="text-white text-sm">Stablecoin advantages</p>
+                            <h2 className="text-white text-lg md:text-2xl">
+                                The main perk of stablecoins is they help with everyday transactions.
+                            </h2>
+
+                        </div>
+                        <p className="mt-3"><strong>Imagine you wanted to place a $10 bet. </strong></p>
+                        <p>With Bitcoin’s price fluctuations, your $10 might be worth $15 tomorrow. So, most people will simply choose to HODL. The same goes for anything else you buy – pizza (remember the guy who bought ‘za worth millions?), software subscriptions, travel tickets, etc.</p>
+                        <p><strong>With a stablecoin, you don’t have to worry about price fluctuations. </strong></p>
+                        <p>The stablecoin will always be worth the same amount, so you can use it without any fear of losing money. In other words, stablecoins make crypto usable and spendable.</p>
+                        <figure className="wp-block-table is-style-stripes"><table className="has-fixed-layout"><tbody><tr><td></td><td><strong>Traditional Cryptos</strong></td><td><strong>Stablecoins</strong></td></tr><tr><td><strong>Volatility</strong></td><td>Very high</td><td>Low</td></tr><tr><td><strong>Centralization?</strong></td><td>Decentralized</td><td>Centralized</td></tr><tr><td><strong>Use</strong></td><td>Trading, investments, store of value (for cryptos on an uptrend)</td><td>Medium of exchange, store of value (e.g., from trades or bets)</td></tr><tr><td><strong>Popular coins</strong></td><td>BTC, ETH, DOGE</td><td>USDT, DAI, BUSD</td></tr></tbody></table></figure>
+                    </section>
+                    <section id="stablecoin-types" >
+                        <h2> Types of Stablecoins</h2>
+                        <p>Now that we covered stablecoins as a whole, let’s talk about the diffferent <em>types </em>of stablecoins out there:</p>
+                    </section>
+                    <section id="fiat-backed">
+                        <h3 >Fiat-backed </h3>
+                        <img src={EuroBankNotes} className="w-full h-auto" />
+                        <p className="mt-3">Fiat-backed stablecoins are cryptocurrencies that are pegged to the value of a traditional currency, like the US dollar. The fiat currency is essentially collateral for the stablecoin’s promise of stored value.&nbsp;</p>
+                        <p><strong>Stablecoin providers keep fiat reserves to maintain the coin’s stability.</strong> These reserves are private, but they get regular audits to ensure the custodian is keeping their commitment.&nbsp;</p>
+                        <p>Take <a href="https://casinosblockchain.io/tether-casinos/" target="_blank" rel="noreferrer noopener">Tether (USDT) casinos </a>for example. Tether is pegged to the US dollar, meaning that 1 USDT is always worth 1 US dollar. This means you can gamble with Tether without risking your earnings to volatility.  </p>
+                        <p>Tether’s creators also claim there is a 1:1 ratio between USDT and US dollars. For every $1 in existence, they say, there is also 1 USDT.&nbsp;</p>
+                        <p>This has proven to be a <a href="https://www.theverge.com/2021/10/15/22728253/tether-41-million-misleading-statements-fiat-currency-bitfinex-cftc#:~:text=The%20Tether%20controversy%2C%20explained,2016%20order%20from%20the%20CFTC." target="_blank" rel="noreferrer noopener">controversial claim</a>, but the fact remains that USDT has been much more stable than other cryptocurrencies. If you buy $1-worth of Tether today, the price won’t change tomorrow.&nbsp;</p>
+                        <p><strong>Other fiat-backed stablecoins include USD Coin and Gemini dollar.&nbsp;</strong></p>
+                    </section>
+                    <section id="Commodity-backed">
+                        <h3>Commodity-backed</h3>
+                        <img src={GoleImg} className="w-full h-auto" />
+                        <p className="mt-3"><strong>A commodity-backed stablecoin is a digital currency whose value is pegged to that of a physical commodity like oil or gold.</strong>&nbsp;</p>
+                        <p>The idea behind commodity-backed stablecoins is that, as long as there is demand for the physical commodity, the stablecoin will maintain its value. This means you’re exposed to the asset’s value. If you have a gold-backed stablecoin, for example, and the price of gold goes up – so will the price of your coin.&nbsp;</p>
+                        <p><strong>Gold is, in fact, the most common commodity used in stablecoins.</strong></p>
+                        <p><a href="https://casinosblockchain.io/pax-gold-casinos/">PAX Gold (PAXG)</a> is the best-known example. Every token represents one troy ounce of the London Good Delivery gold bar.&nbsp;</p>
+                        <p>PAXG’s backing company, Paxos, is in charge of the reserve, but they get regular audits. So far, PAXG has been one of the more reliable, less controversial stablecoins.</p>
+                    </section>
+                    <section id="Cryptocurrency-backed">
+                        <h3> Cryptocurrency-backed 	</h3>
+                        <img src={BitcoinCash} className="w-full h-auto" />
+                        <p className="mt-3"><strong>Cryptocurrency-backed stablecoins are, as the name suggests, stablecoins that are backed by other cryptocurrencies.</strong></p>
+                        <p>Crypto collaterals mean a stablecoin can be decentralized. This removes the need for a central authority (like Tether) to maintain the coin’s peg. It also appeals to blockchain enthusiasts who distrust central institutions on principle.&nbsp;</p>
+                        <p>The most popular cryptocurrency-backed stablecoin is Dai. Dai is pegged to the value of the US dollar, but it’s not backed by fiat currency. Instead, it’s backed by Ether, the native cryptocurrency of the Ethereum blockchain.&nbsp;</p>
+                        <p>To avoid volatility, crypto-backed stablecoins are often over-collateralized. But, even that didn’t help DAI in March 2020. On the <strong>infamous Black Thursday</strong> two things happened at once:&nbsp;</p>
+                        <ul className="is-style-dotted-list"><li><strong>ETH’s price crashed.</strong></li><li><strong>The Ethereum network was clogged.&nbsp;</strong></li></ul>
+                        <p>This brought about to a <strong>momentary DAI price spike</strong>, which (thanks to <a className="text-blue-500" href="https://medium.com/@whiterabbit_hq/black-thursday-for-makerdao-8-32-million-was-liquidated-for-0-dai-36b83cac56b6" target="_blank" rel="noreferrer noopener">zero bids auctions</a>) led to over $8 million in losses.&nbsp;Thankfully, the DAI company has learnt its lesson and is now <strong>diversifying the collaterals, to include physical assets and fiat currency, too</strong>.</p>
+
+                    </section>
+                    <section id="Algorithmic" >
+                        <h3>Algorithmic </h3>
+                        <img src={Alpridephoto} className="w-full h-auto" />
+                        <p className="mt-3"><strong>Algorithmic stablecoins are cryptocurrencies that are stabilized by a mathematical formula, as opposed to a collateralized asset.&nbsp;</strong></p>
+                        <p>This is a newer technology, and there are currently only a few algorithmic stablecoins in circulation. Rather than actually <em>owning </em>a collateral, algorithmic stablecoin providers peg the price of that reference asset through mathematical calculations.&nbsp;</p>
+                        <p>While some argue non-backed stablecoins are the future, others are<a className="text-blue-600" href="http://www.wakeforestlawreview.com/2021/10/built-to-fail-the-inherent-fragility-of-algorithmic-stablecoins/" target="_blank" rel="noopener"> less enthusiastic</a> about them. So far there are very few algorithmic stablecoin projects anyway – and none of them work in crypto casinos.&nbsp;</p>
+                        <p>We’ll be keeping an eye out for the future, though.</p>
+
+                    </section>
+                    <section id="why-stablecoins">
+                        <h2>Why Gamble with Stablecoins?</h2>
+                        <p><strong>Volatility is a huge issue for the gambling industry.</strong> Trust is essential, but it’s hard to maintain when your currency can swing in value by 20-30-50% in a day.</p>
+                        <p><strong>With traditional cryptos, you’re gambling on two things:&nbsp;</strong></p>
+                        <ul className="pl-4 list-none">
+                            <li>
+                                <Check fontSize="small" color="success" className="mr-2 " />
+                                The game you’re playing
+                            </li>
+                            <li>
+                                <Check fontSize="small" color="success" className="mr-2 " />
+                                The price of the coin
+                            </li>
+                        </ul>
+                        <p>Let’s take two scenarios:&nbsp;</p>
+                        <ul className="is-style-dotted-list"><li><strong>You place a bet of 0.05 BTC.<br /></strong>At the time, 1 BTC is worth $10,000, so you bet $500. You win and double your money – $1000 worth of BTC, or 0.1 BTC. Unfortunately, when you decide to withdraw your earnings, BTC dips to $4,000 (this actually happened in March 2020). So, your 0.1 BTC is now worth just $400.<br />Even though you won the bet, you lost $100!</li><li><strong>You place that same bet of 0.05 BTC, worth $500 at the time. You win and now have 0.1 BTC.</strong><br />The next day BTC soars to $20,000. Now, your 0.1 BTC is worth $2000 – you won $1000 extra from the crypto’s upswing.</li></ul>
+                        <p>As you can see, crypto volatility can go both ways. It could benefit you or harm you, but it’s definitely an added risk.&nbsp;</p>
+                        <p>Stablecoins make crypto gambling much more similar to regular betting. You can trust that the stablecoin will maintain its value, so you can focus on the game itself. This makes it much easier to enjoy a relaxing game of poker or blackjack without worrying about doubling your losses.&nbsp;</p>
+                        <p>What is more, stablecoins make the issue of <a href="https://casinosblockchain.io/crypto-gambling-taxes/" target="_blank" rel="noreferrer noopener">crypto gambling taxes</a> (which is notoriously complex) a little simpler, since documenting the market value is a non-issue. </p>
+
+                    </section>
+                    <section id="best-stablecoin-casinos">
+                        <h2>The Best Stablecoin Casinos</h2>
+                        <p>So where do you go to gamble with stablecoins? Here are our top picks:&nbsp;</p>
+                    </section>
+                    <section id="bcgame-casino">
+                        <h3>  BC.Game Casino 	</h3>
+                        <img src={BcGame} className="w-full h-auto" />
+                        <p className="mt-3">BC.Game is a new online casino that accepts a <strong>range of cryptocurrencies</strong>, including stablecoins. They offer an <strong>excellent selection of games</strong>, including slots, roulette, blackjack, and poker.&nbsp;</p>
+                        <p><strong>BC.Game also has a social aspect </strong>that rewards players with bonuses and free spins for participating in the community.&nbsp;</p>
+                        <p> ?  <strong>What Stablecoins Are Available?&nbsp;</strong></p>
+                        <p>BC.Game Casino has DAI, Tether, Binance USD (BUSD), and USDC. There are 65+ cryptocurrencies in total.</p>
+                        <div className="mt-4">
+                            {dummyInfos.length > 0 &&
+                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                                    if (index === 2) {
+                                        return (
+                                            <SiteRankBlogTable
+                                                key={index}
+                                                siteIndex={index}
+                                                summaryData={summaryInfo}
+                                            />
+                                        )
+                                    }
                                 })
                             }
                         </div>
                     </section>
-                    <section id="How-to-Choose" >
-                        <h2 className="mt-8" >How to Choose the Best Gambler's Wallet?</h2>
-                        <p>
-                            Now that we had a quick look at our favorite BTC wallets for gambling, we can talk about <b>why they made the list</b>. What should you look for when choosing a Bitcoin gambling wallet? How did we make our picks?
-                        </p>
-                        <p className="my-4">Let’s break it down in more detail:</p>
-                        <section id="What is a Bitcoin-Wallet" />
-                        <h3 >What is a Bitcoin Wallet?</h3>
-                        <h4>First things first - what even is a Bitcoin wallet?</h4>
-                        <div className="w-full h-[220px] p-10  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
-                            <p className="uppercase text-xs  md:text-base text-white opacity-50">In the most basic terms</p>
-                            <h2 className="text-white text-lg md:text-2xl">
-                                A Bitcoin wallet is a digital storage space for your Bitcoin
-                            </h2>
+                    <section id="Cloudbet-casino">
+                        <h3>Cloudbet</h3>
+                        <img src={Cloudbet1} className="w-full h-auto" />
+                        <p><a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">Cloudbet </a>is another great choice for crypto gambling. They’re one of the oldest and most well-established cryptocurrency casinos on this list.&nbsp;</p>
+                        <p>The game selection features over 50 providers, a range of live table games, and a comprehensive sportsbook (though if you’re into eSports we recommend <a className="text-blue-600" href="https://casinosblockchain.io/thunderpick-review/" target="_blank" rel="noreferrer noopener">Thunderpick</a> instead). Cloudbet also has over 1000 slots, as well as a provably fair selection of crypto favorites.&nbsp;</p>
+                        <p> ?  <strong>What Stablecoins Are Available?</strong></p>
+                        <div className="mt-4">
+                            {dummyInfos.length > 0 &&
+                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                                    if (index === 3) {
+                                        return (
+                                            <SiteRankBlogTable
+                                                key={index}
+                                                siteIndex={index}
+                                                summaryData={summaryInfo}
+                                            />
+                                        )
+                                    }
+                                })
+                            }
                         </div>
-                        <p className="mt-2">It’s like your bank account, where you can keep, receive, and send your Bitcoin.</p>
-                        <p className="mt-2">But <b>unlike a bank account, a Bitcoin wallet can be decentralized</b> – meaning there is no central authority or middleman controlling your Bitcoin. Even when a central authority (like a Coinbase gambling wallet,) there are fewer restrictions – but also fewer safety measures.</p>
+                    </section>
+                    <section id="get-started">
+                        <h2> How to Get Started With Stablecoin Casinos?</h2>
+                        <p>Playing at stablecoin casinos isn’t that much different than gambling with any other crypto.&nbsp;</p>
+                        <ul className="is-style-dotted-list"><li><strong>First, you want to set up your wallet.</strong><br />We recommend MetaMask, because it’s easy to use and secure. It also allows gambling transactions in the Terms &amp; Conditions.&nbsp;</li><li><strong>Then, head over to a cryptocurrency exchange.</strong><br />We love Binance, because they have a large selection of stablecoins and low fees. If you prefer a more beginner-friendly option, Coinbase also has all major stablecoins.&nbsp;</li><li><strong>Once on the exchange, you want to deposit fiat and buy your stablecoin.</strong><br />If you’re wondering which coin to pick, for the time being, Tether is best. Even with the controversy, it’s still the biggest stablecoin out there.&nbsp;</li><li><strong>Finally, you want to transfer your stablecoin to MetaMask</strong> (don’t keep it on the exchange). From there, make a transaction to your casino of choice.</li></ul>
+                        <p>Wondering which stablecoin casino to pick? Our number one choice remains BC.Game!</p>
+                        <h2>Final Thoughts</h2>
+                        <p>When it comes to gambling, stablecoins offer a few key advantages over other cryptocurrencies:&nbsp;</p>
+                        <ul className="pl-4 list-none">
+                            <li>
+                                <Check fontSize="small" color="success" className="mr-2 " />
+                                They’re <b>less risky</b> because their value doesn’t fluctuate as much as other cryptocurrencies.
+                            </li>
+                            <li>
+                                <Check fontSize="small" color="success" className="mr-2 " />
+                                They’re <b>usable</b> for everyday transactions.
+                            </li>
+                            <li>
+                                <Check fontSize="small" color="success" className="mr-2 " />
+                                They’re <b>perfect for gambling</b>, since you don’t have to worry about price swings.
+                            </li>
+                        </ul>
+                        <p>As crypto grows in popularity, so do stablecoin casinos. Big-name players like Cloudbet and ambitious newcomers like BC.Game alike begin to offer them. If you ask us, BC.Game is currently the best casino for stablecoins (and overall).&nbsp;</p>
+                        <p>Did we get it right? Check it out for yourself and let us know by leaving a <a className="text-blue-600" href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener">review</a>.&nbsp;</p>
+                    </section>
+                    <section id="FAQ">
+                        <h2>Frequently Asked Questions</h2>
+                        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel1bh-content"
+                                id="panel1bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">What Is the Best Stablecoin to Hold?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">Fiat and asset-backed stablecoins are best for holding - for example,
+                                    <a href="https://casinosblockchain.io/tether-casinos/" className="text-blue-600">Tether</a>
+                                    Tether or PAX Gold. But, stablecoins mostly exist for transactions, so they’re not really the best investment.
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel2bh-content"
+                                id="panel2bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">What Is the Safest Stablecoin?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">
+                                    <a href="https://casinosblockchain.io/pax-gold-casinos/" className="text-blue-600">PAX Gold</a>
+                                    is considered one of the safest stablecoins out there. Backed by real gold, it has suffered far less fluctuations and controversies than Tether or other popular options.
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel3bh-content"
+                                id="panel3bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">Is Stablecoin Better Than Bitcoin?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">
+                                    Stablecoins offer their unique set of perks - stability, preserving value, better for transactions. But, if you’re a hardcore decentralization enthusiast, you might see them as a threat to everything crypto represents. Ultimately, both stablecoins and traditional coins have a place in the crypto universe.
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel4bh-content"
+                                id="panel4bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">Is Tether a Gambling Coin?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">Yes,
+                                    <a href="https://casinosblockchain.io/tether-casinos/" className="text-blue-600">Tether</a> is one of the most popular coins for gambling.
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
                     </section>
                 </div>
             </div>
             {/* RightNavBar */}
-            <div className="w-[22%] h-fit xl:block hidden bg-white rounded-md sticky top-5">
+            <div className="w-[22%] h-fit xl:block hidden bg-white shadow-2xl shadow-orange-400 rounded-md sticky top-5">
                 <div className="container text-sm h-fit w-full p-2 ">
                     <ul className="list-none w-full text-[#80869e]">
                         <a href="#in-short" className="in-short hover:text-[#3e47e0] no-underline cursor-pointer">
@@ -274,7 +485,7 @@ const MainContent = () => {
                                 Why Gamble with Stablecoins?
                             </li>
                         </a>
-                        <a href="#best-stablecoin-casino" className="best-stablecoin-casino hover:text-[#3e47e0] no-underline cursor-pointer">
+                        <a href="#best-stablecoin-casinos" className="best-stablecoin-casinos hover:text-[#3e47e0] no-underline cursor-pointer">
                             <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
                                 Best Stablecoin Casinos
                             </li>
