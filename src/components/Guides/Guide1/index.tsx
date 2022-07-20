@@ -3,23 +3,13 @@ import backgroundImg from "../../../Assets/images/Header.svg"
 import giftImg from "../../../Assets/images/gift.png";
 import logoImg from "../../../Assets/images/logos/bc-game.png";
 
-import { ISiteRankBlogCardObj, IReadMoreDataObj } from "../../../Interfaces"
+import { ISiteRankBlogCardObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
 import React, { useEffect } from "react";
-import { Button, Fab } from "@mui/material"
-import { Check, KeyboardArrowRight, NavigateBefore, NavigateNext } from "@mui/icons-material"
+import { Button } from "@mui/material"
+import { Check, KeyboardArrowRight } from "@mui/icons-material"
 
-import ReadMoreCard from "../../Card/ReadMoreCard";
-
-import ReadMoreImg1 from "../../../Assets/images/ReadMore/1.jpg"
-import ReadMoreImg2 from "../../../Assets/images/ReadMore/2.jpg"
-import ReadMoreImg3 from "../../../Assets/images/ReadMore/3.jpg"
-import ReadMoreImg4 from "../../../Assets/images/ReadMore/4.svg"
-import ReadMoreImg5 from "../../../Assets/images/ReadMore/5.jpg"
-import ReadMoreImg6 from "../../../Assets/images/ReadMore/6.jpg"
-import ReadMoreImg7 from "../../../Assets/images/ReadMore/7.jpg"
-import ReadMoreImg8 from "../../../Assets/images/ReadMore/8.jpg"
-import ReadMoreImg9 from "../../../Assets/images/ReadMore/9.jpg"
+import ReadMoreCards from "../../Card/ReadMoreCards";
 
 import OlieMan from "../../../Assets/images/Content/olieman-eth.jpg"
 import BlockstreamGreen from "../../../Assets/images/Content/blockstream-green.png"
@@ -29,16 +19,6 @@ import FirstMobileWallet from "../../../Assets/images/Content/first-mobile-walle
 import BcGame from "../../../Assets/images/Content/bcgame.png"
 import CasinoStake from "../../../Assets/images/Content/casino-stake.png"
 import Cloudbet1 from "../../../Assets/images/Content/Cloudbet1.jpg"
-
-
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper";
-
-import "../css/Guide.css"
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
 
 
 interface IProps {
@@ -72,81 +52,6 @@ const dummyInfos: Array<ISiteRankBlogCardObj> = [
     }
 ];
 
-const ReadMoreData: Array<IReadMoreDataObj> = [
-    {
-        id: 1,
-        image: ReadMoreImg1,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal? Everything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 2,
-        image: ReadMoreImg2,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 3,
-        image: ReadMoreImg3,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 4,
-        image: ReadMoreImg4,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 5,
-        image: ReadMoreImg5,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 6,
-        image: ReadMoreImg6,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 7,
-        image: ReadMoreImg7,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 8,
-        image: ReadMoreImg8,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 9,
-        image: ReadMoreImg9,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    }
-]
-
 const MainContent = () => {
     useEffect(() => {
         const sections = document.querySelectorAll("section");
@@ -177,7 +82,7 @@ const MainContent = () => {
                 </div>
                 <div className="blog pl-24 pt-3 pb-16 w-10/12">
                     <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
-                    <h1>Best Bitcoin Wallet for Online Gambling -2022 Top Picks</h1>
+                    <div className="h1">Best Bitcoin Wallet for Online Gambling -2022 Top Picks</div>
                     <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
                     <p >In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
                     <ul className="pl-8">
@@ -258,7 +163,7 @@ const MainContent = () => {
                         <h3>
                             Types of Bitcoin Wallets
                         </h3>
-                        <img src={OlieMan} className="w-full h-full" />
+                        <img src={OlieMan} className="w-full h-full" alt="olieman" />
                         <p >Here are the four main types of Bitcoin wallets:</p>
                         <p ><b>Desktop Wallets</b></p>
                         <p >Desktop wallets live (you guessed it) on your desktop computer. </p>
@@ -399,7 +304,7 @@ const MainContent = () => {
                     <section id='best-btc-wallets'>
                         <h2> What Is the Best Bitcoin Wallet for Online Gambling?</h2>
                         <p>You already know our top picks (we started with them, after all). But we haven’t broken them down one by one just yet. Now, lets recap the<strong> best Bitcoin wallet for online gambling in 2022</strong> and take a deeper dive into each of them: </p>
-                        <figure className="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>Best Overall</strong></td><td><a href="https://blockstream.com/" target="_blank" rel="noopener" className="text-[#007bff]">Blockstream</a></td></tr><tr><td><strong>Best for Beginners</strong></td><td><a href="https://blockstream.com/" target="_blank" rel="noopener" className="text-[#007bff]">Blockstream</a></td></tr><tr><td><strong>Best for Privacy</strong></td><td><a href="https://electrum.org/#home" target="_blank" rel="noopener" className="text-[#007bff]">Electrum</a></td></tr><tr><td><strong>Best for Mobile</strong></td><td><a href="https://brd.com/" target="_blank" rel="noopener" className="text-[#007bff]">BRD</a></td></tr></tbody></table></figure>
+                        <figure className="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>Best Overall</strong></td><td><a href="https://blockstream.com/" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">Blockstream</a></td></tr><tr><td><strong>Best for Beginners</strong></td><td><a href="https://blockstream.com/" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">Blockstream</a></td></tr><tr><td><strong>Best for Privacy</strong></td><td><a href="https://electrum.org/#home" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">Electrum</a></td></tr><tr><td><strong>Best for Mobile</strong></td><td><a href="https://brd.com/" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">BRD</a></td></tr></tbody></table></figure>
                         <h3>Where to Use Your Wallet?</h3>
                         <p>Psst! Wondering where to use your BTC? Here are our favorite Bitcoin-friendly casinos – juicy bonuses and thousands of fun games ahead: </p>
                         <div className="mt-4">
@@ -416,7 +321,7 @@ const MainContent = () => {
                             }
                         </div>
                         <h3 className="mt-8">Best Overall: Blockstream</h3>
-                        <img src={BlockstreamGreen} className="w-full h-auto" />
+                        <img src={BlockstreamGreen} className="w-full h-auto" alt="BlockstreamGreen" />
                         <p className="mt-5"><strong>Blockstream is our # 1 pick for a gambling-friendly wallet.</strong></p>
                         <p>It’s a user-friendly app available for all <strong>major desktop and mobile OS</strong>. With simple wallet creation and a smooth transaction process, it’s perfect even for BTC newbies. </p>
                         <p>Plus, the app has been translated to <strong>11 different languages</strong>!</p>
@@ -426,7 +331,7 @@ const MainContent = () => {
                     </section>
                     <section id="Best-for-Beginners">
                         <h3>Best for Beginners: Blockstream	</h3>
-                        <img src={BlockstreamNewWallet} className="w-full h-auto" />
+                        <img src={BlockstreamNewWallet} className="w-full h-auto" alt="BlockstreamNewWallet" />
                         <p className="mt-2 text-sm">Creating a wallet with Blockstream is very simple</p>
                         <p>Not only is Blockstream our favorite BTC wallet overall, it’s also our best choice for newbies.</p>
                         <p>The app strikes the perfect balance between being <strong>straightforward and feature-rich</strong>, while also providing top-notch security. And, the support for both <strong>Android and iOS devices </strong>makes it widely accessible.</p>
@@ -446,13 +351,14 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
                     </section>
                     <section id="best-for-privacy">
                         <h3>Best for Privacy: Electrum	</h3>
-                        <img src={EtherDefaultWallet} className="w-full h-auto" />
+                        <img src={EtherDefaultWallet} className="w-full h-auto" alt="EtherDefaultWallet" />
                         <p className="mt-2 text-sm">The Electrum wallet has a very bare-bones design, but it’s extremely secure.</p>
                         <p>Worried about security? You’re not alone. Electrum can give you some extra peace of mind.</p>
                         <p>So why is this our favorite safe wallet?</p>
@@ -464,7 +370,7 @@ const MainContent = () => {
                     </section>
                     <section id="best-for-mobile">
                         <h3>Best for Mobile: BRD</h3>
-                        <img src={FirstMobileWallet} className="w-full h-auto" />
+                        <img src={FirstMobileWallet} className="w-full h-auto" alt="FirstMobileWallet" />
                         <p className="mt-2 text-sm">BRD is the most comprehensive mobile wallet we’ve seen – and that’s saying something!</p>
                         <p>All the wallets we mentioned so far have a mobile version. So why did we pick BRD as our top mobile-friendly Bitcoin wallet?</p>
                         <p>Well, the answer is simple: no other option supports the same functionality.</p>
@@ -483,6 +389,7 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
@@ -510,7 +417,7 @@ const MainContent = () => {
                                 })
                             }
                         </div>
-                        <h3>Step 1: Choose and Set Up a Wallet</h3>
+                        <div className="mt-3 h3">Step 1: Choose and Set Up a Wallet</div>
                         <p>Looking for <strong>more control over your crypto</strong>? Getting a Bitcoin wallet is the way to go.</p>
                         <p>Your first step would be <strong>picking the right one</strong>. We already covered our top choices – and the setup process is similar for all of them.</p>
                         <ul className="is-style-dotted-list"><li><strong>You start out by downloading the program and installing it on your computer or mobile. </strong>Then, you want to create a new wallet. </li><li><strong>When making a new wallet, you’ll be assigned a private key</strong> – a unique string of numbers and letters that you use to access your wallet.<br />These keys are usually long and complex to remember. That’s why most programs also use seed phrases. Seeds are usually random words that you can use to access your wallet in case you lose your private key.</li><li><strong>Write down the seed phrase </strong>in multiple locations. This is the only way to recover your crypto if your device has any problem.</li><li><strong>Next, you will be asked to setup authentication methods. <br /></strong>These could include a PIN code, Two-Factor Authentication (2FA), or biometrics. These are used for extra security and are highly recommended.</li></ul>
@@ -545,7 +452,7 @@ const MainContent = () => {
                         <h2 >Where to Use Your Bitcoin Wallet	</h2>
                         <p>So where do we spend out Bitcoin? Here are our top three picks for BTC casinos – and why we love them:</p>
                         <h3>BC.Game</h3>
-                        <img src={BcGame} className="w-full h-auto" />
+                        <img src={BcGame} className="w-full h-auto" alt="BcGame" />
                         <p className="mt-3"><a href="https://casinosblockchain.io/bc-game-review/" target="_blank" className="text-[#3e47e0]" rel="noreferrer noopener">BC.Game</a> is a fresh new casino with a <strong>huge selection of games and thrilling daily promotions</strong>.</p>
                         <p >Their library includes slots, card games, dice, and more. They also support live dealers and have a pretty <strong>significant social aspect</strong>. Use the players’ chat to connect with other gamblers, share tips, and brag about your wins.</p>
                         <p>The casino also has a <strong>loyalty program that gives back</strong> to regular players. The more you play, the higher up you go in the VIP ladder. You get better promos and more bonuses the higher you go.</p>
@@ -561,12 +468,13 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
                         <h3>Stake</h3>
                         <a href="https://stake.com/registration" target-="_blank" rel="noreferrer">
-                            <img src={CasinoStake} className="w-full h-auto" />
+                            <img src={CasinoStake} className="w-full h-auto" alt="CasinoStake" />
                         </a>
                         <p className="mt-3">Drake loves <a href="https://casinosblockchain.io/stake-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/stake-bitcoin-casino-review/" rel="noreferrer noopener">Stake </a>and we love Stake!</p>
                         <p>Stake casino is currently <strong>one of the biggest crypto gambling sites</strong> – and for a good reason. They boast over 3000 games and a sleek website that’s super easy to navigate. </p>
@@ -584,12 +492,13 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
                         <h3>Cloudbet</h3>
                         <a href="https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd" target-="_blank" rel="noreferrer">
-                            <img src={Cloudbet1} className="w-full h-auto" />
+                            <img src={Cloudbet1} className="w-full h-auto" alt="Cloudbet1" />
                         </a>
                         <p className="mt-3">Finally, our third choice is <a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet</a>. They are one of the <strong>oldest crypto gambling sites</strong> and have a very solid reputation in the community.</p>
                         <p>But don’t let age fool you – the selection of <strong>games, bonuses, and promotions </strong>is just as impressive. Much like Stake, Cloudbet also has a <strong>sports betting product</strong>. So if you like to mix things up, they are a great choice.</p>
@@ -605,6 +514,7 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
@@ -685,90 +595,44 @@ const NavBarMiniTable = (props: IProps) => {
     const summaryData = props.summaryData;
     return (
         <React.Fragment>
-            <a href={summaryData.link} target="_blank" rel="noreferrer">
-                <div className="flex flex-row justify-between border border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
-                    <div className="w-full flex flex-row justify-start gap-x-4" >
-                        <div className="flex w-16 items-center justify-center">
-                            <img className=" rounded-full" src={logoImg} alt="MainPageImg" />
-                        </div>
-                        <div className="flex flex-col justify-center gap-y-0.5 w-full">
-                            <span className="text-base font-bold">{summaryData.name}</span>
-                            <div className='flex'>
-                                {summaryData.bonus &&
-                                    <Button
-                                        className="w-20 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
-                                        endIcon={<KeyboardArrowRight className="text-black text-xs rounded-full bg-orange-400" />}
-                                    >
-                                        <img className="h-3" src={giftImg} alt="MainPageImg" />
-                                        <span className="text-[10px] text-black">{summaryData.bonus}</span>
-                                    </Button>
-                                }
-                            </div>
-
-                        </div>
+            <div className="flex flex-row justify-between border border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
+                <div className="w-full flex flex-row justify-start gap-x-4" >
+                    <div className="flex w-16 items-center justify-center">
+                        <img className=" rounded-full" src={logoImg} alt="MainPageImg" />
                     </div>
-
-                    <div className="w-48 flex items-center justify-center">
-                        <div className='block'>
-                            <Button
-                                className="text-white text-[10px] h-8"
-                                variant="contained"
-                                size='small'
-                                color="primary"
-                                href="/"
-                                target="_BLANK"
-                            >
-                                Play
-                            </Button>
+                    <div className="flex flex-col justify-center gap-y-0.5 w-full">
+                        <span className="text-base font-bold">{summaryData.name}</span>
+                        <div className='flex'>
+                            {summaryData.bonus &&
+                                <Button
+                                    className="w-20 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
+                                    endIcon={<KeyboardArrowRight className="text-black text-xs rounded-full bg-orange-400" />}
+                                >
+                                    <img className="h-3" src={giftImg} alt="MainPageImg" />
+                                    <span className="text-[10px] text-black">{summaryData.bonus}</span>
+                                </Button>
+                            }
                         </div>
+
                     </div>
                 </div>
-            </a>
+
+                <div className="w-48 flex items-center justify-center">
+                    <div className='block'>
+                        <Button
+                            className="text-white text-[10px] h-8"
+                            variant="contained"
+                            size='small'
+                            color="primary"
+                            href={summaryData.link}
+                            target="_BLANK"
+                        >
+                            Play
+                        </Button>
+                    </div>
+                </div>
+            </div>
         </React.Fragment>
-    )
-}
-
-const ReadMoreCards = () => {
-    return (
-        <div className="w-full flex justify-center ">
-            <Swiper
-                slidesPerView={1}
-                spaceBetween={10}
-                navigation={{
-                    prevEl: '.Swiper-prev',
-                    nextEl: '.Swiper-next'
-                }}
-                breakpoints={{
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                }}
-                modules={[Navigation]}
-            >
-                {
-                    ReadMoreData.map(((item: IReadMoreDataObj, index: number) => (
-                        <SwiperSlide key={index}>
-                            <ReadMoreCard item={item} index={index} />
-                        </SwiperSlide>
-                    )))
-                }
-                <div className="Swiper-prev">
-                    <Fab className="bg-[#272822] text-white" aria-label="prev" color="default" size="small">
-                        <NavigateBefore />
-                    </Fab>
-                </div>
-                <div className="Swiper-next">
-                    <Fab className="bg-[#272822] text-white" aria-label="next" color="default" size="small">
-                        <NavigateNext />
-                    </Fab>
-                </div>
-            </Swiper>
-        </div >
     )
 }
 
@@ -780,7 +644,7 @@ const MainPage1 = () => {
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
                 <div className="p-10 w-full flex flex-col justify-center">
-                    <h1>Latest News</h1>
+                    <div className="h1">Latest News</div>
                     <ReadMoreCards />
                 </div>
             </div>

@@ -161,7 +161,7 @@ const Topbar = () => {
                         </Button>
                         {(openBonusMenu || overBonusMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded"
+                                className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded z-10"
                                 onMouseEnter={() => { setOverBonusMenu(true) }}
                                 onMouseLeave={() => { setOverBonusMenu(false) }}
                             >
@@ -185,7 +185,7 @@ const Topbar = () => {
                         </Button>
                         {(openCryptoCurrencyMenu || overCryptoCurrencyMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-32 right-2.5 bg-neutral-800 py-2 rounded"
+                                className="absolute flex flex-col gap-y-2 w-32 right-2.5 bg-neutral-800 py-2 rounded z-10"
                                 onMouseEnter={() => { setOverCryptoCurrencyMenu(true) }}
                                 onMouseLeave={() => { setOverCryptoCurrencyMenu(false) }}
                             >
@@ -227,32 +227,32 @@ const Topbar = () => {
                         </Button>
                         {(openGameMenu || overGameMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded"
+                                className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded z-10"
                                 onMouseEnter={() => { setOverGameMenu(true) }}
                                 onMouseLeave={() => { setOverGameMenu(false) }}
                             >
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/crash-crypto-game' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Crash
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/bitcoin-jackpot' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Jackpots
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/slots-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Slots
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/roulette-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Roulette
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/blackjack-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Blackjack
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/dice-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Dice
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/plinko-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Plinko
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/bitcoin-poker-sites' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Poker
                                 </Link>
                             </div>
@@ -293,13 +293,6 @@ const Topbar = () => {
                                 </Link>
                             </div>
                         }
-                    </div>
-                    <div className="relative">
-                        <Button
-                            className="text-white hover:text-amber-500"
-                        >
-                            {t("title12")}
-                        </Button>
                     </div>
                     <div className="relative">
                         <Button

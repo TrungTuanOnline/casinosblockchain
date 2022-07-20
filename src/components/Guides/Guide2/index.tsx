@@ -1,21 +1,13 @@
 import backgroundImg from "../../../Assets/images/Header.svg"
 
-import { ISiteRankBlogCardObj, IReadMoreDataObj } from "../../../Interfaces"
+import { ISiteRankBlogCardObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
-import { Fab } from "@mui/material"
-import { Check, NavigateBefore, NavigateNext } from "@mui/icons-material"
+import { Check } from "@mui/icons-material"
 
-import ReadMoreCard from "../../Card/ReadMoreCard";
+import ReadMoreCards from "../../Card/ReadMoreCards";
 
-import ReadMoreImg1 from "../../../Assets/images/ReadMore/1.jpg"
-import ReadMoreImg2 from "../../../Assets/images/ReadMore/2.jpg"
-import ReadMoreImg3 from "../../../Assets/images/ReadMore/3.jpg"
-import ReadMoreImg4 from "../../../Assets/images/ReadMore/4.svg"
-import ReadMoreImg5 from "../../../Assets/images/ReadMore/5.jpg"
-import ReadMoreImg6 from "../../../Assets/images/ReadMore/6.jpg"
-import ReadMoreImg7 from "../../../Assets/images/ReadMore/7.jpg"
+
 import ReadMoreImg8 from "../../../Assets/images/ReadMore/8.jpg"
-import ReadMoreImg9 from "../../../Assets/images/ReadMore/9.jpg"
 
 import EuroBankNotes from "../../../Assets/images/Content/euro-bank-notes.jpg"
 import GoleImg from "../../../Assets/images/Content/gold.jpg"
@@ -25,12 +17,7 @@ import BcGame from "../../../Assets/images/Content/bcgame.png"
 import Cloudbet1 from "../../../Assets/images/Content/Cloudbet1.jpg"
 
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper";
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { useEffect, useState } from "react";
 
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
@@ -59,81 +46,6 @@ const dummyInfos: Array<ISiteRankBlogCardObj> = [
         features: ["Great Rewards", "Nice Payment Limits", "test4"]
     }
 ];
-
-const ReadMoreData: Array<IReadMoreDataObj> = [
-    {
-        id: 1,
-        image: ReadMoreImg1,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?Everythi \r\n ng You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 2,
-        image: ReadMoreImg2,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 3,
-        image: ReadMoreImg3,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 4,
-        image: ReadMoreImg4,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 5,
-        image: ReadMoreImg5,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 6,
-        image: ReadMoreImg6,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 7,
-        image: ReadMoreImg7,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal? Everything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 8,
-        image: ReadMoreImg8,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    },
-    {
-        id: 9,
-        image: ReadMoreImg9,
-        date: "July 18, 2022",
-        title: "Is Crypto Gambling Legal?\nEverything You Need to Know in the US, Canada, UK, and Beyond",
-        content: "Crypto gambling is a new and exciting way to bet in 2022. However, there are no specific...",
-        link: "/is-crypto-gambling-legal"
-    }
-]
 
 const MainContent = () => {
     const [expanded, setExpanded] = useState<string | false>(false);
@@ -175,7 +87,7 @@ const MainContent = () => {
                         Updated:&nbsp;
                         <span>July 8, 2022</span>
                     </p>
-                    <h1>Stablecoin Casinos: The Full Guide to Gambling with Tether, USDC, and More</h1>
+                    <div className="h1">Stablecoin Casinos: The Full Guide to Gambling with Tether, USDC, and More</div>
                     <p>The world of crypto is extremely new – even Bitcoin hasn’t been around for that long. And, while blockchain-based currencies offer exciting new opportunities for finance, they also have one major problem:&nbsp;</p>
                     <p><strong>Volatility.&nbsp;</strong></p>
                     <p>Stablecoins are here to change this. </p>
@@ -218,6 +130,7 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
@@ -247,7 +160,7 @@ const MainContent = () => {
                     </section>
                     <section id="fiat-backed">
                         <h3 >Fiat-backed </h3>
-                        <img src={EuroBankNotes} className="w-full h-auto" />
+                        <img src={EuroBankNotes} className="w-full h-auto" alt="EuroBankNotes" />
                         <p className="mt-3">Fiat-backed stablecoins are cryptocurrencies that are pegged to the value of a traditional currency, like the US dollar. The fiat currency is essentially collateral for the stablecoin’s promise of stored value.&nbsp;</p>
                         <p><strong>Stablecoin providers keep fiat reserves to maintain the coin’s stability.</strong> These reserves are private, but they get regular audits to ensure the custodian is keeping their commitment.&nbsp;</p>
                         <p>Take <a href="https://casinosblockchain.io/tether-casinos/" target="_blank" rel="noreferrer noopener">Tether (USDT) casinos </a>for example. Tether is pegged to the US dollar, meaning that 1 USDT is always worth 1 US dollar. This means you can gamble with Tether without risking your earnings to volatility.  </p>
@@ -257,7 +170,7 @@ const MainContent = () => {
                     </section>
                     <section id="Commodity-backed">
                         <h3>Commodity-backed</h3>
-                        <img src={GoleImg} className="w-full h-auto" />
+                        <img src={GoleImg} className="w-full h-auto" alt="GoleImg" />
                         <p className="mt-3"><strong>A commodity-backed stablecoin is a digital currency whose value is pegged to that of a physical commodity like oil or gold.</strong>&nbsp;</p>
                         <p>The idea behind commodity-backed stablecoins is that, as long as there is demand for the physical commodity, the stablecoin will maintain its value. This means you’re exposed to the asset’s value. If you have a gold-backed stablecoin, for example, and the price of gold goes up – so will the price of your coin.&nbsp;</p>
                         <p><strong>Gold is, in fact, the most common commodity used in stablecoins.</strong></p>
@@ -266,7 +179,7 @@ const MainContent = () => {
                     </section>
                     <section id="Cryptocurrency-backed">
                         <h3> Cryptocurrency-backed 	</h3>
-                        <img src={BitcoinCash} className="w-full h-auto" />
+                        <img src={BitcoinCash} className="w-full h-auto" alt="BitcoinCash" />
                         <p className="mt-3"><strong>Cryptocurrency-backed stablecoins are, as the name suggests, stablecoins that are backed by other cryptocurrencies.</strong></p>
                         <p>Crypto collaterals mean a stablecoin can be decentralized. This removes the need for a central authority (like Tether) to maintain the coin’s peg. It also appeals to blockchain enthusiasts who distrust central institutions on principle.&nbsp;</p>
                         <p>The most popular cryptocurrency-backed stablecoin is Dai. Dai is pegged to the value of the US dollar, but it’s not backed by fiat currency. Instead, it’s backed by Ether, the native cryptocurrency of the Ethereum blockchain.&nbsp;</p>
@@ -277,10 +190,10 @@ const MainContent = () => {
                     </section>
                     <section id="Algorithmic" >
                         <h3>Algorithmic </h3>
-                        <img src={Alpridephoto} className="w-full h-auto" />
+                        <img src={Alpridephoto} className="w-full h-auto" alt="Alpridephoto" />
                         <p className="mt-3"><strong>Algorithmic stablecoins are cryptocurrencies that are stabilized by a mathematical formula, as opposed to a collateralized asset.&nbsp;</strong></p>
                         <p>This is a newer technology, and there are currently only a few algorithmic stablecoins in circulation. Rather than actually <em>owning </em>a collateral, algorithmic stablecoin providers peg the price of that reference asset through mathematical calculations.&nbsp;</p>
-                        <p>While some argue non-backed stablecoins are the future, others are<a className="text-blue-600" href="http://www.wakeforestlawreview.com/2021/10/built-to-fail-the-inherent-fragility-of-algorithmic-stablecoins/" target="_blank" rel="noopener"> less enthusiastic</a> about them. So far there are very few algorithmic stablecoin projects anyway – and none of them work in crypto casinos.&nbsp;</p>
+                        <p>While some argue non-backed stablecoins are the future, others are<a className="text-blue-600" href="http://www.wakeforestlawreview.com/2021/10/built-to-fail-the-inherent-fragility-of-algorithmic-stablecoins/" target="_blank" rel="noopener noreferrer"> less enthusiastic</a> about them. So far there are very few algorithmic stablecoin projects anyway – and none of them work in crypto casinos.&nbsp;</p>
                         <p>We’ll be keeping an eye out for the future, though.</p>
 
                     </section>
@@ -311,7 +224,7 @@ const MainContent = () => {
                     </section>
                     <section id="bcgame-casino">
                         <h3>  BC.Game Casino 	</h3>
-                        <img src={BcGame} className="w-full h-auto" />
+                        <img src={BcGame} className="w-full h-auto" alt="BcGame" />
                         <p className="mt-3">BC.Game is a new online casino that accepts a <strong>range of cryptocurrencies</strong>, including stablecoins. They offer an <strong>excellent selection of games</strong>, including slots, roulette, blackjack, and poker.&nbsp;</p>
                         <p><strong>BC.Game also has a social aspect </strong>that rewards players with bonuses and free spins for participating in the community.&nbsp;</p>
                         <p> ?  <strong>What Stablecoins Are Available?&nbsp;</strong></p>
@@ -328,13 +241,14 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
                     </section>
                     <section id="Cloudbet-casino">
                         <h3>Cloudbet</h3>
-                        <img src={Cloudbet1} className="w-full h-auto" />
+                        <img src={Cloudbet1} className="w-full h-auto" alt="Cloudbet1" />
                         <p><a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">Cloudbet </a>is another great choice for crypto gambling. They’re one of the oldest and most well-established cryptocurrency casinos on this list.&nbsp;</p>
                         <p>The game selection features over 50 providers, a range of live table games, and a comprehensive sportsbook (though if you’re into eSports we recommend <a className="text-blue-600" href="https://casinosblockchain.io/thunderpick-review/" target="_blank" rel="noreferrer noopener">Thunderpick</a> instead). Cloudbet also has over 1000 slots, as well as a provably fair selection of crypto favorites.&nbsp;</p>
                         <p> ?  <strong>What Stablecoins Are Available?</strong></p>
@@ -350,6 +264,7 @@ const MainContent = () => {
                                             />
                                         )
                                     }
+                                    return ""
                                 })
                             }
                         </div>
@@ -522,51 +437,6 @@ const MainContent = () => {
     )
 }
 
-const ReadMoreCards = () => {
-    return (
-        <div className="w-full flex justify-center ">
-            <Swiper
-                slidesPerView={1}
-                spaceBetween={10}
-                navigation={{
-                    prevEl: '.Swiper-prev',
-                    nextEl: '.Swiper-next'
-                }}
-                breakpoints={{
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                }}
-                modules={[Navigation]}
-            >
-                {
-                    ReadMoreData.map(((item: IReadMoreDataObj, index: number) => (
-                        <SwiperSlide key={index}>
-                            <ReadMoreCard item={item} index={index} />
-                        </SwiperSlide>
-                    )))
-                }
-                <div className="Swiper-prev">
-                    <Fab className="bg-[#272822] text-white" aria-label="prev" color="default" size="small">
-                        <NavigateBefore />
-                    </Fab>
-                </div>
-                <div className="Swiper-next">
-                    <Fab className="bg-[#272822] text-white" aria-label="next" color="default" size="small">
-                        <NavigateNext />
-                    </Fab>
-                </div>
-            </Swiper>
-        </div >
-    )
-}
-
-
 const MainPage = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
@@ -575,7 +445,7 @@ const MainPage = () => {
                 <MainContent />
 
                 <div className="p-10 w-full flex flex-col justify-center">
-                    <h1>Latest News</h1>
+                    <div className="h1">Latest News</div>
                     <ReadMoreCards />
                 </div>
             </div>
