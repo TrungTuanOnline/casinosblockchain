@@ -1,4 +1,5 @@
 import ReadMoreCards from "../../components/Card/ReadMoreCards";
+import Footer from "../../components/Common/Footer";
 import Topbar from "../../components/Common/Topbar";
 import Header from "../../components/Games/Blackjack/Header";
 import Content from "../../components/Games/Crash/Content";
@@ -15,6 +16,7 @@ const Blackjack = () => {
                 <div className="h2">Latest News</div>
                 <ReadMoreCards />
             </div>
+            <Footer />
         </div>
     )
 }

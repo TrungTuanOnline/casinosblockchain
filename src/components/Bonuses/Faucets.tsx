@@ -82,7 +82,7 @@ const MainContent = () => {
                 </div>
                 <div className="blog pl-24 pt-3 pb-16 w-10/12">
                     <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
-                    <div className="h1">Best Bitcoin</div>
+                    <div className="h1">A Beginner's Guide to Bitcoin Free Spins</div>
                     <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
                     <p >In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
                     <ul className="pl-8">

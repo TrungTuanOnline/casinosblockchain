@@ -1,3 +1,4 @@
+import Footer from "../../components/Common/Footer"
 import Topbar from "../../components/Common/Topbar"
 import Header from "../../components/Cryptocurrencies/Ripple/Header"
 import Content from "../../components/Games/Crash/Content"
@@ -11,6 +12,7 @@ const Ripple = () => {
             <Header />
             <SiteInfos />
             <Content />
+            <Footer />
         </div>
     )
 }
