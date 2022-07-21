@@ -93,9 +93,9 @@ const MainContent = () => {
                     <p>Stablecoins are here to change this. </p>
                     <p>They are cryptocurrencies that are built to address volatility by pegging their value to another asset, like the US dollar. This makes them much more usable for everyday transactions.</p>
                     <div className="w-full h-[220px] p-10 flex justify-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
-                        <h2 className="text-white text-lg md:text-2xl">
+                        <div className="h2 text-white text-lg md:text-2xl">
                             Wherever you spend crypto, stablecoins can help you avoid price swings.
-                        </h2>
+                        </div>
                     </div>
                     <p>Because stablecoins stay around the same value, you can use them to make bets without losing money to volatility. This makes them perfect for the gambling industry, which needs to be able to trust its currency.</p>
                     <p><strong>But which stablecoin to pick – and how do you choose a stablecoin casino to play in?</strong>&nbsp; </p>
@@ -114,7 +114,7 @@ const MainContent = () => {
                         }
                     </div>
                     <section id="in-short">
-                        <h2>Stablecoins and Gambling: In Short	</h2>
+                        <div className="h2">Stablecoins and Gambling: In Short	</div>
                         <p>Playing with stablecoins removes volatility from crypto casinos. There are three main reasons to pick USDT or DAI over traditional cryptos:</p>
                         <ul className="is-style-dotted-list"><li><strong>Stability</strong> – as the name suggests, stablecoins are more ‘solid’, a haven from the sharp swings of other cryptos.</li><li><strong>Reduce risk</strong> – with stablecoins, you’re no longer gambling on the bet AND the price of your crypto. You can (theoretically) reduce losses – but also wins. </li><li><strong>Enjoy crypto casino perks</strong> – stablecoins are still cryptocurrencies, so you can enjoy all the perks of gambling with crypto like lower <a href="https://casinosblockchain.io/house-edge-casinos/" target="_blank" rel="noreferrer noopener">house edges</a>.</li></ul>
                         <p>Our <strong>number one stablecoin casino</strong> is <a href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener">BC.Game</a> for the awesome game selection, social experience, and the range of cryptos they accept.</p>
@@ -137,15 +137,15 @@ const MainContent = () => {
                         <p><br />Curious to learn more? Read on…</p>
                     </section>
                     <section id="what-are-stablecoins">
-                        <h2 >What Are Stablecoins?</h2>
+                        <div className="h2" >What Are Stablecoins?</div>
                         <p>Stablecoins are cryptocurrencies that are attached to a stable asset, usually a fiat currency.</p>
                         <p>When you sell a volatile cryptocurrency for a stablecoin, you know that the stablecoin will maintain its value. You can then keep the stablecoin on the exchange as you prepare for your next trade.</p>
                         <p >But, stablecoins are useful beyond trading, too.</p>
                         <div className="w-full h-[220px] p-10 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
-                            <p className="text-white text-sm">Stablecoin advantages</p>
-                            <h2 className="text-white text-lg md:text-2xl">
+                            <p className="h2 text-white text-sm">Stablecoin advantages</p>
+                            <div className="text-white text-lg md:text-2xl">
                                 The main perk of stablecoins is they help with everyday transactions.
-                            </h2>
+                            </div>
 
                         </div>
                         <p className="mt-3"><strong>Imagine you wanted to place a $10 bet. </strong></p>
@@ -155,11 +155,11 @@ const MainContent = () => {
                         <figure className="wp-block-table is-style-stripes"><table className="has-fixed-layout"><tbody><tr><td></td><td><strong>Traditional Cryptos</strong></td><td><strong>Stablecoins</strong></td></tr><tr><td><strong>Volatility</strong></td><td>Very high</td><td>Low</td></tr><tr><td><strong>Centralization?</strong></td><td>Decentralized</td><td>Centralized</td></tr><tr><td><strong>Use</strong></td><td>Trading, investments, store of value (for cryptos on an uptrend)</td><td>Medium of exchange, store of value (e.g., from trades or bets)</td></tr><tr><td><strong>Popular coins</strong></td><td>BTC, ETH, DOGE</td><td>USDT, DAI, BUSD</td></tr></tbody></table></figure>
                     </section>
                     <section id="stablecoin-types" >
-                        <h2> Types of Stablecoins</h2>
+                        <div className="h2"> Types of Stablecoins</div>
                         <p>Now that we covered stablecoins as a whole, let’s talk about the diffferent <em>types </em>of stablecoins out there:</p>
                     </section>
                     <section id="fiat-backed">
-                        <h3 >Fiat-backed </h3>
+                        <div className="h3" >Fiat-backed </div>
                         <img src={EuroBankNotes} className="w-full h-auto" alt="EuroBankNotes" />
                         <p className="mt-3">Fiat-backed stablecoins are cryptocurrencies that are pegged to the value of a traditional currency, like the US dollar. The fiat currency is essentially collateral for the stablecoin’s promise of stored value.&nbsp;</p>
                         <p><strong>Stablecoin providers keep fiat reserves to maintain the coin’s stability.</strong> These reserves are private, but they get regular audits to ensure the custodian is keeping their commitment.&nbsp;</p>
@@ -169,7 +169,7 @@ const MainContent = () => {
                         <p><strong>Other fiat-backed stablecoins include USD Coin and Gemini dollar.&nbsp;</strong></p>
                     </section>
                     <section id="Commodity-backed">
-                        <h3>Commodity-backed</h3>
+                        <div className="h3">Commodity-backed</div>
                         <img src={GoleImg} className="w-full h-auto" alt="GoleImg" />
                         <p className="mt-3"><strong>A commodity-backed stablecoin is a digital currency whose value is pegged to that of a physical commodity like oil or gold.</strong>&nbsp;</p>
                         <p>The idea behind commodity-backed stablecoins is that, as long as there is demand for the physical commodity, the stablecoin will maintain its value. This means you’re exposed to the asset’s value. If you have a gold-backed stablecoin, for example, and the price of gold goes up – so will the price of your coin.&nbsp;</p>
@@ -178,7 +178,7 @@ const MainContent = () => {
                         <p>PAXG’s backing company, Paxos, is in charge of the reserve, but they get regular audits. So far, PAXG has been one of the more reliable, less controversial stablecoins.</p>
                     </section>
                     <section id="Cryptocurrency-backed">
-                        <h3> Cryptocurrency-backed 	</h3>
+                        <div className="h3"> Cryptocurrency-backed 	</div>
                         <img src={BitcoinCash} className="w-full h-auto" alt="BitcoinCash" />
                         <p className="mt-3"><strong>Cryptocurrency-backed stablecoins are, as the name suggests, stablecoins that are backed by other cryptocurrencies.</strong></p>
                         <p>Crypto collaterals mean a stablecoin can be decentralized. This removes the need for a central authority (like Tether) to maintain the coin’s peg. It also appeals to blockchain enthusiasts who distrust central institutions on principle.&nbsp;</p>
@@ -189,7 +189,7 @@ const MainContent = () => {
 
                     </section>
                     <section id="Algorithmic" >
-                        <h3>Algorithmic </h3>
+                        <div className="h3">Algorithmic </div>
                         <img src={Alpridephoto} className="w-full h-auto" alt="Alpridephoto" />
                         <p className="mt-3"><strong>Algorithmic stablecoins are cryptocurrencies that are stabilized by a mathematical formula, as opposed to a collateralized asset.&nbsp;</strong></p>
                         <p>This is a newer technology, and there are currently only a few algorithmic stablecoins in circulation. Rather than actually <em>owning </em>a collateral, algorithmic stablecoin providers peg the price of that reference asset through mathematical calculations.&nbsp;</p>
@@ -198,7 +198,7 @@ const MainContent = () => {
 
                     </section>
                     <section id="why-stablecoins">
-                        <h2>Why Gamble with Stablecoins?</h2>
+                        <div className="h2">Why Gamble with Stablecoins?</div>
                         <p><strong>Volatility is a huge issue for the gambling industry.</strong> Trust is essential, but it’s hard to maintain when your currency can swing in value by 20-30-50% in a day.</p>
                         <p><strong>With traditional cryptos, you’re gambling on two things:&nbsp;</strong></p>
                         <ul className="pl-4 list-none">
@@ -219,11 +219,11 @@ const MainContent = () => {
 
                     </section>
                     <section id="best-stablecoin-casinos">
-                        <h2>The Best Stablecoin Casinos</h2>
+                        <div className="h2">The Best Stablecoin Casinos</div>
                         <p>So where do you go to gamble with stablecoins? Here are our top picks:&nbsp;</p>
                     </section>
                     <section id="bcgame-casino">
-                        <h3>  BC.Game Casino 	</h3>
+                        <div className="h3">  BC.Game Casino 	</div>
                         <img src={BcGame} className="w-full h-auto" alt="BcGame" />
                         <p className="mt-3">BC.Game is a new online casino that accepts a <strong>range of cryptocurrencies</strong>, including stablecoins. They offer an <strong>excellent selection of games</strong>, including slots, roulette, blackjack, and poker.&nbsp;</p>
                         <p><strong>BC.Game also has a social aspect </strong>that rewards players with bonuses and free spins for participating in the community.&nbsp;</p>
@@ -247,7 +247,7 @@ const MainContent = () => {
                         </div>
                     </section>
                     <section id="Cloudbet-casino">
-                        <h3>Cloudbet</h3>
+                        <div className="h3">Cloudbet</div>
                         <img src={Cloudbet1} className="w-full h-auto" alt="Cloudbet1" />
                         <p><a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">Cloudbet </a>is another great choice for crypto gambling. They’re one of the oldest and most well-established cryptocurrency casinos on this list.&nbsp;</p>
                         <p>The game selection features over 50 providers, a range of live table games, and a comprehensive sportsbook (though if you’re into eSports we recommend <a className="text-blue-600" href="https://casinosblockchain.io/thunderpick-review/" target="_blank" rel="noreferrer noopener">Thunderpick</a> instead). Cloudbet also has over 1000 slots, as well as a provably fair selection of crypto favorites.&nbsp;</p>
@@ -270,11 +270,11 @@ const MainContent = () => {
                         </div>
                     </section>
                     <section id="get-started">
-                        <h2> How to Get Started With Stablecoin Casinos?</h2>
+                        <div className="h2"> How to Get Started With Stablecoin Casinos?</div>
                         <p>Playing at stablecoin casinos isn’t that much different than gambling with any other crypto.&nbsp;</p>
                         <ul className="is-style-dotted-list"><li><strong>First, you want to set up your wallet.</strong><br />We recommend MetaMask, because it’s easy to use and secure. It also allows gambling transactions in the Terms &amp; Conditions.&nbsp;</li><li><strong>Then, head over to a cryptocurrency exchange.</strong><br />We love Binance, because they have a large selection of stablecoins and low fees. If you prefer a more beginner-friendly option, Coinbase also has all major stablecoins.&nbsp;</li><li><strong>Once on the exchange, you want to deposit fiat and buy your stablecoin.</strong><br />If you’re wondering which coin to pick, for the time being, Tether is best. Even with the controversy, it’s still the biggest stablecoin out there.&nbsp;</li><li><strong>Finally, you want to transfer your stablecoin to MetaMask</strong> (don’t keep it on the exchange). From there, make a transaction to your casino of choice.</li></ul>
                         <p>Wondering which stablecoin casino to pick? Our number one choice remains BC.Game!</p>
-                        <h2>Final Thoughts</h2>
+                        <div className="h2">Final Thoughts</div>
                         <p>When it comes to gambling, stablecoins offer a few key advantages over other cryptocurrencies:&nbsp;</p>
                         <ul className="pl-4 list-none">
                             <li>
@@ -294,7 +294,7 @@ const MainContent = () => {
                         <p>Did we get it right? Check it out for yourself and let us know by leaving a <a className="text-blue-600" href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener">review</a>.&nbsp;</p>
                     </section>
                     <section id="FAQ">
-                        <h2>Frequently Asked Questions</h2>
+                        <div className="h2">Frequently Asked Questions</div>
                         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} elevation={4}>
                             <AccordionSummary
                                 expandIcon={<ExpandMore />}
@@ -357,7 +357,8 @@ const MainContent = () => {
                 </div>
             </div>
             {/* RightNavBar */}
-            <div className="w-[22%] h-fit xl:block hidden bg-white shadow-2xl shadow-orange-400 rounded-md sticky top-5">
+            <div className="w-[22%] h-fit xl:block hidden 
+bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
                 <div className="container text-sm h-fit w-full p-2 ">
                     <ul className="list-none w-full text-[#80869e]">
                         <a href="#in-short" className="in-short hover:text-[#3e47e0] no-underline cursor-pointer">

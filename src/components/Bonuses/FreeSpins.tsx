@@ -1,24 +1,24 @@
-import MetamaskCasinos from "../../../Assets/images/Metamask-Casinos.jpg"
-import backgroundImg from "../../../Assets/images/Header.svg"
-import giftImg from "../../../Assets/images/gift.png";
-import logoImg from "../../../Assets/images/logos/bc-game.png";
+import BitcoinFaucetsScaled from "../../Assets/images/bitcoin-faucets-scaled.jpg"
+import backgroundImg from "../../Assets/images/Header.svg"
+import giftImg from "../../Assets/images/gift.png";
+import logoImg from "../../Assets/images/logos/bc-game.png";
 
-import { ISiteRankBlogCardObj } from "../../../Interfaces"
-import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
+import { ISiteRankBlogCardObj } from "../../Interfaces"
+import SiteRankBlogTable from "../Card/SiteRankBlogTable"
 import React, { useEffect } from "react";
 import { Button } from "@mui/material"
 import { Check, KeyboardArrowRight } from "@mui/icons-material"
 
-import ReadMoreCards from "../../Card/ReadMoreCards";
+import ReadMoreCards from "../Card/ReadMoreCards"
 
-import OlieMan from "../../../Assets/images/Content/olieman-eth.jpg"
-import BlockstreamGreen from "../../../Assets/images/Content/blockstream-green.png"
-import BlockstreamNewWallet from "../../../Assets/images/Content/blockstream-new-wallet.png"
-import EtherDefaultWallet from "../../../Assets/images/Content/ether-default-wallet.png"
-import FirstMobileWallet from "../../../Assets/images/Content/first-mobile-wallet.png"
-import BcGame from "../../../Assets/images/Content/bcgame.png"
-import CasinoStake from "../../../Assets/images/Content/casino-stake.png"
-import Cloudbet1 from "../../../Assets/images/Content/Cloudbet1.jpg"
+import OlieMan from "../../Assets/images/Content/olieman-eth.jpg"
+import BlockstreamGreen from "../../Assets/images/Content/blockstream-green.png"
+import BlockstreamNewWallet from "../../Assets/images/Content/blockstream-new-wallet.png"
+import EtherDefaultWallet from "../../Assets/images/Content/ether-default-wallet.png"
+import FirstMobileWallet from "../../Assets/images/Content/first-mobile-wallet.png"
+import BcGame from "../../Assets/images/Content/bcgame.png"
+import CasinoStake from "../../Assets/images/Content/casino-stake.png"
+import Cloudbet1 from "../../Assets/images/Content/Cloudbet1.jpg"
 
 
 interface IProps {
@@ -77,12 +77,12 @@ const MainContent = () => {
     return (
         <div className="w-full flex gap-6 justify-center">
             <div className="xl:w-8/12 w-full h-full ">
-                <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
-                    <img alt="MainPageImg" src={MetamaskCasinos} className="w-full max-h-full object-cover " />
+                <div className="w-full xl:h-[435px] md:h-[380px] rounded-md border-4 border-white">
+                    <img alt="MainPageImg" src={BitcoinFaucetsScaled} className="w-full max-h-full object-cover " />
                 </div>
                 <div className="blog pl-24 pt-3 pb-16 w-10/12">
-                    <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
-                    <div className="h1">Best Bitcoin Wallet for Online Gambling -2022 Top Picks</div>
+                    <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 29, 2022</span></p>
+                    <div className="h1">A Beginner’s Guide to Bitcoin Free Spins</div>
                     <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
                     <p >In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
                     <ul className="pl-8">
@@ -638,7 +638,7 @@ const NavBarMiniTable = (props: IProps) => {
 }
 
 
-const MainPage1 = () => {
+const Faucets = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
             <div className="w-full h-32 bg-black" />
@@ -653,4 +653,4 @@ const MainPage1 = () => {
     )
 }
 
-export default MainPage1;
+export default Faucets;

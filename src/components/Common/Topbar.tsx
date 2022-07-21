@@ -165,10 +165,10 @@ const Topbar = () => {
                                 onMouseEnter={() => { setOverBonusMenu(true) }}
                                 onMouseLeave={() => { setOverBonusMenu(false) }}
                             >
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/bitcoin-free-spins' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title3")}
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/are-bitcoin-faucets-worth-it' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     {t("title4")}
                                 </Link>
                             </div>
@@ -189,28 +189,28 @@ const Topbar = () => {
                                 onMouseEnter={() => { setOverCryptoCurrencyMenu(true) }}
                                 onMouseLeave={() => { setOverCryptoCurrencyMenu(false) }}
                             >
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/best-bitcoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Bitcoin
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/best-ethereum-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Ethereum
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/tether-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Tether
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/dogecoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Dogecoin
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/litecoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Litecoin
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/ripple-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Ripple
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/binance-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Binance
                                 </Link>
-                                <Link to='/' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link to='/cardano-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
                                     Cardano
                                 </Link>
                             </div>
