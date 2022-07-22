@@ -35,48 +35,33 @@ import Footer from "../../components/Common/Footer";
 import {siteDatas} from "../../Interfaces/SiteDatas";
 
 // crypto images
-import avalancheCryptoImg from "../../Assets/images/cryptocurrency/avalanche.png";
-import bnbCryptoImg from "../../Assets/images/cryptocurrency/bnb.png";
 import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
 import bitcoinCashCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-cash.png";
-import cardanoCryptoImg from "../../Assets/images/cryptocurrency/cardano.png";
-import chainlinkCryptoImg from "../../Assets/images/cryptocurrency/chainlink.png";
-import daiCryptoImg from "../../Assets/images/cryptocurrency/dai.png";
-import dashCryptoImg from "../../Assets/images/cryptocurrency/dash.png";
-import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
 import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
 import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
-import paxGoldCryptoImg from "../../Assets/images/cryptocurrency/pax-gold.png";
-import paxosCryptoImg from "../../Assets/images/cryptocurrency/paxos.png";
-import moneroCryptoImg from "../../Assets/images/cryptocurrency/monero.png";
-import polkadotCryptoImg from "../../Assets/images/cryptocurrency/Polkadot.png";
-import shibaInuCryptoImg from "../../Assets/images/cryptocurrency/shiba-inu.png";
-import solanaCryptoImg from "../../Assets/images/cryptocurrency/solana.png";
 import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
-import unisawpCryptoImg from "../../Assets/images/cryptocurrency/unisawp.png";
-import usdcCryptoImg from "../../Assets/images/cryptocurrency/usdc.png";
 
 // game images
 import baccaratGameImg from "../../Assets/images/games/baccarat.png";
 import blackjackGameImg from "../../Assets/images/games/blackjack.png";
-import crashGameImg from "../../Assets/images/games/crash.png";
-import diceGameImg from "../../Assets/images/games/dice.png";
 import jackpotGameImg from "../../Assets/images/games/jackpot.png";
-import kenoGameImg from "../../Assets/images/games/keno.png";
 import liveCasinoGameImg from "../../Assets/images/games/live-casino.png";
-import plinkoGameImg from "../../Assets/images/games/plinko.png";
 import pokerGameImg from "../../Assets/images/games/poker.png";
 import rouletteGameImg from "../../Assets/images/games/roulette.png";
 import slotsGameImg from "../../Assets/images/games/slots.png";
-import sportsBettingGameImg from "../../Assets/images/games/sports-betting.png";
 
 // review images
-import reviewImg1 from "../../Assets/images/reviews/4-cloudbet-game/1-cloudbet-review.png";
-import reviewImg2 from "../../Assets/images/reviews/4-cloudbet-game/2-cloudbet-review.png";
-import reviewImg3 from "../../Assets/images/reviews/4-cloudbet-game/3-cloudbet-review.png";
+import reviewImg1 from "../../Assets/images/reviews/1-bc-game/1-bc-review.png";
+import reviewImg2 from "../../Assets/images/reviews/1-bc-game/2-bc-review.png";
+import reviewImg3 from "../../Assets/images/reviews/1-bc-game/3-bc-review.png";
+import reviewImg4 from "../../Assets/images/reviews/1-bc-game/4-bc-review.png";
+import reviewImg5 from "../../Assets/images/reviews/1-bc-game/5-bc-review.png";
+import reviewImg6 from "../../Assets/images/reviews/1-bc-game/6-bc-review.png";
+import reviewImg7 from "../../Assets/images/reviews/1-bc-game/7-bc-review.png";
+import reviewImg8 from "../../Assets/images/reviews/1-bc-game/8-bc-review.png";
 
 // country flag
-import { CN, DE, GB, GR, HU, FR, ID, IT, JP, KR, PL, PT, RU, ES, SE, TW, TH, TR } from 'country-flag-icons/react/1x1';
+import { AF, GB, FI, DE, JP, RU, NO } from 'country-flag-icons/react/1x1';
 
 const StyledRating = styled(Rating)({
 });
@@ -103,40 +88,12 @@ const RatingEmptydDiv = () => {
 
 const cryptocurrenciesObj: Array<any> = [
     {
-        img: avalancheCryptoImg,
-        name: "Avalanche"
-    },
-    {
-        img: bnbCryptoImg,
-        name: "Binance Coin"
-    },
-    {
         img: bitcoinCryptoImg,
         name: "Bitcoin"
     },
     {
         img: bitcoinCashCryptoImg,
         name: "Bitcoin Cash"
-    },
-    {
-        img: cardanoCryptoImg,
-        name: "Cardano"
-    },
-    {
-        img: chainlinkCryptoImg,
-        name: "Chainlink"
-    },
-    {
-        img: daiCryptoImg,
-        name: "Dai"
-    },
-    {
-        img: dashCryptoImg,
-        name: "Dash"
-    },
-    {
-        img: dogecoinCryptoImg,
-        name: "Dogecoin"
     },
     {
         img: etherCryptoImg,
@@ -147,40 +104,8 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Litecoin"
     },
     {
-        img: paxGoldCryptoImg,
-        name: "PAX Gold"
-    },
-    {
-        img: paxosCryptoImg,
-        name: "Paxos"
-    },
-    {
-        img: moneroCryptoImg,
-        name: "Monero"
-    },
-    {
-        img: polkadotCryptoImg,
-        name: "Polkadot"
-    },
-    {
-        img: shibaInuCryptoImg,
-        name: "Shiba Inu"
-    },
-    {
-        img: solanaCryptoImg,
-        name: "Solana"
-    },
-    {
         img: tetherCryptoImg,
         name: "Tether"
-    },
-    {
-        img: unisawpCryptoImg,
-        name: "Uniswap"
-    },
-    {
-        img: usdcCryptoImg,
-        name: "USD Coin"
     }
 ];
 
@@ -194,29 +119,12 @@ const gamesObj: Array<any> = [
         name: "Blackjack"
     },
     {
-        img: crashGameImg,
-        name: "Crash"
-    },
-
-    {
-        img: diceGameImg,
-        name: "Dice"
-    },
-    {
         img: jackpotGameImg,
         name: "Jackpots"
     },
     {
-        img: kenoGameImg,
-        name: "Keno"
-    },
-    {
         img: liveCasinoGameImg,
         name: "Live Casino"
-    },
-    {
-        img: plinkoGameImg,
-        name: "Plinko"
     },
     {
         img: pokerGameImg,
@@ -229,29 +137,16 @@ const gamesObj: Array<any> = [
     {
         img: slotsGameImg,
         name: "Slots"
-    },
-    {
-        img: sportsBettingGameImg,
-        name: "Sports Betting"
     }
 ]
 
-const CloudbetGameReview = () => {
-    const siteData = siteDatas[3];
+const KingBillyGameReview = () => {
+    const siteData = siteDatas[7];
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
     const [openFAQ2, setOpenFAQ2] = useState(false);
     const [openFAQ3, setOpenFAQ3] = useState(false);
-    
-    // const [isTablet, setIsTablet] = useState(false);
-    // useEffect(() => {
-    //     function updateSize() {
-    //         setIsTablet(window.innerWidth < 1024);
-    //     }
-    //     window.addEventListener('resize', updateSize);
-    //     updateSize();
-    //     return () => window.removeEventListener('resize', updateSize);
-    // }, []);
+    const [openFAQ4, setOpenFAQ4] = useState(false);
 
     useEffect(() => {
         const partSections = document.getElementsByClassName("part-section");
@@ -350,7 +245,7 @@ const CloudbetGameReview = () => {
                                         {siteData.name} Overview
                                     </div>
                                     <div className="text-base">
-                                        Play all your favorite games on the legacy site
+                                        Come for the crown, stay for the bonuses
                                     </div>
                                 </div>
                             </div>
@@ -418,76 +313,32 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-wrap gap-4 mt-5">
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <CN className="h-5 rounded-full" />
-                                                <div className="text-base">Chinese</div>
+                                                <AF className="h-5 rounded-full" />
+                                                <div className="text-base">Afrikaans</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <GB className="h-5 rounded-full" />
                                                 <div className="text-base">English</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <FR className="h-5 rounded-full" />
-                                                <div className="text-base">French</div>
+                                                <FI className="h-5 rounded-full" />
+                                                <div className="text-base">Finnish</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <DE className="h-5 rounded-full" />
                                                 <div className="text-base">Germany</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <GR className="h-5 rounded-full" />
-                                                <div className="text-base">Greek</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <HU className="h-5 rounded-full" />
-                                                <div className="text-base">Hungarian</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <ID className="h-5 rounded-full" />
-                                                <div className="text-base">Indonesian</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <IT className="h-5 rounded-full" />
-                                                <div className="text-base">Italian</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <JP className="h-5 rounded-full" />
                                                 <div className="text-base">Japanese</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <KR className="h-5 rounded-full" />
-                                                <div className="text-base">Korean</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <PL className="h-5 rounded-full" />
-                                                <div className="text-base">Polish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <PT className="h-5 rounded-full" />
-                                                <div className="text-base">Portuguese</div>
+                                                <NO className="h-5 rounded-full" />
+                                                <div className="text-base">Norwegian</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <RU className="h-5 rounded-full" />
                                                 <div className="text-base">Russian</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <ES className="h-5 rounded-full" />
-                                                <div className="text-base">Spanish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <SE className="h-5 rounded-full" />
-                                                <div className="text-base">Swedish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <TW className="h-5 rounded-full" />
-                                                <div className="text-base">Taiwanese</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <TH className="h-5 rounded-full" />
-                                                <div className="text-base">Thai</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <TR className="h-5 rounded-full" />
-                                                <div className="text-base">Turkish</div>
                                             </div>
                                         </div>
                                     </div>
@@ -501,29 +352,33 @@ const CloudbetGameReview = () => {
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">One of the market leaders</div>
+                                                        <div className="w-[230px]">Award-winning casino</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Huge casino games offer</div>
+                                                        <div className="w-[230px]">Lots of bonuses and rewards</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Innovative welcome bonus</div>
+                                                        <div className="w-[230px]">Large number of games</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Flexible payment limits</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">23 cryptocurrencies available</div>
+                                                        <div className="w-[230px]">Original medieval theme</div>
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">No free spins</div>
+                                                        <div className="w-[230px]">Not all common cryptocurrencies accepted</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                                        <div className="w-[230px]">No provably fair games</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                                        <div className="w-[230px]">KYC check</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -774,7 +629,7 @@ const CloudbetGameReview = () => {
                                             Bonuses
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Regular rewards and flexibility
+                                            Treat yourself to some royal rewards
                                         </div>
                                     </div>
                                 </div>
@@ -800,135 +655,13 @@ const CloudbetGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div className="text-base">
-                                        Whether you are a casino lover or a sports fan, you will always get a nice welcome at Cloudbet Casino with a <span className="font-bold">100% matched deposit bonus up to 5 Bitcoin</span>.
+                                        Rejoice! King Billy Casino's welcome bonus is truly fit for a king.
                                     </div>
                                     <div>
-                                        And the best part? The bonus is not just for BTC players! You can also choose to deposit and win your bonus in a number of other currencies:
-                                    </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Cardano
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Algorand
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Avalanche 
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Bitcoin Cash
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Binance
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Binance USD
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Dai
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Dash
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Polkadot
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Ethereum
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Fantom
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Chainlink
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Polygon
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                PAX Gold
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Shiba Inu
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Solana
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Uniswap
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                USD Coin
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                USDP
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Tether
-                                            </div>
-                                        </div>
+                                        After your first four deposits, you can claim <span className="font-bold">up to 5 Bitcoin and 200 free spins</span>:
                                     </div>
                                     <div className="text-base">
-                                        This offer, however, works a bit differently than you might be used to. Let's break it down:
+                                        With the current new user scheme, you can get up to 780% deposit match on your first four transactions. Here is how it works:
                                     </div>
                                     {/* timeline 1 */}
                                     <div className="text-base">
@@ -942,7 +675,7 @@ const CloudbetGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        Open an account on Cloudbet
+                                                        <span className="font-bold">1st Deposit</span> - 100% up to 1 BTC + 200 Bitcoin free spins
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -955,7 +688,7 @@ const CloudbetGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        Deposit in one of the 23 cryptocurrencies available.
+                                                        <span className="font-bold">2nd Deposit</span> - 50% up to 1 BTC (code WELCOME2)
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -968,7 +701,7 @@ const CloudbetGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        Play casino games to collect Welcome Bonus points.
+                                                        <span className="font-bold">3rd Deposit</span> - 25% up to 1.5 BTC (code WELCOME3)
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -980,7 +713,7 @@ const CloudbetGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        For every 150 Welcome Bonus points, redeem an increment of your bonus.
+                                                        <span className="font-bold">4th Deposit</span> - 25% up to 1.5 BTC (code WELCOME4)
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -988,189 +721,142 @@ const CloudbetGameReview = () => {
                                     </div>
                                     {/*  */}
                                     <div>
-                                        For example:
-                                        <br></br>
-                                        If you <span className="font-bold">play with Cardano</span>, the minimum deposit is 20 ADA. Bonus release increments match the minimum deposit. This means your deposit will also be released in 20 ADA increments.
+                                        This multi-tiered welcome offer has one considerable advantage: you can deposit a smaller amount at first to test the waters before committing your Bitcoin.
                                     </div>
                                     <div>
-                                        So, let's say <span className="font-bold">you deposit 100 ADA</span> and start playing. As you gamble, you <span className="font-bold">collect Welcome Bonus points</span>, which are calculated through this formula:
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="font-bold text-gray-400">
-                                            Welcome Bonus Points
-                                        </div>
-                                        <div className="text-white font-bold text-2xl">
-                                            Welcome Bonus Points = Converted Stake x 0.008 x (100-RTP)
-                                        </div>
+                                        Since the free spins are yours after the first deposit, you can check out King Billy's best games right from the start.
                                     </div>
                                     <div>
-                                        When you hit <span className="font-bold">150 Welcome Bonus points</span>, you get the first 20 ADA of your welcome bonus. Get to 300 and you get the next 20 ADA, 450 for 20 ADA more, etc.
-                                    </div>
-                                    <div>
-                                        You have 60 days to collect all the Welcome Bonus points and get your gift.
-                                    </div>
-                                    <div>
-                                        Are bonuses and deposits similar in all currencies? No.
-                                    </div>
-                                    <div>
-                                        The <span className="font-bold">minimum and maximum deposit</span> and the bonus release increments vary across different coins. Here is how they compare for the five most popular cryptos:
-                                    </div>
-                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
-                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3 rounded-t-xl">
-                                            <div className="w-1/4 font-bold">
-                                                Cryptocurrency
-                                            </div>
-                                            <div className="w-1/4 font-bold">
-                                                Minimum Deposit
-                                            </div>
-                                            <div className="w-1/4 font-bold">
-                                                Maximum Deposit
-                                            </div>
-                                            <div className="w-1/4 font-bold">
-                                                Bonus Release Increments
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-between px-3 py-3">
-                                            <div className="w-1/4">
-                                                Bitcoin (BTC)
-                                            </div>
-                                            <div className="w-1/4">
-                                                0.001 BTC
-                                            </div>
-                                            <div className="w-1/4">
-                                                5 BTC
-                                            </div>
-                                            <div className="w-1/4">
-                                                0.001 BTC
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
-                                            <div className="w-1/4">
-                                                Ethereum (ETH)
-                                            </div>
-                                            <div className="w-1/4">
-                                                0.01 ETH
-                                            </div>
-                                            <div className="w-1/4">
-                                                20 ETH
-                                            </div>
-                                            <div className="w-1/4">
-                                                0.01 ETH
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-between px-3 py-3">
-                                            <div className="w-1/4">
-                                                Dogecoin (DOGE)
-                                            </div>
-                                            <div className="w-1/4">
-                                                100 DOGE
-                                            </div>
-                                            <div className="w-1/4">
-                                                40,000 DOGE
-                                            </div>
-                                            <div className="w-1/4">
-                                                100 DOGE
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
-                                            <div className="w-1/4">
-                                                Tether (USDT)
-                                            </div>
-                                            <div className="w-1/4">
-                                                20 USDT
-                                            </div>
-                                            <div className="w-1/4">
-                                                50,000 USDT
-                                            </div>
-                                            <div className="w-1/4">
-                                                20 USDT
-                                            </div>
-                                        </div>
+                                        Come again? Dollar equivalent?
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Cloudbet Canada - Bonus In CAD
+                                        Canadian Welcome Package - $1500 In CAD
                                     </div>
                                     <div>
-                                        Since Cloudbet is a cryptocurrency-first casino, you can't get your first deposit bonus in CAD (Canadian Dollars).
+                                        If you're Canadian and you're looking for a BTC alternative, you're in for a treat, with a dedicated welcome bonus available in CAD, giving you up to $1500 and 200 free spins:.
                                     </div>
                                     <div>
-                                        However, Cloudbet's welcome bonus is 100% fit for Canadian players, who are more than welcome to claim them in their crypto of choice. The same is true for all Cloudbet promotions!
-                                        </div>
+                                        Let's have a closer look at how it works:
+                                    </div>
+                                    <div className="text-base">
+                                        <Timeline position="right">
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">1</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        <span className="font-bold">1st Deposit</span> - 100% up to $300 + 200 Free spins
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">2</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        <span className="font-bold">2nd Deposit</span> - 50% up to $300
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">3</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        <span className="font-bold">3rd Deposit</span> - 25% up to $450
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">4</div>
+                                                    </TimelineDot>
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        <span className="font-bold">4th Deposit</span> - 25% up to $450
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                        </Timeline>
+                                    </div>
                                     <div>
-                                        On that note, let's have a better look at the other promotions on this website.
+                                        As you can see, it's similar to the Bitcoin offer, giving you more flexibility. Due to the current value of the coin, however, the Bitcoin welcome offer gives you more value for your money, and we recommend you get it instead.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Other Available Bonuses
-                                    </div>
-                                    <div>
-                                        The promotional fun doesn't here. When playing at Cloudbet, you'll always be entitled to a series of tournaments, bonuses and other rewards.
+                                        Other King Billy Casino Bonuses
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Mega Match Mondays</span>: Start your week with a positive vibe and a 50% reload bonus of up to 25mBTC, available every Monday.
+                                            <span className="font-bold">King's Gold</span>: Every month, King Billy dishes out 61 free spins on a carefully selected slot machine upon a $20 deposit.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Turbo Thursday</span>: If you need some extra power to bring the week to a nice end, you can certainly use this 50% reload bonus of up to 50 mBTC.
+                                            <span className="font-bold">Spin & Win</span>: Have the chance to win 100 daily free spins on the ever-popular Book of Dead slot. 
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Zero-Margin Sports Bets</span>: Be ahead of the curve and get the best odds on some of the world's most exciting competitions.
+                                            <span className="font-bold">Tournaments</span>: Thrash your competition on regular tournaments organized by King Billy himself.
                                         </div>
-                                    </div>
-                                    <div>
-                                        If it's Free Spins you're after, you might want to keep an eye on the promotional section and look for seasonal tournaments offering generous prizes.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        VIP Program
+                                        King Billy Casino's VIP Program
                                     </div>
                                     <div>
-                                        Do you like to be pampered? If you're looking to be treated like a star, then look no further. Cloudbet offers an interesting set of advantages to its most loyal players.
+                                        Your journey to royalty starts humbly at first; when you first join the realm, you're only a citizen. 
                                     </div>
                                     <div>
-                                        Here's what might be in store for you as a Cloudbet VIP
+                                        If you play your cards right, however, you can become a baron, duke, prince, and even a king!
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Extended Betting Limits
-                                            </div>
+                                    <div className="font-bold">
+                                        How It Works:
+                                    </div>
+                                    <div>
+                                        You can climb up the social ladder by playing selected games and collecting points. 
+                                    </div>
+                                    <div>
+                                        Once you do become royalty, you're in for a few treats:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Weekly cashback of up to 13%.
                                         </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Faster Withdrawals
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Dedicated VIP manager with exclusive rewards.
                                         </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Better Bonuses
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Chance to change loyalty points into cash.
                                         </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Personal Account Managers
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Lavish Gifts
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Invitations to Exclusive Events
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Level up bonuses, including free spins and surprise rewards.
                                         </div>
                                     </div>
                                 </div>
@@ -1184,19 +870,15 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Interesting welcome bonus</div>
+                                            <div className="w-[230px]">Themed VIP program</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Bonuses available in several cryptos</div>
+                                            <div className="w-[230px]">Tiered welcome bonus</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Lavish VIP program</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Many other promotions</div>
+                                            <div className="w-[230px]">Consistent and rewarding promotions</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1205,7 +887,7 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No free spins</div>
+                                            <div className="w-[230px]">Not all games count for the VIP club</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1235,7 +917,7 @@ const CloudbetGameReview = () => {
                                             Look & Feel
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Simple but effective
+                                            Easy navigation and a modern look
                                         </div>
                                     </div>
                                 </div>
@@ -1261,63 +943,40 @@ const CloudbetGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        Keeping up with the trend of other Bitcoin casinos, Cloudbet keeps things <span className="font-bold">modern and clean</span> when it comes to its design.
+                                        BC.Game is a modern website with the sleek and smooth template we've come to associate with crypto casinos. It's not an original look, but, in our opinion, it's still attractive.
                                     </div>
                                     <div>
-                                        In a way, the ambience is the opposite of a brick-and-mortar casino: instead of shiny lights and an oppulent look created to wow and entrance you, you get an organized, informative space.
+                                        The bluish-grey and green color scheme that feels familiar, while the mascot is cute and friendly. Game thumbnails have a simple, yet visually pleasing style. The tone of voice is fun, too.
                                     </div>
                                     <div>
-                                        The sportsbook tab is chockful of different sports and events but presents the information cleanly. You can navigate directly to your favorite sport (they also offer Bitcoin eSports betting) or browse the homepage for a curated selection of the best current odds and events.
+                                        Here are some of the best UX features BC.Game has to offfer:
                                     </div>
-                                    <div>
-                                        As for the casino itself, it's divided into different sections, each highlighting a different type of game. If you stay on the lobby, you will be able to find the following options:
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Vibrant players' chat</span> on the right-hand side of the screen (participation is entirely optional, but it can be rewarding).
+                                        </div>
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Game Of The Week
-                                            </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Winners' feed and bet backlog</span> on the homepage for total transparency (you can hide your username for privacy).
                                         </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Popular Games
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                New Games
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Best Live Games
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Best Table Games
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Games By Provider
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Games By Theme
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Fuss-free social media signup</span> with optional safety features available (more on that below).
                                         </div>
                                     </div>
                                     <div>
-                                        All in all, this is a <span className="font-bold">very appealing and easy to navigate casino</span> with a couple of handy features that help you find what you're looking for and make the right choices.
+                                        In our experience, navigation was intuitive and hassle-free, both on the browser version and BC.Game's mobile app.
+                                    </div>
+                                    <div>
+                                        There are, however, a few grammar mistakes and untranslated areas (in some languages) that could negatively influence your gameplay. This is an area where we'd like to see the brand improve.
+                                    </div>
+                                    <div>
+                                        Additionally, we did experience slow loading times on more demanding games, namely Saviour Sword, but we were browsing with a VPN, which can reduce loading speed.
                                     </div>
                                     <div className="w-[350px] xl:w-[600px] flex justify-center">
                                         <Swiper
@@ -1333,25 +992,26 @@ const CloudbetGameReview = () => {
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
                                                         className=""
-                                                        src={reviewImg1}
-                                                        alt="reviewImg">
-                                                    </img>
-                                                </div>
-                                            </SwiperSlide>
-                                            <SwiperSlide>
-                                                <div className="flex justify-center items-center w-full px-16 py-10">
-                                                    <img 
-                                                        className=""
-                                                        src={reviewImg2}
-                                                        alt="reviewImg">
-                                                    </img>
-                                                </div>
-                                            </SwiperSlide>
-                                            <SwiperSlide>
-                                                <div className="flex justify-center items-center w-full px-16 py-10">
-                                                    <img 
-                                                        className=""
                                                         src={reviewImg3}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                                
+                                            </SwiperSlide>
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
+                                                    <img 
+                                                        className=""
+                                                        src={reviewImg4}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
+                                                    <img 
+                                                        className=""
+                                                        src={reviewImg5}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
@@ -1379,15 +1039,24 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Two color schemes to choose from</div>
+                                            <div className="w-[230px]">Social features</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Easy to navigate</div>
+                                            <div className="w-[230px]">Mobile app</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Information is well organized</div>
+                                            <div className="w-[230px]">Intuitive navigation</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-y-3 px-5">
+                                        <div className="font-bold text-red-900">
+                                            CONS
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Occasional language issues</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1398,7 +1067,7 @@ const CloudbetGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open Cloudbet
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1417,7 +1086,7 @@ const CloudbetGameReview = () => {
                                             Game Selection
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            We can never get too much of NetEnt
+                                            Popular games, live tables, and 100% provably fair originals
                                         </div>
                                     </div>
                                 </div>
@@ -1443,16 +1112,26 @@ const CloudbetGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        Cloudbet Casino offers well <span className="font-bold">over 1200 casino games</span> by a whopping <span className="font-bold">50+ different providers</span>.
+                                        We can't have a full BC.Game review without looking at the games, right? Well, we're happy to report that the <span className="font-bold">game portfolio is full of exciting opportunities.</span>
                                     </div>
                                     <div>
-                                        This means, of course, that you can find titles from all the biggest names in online gaming. You can enjoy the best slots by NetEnt, all the hits from Microgaming, and play live casino games by Evolution Gaming.
+                                        From provably fair originals to big-name slots and live games, this online casino has it all. Let's break down the main game types:
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        BC Originals
                                     </div>
                                     <div>
-                                        But these household brands are not alone. If you feel tired of games by big providers, you can also find hidden gems by the likes of Leander Games, Tom Horn Gaming, and more.
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg6}
+                                            alt="reviewImg">
+                                        </img>
                                     </div>
                                     <div>
-                                        The choice is entirely yours. With the help of a drop-down menu on the "All Games" tab, you should easily find all the titles from your favorite studios.
+                                        BC.Game has a selection of provably fair originals, including their popular roulette game.
+                                    </div>
+                                    <div>
+                                        BC.Game's original games are exclusively provably fair, and include a solid selection of about 20 internally-developed games, including all the crowd-pleasing casino classics:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1464,73 +1143,13 @@ const CloudbetGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Jackpots
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
                                                 Baccarat
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Live Baccarat
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Blackjack
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Live Blackjack
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Roulette
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Live Roulette
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Crash
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Casino Poker
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Virtual Sports
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Craps
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Plinko
+                                                Dice
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1542,72 +1161,233 @@ const CloudbetGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Mines
+                                                Crash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Live Casino
+                                                Roulette
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Sportsbook
+                                                Blackjack
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Esports
+                                                Plinko
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Poker
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Hi-Lo
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Wheel of Fortune
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Mainstream Providers
+                                    </div>
+                                    <div>
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg7}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                        The Madame Destiny slot by Pragmatic Play offers a truly enchanting experience.
+                                    </div>
+                                    <div>
+                                        BC.Game also offers a selection of games by <span className="font-bold">popular providers like Pragmatic Play and Yggdrasil.</span>
+                                    </div>
+                                    <div>
+                                        While their portfolio is growing exponentially, it's still nowhere as big as brands like Stake, which offer a larger variety of mainstream games alongside their provably fair titles.
+                                    </div>
+                                    <div>
+                                        That said, BC.Game is still a newish casino, and while <span className="font-bold">we think they can improve their</span> offering, they've already come a long way.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Live Casino Games at BC.Game
+                                    </div>
+                                    <div>
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg8}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                        BC.Game boasts a stellar selection of live games, including your favorites from big-name providers.
+                                    </div>
+                                    <div>
+                                        Who doesn't love a live game? <span className="font-bold">Hosted by live dealers</span> and featuring a range of exciting awards, they get you closer to an in-person experience than ever.
+                                    </div>
+                                    <div>
+                                        BC.Game is continuously improving their live casino games offer. The current selection includes:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Traditional <span className="font-bold">blackjack and roulette tables</span> with real dealers
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            The infamous live casino <span className="font-bold">game shows</span> from Evolution Gaming
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Classic <span className="font-bold">tables with a twist.</span> like Lightning Roulette
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Casino <span className="font-bold">poker tables</span>, baccarat, dice, and much more!
+                                        </div>
+                                    </div>
+                                    <div>
+                                        In total, there are more than <span className="font-bold">100 different crypto-friendly live tables</span> where you can put your skills to the test!
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        House Edge at BC.Game Originals
+                                    </div>
+                                    <div>
+                                        Arguably one of the biggest perks we noticed during our BC.Game review - the <span className="font-bold">high RTP and low house edge.</span>
+                                    </div>
+                                    <div>
+                                        Let's look at the numbers for some of BC's most popular games:
+                                    </div>
+                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
+                                        <div className="flex flex-row text-center bg-violet-800 rounded-t-xl py-3">
+                                            <div className="w-1/3 text-white">
+                                                Game Type
+                                            </div>
+                                            <div className="w-1/3 text-white">
+                                                RTP
+                                            </div>
+                                            <div className="w-1/3 text-white">
+                                                House Edge
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Blackjack
+                                            </div>
+                                            <div className="w-1/3">
+                                                99.52%
+                                            </div>
+                                            <div className="w-1/3">
+                                                0.48%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Crash
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Dice
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Keno and Plinko
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Others
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Roulette
+                                            </div>
+                                            <div className="w-1/3">
+                                                97.3%
+                                            </div>
+                                            <div className="w-1/3">
+                                                2.7%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Slots
+                                            </div>
+                                            <div className="w-1/3">
+                                                97.51-99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1-2.49%
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        Recently, Cloudbet has also created an arcade-inspired provably fair games section, featuring crypto favorites like plinko, mines and keno.
+                                        BC.Game offers more value for money than most competitors, with <span className="font-bold">an extremely low 1% house edge</span> (sometimes even lower!) on most of its original games, including popular games like Crash.
+                                    </div>
+                                    <div>
+                                        This is translated into high Return-to-Player percentages, giving you more bang for your buck in the long run.
+                                    </div>
+                                    <div>
+                                        Do note that games from <span className="font-bold">mainstream providers will still have their regular payouts</span> since those are outside of BC.Games' hands.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Slot Games And Jackpots
+                                        Do BC.Game Strategies Work?
                                     </div>
                                     <div>
-                                        The biggest part of the casino games section is made up of slots. You'll find <span className="font-bold">over 1.000 options</span> in this category, including classics like Starburst and the Rich Wilde series.
+                                        Any seasoned casino player will tell you that there is <span className="font-bold">no such thing as a guaranteed win.</span>
                                     </div>
                                     <div>
-                                        Your choice in jackpots consists of almost 50 games, including the <span className="font-bold">two famous Mega Moolah slots.</span>
+                                        However, this doesn't stop people from trying to develop strategies that they think will give them an edge. These might give you the illusion of better odds. Ultimately, <span className="font-bold">the house always has an advantage</span>, and even the best players can have losing streaks.
                                     </div>
                                     <div>
-                                        If you're just testing the waters, you can always play the games in fun mode first. This way, you won't have to risk your Bitcoin, but you won't win any real money either. Still, it could be a good choice to test a new Cloudbet strategy.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Table Games and Cloudbet Live Casino
-                                    </div>
-                                    <div>
-                                        When it comes to table games, you can choose to play baccarat (16 games), blackjack (40 games), and roulette (36 games).
-                                    </div>
-                                    <div>
-                                        Most of these are part of the live casino, but you also have some regular table game options. Outside of the live casino, there are 16 other games on offer, and counting since this website is constantly adding new titles to its game selection.
-                                    </div>
-                                    <div>
-                                        At the Cloudbet live casino lobby, you can also play some original games: we're talking about the now-popular Dream Catcher Live, Monopoly Live, and others.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Cloudbet Sports
-                                    </div>
-                                    <div>
-                                        Cloudbet Casino also offers <span className="font-bold">virtual sports betting</span>, a regular <span className="font-bold">sportsbook</span>, and <span className="font-bold">live betting</span>.
-                                    </div>
-                                    <div>
-                                        The brand has competitive odds on sports like hockey, football, basketball, and tennis - some of the most popular competitons in Canada and the USA!
-                                    </div>
-                                    <div>
-                                        An interesting collection of esports markets are also present as part of the sports tab.
-                                    </div>
-                                    <div>
-                                        You can also bet on current events, such as the American presidential election. These events are very seasonal, however, and might not always be offered.
-                                    </div>
-                                    <div>
-                                        The excellent sportsbook made Cloudbet one of our top Roobet alternatives - since the popular Aussie-themed casino is another sportsbetting hub.
+                                        So, instead of focusing on betting strategies, <span className="font-bold">aim to optimize your bankroll management.</span> This will help you keep your losses to a minimum, and improve your winnings over the long term.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1620,15 +1400,23 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">All big providers are present</div>
+                                            <div className="w-[230px]">Very low house edge</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">There's plenty of game variety</div>
+                                            <div className="w-[230px]">Provably fair games</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">You can play for fun before registering</div>
+                                            <div className="w-[230px]">100+ live tables</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Attractive original games</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Plenty of known providers</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1639,7 +1427,7 @@ const CloudbetGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open Cloudbet
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1658,7 +1446,7 @@ const CloudbetGameReview = () => {
                                             Licensing & Safety
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Fully regulated and verified casino
+                                            Newly-acquired Curaçao license
                                         </div>
                                     </div>
                                 </div>
@@ -1684,49 +1472,78 @@ const CloudbetGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        The license that Cloudbet Casino currently holds is issued by the government of Curaçao. It also holds an E-Gambling license from Montenegro.
+                                        <span className="font-bold">Is BC.Game a legit site?</span> Yes, they are. BC.Game is a legal crypto gambling site that holds a license and offers multiple security features.
                                     </div>
                                     <div>
-                                        If you are from one of the restricted territories, you won't be able to play at Cloudbet. These include the United States, the United Kingdom, Hong Kong, and Singapore.
+                                        In previous editions of this casino review, licensing was our biggest issue. For the a long time, BC used to be unlicensed - and that didn't particularly win our trust. But hurrah, the situation has changed!
                                     </div>
                                     <div>
-                                        <span className="font-bold">Should you use a VPN to play at Cloudbet if you're from the US?</span> We don't recommend this, since there are occasional KYC checks where you may be asked to provide official documents that verify your identity, including proof of address.
+                                        <a href="https://gateway.pinata.cloud/ipfs/QmZbpAZ4c9izhEYKmJ4gqkx2Kq4fs88h3hGF1kcMXPHWRg/license.jpg" target="_blank" rel="noreferrer" className="font-bold text-blue-600">BC.Game now has a gambling license from Curaçao</a>, which definitely boosts our confidence (and gives players peace of mind).
                                     </div>
                                     <div>
-                                        You don't have to worry about safety at this casino as all RNG games hold an official certificate from <a href="https://gaminglabs.com/" target="" className="text-blue-600 font-bold">Gaming Laboratories International</a>, which is an authority on this matter. They provide independent testing of games to make sure they are fair and secure.
+                                        But, it's not just about the license. Here are some of the additional safety features that caught our attention:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Players can secure their account with <span className="font-bold">2-factor authentication.</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank"  rel="noreferrer" >Crypto Gambling Foundation seal of approval.</a>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank" rel="noreferrer">verified its randomness.</a>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank" rel="noreferrer">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
+                                        </div>
                                     </div>
                                     <div>
-                                        And when it comes to Responsible Gaming, Cloudbet has a partnership with BeGambleAware. This will ensure you that you'll always have somewhere to turn to in case you lose control of your gambling.
+                                        Another common question we get is:
+                                    </div>
+                                    <div className="font-bold">
+                                        Is BC.Game fair?
+                                    </div>
+                                    <div>
+                                        The answer is yes.
+                                    </div>
+                                    <div>
+                                        In fact, BC.Game excels in provable fairness, which means the algorithm cannot be rigged. Provably fair games are random by design and the casino couldn't manipulate the outcome even if they tried.
+                                    </div>
+                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
+                                        <div className="text-white font-bold text-2xl">
+                                            All BC.Game originals are provably fair - check the results yourself at any time!
+                                        </div>
+                                    </div>
+                                    <div>
+                                        BC.Game is licensed, provably fair, and boasts multiple security features. <span className="font-bold">But what about our playtest?</span>
+                                    </div>
+                                    <div>
+                                        We personally and anonymously test all casinos that we review. There is no replacement for first-hand experience - and, we're glad to report <span className="font-bold">it was all smooth sailing</span> with BC.Game. Throughout the entire experience, we didn't find any issues. No problems with the games, none with bonuses, withdrawals were a piece of cake, too.
+                                    </div>
+                                    <div>
+                                        So, all things considered, we think <span className="font-bold">BC.Game is a trusted, secure brand</span>.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Is Cloudbet Safe For Canadian Players?
+                                        Do They Run KYC Checks?
                                     </div>
                                     <div>
-                                        Yes!
+                                        A Know-Your-Consumer check is when a company verifies that you are who you say you are. This is usually done by matching your name and address to a government-issued ID.
+                                    </div>
+                                    <div className="font-bold">
+                                        BC.Game doesn't run KYC on registration. Instead, they might ask you for ID if you want to make a withdrawal.
                                     </div>
                                     <div>
-                                        Although Cloudbet does not hold a local gambling license on any of Canada's provinces or territories, its international license provides a high degree of safety.
-                                    </div>
-                                    <div>
-                                        What's more, this is a website that cares for its Canadian players with:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            A vast selection of odds on Canada-focussed sports, including local Canadian leagues
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Popular casino games that Canadian players enjoy
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            The chance to choose between English or French, thus catering to the vast majority of Canadians
-                                        </div>
+                                        In our experience, this happens for larger cash-outs, but random checks are still possible. So if you're looking for an anonymous casino, this is a good option. Just be aware that if you do win big, you might have to verify your identity before you can cash out.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1739,15 +1556,19 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Partnership with BeGambleAware</div>
+                                            <div className="w-[230px]">2-factor authentication</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">All RNG games are certified by an independent authority</div>
+                                            <div className="w-[230px]">Crypto Gambling Foundation seal</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Trusted Curaçao license</div>
+                                            <div className="w-[230px]">RNG tested and verified</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Gambling license</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1756,7 +1577,7 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Some territories are restricted</div>
+                                            <div className="w-[230px]">No established reputation</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1767,7 +1588,7 @@ const CloudbetGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open Cloudbet
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1786,7 +1607,7 @@ const CloudbetGameReview = () => {
                                             Payment Options
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            We like flexible limits
+                                            Crypto-only. Stellar coin availability, though.
                                         </div>
                                     </div>
                                 </div>
@@ -1812,188 +1633,208 @@ const CloudbetGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        At Cloudbet Casino you can choose among several <span className="font-bold">cryptocurrencies</span> to make your deposits.
+                                        BC.Game is a <span className="font-bold">crypto-exclusive casino where you cannot play with fiat money.</span>
+                                    </div>
+                                    <div>
+                                        Instead, you have a comprehensive number of cryptocurrencies available, ranging from established coins like Bitcoin to the most obscure altcoins.
+                                    </div>
+                                    <div>
+                                        The list of available tokens is too lengthy to include here in full, but last time we counted it included <span className="font-bold">66 different coins.</span>
+                                    </div>
+                                    <div>
+                                        Here are just a few of the most common cryptocurrencies that are supported at BC.Game casino:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Bitcoin (BTC)
+                                                Ethereum
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Cardano (ADA)
+                                                Bitcoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Algorand (ALGO)
+                                                Bitcoin Cash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Avalanche (AVAX)
+                                                Binance
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Bitcoin Cash (BCH)
+                                                Litecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Binance (BNB)
+                                                Dogecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Binance USD (BUSD)
+                                                Tether
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Dai (DAI)
+                                                Ripple
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Dash (DASH)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Polkadot (DOT)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Ethereum (ETH)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Fantom (FTM)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Chainlink (LINK)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Polygon (MATIC)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                PAX Gold (PAXG)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Shiba Inu (SHIB)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Solana (SOL)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Uniswap (UNI)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                USD Coin (USDC)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                USDP (USDP)
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Tether (USDT)
+                                                Cardano SHIB
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        Using third-party provider MoonPay, you can buy and sell cryptos directly on the website.
+                                        The casino also has its own currency, <span className="font-bold">BC Dollars (BCD)</span>, which works as a stablecoin on the site.
+                                    </div>
+                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
+                                        <div className="text-white font-bold text-2xl">
+                                            BCD is tied to the value of Tether:
+                                            <br/>
+                                            BCD = 1 USDT = 1 USD.
+                                        </div>
                                     </div>
                                     <div>
-                                        You can also use Skrill to deposit and play using a select group of fiat currencies, including:
+                                        This makes it particularly handy when you're cashing out - with BCD you can take your profits and not risk them to volatility.
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                CAD
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                USD
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                EUR
-                                            </div>
-                                        </div>
+                                    <div>
+                                        But, BC.Game is also one of the most prominent stablecoin casinos, offering Tether, USDC, Dai, and more.
+                                    </div>
+                                    <div>
+                                        BC.Game is compatible with a range of Bitcoin wallets and other crypto safeguarding services. It comes with its own exchange, which allows you to convert from one coin to another directly on the platform. Do note that, just like any exchange, there is a fee to cover the transaction costs.
+                                    </div>
+                                    <div>
+                                        And, recently, they also became one of the first crypto casinos to offer NFTs:
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Withdrawals and Deposits
+                                        BC.Game Allows You to Deposit NFTs
                                     </div>
                                     <div>
-                                        When requesting your first withdrawal, you are subject to a KYC check. This is an obligation the casino has to comply with due to licensing requirements.
-                                    </div>
-                                    <div>
-                                        Although KYC can be a bit cumbersome, and it doesn't offer full anonymity, as long as the casino is trustworthy, there's no need to worry. Cloudbet does have a trusted license from Curaçao and a solid reputation among its players, so you shouldn't have any issues.
-                                    </div>
-                                    <div>
-                                        In general, <span className="font-bold">all payments are instant</span> after the KYC process is done, depending only on the blockchain speed.
-                                    </div>
-                                    <div>
-                                        The following payment limits apply:
+                                        That's right - the NFT craze is clearly here to stay. You can now deposit using one of these NFT collectibles:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            Minimum deposit: 0.001 BTC
+                                            BAYC
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            Minimum withdrawal: 0.001 BTC
+                                            Degenpass
                                         </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            CryptoPunks
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            CloneX
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Azuki
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Doodles
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Mfers
+                                        </div>
+                                    </div><div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            MekaVerse
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="https://degenverse.com/" target="_blank" rel="noreferrer" className="text-blue-600">Degenpass</a> is particularly noteworthy as it's a <span className="font-bold">virtual entry pass to the Degenverse ecosystem</span> and a range of eligible casinos.
+                                    </div>
+                                    <div>
+                                        As <a href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" rel="noreferrer" className="text-blue-600">Metaverse gambling</a> grows in importance and popularity, so will NFTs. By offering the Degenpass, BC.Game is already one step ahead of the competition and proving they're at the edge of innovation when it comes to the online gambling industry.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Deposit and Withdrawal Times and Fees
+                                    </div>
+                                    <div>
+                                        How much until your money gets to and from the casino? We tested it and here's what we found:
+                                    </div>
+                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
+                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3 rounded-t-xl">
+                                            <div className="w-1/2">
+                                                Casino Fees
+                                            </div>
+                                            <div className="w-1/2">
+                                                None
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between px-3 py-3">
+                                            <div className="w-1/2">
+                                                Transaction Fees
+                                            </div>
+                                            <div className="w-1/2">
+                                                Depends on the currency
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
+                                            <div className="w-1/2">
+                                                Average Withdrawal Time
+                                            </div>
+                                            <div className="w-1/2">
+                                                10 minutes
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between px-3 py-3">
+                                            <div className="w-1/2">
+                                                Maximum Withdrawal Time
+                                            </div>
+                                            <div className="w-1/2">
+                                                6 hours
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        Withdrawals are subject to a transaction fee, which varies per currency.
+                                    </div>
+                                    <div>
+                                        Bitcoin transactions, for instance, have a 0.0006 BTC cost. However, this isn't a casino fee (BC.Game doesn't charge you for sending the money). Instead, it's a standard <span className="font-bold">reward for blockchain participants who verify the transaction</span> - that's why it varies depending on how busy the network is.
+                                    </div>
+                                    <div>
+                                        Although they're not instant, <span className="font-bold">BC.Game transactions are quick</span> - for us, they only took around 10 minutes, but the maximum time is six hours. On exceptional occasions, transaction times may be longer (due to congestion on the Bitcoin network, for instance), but we never experienced that.
+                                    </div>
+                                    <div>
+                                        If you're mindful of your privacy, one very positive aspect is that the casino <span className="font-bold">does not require an invasive Know Your Customer verification check.</span> They can still ask you to confirm your identity, though, especially for larger cash-outs.
+                                    </div>
+                                    <div>
+                                        We always stress the importance of only sharing truthful information - this is because lying to the casino could lead to trouble at withdrawal or even blocked transactions.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -2006,19 +1847,23 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Quick withdrawals and deposits</div>
+                                            <div className="w-[230px]">Large variety of cryptos (66+)</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">No maximum amounts</div>
+                                            <div className="w-[230px]">Cryptocurrency exchange</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Low minimum amounts</div>
+                                            <div className="w-[230px]">Fast and easy transactions</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">NOption to buy and sell crypto via third-party provider</div>
+                                            <div className="w-[230px]">No invasive KYC</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">In-house stablecoin</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -2027,11 +1872,7 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">KYC required</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No fiat money accepted</div>
+                                            <div className="w-[230px]">No fiat payments</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -2042,7 +1883,7 @@ const CloudbetGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open Cloudbet
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -2061,7 +1902,7 @@ const CloudbetGameReview = () => {
                                             Customer Support
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            The FAQ's might help you out
+                                            Social casino with a very friendly team
                                         </div>
                                     </div>
                                 </div>
@@ -2087,40 +1928,125 @@ const CloudbetGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        In case of any uncertainties or issues, the customer support team is always ready to help out.
+                                        BC.Game is a multilingual website that is available in sixteen different languages. So, whether you speak English, Mandarin, or French, you can rest assured the casino does speak your language, and so does the player chat.
                                     </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Live Chat
+                                    <div>
+                                        However, the help center and support team are only available in English.
+                                    </div>
+                                    <div>
+                                        You can reach out to BC.Game in multiple ways, though:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Live Chat
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            FAQ pagg
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                FAQ
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Email
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Telegram
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Social network profiles
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Email
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Skype
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
-                                        Before you contact them though, it might be a good idea to visit the FAQ page, where you can find the answers to the most common questions. A lot of these questions revolve around Bitcoin. You'll also find that you can learn everything about the live dealers at Cloudbet.
+                                        When we contacted the team, we were pleasantly surprised by the speedy response. It only took a few seconds to get a personal response in the live chat. Agents provided comprehensive and helpful information and we couldn't be happier about the ease of access.
                                     </div>
                                     <div>
-                                        If your question still remains unanswered, or if you prefer to contact the team directly, you can get in touch through email or live chat. Both options are available 24/7, but only in 7 languages, including English and French.
+                                        BC.Game casino also has a strong <span className="font-bold">social media presence</span> through the following platforms:
                                     </div>
-                                    <div>
-                                        Of course, you can also opt for the social route as Cloudbet has profiles on Twitter and Bitcointalk. This is where you'll find the latest news and get another opportunity to ask any questions you may have.
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://github.com/bc-game-project/bcgame-crash"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    GitHub
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://medium.com/@BC.Game"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Medium
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://twitter.com/BCGameOfficial"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Twitter
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://www.facebook.com/bcgamewin"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://discord.com/invite/mQh3M6UDkR"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Discord
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://bitcointalk.org/index.php?topic=5088875.0"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    BitcoinTalk
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -2133,15 +2059,19 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">24/7 live chat</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Friendly support team</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Skype and Telegram support</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
                                             <div className="w-[230px]">Social media presence</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">FAQ page</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">24/7 Live chat</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -2150,7 +2080,7 @@ const CloudbetGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Support is offered in only a few languages</div>
+                                            <div className="w-[230px]">Support only in English</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -2161,7 +2091,7 @@ const CloudbetGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open Cloudbet
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -2179,7 +2109,7 @@ const CloudbetGameReview = () => {
                                         F.A.Q.
                                     </div>
                                     <div className="text-sm text-gray-500">
-                                        What else is there to tell?
+                                        All you need to know about BC.Game
                                     </div>
                                 </div>
                             </div>
@@ -2188,11 +2118,11 @@ const CloudbetGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ1(!openFAQ1) }}
                                 >
-                                    1. How do I get loyalty points on Cloudbet?
+                                    1. Is BC casino legit?
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        To earn loyalty points at <a href={"https://" + siteData.link} target="" className="text-blue-600">Cloudbet,</a> you simply have to play at the casino and place sports bets. Playing for fun (in demo mode) does not earn you any loyalty points, so you must make sure you're playing for real.
+                                        Yes, <a href={"https://" + siteData.link} target="" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
                                     </div>
                                 }
                             </div>
@@ -2201,11 +2131,11 @@ const CloudbetGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ2(!openFAQ2) }}
                                 >
-                                    2. Where does Cloudbet work? In what countries can I play at Cloudbet?
+                                    2. What currencies can I use at BC.Game?
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        <a href={"https://" + siteData.link} target="" className="text-blue-600">Cloudbet</a> accepts players from most countries including Canada and Australia, but it does exclude registrations from the United States, the United Kingdom, Hong Kong, and Singapore. If you're from a country where online gaming is regulated or forbidden, playing at Cloudbet could also be illegal.
+                                        BC.Game supports a wide range of cryptocurrencies, including Bitcoin, Ethereum, Dogecoin, Ripple, Tether, and more. Unfortunately, you cannot play with fiat money at this casino.
                                     </div>
                                 }
                             </div>
@@ -2214,11 +2144,24 @@ const CloudbetGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ3(!openFAQ3) }}
                                 >
-                                    3. Should I use a VPN while playing at Cloudbet?
+                                    3. Does BC.Game offer a deposit welcome bonus?
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        A VPN can help you protect your privacy online, so using one when playing at <a href={"https://" + siteData.link} target="" className="text-blue-600">Cloudbet</a> can be a good option for you. However, you shouldn't use a VPN to play from unlicensed locations since there is a KYC process in place before you can withdraw your profits.
+                                        Yes, there is a traditional deposit bonus at BC.Game on a regular basis, you can spin a wheel every day and win a random prize, including up to 5 BTC. The best part? You can do that right after sign up, even before your first deposit. There are also limited offers from time to time, where you can indeed unlock a deposit bonus paid in BCD (the casino's own token).
+                                    </div>
+                                }
+                            </div>
+                            <div className="flex flex-col border-b border-gray-400 px-2 py-2">
+                                <div
+                                    className="text-black font-medium cursor-pointer"
+                                    onClick={() => { setOpenFAQ4(!openFAQ4) }}
+                                >
+                                    4. Is BC.Game safe?
+                                </div>
+                                {openFAQ4 &&
+                                    <div className="text-black mt-5">
+                                        Along with the Curaçao license, BC.Game offers a few safety reassurances to its players. For instance, this casino is provably fair and holds a Crypto Gambling Foundation seal of approval.
                                     </div>
                                 }
                             </div>
@@ -2289,4 +2232,4 @@ const CloudbetGameReview = () => {
     )
 }
 
-export default CloudbetGameReview;
+export default KingBillyGameReview;

@@ -427,7 +427,7 @@ const BCGameReview = () => {
                                                                     className="h-10">
                                                                 </img>
                                                             </div>
-                                                            <div className="text-base">
+                                                            <div className="text-center">
                                                                 {data.name}
                                                             </div>
                                                         </div>
