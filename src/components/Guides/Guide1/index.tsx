@@ -6,24 +6,10 @@ import logoImg from "../../../Assets/images/logos/bc-game.png";
 import { ISiteRankBlogCardObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
 import React, { useEffect } from "react";
-<<<<<<< HEAD
-import { Button, Fab } from "@mui/material"
-import { KeyboardArrowRight, NavigateBefore, NavigateNext } from "@mui/icons-material"
-=======
 import { Button } from "@mui/material"
 import { Check, KeyboardArrowRight } from "@mui/icons-material"
->>>>>>> 4f40cc849fa27f160caed2698bea75a83f28f841
 
 import ReadMoreCards from "../../Card/ReadMoreCards";
-
-<<<<<<< HEAD
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper";
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-=======
 import OlieMan from "../../../Assets/images/Content/olieman-eth.jpg"
 import BlockstreamGreen from "../../../Assets/images/Content/blockstream-green.png"
 import BlockstreamNewWallet from "../../../Assets/images/Content/blockstream-new-wallet.png"
@@ -32,7 +18,6 @@ import FirstMobileWallet from "../../../Assets/images/Content/first-mobile-walle
 import BcGame from "../../../Assets/images/Content/bcgame.png"
 import CasinoStake from "../../../Assets/images/Content/casino-stake.png"
 import Cloudbet1 from "../../../Assets/images/Content/Cloudbet1.jpg"
->>>>>>> 4f40cc849fa27f160caed2698bea75a83f28f841
 
 
 interface IProps {
