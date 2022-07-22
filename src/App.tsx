@@ -44,6 +44,7 @@ import CloudbetGameReview from './pages/Reviews/CloudbetGameReview';
 import TrueFlipGameReview from './pages/Reviews/TrueFlipGameReview';
 import BitcoinComGameReview from './pages/Reviews/BitcoinComGameReview';
 import BitStarzGameReview from './pages/Reviews/BitStarzGameReview';
+import KingBillyGameReview from './pages/Reviews/KingBillyGameReview';
 // review pages end
 
 function App() {
@@ -87,6 +88,7 @@ function App() {
         <Route path='/review/trueflip.io' element={<TrueFlipGameReview />} />
         <Route path='/review/games.bitcoin.com' element={<BitcoinComGameReview />} />
         <Route path='/review/bitstarz.com' element={<BitStarzGameReview />} />
+        <Route path='/review/kingbillycasino.com' element={<KingBillyGameReview />} />
         {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />

@@ -37,7 +37,6 @@ import {siteDatas} from "../../Interfaces/SiteDatas";
 // crypto images
 import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
 import bitcoinCashCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-cash.png";
-import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
 import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
 import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
 import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
@@ -45,23 +44,24 @@ import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
 // game images
 import baccaratGameImg from "../../Assets/images/games/baccarat.png";
 import blackjackGameImg from "../../Assets/images/games/blackjack.png";
-import diceGameImg from "../../Assets/images/games/dice.png";
 import jackpotGameImg from "../../Assets/images/games/jackpot.png";
-import kenoGameImg from "../../Assets/images/games/keno.png";
 import liveCasinoGameImg from "../../Assets/images/games/live-casino.png";
-import plinkoGameImg from "../../Assets/images/games/plinko.png";
 import pokerGameImg from "../../Assets/images/games/poker.png";
 import rouletteGameImg from "../../Assets/images/games/roulette.png";
-import sicBoGameImg from "../../Assets/images/games/sic-bo.png";
 import slotsGameImg from "../../Assets/images/games/slots.png";
 
 // review images
-import reviewImg1 from "../../Assets/images/reviews/7-bit-starz-game/1-bitstarz-review.png";
-import reviewImg2 from "../../Assets/images/reviews/7-bit-starz-game/2-bitstarz-review.png";
-import reviewImg3 from "../../Assets/images/reviews/7-bit-starz-game/3-bitstarz-review.png";
+import reviewImg1 from "../../Assets/images/reviews/1-bc-game/1-bc-review.png";
+import reviewImg2 from "../../Assets/images/reviews/1-bc-game/2-bc-review.png";
+import reviewImg3 from "../../Assets/images/reviews/1-bc-game/3-bc-review.png";
+import reviewImg4 from "../../Assets/images/reviews/1-bc-game/4-bc-review.png";
+import reviewImg5 from "../../Assets/images/reviews/1-bc-game/5-bc-review.png";
+import reviewImg6 from "../../Assets/images/reviews/1-bc-game/6-bc-review.png";
+import reviewImg7 from "../../Assets/images/reviews/1-bc-game/7-bc-review.png";
+import reviewImg8 from "../../Assets/images/reviews/1-bc-game/8-bc-review.png";
 
 // country flag
-import { CN, GB, JP, RU } from 'country-flag-icons/react/1x1';
+import { AF, GB, FI, DE, JP, RU, NO } from 'country-flag-icons/react/1x1';
 
 const StyledRating = styled(Rating)({
 });
@@ -96,10 +96,6 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Bitcoin Cash"
     },
     {
-        img: dogecoinCryptoImg,
-        name: "Dogecoin"
-    },
-    {
         img: etherCryptoImg,
         name: "Ethereum"
     },
@@ -123,24 +119,12 @@ const gamesObj: Array<any> = [
         name: "Blackjack"
     },
     {
-        img: diceGameImg,
-        name: "Dice"
-    },
-    {
         img: jackpotGameImg,
         name: "Jackpots"
     },
     {
-        img: kenoGameImg,
-        name: "Keno"
-    },
-    {
         img: liveCasinoGameImg,
         name: "Live Casino"
-    },
-    {
-        img: plinkoGameImg,
-        name: "Plinko"
     },
     {
         img: pokerGameImg,
@@ -151,16 +135,12 @@ const gamesObj: Array<any> = [
         name: "Roulette"
     },
     {
-        img: sicBoGameImg,
-        name: "Sic Bo"
-    },
-    {
         img: slotsGameImg,
         name: "Slots"
     }
 ]
 
-const BitStarzGameReview = () => {
+const KingBillyGameReview = () => {
     const siteData = siteDatas[7];
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
@@ -265,7 +245,7 @@ const BitStarzGameReview = () => {
                                         {siteData.name} Overview
                                     </div>
                                     <div className="text-base">
-                                        Is it safe? Or is BitStarz a scam?
+                                        Come for the crown, stay for the bonuses
                                     </div>
                                 </div>
                             </div>
@@ -333,16 +313,28 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-wrap gap-4 mt-5">
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <CN className="h-5 rounded-full" />
-                                                <div className="text-base">Chinese</div>
+                                                <AF className="h-5 rounded-full" />
+                                                <div className="text-base">Afrikaans</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <GB className="h-5 rounded-full" />
                                                 <div className="text-base">English</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
+                                                <FI className="h-5 rounded-full" />
+                                                <div className="text-base">Finnish</div>
+                                            </div>
+                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
+                                                <DE className="h-5 rounded-full" />
+                                                <div className="text-base">Germany</div>
+                                            </div>
+                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <JP className="h-5 rounded-full" />
                                                 <div className="text-base">Japanese</div>
+                                            </div>
+                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
+                                                <NO className="h-5 rounded-full" />
+                                                <div className="text-base">Norwegian</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <RU className="h-5 rounded-full" />
@@ -364,37 +356,29 @@ const BitStarzGameReview = () => {
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Knowledgeable team</div>
+                                                        <div className="w-[230px]">Lots of bonuses and rewards</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Generous and varied promotions</div>
+                                                        <div className="w-[230px]">Large number of games</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Big game selection</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">All the best providers</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">BTC to EUR converter</div>
+                                                        <div className="w-[230px]">Original medieval theme</div>
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                                        <div className="w-[230px]">Not all common cryptocurrencies accepted</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                                        <div className="w-[230px]">No provably fair games</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
                                                         <div className="w-[230px]">KYC check</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">Limited language support</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">Lack of transparency</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -645,7 +629,7 @@ const BitStarzGameReview = () => {
                                             Bonuses
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            A vast array of generous promotions
+                                            Treat yourself to some royal rewards
                                         </div>
                                     </div>
                                 </div>
@@ -671,7 +655,13 @@ const BitStarzGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div className="text-base">
-                                        You're off to a good start at BitStarz, with a four-part welcome package offering you up to 5 Bitcoins and 180 Free Spins.
+                                        Rejoice! King Billy Casino's welcome bonus is truly fit for a king.
+                                    </div>
+                                    <div>
+                                        After your first four deposits, you can claim <span className="font-bold">up to 5 Bitcoin and 200 free spins</span>:
+                                    </div>
+                                    <div className="text-base">
+                                        With the current new user scheme, you can get up to 780% deposit match on your first four transactions. Here is how it works:
                                     </div>
                                     {/* timeline 1 */}
                                     <div className="text-base">
@@ -685,7 +675,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        1st Deposit Bonus: 100% up to 1 BTC + 180 Bitcoin Free Spins
+                                                        <span className="font-bold">1st Deposit</span> - 100% up to 1 BTC + 200 Bitcoin free spins
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -698,7 +688,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        2nd Deposit Bonus: 50% up to1 BTC
+                                                        <span className="font-bold">2nd Deposit</span> - 50% up to 1 BTC (code WELCOME2)
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -711,7 +701,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        3rd Deposit Bonus: 50% up to 2 BTC
+                                                        <span className="font-bold">3rd Deposit</span> - 25% up to 1.5 BTC (code WELCOME3)
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -723,7 +713,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        4th Deposit Bonus: 100% up to 1 BTC
+                                                        <span className="font-bold">4th Deposit</span> - 25% up to 1.5 BTC (code WELCOME4)
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -731,58 +721,22 @@ const BitStarzGameReview = () => {
                                     </div>
                                     {/*  */}
                                     <div>
-                                        Although the bonuses are available in many currencies, it doesn't take a math genius to figure out that if you want to get more bang for your buck, definitely choose Bitcoin for your welcome bonus (hint: 1 BTC is worth a lot more 100$).
+                                        This multi-tiered welcome offer has one considerable advantage: you can deposit a smaller amount at first to test the waters before committing your Bitcoin.
                                     </div>
                                     <div>
-                                        Do note that you will have to play through your bonus funds at least 40x before you can withdraw any winnings. In addition, you have to fulfil these wagering requirements within 7 days. After that time, the bonus expires.
+                                        Since the free spins are yours after the first deposit, you can check out King Billy's best games right from the start.
                                     </div>
                                     <div>
-                                        While strict, the terms and conditions for this welcome bonus aren't unusual for Bitcoin bonuses.
-                                    </div>
-                                    <div>
-                                        <span className="font-bold">But is BitStars's welcome bonus worth it?</span> It depends.
-                                    </div>
-                                    <div>
-                                        It's certainly more value than most other Bitcoin casinos offer you. Other popular casinos like <a href="https://stake.com/" target="_blank" rel="noreferrer" className="text-blue-600">Stake</a>, for instance, don't have any welcome bonus.
-                                    </div>
-                                    <div>
-                                        However, to fully take advantage of this offer, you have to play through the bonus and wager its winnings within seven days.
-                                    </div>
-                                    <div>
-                                        If you're already looking to spend some time at the casino, that shouldn't be an issue. But, on the other hand, casual players may struggle to find value here.
-                                    </div>
-                                    <div>
-                                        Our tip? Before you commit your funds, redeem the 20 Free Spins you get on registration and see if the casino is worth your time.
+                                        Come again? Dollar equivalent?
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        BitStarz No Deposit Bonus
+                                        Canadian Welcome Package - $1500 In CAD
                                     </div>
                                     <div>
-                                        As soon as you create an account at BitStarz, you <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">unlock 20 Free Spins</a> to test the product. The spins are all yours simply for signing up; no deposit nor BitStarz bonus code is required.
+                                        If you're Canadian and you're looking for a BTC alternative, you're in for a treat, with a dedicated welcome bonus available in CAD, giving you up to $1500 and 200 free spins:.
                                     </div>
                                     <div>
-                                        You can use it to get a good feel of the casino, spin some slots and maybe even win Bitcoin with no risk!
-                                    </div>
-                                    <div>
-                                        While this bonus is 100% legitimate, it does come with some restrictions. For instance, there is a wagering requirement, and you have to finish the KYC process before withdrawing any winnings.
-                                    </div>
-                                    <div>
-                                        Do note that the casino states that players with disposable email addresses are not eligible for any free spins.
-                                    </div>
-                                    <div className="font-bold">
-                                        We recommend you thoroughly read the terms and conditions of the offer before signing up so you don't have any unpleasant surprises.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        BitStarz Canada - Bonus For Canadian Players (in CAD)
-                                    </div>
-                                    <div>
-                                        Canadian players are not forgotten at BitStarz!
-                                    </div>
-                                    <div>
-                                        If you'd rather play with real money, you'll be happy to know you can get up to $2000 (Canadian dollars) with your full welcome package.
-                                    </div>
-                                    <div>
-                                        Here's how the Canadian bonus works:
+                                        Let's have a closer look at how it works:
                                     </div>
                                     <div className="text-base">
                                         <Timeline position="right">
@@ -795,7 +749,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        1st Deposit Bonus: 100% up to $400 + 180 Free Spins
+                                                        <span className="font-bold">1st Deposit</span> - 100% up to $300 + 200 Free spins
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -808,7 +762,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        2nd Deposit Bonus: 50% up to $400
+                                                        <span className="font-bold">2nd Deposit</span> - 50% up to $300
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -821,7 +775,7 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        3rd Deposit Bonus: 50% up to $800
+                                                        <span className="font-bold">3rd Deposit</span> - 25% up to $450
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -833,55 +787,77 @@ const BitStarzGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        4th Deposit Bonus: 100% up to $400
+                                                        <span className="font-bold">4th Deposit</span> - 25% up to $450
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
                                         </Timeline>
                                     </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="font-bold text-gray-400">
-                                            Bitstarz Canada
+                                    <div>
+                                        As you can see, it's similar to the Bitcoin offer, giving you more flexibility. Due to the current value of the coin, however, the Bitcoin welcome offer gives you more value for your money, and we recommend you get it instead.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Other King Billy Casino Bonuses
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">King's Gold</span>: Every month, King Billy dishes out 61 free spins on a carefully selected slot machine upon a $20 deposit.
                                         </div>
-                                        <div className="text-white font-bold text-2xl">
-                                            BitStarz no deposit bonus is available for Canadian players!
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Spin & Win</span>: Have the chance to win 100 daily free spins on the ever-popular Book of Dead slot. 
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Tournaments</span>: Thrash your competition on regular tournaments organized by King Billy himself.
                                         </div>
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Other BitStarz Promotions
+                                        King Billy Casino's VIP Program
                                     </div>
                                     <div>
-                                        The welcome offers are just the tip of the promotional iceberg at BitStarz casino. Some of the other freebies that might come your way include bonus credit, free spins, and, in some cases, even a Tesla!
+                                        Your journey to royalty starts humbly at first; when you first join the realm, you're only a citizen. 
                                     </div>
                                     <div>
-                                        This casino's list of regular promotions includes things like:
+                                        If you play your cards right, however, you can become a baron, duke, prince, and even a king!
+                                    </div>
+                                    <div className="font-bold">
+                                        How It Works:
+                                    </div>
+                                    <div>
+                                        You can climb up the social ladder by playing selected games and collecting points. 
+                                    </div>
+                                    <div>
+                                        Once you do become royalty, you're in for a few treats:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Slot Wars</span>: as a regular player, you can play for your share of $5,000 and 5,000 free spins, which are up for grabs every single week.
+                                            Weekly cashback of up to 13%.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Table Wars</span>: if you're looking for bragging rights in addition to a nice prize pool, maybe you'll want to try your luck at the Table Wars. There, you'll get a weekly chance to win $3,000.
+                                            Dedicated VIP manager with exclusive rewards.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Monday Reload Bonus and Free Spins Friday</span>: the easiest ways to get your hands on a nice bonus are the Monday Reload Bonus and the Free Spins Friday. You only have to deposit to qualify for these bonuses.
+                                            Chance to change loyalty points into cash.
                                         </div>
                                     </div>
-                                    <div>
-                                        While this is a decent selection of promotions, we think that other casinos bring more to the table when it comes to regular rewards. Stake, for instance, hosts a weekly $100,000 giveaway, with individual prizes going up to $5,000, which is more than the full prize pool for the Slot Wars.
-                                    </div>
-                                    <div>
-                                        What's more, BitStarz doesn't have an advertised VIP program.
-                                    </div>
-                                    <div>
-                                        Our opinion is that while new players get a good deal at BitStarz, but in the long run, you can find better value at brands like <a href="https://stake.com/" target="_blank" rel="noreferrer" className="text-blue-600">Stake</a> casino or even <a href="/review/trueflip.io" target="_blank" rel="noreferrer" className="text-blue-600">True Flip</a>.
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Level up bonuses, including free spins and surprise rewards.
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -894,15 +870,15 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Generous welcome bonus</div>
+                                            <div className="w-[230px]">Themed VIP program</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Lots of side promotions</div>
+                                            <div className="w-[230px]">Tiered welcome bonus</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Free spins bonus without deposit</div>
+                                            <div className="w-[230px]">Consistent and rewarding promotions</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -911,7 +887,7 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No advertised VIP program</div>
+                                            <div className="w-[230px]">Not all games count for the VIP club</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -941,7 +917,7 @@ const BitStarzGameReview = () => {
                                             Look & Feel
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Nice blend of sober and fun design
+                                            Easy navigation and a modern look
                                         </div>
                                     </div>
                                 </div>
@@ -967,19 +943,40 @@ const BitStarzGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        As expected, you can access the website on both smartphones and computers. While there is no BitStarz app, the website is fully responsive on smaller screens.
+                                        BC.Game is a modern website with the sleek and smooth template we've come to associate with crypto casinos. It's not an original look, but, in our opinion, it's still attractive.
                                     </div>
                                     <div>
-                                        When playtesting BitStarz casino, we didn't find any major bugs. The platform performs well on both desktop and mobile devices, with fast loading times and intuitive navigation.
+                                        The bluish-grey and green color scheme that feels familiar, while the mascot is cute and friendly. Game thumbnails have a simple, yet visually pleasing style. The tone of voice is fun, too.
                                     </div>
                                     <div>
-                                        The very first moment you open the BitStarz page, you are greeted by the bonuses on offer, which is quite handy if you're trying to browse the best offers.
+                                        Here are some of the best UX features BC.Game has to offfer:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Vibrant players' chat</span> on the right-hand side of the screen (participation is entirely optional, but it can be rewarding).
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Winners' feed and bet backlog</span> on the homepage for total transparency (you can hide your username for privacy).
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Fuss-free social media signup</span> with optional safety features available (more on that below).
+                                        </div>
                                     </div>
                                     <div>
-                                        However, if you're looking for the game selection, you have to scroll down past the promotions. Then, you can browse the different game categories available. This vibrant, colourful area showcases all the different slots, table games, and more but still maintains the casino's visual identity.
+                                        In our experience, navigation was intuitive and hassle-free, both on the browser version and BC.Game's mobile app.
                                     </div>
                                     <div>
-                                        But does it look good? While the answer is somewhat subjective, we thought BitStarz offered an appealing website with a distinctive visual vibe.
+                                        There are, however, a few grammar mistakes and untranslated areas (in some languages) that could negatively influence your gameplay. This is an area where we'd like to see the brand improve.
+                                    </div>
+                                    <div>
+                                        Additionally, we did experience slow loading times on more demanding games, namely Saviour Sword, but we were browsing with a VPN, which can reduce loading speed.
                                     </div>
                                     <div className="w-[350px] xl:w-[600px] flex justify-center">
                                         <Swiper
@@ -995,7 +992,7 @@ const BitStarzGameReview = () => {
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
                                                         className=""
-                                                        src={reviewImg1}
+                                                        src={reviewImg3}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
@@ -1005,7 +1002,7 @@ const BitStarzGameReview = () => {
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
                                                         className=""
-                                                        src={reviewImg2}
+                                                        src={reviewImg4}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
@@ -1014,7 +1011,7 @@ const BitStarzGameReview = () => {
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
                                                         className=""
-                                                        src={reviewImg3}
+                                                        src={reviewImg5}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
@@ -1042,11 +1039,24 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Easy navigation due to its clean interface</div>
+                                            <div className="w-[230px]">Social features</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Fast loading times</div>
+                                            <div className="w-[230px]">Mobile app</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Intuitive navigation</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-y-3 px-5">
+                                        <div className="font-bold text-red-900">
+                                            CONS
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Occasional language issues</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1057,7 +1067,7 @@ const BitStarzGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BitStarz
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1076,7 +1086,7 @@ const BitStarzGameReview = () => {
                                             Game Selection
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Many top games to choose from
+                                            Popular games, live tables, and 100% provably fair originals
                                         </div>
                                     </div>
                                 </div>
@@ -1102,19 +1112,26 @@ const BitStarzGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        There is much to like about BitStarz's game selection.
+                                        We can't have a full BC.Game review without looking at the games, right? Well, we're happy to report that the <span className="font-bold">game portfolio is full of exciting opportunities.</span>
                                     </div>
                                     <div>
-                                        As soon as you enter the lobby, you can see their top games. You should be able to recognize a few famous titles in this section, such as Book of Dead, Bonanza, and Jammin' Jars. However, there are many other games on offer at BitStarz Casino.
+                                        From provably fair originals to big-name slots and live games, this online casino has it all. Let's break down the main game types:
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        BC Originals
                                     </div>
                                     <div>
-                                        You get to choose from a vast selection from over 30 providers, including several new releases, which means you can be sure never to miss another brand-new slot again! You also don't have to worry about missing out on classics like Immortal Romance or Butterfly Staxx because these games are also available at BitStarz.
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg6}
+                                            alt="reviewImg">
+                                        </img>
                                     </div>
                                     <div>
-                                        Speaking of classics, the infamous jackpot game, Mega Moolah, is also available, alongside other progressive jackpots that might give you the chance to win even bigger.
+                                        BC.Game has a selection of provably fair originals, including their popular roulette game.
                                     </div>
                                     <div>
-                                        The sheer variety of casino games available is impressive: not many casinos accepting Bitcoin payments offer as many different games as BitStarz.
+                                        BC.Game's original games are exclusively provably fair, and include a solid selection of about 20 internally-developed games, including all the crowd-pleasing casino classics:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1126,31 +1143,31 @@ const BitStarzGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Jackpot slots
+                                                Baccarat
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Progressive slots
+                                                Dice
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                European roulette
+                                                Keno
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                American roulette
+                                                Crash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Live roulette
+                                                Roulette
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1162,81 +1179,215 @@ const BitStarzGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Live blackjack
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Baccarat
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Live baccarat
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Video poker
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Video
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Live poker
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Bicho
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Video
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
                                                 Plinko
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Sic Bo
+                                                Poker
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Keno
+                                                Hi-Lo
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Wheel of Fortune
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Mainstream Providers
+                                    </div>
+                                    <div>
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg7}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                        The Madame Destiny slot by Pragmatic Play offers a truly enchanting experience.
+                                    </div>
+                                    <div>
+                                        BC.Game also offers a selection of games by <span className="font-bold">popular providers like Pragmatic Play and Yggdrasil.</span>
+                                    </div>
+                                    <div>
+                                        While their portfolio is growing exponentially, it's still nowhere as big as brands like Stake, which offer a larger variety of mainstream games alongside their provably fair titles.
+                                    </div>
+                                    <div>
+                                        That said, BC.Game is still a newish casino, and while <span className="font-bold">we think they can improve their</span> offering, they've already come a long way.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Live Casino Games at BC.Game
+                                    </div>
+                                    <div>
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg8}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                        BC.Game boasts a stellar selection of live games, including your favorites from big-name providers.
+                                    </div>
+                                    <div>
+                                        Who doesn't love a live game? <span className="font-bold">Hosted by live dealers</span> and featuring a range of exciting awards, they get you closer to an in-person experience than ever.
+                                    </div>
+                                    <div>
+                                        BC.Game is continuously improving their live casino games offer. The current selection includes:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Traditional <span className="font-bold">blackjack and roulette tables</span> with real dealers
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            The infamous live casino <span className="font-bold">game shows</span> from Evolution Gaming
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Classic <span className="font-bold">tables with a twist.</span> like Lightning Roulette
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Casino <span className="font-bold">poker tables</span>, baccarat, dice, and much more!
+                                        </div>
+                                    </div>
+                                    <div>
+                                        In total, there are more than <span className="font-bold">100 different crypto-friendly live tables</span> where you can put your skills to the test!
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        House Edge at BC.Game Originals
+                                    </div>
+                                    <div>
+                                        Arguably one of the biggest perks we noticed during our BC.Game review - the <span className="font-bold">high RTP and low house edge.</span>
+                                    </div>
+                                    <div>
+                                        Let's look at the numbers for some of BC's most popular games:
+                                    </div>
+                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
+                                        <div className="flex flex-row text-center bg-violet-800 rounded-t-xl py-3">
+                                            <div className="w-1/3 text-white">
+                                                Game Type
+                                            </div>
+                                            <div className="w-1/3 text-white">
+                                                RTP
+                                            </div>
+                                            <div className="w-1/3 text-white">
+                                                House Edge
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Blackjack
+                                            </div>
+                                            <div className="w-1/3">
+                                                99.52%
+                                            </div>
+                                            <div className="w-1/3">
+                                                0.48%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Crash
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Dice
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Keno and Plinko
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Others
+                                            </div>
+                                            <div className="w-1/3">
+                                                99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Roulette
+                                            </div>
+                                            <div className="w-1/3">
+                                                97.3%
+                                            </div>
+                                            <div className="w-1/3">
+                                                2.7%
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Slots
+                                            </div>
+                                            <div className="w-1/3">
+                                                97.51-99%
+                                            </div>
+                                            <div className="w-1/3">
+                                                1-2.49%
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        As you can see from the list above, BitStarz is not just about slot games. What's more, both the Table Games and the Live Games section feature a good selection of different gambling options.
+                                        BC.Game offers more value for money than most competitors, with <span className="font-bold">an extremely low 1% house edge</span> (sometimes even lower!) on most of its original games, including popular games like Crash.
                                     </div>
                                     <div>
-                                        As usual, roulette and blackjack are the more numerous games, but you can also find several versions of casino poker, baccarat, and more.
+                                        This is translated into high Return-to-Player percentages, giving you more bang for your buck in the long run.
                                     </div>
                                     <div>
-                                        Unfortunately, not all games are playable using cryptocurrencies. There is, however, a dedicated tab for Bitcoin players. All of the games featured here can be played with BTC, allowing you to find them with ease if you're only interested in Bitcoin gambling.
+                                        Do note that games from <span className="font-bold">mainstream providers will still have their regular payouts</span> since those are outside of BC.Games' hands.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Do BC.Game Strategies Work?
                                     </div>
                                     <div>
-                                        One thing you should also be aware of is that some games may be restricted in your location.
+                                        Any seasoned casino player will tell you that there is <span className="font-bold">no such thing as a guaranteed win.</span>
+                                    </div>
+                                    <div>
+                                        However, this doesn't stop people from trying to develop strategies that they think will give them an edge. These might give you the illusion of better odds. Ultimately, <span className="font-bold">the house always has an advantage</span>, and even the best players can have losing streaks.
+                                    </div>
+                                    <div>
+                                        So, instead of focusing on betting strategies, <span className="font-bold">aim to optimize your bankroll management.</span> This will help you keep your losses to a minimum, and improve your winnings over the long term.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1249,11 +1400,7 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Overall great selection</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Popular providers</div>
+                                            <div className="w-[230px]">Very low house edge</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
@@ -1261,20 +1408,15 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Loads of progressive jackpots</div>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col gap-y-3 px-5">
-                                        <div className="font-bold text-red-900">
-                                            CONS
+                                            <div className="w-[230px]">100+ live tables</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Live casino mostly around roulette and blackjack</div>
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Attractive original games</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Not all games playable with crypto</div>
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Plenty of known providers</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1285,7 +1427,7 @@ const BitStarzGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BitStarz
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1304,7 +1446,7 @@ const BitStarzGameReview = () => {
                                             Licensing & Safety
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            As safe as it gets
+                                            Newly-acquired Curaçao license
                                         </div>
                                     </div>
                                 </div>
@@ -1330,67 +1472,78 @@ const BitStarzGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        Besides offering a few provably fair games, BitStarz is a casino that has been awarded multiple times by reputable brands in the industry like AskGambers.
+                                        <span className="font-bold">Is BC.Game a legit site?</span> Yes, they are. BC.Game is a legal crypto gambling site that holds a license and offers multiple security features.
                                     </div>
                                     <div>
-                                        Their commitment to security is outstanding, going above and beyond to guarantee full transparency and data security:
-                                    </div>                                    
+                                        In previous editions of this casino review, licensing was our biggest issue. For the a long time, BC used to be unlicensed - and that didn't particularly win our trust. But hurrah, the situation has changed!
+                                    </div>
+                                    <div>
+                                        <a href="https://gateway.pinata.cloud/ipfs/QmZbpAZ4c9izhEYKmJ4gqkx2Kq4fs88h3hGF1kcMXPHWRg/license.jpg" target="_blank" rel="noreferrer" className="font-bold text-blue-600">BC.Game now has a gambling license from Curaçao</a>, which definitely boosts our confidence (and gives players peace of mind).
+                                    </div>
+                                    <div>
+                                        But, it's not just about the license. Here are some of the additional safety features that caught our attention:
+                                    </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            The casino partnered with SoftSwiss, an iGaming platform that provides fraud protection and trusted fair games.
+                                            Players can secure their account with <span className="font-bold">2-factor authentication.</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            BitStarz uses SSL encryption to protect all customer's personal data.
+                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank"  rel="noreferrer" >Crypto Gambling Foundation seal of approval.</a>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            2-factor authentication is available to those that want an additional layer of security in their account.
+                                            iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank" rel="noreferrer">verified its randomness.</a>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank" rel="noreferrer">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
                                         </div>
                                     </div>
                                     <div>
-                                        As a side note, BitStarz also holds a Curaçao license, which isn't a deal-maker on its own but adds nicely to the mix - just like the fact that they have an RNG <a href="https://itechlabs.com/certification-services/rng-testing-certification/" target="" className="text-blue-600">certification</a> by iTech Labs.
+                                        Another common question we get is:
+                                    </div>
+                                    <div className="font-bold">
+                                        Is BC.Game fair?
+                                    </div>
+                                    <div>
+                                        The answer is yes.
+                                    </div>
+                                    <div>
+                                        In fact, BC.Game excels in provable fairness, which means the algorithm cannot be rigged. Provably fair games are random by design and the casino couldn't manipulate the outcome even if they tried.
+                                    </div>
+                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
+                                        <div className="text-white font-bold text-2xl">
+                                            All BC.Game originals are provably fair - check the results yourself at any time!
+                                        </div>
+                                    </div>
+                                    <div>
+                                        BC.Game is licensed, provably fair, and boasts multiple security features. <span className="font-bold">But what about our playtest?</span>
+                                    </div>
+                                    <div>
+                                        We personally and anonymously test all casinos that we review. There is no replacement for first-hand experience - and, we're glad to report <span className="font-bold">it was all smooth sailing</span> with BC.Game. Throughout the entire experience, we didn't find any issues. No problems with the games, none with bonuses, withdrawals were a piece of cake, too.
+                                    </div>
+                                    <div>
+                                        So, all things considered, we think <span className="font-bold">BC.Game is a trusted, secure brand</span>.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Is BitStarz a Scam?
+                                        Do They Run KYC Checks?
                                     </div>
                                     <div>
-                                        In short, no. All in all, <span className="font-bold">BitStarz is one of the crypto casinos that we can recommend</span> when it comes to its overall quality and safety.
+                                        A Know-Your-Consumer check is when a company verifies that you are who you say you are. This is usually done by matching your name and address to a government-issued ID.
+                                    </div>
+                                    <div className="font-bold">
+                                        BC.Game doesn't run KYC on registration. Instead, they might ask you for ID if you want to make a withdrawal.
                                     </div>
                                     <div>
-                                        However, popular brands like BitStarz are bound to have unhappy customers, including some that share their negative experiences on the web. For instance, claims that the casino doesn't 'pay out' are not unheard of.
-                                    </div>
-                                    <div>
-                                        The fact of the matter is that <span className="font-bold">BitStarz does confiscate player winnings</span> if they suspect identity fraud or bonus abuse. This is common practice at online casinos, and it shouldn't be considered a scam as long as the casino's action is legitimate. The terms and conditions clearly explain that possibility.
-                                    </div>
-                                    <div>
-                                        We always recommend that you protect yourself by gathering as much information as possible:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Read the terms and conditions of any bonus before accepting it and learn about rules like wagering requirements that may prevent you from withdrawing winnings.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Go through the website's terms and conditions before making your first deposit.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Always provide real information at casinos that verify your identity, or you will risk having your funds confiscated and your account closed.
-                                        </div>
-                                    </div>
-                                    <div>
-                                        That being said, we believe BitStarz could make a better effort to highlight these rules on their website. While BitStarz, in our opinion, is not a scam, there is room for improvement when it comes to its transparency.
+                                        In our experience, this happens for larger cash-outs, but random checks are still possible. So if you're looking for an anonymous casino, this is a good option. Just be aware that if you do win big, you might have to verify your identity before you can cash out.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1403,27 +1556,19 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Industry awards</div>
+                                            <div className="w-[230px]">2-factor authentication</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">SSL Encryption</div>
+                                            <div className="w-[230px]">Crypto Gambling Foundation seal</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Partnership with SoftSwiss</div>
+                                            <div className="w-[230px]">RNG tested and verified</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">RNG Certified</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Provably fair games</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">2 Factor Authentication available</div>
+                                            <div className="w-[230px]">Gambling license</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1432,11 +1577,7 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Some player complaints</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Lack of transparency</div>
+                                            <div className="w-[230px]">No established reputation</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1447,7 +1588,7 @@ const BitStarzGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BitStarz
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1466,7 +1607,7 @@ const BitStarzGameReview = () => {
                                             Payment Options
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Well-rounded multi-currency acceptance
+                                            Crypto-only. Stellar coin availability, though.
                                         </div>
                                     </div>
                                 </div>
@@ -1492,185 +1633,208 @@ const BitStarzGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        As BitStarz is, first and foremost, a Bitcoin casino, you can obviously pay with Bitcoins. However, other cryptocurrencies are available: Ethereum, Bitcoin Cash, Litecoin, Dogecoin, and Tether. This list of accepted cryptos could be longer, but it does feature most major players.
+                                        BC.Game is a <span className="font-bold">crypto-exclusive casino where you cannot play with fiat money.</span>
                                     </div>
                                     <div>
-                                        If you're looking for a particular coin that isn't offered, do check our cryptocurrency page for a full list of casinos supporting your coin of choice.
+                                        Instead, you have a comprehensive number of cryptocurrencies available, ranging from established coins like Bitcoin to the most obscure altcoins.
                                     </div>
                                     <div>
-                                        In addition, several fiat currencies will also be available to you once you sign up:
+                                        The list of available tokens is too lengthy to include here in full, but last time we counted it included <span className="font-bold">66 different coins.</span>
+                                    </div>
+                                    <div>
+                                        Here are just a few of the most common cryptocurrencies that are supported at BC.Game casino:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Euros
+                                                Ethereum
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                US Dollars
+                                                Bitcoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Canadian Dollars
+                                                Bitcoin Cash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Australian Dollars
+                                                Binance
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                New Zealand Dollar
+                                                Litecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Japanese Yen
+                                                Dogecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Chinese Yuan
+                                                Tether
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Rubles
+                                                Ripple
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Krones
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Złoty
+                                                Cardano SHIB
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        After creating your account, the available deposit methods for these currencies and your country of residence will show up. You can then opt to add more to your account.
+                                        The casino also has its own currency, <span className="font-bold">BC Dollars (BCD)</span>, which works as a stablecoin on the site.
                                     </div>
-                                    <div>
-                                        There are also many credit cards, e-wallets, bank transfer methods, and vouchers to choose from.
-                                    </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                VISA
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                MasterCard
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Maestro
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Skrill
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Neteller
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Bank Transfer
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                ComePay
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                PaySafeCard
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                AstroPay
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                ZłoecoPayz
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                ecoVoucher
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                SticPay
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                MuchBetter
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                MiFinity
-                                            </div>
+                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
+                                        <div className="text-white font-bold text-2xl">
+                                            BCD is tied to the value of Tether:
+                                            <br/>
+                                            BCD = 1 USDT = 1 USD.
                                         </div>
                                     </div>
                                     <div>
-                                        BitStarz also comes with its own exchange, which allows you to convert BTC to EUR directly on its platform. Even if the conversion fee is not the lowest out there, this feature can be quite convenient.
+                                        This makes it particularly handy when you're cashing out - with BCD you can take your profits and not risk them to volatility.
                                     </div>
                                     <div>
-                                        You are subject to minimum deposits and withdrawals with all payment methods. However, when choosing to play with cryptocurrencies, you are not subject to maximum amounts, but with all other methods, you are.
+                                        But, BC.Game is also one of the most prominent stablecoin casinos, offering Tether, USDC, Dai, and more.
                                     </div>
                                     <div>
-                                        The casino can also force a KYC check before withdrawing money. This only happens once in every player's lifetime and is a quick process to verify your identity and make sure nobody can steal your money. However, it might be a drawback for some preferring to play with complete anonymity.
+                                        BC.Game is compatible with a range of Bitcoin wallets and other crypto safeguarding services. It comes with its own exchange, which allows you to convert from one coin to another directly on the platform. Do note that, just like any exchange, there is a fee to cover the transaction costs.
                                     </div>
                                     <div>
-                                        While we didn't encounter any issues when withdrawing money ourselves, we know a few instances when players had their winnings withheld. As far as we could gather, this happened with players who had deposited without proof of identity because they provided false information.
+                                        And, recently, they also became one of the first crypto casinos to offer NFTs:
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        BC.Game Allows You to Deposit NFTs
                                     </div>
                                     <div>
-                                        Of course, this is against the casino's terms and conditions, but it can feel unfair if you're not aware of them. The fact is that other websites with a strict KYC process, like FortuneJack, are better at disclosing that information.
+                                        That's right - the NFT craze is clearly here to stay. You can now deposit using one of these NFT collectibles:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            BAYC
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Degenpass
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            CryptoPunks
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            CloneX
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Azuki
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Doodles
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Mfers
+                                        </div>
+                                    </div><div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            MekaVerse
+                                        </div>
                                     </div>
                                     <div>
-                                        If you don't want to provide personal data when creating an account, check our anonymous gambling guide.
+                                        <a href="https://degenverse.com/" target="_blank" rel="noreferrer" className="text-blue-600">Degenpass</a> is particularly noteworthy as it's a <span className="font-bold">virtual entry pass to the Degenverse ecosystem</span> and a range of eligible casinos.
+                                    </div>
+                                    <div>
+                                        As <a href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" rel="noreferrer" className="text-blue-600">Metaverse gambling</a> grows in importance and popularity, so will NFTs. By offering the Degenpass, BC.Game is already one step ahead of the competition and proving they're at the edge of innovation when it comes to the online gambling industry.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Deposit and Withdrawal Times and Fees
+                                    </div>
+                                    <div>
+                                        How much until your money gets to and from the casino? We tested it and here's what we found:
+                                    </div>
+                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
+                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3 rounded-t-xl">
+                                            <div className="w-1/2">
+                                                Casino Fees
+                                            </div>
+                                            <div className="w-1/2">
+                                                None
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between px-3 py-3">
+                                            <div className="w-1/2">
+                                                Transaction Fees
+                                            </div>
+                                            <div className="w-1/2">
+                                                Depends on the currency
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
+                                            <div className="w-1/2">
+                                                Average Withdrawal Time
+                                            </div>
+                                            <div className="w-1/2">
+                                                10 minutes
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between px-3 py-3">
+                                            <div className="w-1/2">
+                                                Maximum Withdrawal Time
+                                            </div>
+                                            <div className="w-1/2">
+                                                6 hours
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        Withdrawals are subject to a transaction fee, which varies per currency.
+                                    </div>
+                                    <div>
+                                        Bitcoin transactions, for instance, have a 0.0006 BTC cost. However, this isn't a casino fee (BC.Game doesn't charge you for sending the money). Instead, it's a standard <span className="font-bold">reward for blockchain participants who verify the transaction</span> - that's why it varies depending on how busy the network is.
+                                    </div>
+                                    <div>
+                                        Although they're not instant, <span className="font-bold">BC.Game transactions are quick</span> - for us, they only took around 10 minutes, but the maximum time is six hours. On exceptional occasions, transaction times may be longer (due to congestion on the Bitcoin network, for instance), but we never experienced that.
+                                    </div>
+                                    <div>
+                                        If you're mindful of your privacy, one very positive aspect is that the casino <span className="font-bold">does not require an invasive Know Your Customer verification check.</span> They can still ask you to confirm your identity, though, especially for larger cash-outs.
+                                    </div>
+                                    <div>
+                                        We always stress the importance of only sharing truthful information - this is because lying to the casino could lead to trouble at withdrawal or even blocked transactions.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1683,15 +1847,23 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Main cryptocurrencies accepted</div>
+                                            <div className="w-[230px]">Large variety of cryptos (66+)</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Accepts fiat money</div>
+                                            <div className="w-[230px]">Cryptocurrency exchange</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">BTC to EUR converter</div>
+                                            <div className="w-[230px]">Fast and easy transactions</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">No invasive KYC</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">In-house stablecoin</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1700,11 +1872,7 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Limited number of cryptocurrencies</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">KYC process may slow payments</div>
+                                            <div className="w-[230px]">No fiat payments</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1715,7 +1883,7 @@ const BitStarzGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BitStarz
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1734,7 +1902,7 @@ const BitStarzGameReview = () => {
                                             Customer Support
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Jarvis ready to assist you
+                                            Social casino with a very friendly team
                                         </div>
                                     </div>
                                 </div>
@@ -1760,16 +1928,125 @@ const BitStarzGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BitStarz is an intuitive website with no outstanding issues and transparent bonus policies, and you should be able to play with ease. However, if you need help, you can easily contact the customer support team that is always ready to assist you.
+                                        BC.Game is a multilingual website that is available in sixteen different languages. So, whether you speak English, Mandarin, or French, you can rest assured the casino does speak your language, and so does the player chat.
                                     </div>
                                     <div>
-                                        You can reach the agents 24/7 by email or live chat. However, before you contact them, it might be helpful to go through the FAQ section.
+                                        However, the help center and support team are only available in English.
                                     </div>
                                     <div>
-                                        When using the live chat option, you will first be greeted by Jarvis (a tip of the hat to Iron Man's own AI personal assistant). Then, if the BitStarz chatbot doesn't readily solve your questions, you will quickly be re-directed to a real person - which, in our experience, always turned out to be a friendly one.
+                                        You can reach out to BC.Game in multiple ways, though:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Live Chat
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                FAQ
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Telegram
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Email
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Skype
+                                            </div>
+                                        </div>
                                     </div>
                                     <div>
-                                        Unfortunately, all customer support options are only available in a few languages, just like the rest of the website. However, it shouldn't be an issue if you're reading this review since English is fully supported.
+                                        When we contacted the team, we were pleasantly surprised by the speedy response. It only took a few seconds to get a personal response in the live chat. Agents provided comprehensive and helpful information and we couldn't be happier about the ease of access.
+                                    </div>
+                                    <div>
+                                        BC.Game casino also has a strong <span className="font-bold">social media presence</span> through the following platforms:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://github.com/bc-game-project/bcgame-crash"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    GitHub
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://medium.com/@BC.Game"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Medium
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://twitter.com/BCGameOfficial"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Twitter
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://www.facebook.com/bcgamewin"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://discord.com/invite/mQh3M6UDkR"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Discord
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                <a 
+                                                    href="https://bitcointalk.org/index.php?topic=5088875.0"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    BitcoinTalk
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1782,11 +2059,19 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">24/7 Live chat</div>
+                                            <div className="w-[230px]">24/7 live chat</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Crafted FAQ section</div>
+                                            <div className="w-[230px]">Friendly support team</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Skype and Telegram support</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Social media presence</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1795,7 +2080,7 @@ const BitStarzGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Limited language support</div>
+                                            <div className="w-[230px]">Support only in English</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1806,7 +2091,7 @@ const BitStarzGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BitStarz
+                                            Open BC.Game Casino
                                         </Button>
                                     </div>
                                 </div>
@@ -1824,7 +2109,7 @@ const BitStarzGameReview = () => {
                                         F.A.Q.
                                     </div>
                                     <div className="text-sm text-gray-500">
-                                        Any extra information we can provide you with
+                                        All you need to know about BC.Game
                                     </div>
                                 </div>
                             </div>
@@ -1833,11 +2118,11 @@ const BitStarzGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ1(!openFAQ1) }}
                                 >
-                                    1. Is BitStarz legitimate?
+                                    1. Is BC casino legit?
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes! While some users have complained about the brand, BitStarz is a reputable and safe online casino with several awards from trusted publications, such as AskGamblers. In addition, it holds a license from Curaçao, offers provably fair games, and uses SSL encryption technology to protect your data.
+                                        Yes, <a href={"https://" + siteData.link} target="" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
                                     </div>
                                 }
                             </div>
@@ -1846,11 +2131,11 @@ const BitStarzGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ2(!openFAQ2) }}
                                 >
-                                    2. Can I play with any other currencies besides Bitcoin?
+                                    2. What currencies can I use at BC.Game?
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        You can! BitStarz supports multiple currencies. Besides Bitcoin, you can play with cryptos such as Ethereum or Bitcoin Cash and fiat currencies like Euros or US Dollars.
+                                        BC.Game supports a wide range of cryptocurrencies, including Bitcoin, Ethereum, Dogecoin, Ripple, Tether, and more. Unfortunately, you cannot play with fiat money at this casino.
                                     </div>
                                 }
                             </div>
@@ -1859,11 +2144,11 @@ const BitStarzGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ3(!openFAQ3) }}
                                 >
-                                    3. How do I get free spins on BitStarz?
+                                    3. Does BC.Game offer a deposit welcome bonus?
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        All new BitStarz players are entitled to a no-deposit bonus of 20 Free Spins (no bonus code required), plus a deposit bonus of up to 5 Bitcoins and 180 Free Spins. To get them, you just have to <a href={"https://" + siteData.link} target="" className="text-blue-600">create a new account</a>!
+                                        Yes, there is a traditional deposit bonus at BC.Game on a regular basis, you can spin a wheel every day and win a random prize, including up to 5 BTC. The best part? You can do that right after sign up, even before your first deposit. There are also limited offers from time to time, where you can indeed unlock a deposit bonus paid in BCD (the casino's own token).
                                     </div>
                                 }
                             </div>
@@ -1872,13 +2157,11 @@ const BitStarzGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ4(!openFAQ4) }}
                                 >
-                                    4. How do I withdraw money at BitStarz?
+                                    4. Is BC.Game safe?
                                 </div>
                                 {openFAQ4 &&
                                     <div className="text-black mt-5">
-                                        Before you can withdraw your winnings at BitStarz, you have to wager through any bonus money that you may have. You can check this from your account.
-                                        <br/>
-                                        Do note that BitStarz may request personal data before you process your first withdrawal. This is called a KYC check and is a standard procedure at online casinos.
+                                        Along with the Curaçao license, BC.Game offers a few safety reassurances to its players. For instance, this casino is provably fair and holds a Crypto Gambling Foundation seal of approval.
                                     </div>
                                 }
                             </div>
@@ -1949,4 +2232,4 @@ const BitStarzGameReview = () => {
     )
 }
 
-export default BitStarzGameReview;
+export default KingBillyGameReview;
