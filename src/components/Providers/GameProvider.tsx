@@ -8,6 +8,8 @@ import CloudbetLogo from "../../Assets/images/cloudbet-new-logo.png"
 import { IMainCardDataObj, ISortStringObj } from "../../Interfaces"
 import SiteInfos from "./SiteInfos"
 
+import "./css/index.css"
+
 const GameProvider = () => {
     const SortString: Array<ISortStringObj> = [
         { id: 1, str: "#", Link: "#glossary-#" },
@@ -145,7 +147,6 @@ const GameProvider = () => {
                                 <div key={index}>
                                     <MainCard item={item} />
                                 </div>
-
                         ))
                     }
                 </div>
@@ -156,3 +157,14 @@ const GameProvider = () => {
 }
 
 export default GameProvider
+
+
+
+
+/* <div className="games-list has-most">
+            <div className="container">
+                <div className="row">
+
+                </div>
+            </div>
+        </div> */

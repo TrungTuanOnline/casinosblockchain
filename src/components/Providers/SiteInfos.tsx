@@ -4,7 +4,7 @@ import { ISiteInfoObj } from "../../Interfaces";
 import { useState } from "react";
 
 const SiteInfos = () => {
-    const dummyInfos: Array<ISiteInfoObj> = [siteDatas[0], siteDatas[1], siteDatas[2]];
+    const dummyInfos: Array<ISiteInfoObj> = [siteDatas[6], siteDatas[1]];
 
     const [openSubInfoIndex, setOpenSubInfoIndex] = useState<null | number>(null);
     return (

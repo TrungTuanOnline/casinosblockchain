@@ -1,13 +1,11 @@
 import MetamaskCasinos from "../../../Assets/images/Metamask-Casinos.jpg"
 import backgroundImg from "../../../Assets/images/Header.svg"
-import giftImg from "../../../Assets/images/gift.png";
-import logoImg from "../../../Assets/images/logos/bc-game.png";
+
 
 import { ISiteRankBlogCardObj } from "../../../Interfaces"
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
 import React, { useEffect } from "react";
-import { Button } from "@mui/material"
-import { Check, KeyboardArrowRight } from "@mui/icons-material"
+import { Check } from "@mui/icons-material"
 
 import ReadMoreCards from "../../Card/ReadMoreCards";
 import OlieMan from "../../../Assets/images/Content/olieman-eth.jpg"
@@ -18,38 +16,11 @@ import FirstMobileWallet from "../../../Assets/images/Content/first-mobile-walle
 import BcGame from "../../../Assets/images/Content/bcgame.png"
 import CasinoStake from "../../../Assets/images/Content/casino-stake.png"
 import Cloudbet1 from "../../../Assets/images/Content/Cloudbet1.jpg"
+import { siteDatas } from "../../../Interfaces/SiteDatas";
+import NavBarMiniTable from "../../Card/NavBarMiniTable";
 
 
-interface IProps {
-    siteIndex: number,
-    summaryData: ISiteRankBlogCardObj
-}
-
-
-
-const dummyInfos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses", "test3"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "third",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "5B",
-        features: ["Great Rewards", "Nice Payment Limits", "test4"]
-    }
-];
+const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[0], siteDatas[1], siteDatas[3]];
 
 const MainContent = () => {
     useEffect(() => {
@@ -339,19 +310,12 @@ const MainContent = () => {
                         <p><strong>Blockstream</strong>, on the other hand, <strong>has everything you need to get started with BTC gambling</strong>, and then some.</p>
                         <p>Our favorite, beginner-friendly casino for Blockstream users is BC.Game: </p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 0) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
+                            {
+                                <SiteRankBlogTable
+                                    key={1}
+                                    siteIndex={1}
+                                    summaryData={siteDatas[0]}
+                                />
                             }
                         </div>
                     </section>
@@ -377,19 +341,12 @@ const MainContent = () => {
                         <p>And, with $20B+ under protection and eight years on the market, it’s one of the <strong>most trusted wallets available today</strong>.</p>
                         <p>Speaking of mobile-friendly, here’s our favorite mobile casino: </p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 1) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
+                            {
+                                <SiteRankBlogTable
+                                    key={1}
+                                    siteIndex={1}
+                                    summaryData={siteDatas[1]}
+                                />
                             }
                         </div>
                         <div className="h2">How to Get Started with Your Bitcoin Wallet	</div>
@@ -404,8 +361,8 @@ const MainContent = () => {
                         <p>Of course, <strong>this only works if the casino you’re playing at also operates as a BTC exchange</strong>. Not all of them do – and not all that do are safe. Still, we can recommend some reliable and user-friendly ones like BC.Game (just go to Wallet &gt; Buy Crypto).</p>
                         <p>Play wallet-free at these gambling sites:</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                            {
+                                [siteDatas[0], siteDatas[1], siteDatas[2],].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
                                         <SiteRankBlogTable
                                             key={index}
@@ -456,20 +413,11 @@ const MainContent = () => {
                         <p >Their library includes slots, card games, dice, and more. They also support live dealers and have a pretty <strong>significant social aspect</strong>. Use the players’ chat to connect with other gamblers, share tips, and brag about your wins.</p>
                         <p>The casino also has a <strong>loyalty program that gives back</strong> to regular players. The more you play, the higher up you go in the VIP ladder. You get better promos and more bonuses the higher you go.</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 0) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={0}
+                                siteIndex={0}
+                                summaryData={siteDatas[0]}
+                            />
                         </div>
                         <div className="h3">Stake</div>
                         <a href="https://stake.com/registration" target-="_blank" rel="noreferrer">
@@ -480,20 +428,11 @@ const MainContent = () => {
                         <p>Just like BC.Game, Stake also has a <strong>VIP program</strong> that rewards loyal customers with cashback, bonuses, and more. Even better – they also have a <strong>sportsbook</strong>, which BC.Game is yet to develop.</p>
                         <p>And we weren’t joking about the Drake collab either.</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 1) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={1}
+                                siteIndex={1}
+                                summaryData={siteDatas[1]}
+                            />
                         </div>
                         <div className="h3">Cloudbet</div>
                         <a href="https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd" target-="_blank" rel="noreferrer">
@@ -502,20 +441,11 @@ const MainContent = () => {
                         <p className="mt-3">Finally, our third choice is <a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet</a>. They are one of the <strong>oldest crypto gambling sites</strong> and have a very solid reputation in the community.</p>
                         <p>But don’t let age fool you – the selection of <strong>games, bonuses, and promotions </strong>is just as impressive. Much like Stake, Cloudbet also has a <strong>sports betting product</strong>. So if you like to mix things up, they are a great choice.</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 2) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={3}
+                                siteIndex={3}
+                                summaryData={siteDatas[3]}
+                            />
                         </div>
                         <div className="h3">Final Thoughts</div>
                         <p>Now you know <strong>everything about Bitcoin wallets</strong> and how to use them to gamble online. </p>
@@ -571,8 +501,8 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
                         </a>
                     </ul>
                     <p className="font-bold my-8">Popular Casinos</p>
-                    {dummyInfos.length > 0 &&
-                        dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                    {
+                        [siteDatas[0], siteDatas[1], siteDatas[4]].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                             return (
                                 <NavBarMiniTable
                                     key={index}
@@ -590,62 +520,18 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 }
 
 
-const NavBarMiniTable = (props: IProps) => {
-    const summaryData = props.summaryData;
-    return (
-        <React.Fragment>
-            <div className="flex flex-row justify-between border border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
-                <div className="w-full flex flex-row justify-start gap-x-4" >
-                    <div className="flex w-16 items-center justify-center">
-                        <img className=" rounded-full" src={logoImg} alt="MainPageImg" />
-                    </div>
-                    <div className="flex flex-col justify-center gap-y-0.5 w-full">
-                        <span className="text-base font-bold">{summaryData.name}</span>
-                        <div className='flex'>
-                            {summaryData.bonus &&
-                                <Button
-                                    className="w-20 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
-                                    endIcon={<KeyboardArrowRight className="text-black text-xs rounded-full bg-orange-400" />}
-                                >
-                                    <img className="h-3" src={giftImg} alt="MainPageImg" />
-                                    <span className="text-[10px] text-black">{summaryData.bonus}</span>
-                                </Button>
-                            }
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="w-48 flex items-center justify-center">
-                    <div className='block'>
-                        <Button
-                            className="text-white text-[10px] h-8"
-                            variant="contained"
-                            size='small'
-                            color="primary"
-                            href={summaryData.link}
-                            target="_BLANK"
-                        >
-                            Play
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </React.Fragment>
-    )
-}
 
 
 const MainPage1 = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
-            <div className="w-full h-32 bg-black" />
+            <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
-                <div className="p-10 w-full flex flex-col justify-center">
+                {/* <div className="p-10 w-full flex flex-col justify-center">
                     <div className="h1">Latest News</div>
                     <ReadMoreCards />
-                </div>
+                </div> */}
             </div>
         </div>
     )
