@@ -37,26 +37,28 @@ import {siteDatas} from "../../Interfaces/SiteDatas";
 // crypto images
 import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
 import bitcoinCashCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-cash.png";
+import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
 import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
 import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
 import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
 
 // game images
-import baccaratGameImg from "../../Assets/images/games/baccarat.png";
 import blackjackGameImg from "../../Assets/images/games/blackjack.png";
 import jackpotGameImg from "../../Assets/images/games/jackpot.png";
 import liveCasinoGameImg from "../../Assets/images/games/live-casino.png";
+import lotteryGameImg from "../../Assets/images/games/lottery.png";
 import pokerGameImg from "../../Assets/images/games/poker.png";
 import rouletteGameImg from "../../Assets/images/games/roulette.png";
+import sicBoGameImg from "../../Assets/images/games/sic-bo.png";
 import slotsGameImg from "../../Assets/images/games/slots.png";
 
 // review images
-import reviewImg1 from "../../Assets/images/reviews/8-kingbilly-game/1-kingbilly-review.png";
-import reviewImg2 from "../../Assets/images/reviews/8-kingbilly-game/2-kingbilly-review.png";
-import reviewImg3 from "../../Assets/images/reviews/8-kingbilly-game/3-kingbilly-review.png";
+import reviewImg1 from "../../Assets/images/reviews/9-mBet-game/1-mBit-review.png";
+import reviewImg2 from "../../Assets/images/reviews/9-mBet-game/2-mBit-review.png";
+import reviewImg3 from "../../Assets/images/reviews/9-mBet-game/3-mBit-review.png";
 
 // country flag
-import { AF, GB, FI, DE, JP, RU, NO } from 'country-flag-icons/react/1x1';
+import { GB, DE, JP, RU } from 'country-flag-icons/react/1x1';
 
 const StyledRating = styled(Rating)({
 });
@@ -91,6 +93,10 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Bitcoin Cash"
     },
     {
+        img: dogecoinCryptoImg,
+        name: "Dogecoin"
+    },
+    {
         img: etherCryptoImg,
         name: "Ethereum"
     },
@@ -106,10 +112,6 @@ const cryptocurrenciesObj: Array<any> = [
 
 const gamesObj: Array<any> = [
     {
-        img: baccaratGameImg,
-        name: "Baccarat"
-    },
-    {
         img: blackjackGameImg,
         name: "Blackjack"
     },
@@ -122,6 +124,10 @@ const gamesObj: Array<any> = [
         name: "Live Casino"
     },
     {
+        img: lotteryGameImg,
+        name: "Lottery"
+    },
+    {
         img: pokerGameImg,
         name: "Poker"
     },
@@ -130,18 +136,21 @@ const gamesObj: Array<any> = [
         name: "Roulette"
     },
     {
+        img: sicBoGameImg,
+        name: "Sic Bo"
+    },
+    {
         img: slotsGameImg,
         name: "Slots"
     }
 ]
 
-const KingBillyGameReview = () => {
-    const siteData = siteDatas[7];
+const MBitGameReview = () => {
+    const siteData = siteDatas[8];
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
     const [openFAQ2, setOpenFAQ2] = useState(false);
     const [openFAQ3, setOpenFAQ3] = useState(false);
-    const [openFAQ4, setOpenFAQ4] = useState(false);
 
     useEffect(() => {
         const partSections = document.getElementsByClassName("part-section");
@@ -240,7 +249,7 @@ const KingBillyGameReview = () => {
                                         {siteData.name} Overview
                                     </div>
                                     <div className="text-base">
-                                        Come for the crown, stay for the bonuses
+                                        Aim for the moon at this otherworldly casino
                                     </div>
                                 </div>
                             </div>
@@ -308,16 +317,8 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-wrap gap-4 mt-5">
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <AF className="h-5 rounded-full" />
-                                                <div className="text-base">Afrikaans</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <GB className="h-5 rounded-full" />
                                                 <div className="text-base">English</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <FI className="h-5 rounded-full" />
-                                                <div className="text-base">Finnish</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <DE className="h-5 rounded-full" />
@@ -326,10 +327,6 @@ const KingBillyGameReview = () => {
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <JP className="h-5 rounded-full" />
                                                 <div className="text-base">Japanese</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <NO className="h-5 rounded-full" />
-                                                <div className="text-base">Norwegian</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <RU className="h-5 rounded-full" />
@@ -347,33 +344,25 @@ const KingBillyGameReview = () => {
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Award-winning casino</div>
+                                                        <div className="w-[230px]">Backed by a huge company</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Lots of bonuses and rewards</div>
+                                                        <div className="w-[230px]">Many different casino games</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Large number of games</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Original medieval theme</div>
+                                                        <div className="w-[230px]">Generous bonuses and VIP program</div>
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">Not all common cryptocurrencies accepted</div>
+                                                        <div className="w-[230px]">NetEnt, Yggdrasil, and Quickspin games are missing</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">No provably fair games</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">KYC check</div>
+                                                        <div className="w-[230px]">No fiat currencies</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -624,7 +613,7 @@ const KingBillyGameReview = () => {
                                             Bonuses
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Treat yourself to some royal rewards
+                                            Being a VIP has never been more fun
                                         </div>
                                     </div>
                                 </div>
@@ -650,13 +639,7 @@ const KingBillyGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div className="text-base">
-                                        Rejoice! King Billy Casino's welcome bonus is truly fit for a king.
-                                    </div>
-                                    <div>
-                                        After your first four deposits, you can claim <span className="font-bold">up to 5 Bitcoin and 200 free spins</span>:
-                                    </div>
-                                    <div className="text-base">
-                                        With the current new user scheme, you can get up to 780% deposit match on your first four transactions. Here is how it works:
+                                        The fun at mBit Casino starts with a generous welcome bonus. Or rather, a welcome package, since it's divided into three different parts, each requiring a separate deposit:
                                     </div>
                                     {/* timeline 1 */}
                                     <div className="text-base">
@@ -670,7 +653,7 @@ const KingBillyGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        <span className="font-bold">1st Deposit</span> - 100% up to 1 BTC + 200 Bitcoin free spins
+                                                        110% up to 1.1 BTC + 300 free spins
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -683,7 +666,7 @@ const KingBillyGameReview = () => {
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        <span className="font-bold">2nd Deposit</span> - 50% up to 1 BTC (code WELCOME2)
+                                                        50% up to 2.5 BTC
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -692,23 +675,10 @@ const KingBillyGameReview = () => {
                                                     <TimelineDot>
                                                         <div className="w-8 h-8 rounded-full bg-black text-center pt-1">3</div>
                                                     </TimelineDot>
-                                                    <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
-                                                        <span className="font-bold">3rd Deposit</span> - 25% up to 1.5 BTC (code WELCOME3)
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">4</div>
-                                                    </TimelineDot>
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div>
-                                                        <span className="font-bold">4th Deposit</span> - 25% up to 1.5 BTC (code WELCOME4)
+                                                        75% up to 1.5 BTC
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -716,143 +686,81 @@ const KingBillyGameReview = () => {
                                     </div>
                                     {/*  */}
                                     <div>
-                                        This multi-tiered welcome offer has one considerable advantage: you can deposit a smaller amount at first to test the waters before committing your Bitcoin.
+                                        The total amount goes up to a whopping 5 Bitcoins plus 300 free spins.
                                     </div>
                                     <div>
-                                        Since the free spins are yours after the first deposit, you can check out King Billy's best games right from the start.
+                                        You can also get an equivalent offer if you choose to play with another currency. However, bonuses at mBit are generally slightly better if you choose BTC.
                                     </div>
                                     <div>
-                                        Come again? Dollar equivalent?
+                                        <span className="font-bold">Important note</span>: don't forget to enable these bonuses when depositing for the first time!
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Canadian Welcome Package - $1500 In CAD
+                                        Other mBit Bonuses
                                     </div>
                                     <div>
-                                        If you're Canadian and you're looking for a BTC alternative, you're in for a treat, with a dedicated welcome bonus available in CAD, giving you up to $1500 and 200 free spins:.
-                                    </div>
-                                    <div>
-                                        Let's have a closer look at how it works:
-                                    </div>
-                                    <div className="text-base">
-                                        <Timeline position="right">
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">1</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div>
-                                                        <span className="font-bold">1st Deposit</span> - 100% up to $300 + 200 Free spins
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">2</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div>
-                                                        <span className="font-bold">2nd Deposit</span> - 50% up to $300
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">3</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div>
-                                                        <span className="font-bold">3rd Deposit</span> - 25% up to $450
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">4</div>
-                                                    </TimelineDot>
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div>
-                                                        <span className="font-bold">4th Deposit</span> - 25% up to $450
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                        </Timeline>
-                                    </div>
-                                    <div>
-                                        As you can see, it's similar to the Bitcoin offer, giving you more flexibility. Due to the current value of the coin, however, the Bitcoin welcome offer gives you more value for your money, and we recommend you get it instead.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Other King Billy Casino Bonuses
+                                        That's not all. If you keep playing at mBit Casino, you'll get to feast on many bonuses, cash prizes and cashbacks.
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">King's Gold</span>: Every month, King Billy dishes out 61 free spins on a carefully selected slot machine upon a $20 deposit.
+                                            VIP Friday Reload: The title might imply exclusivity, but this 100% up to 0.25 Bitcoins is for every player. Since it's called a VIP Bonus, the maximum amount doesn't impress.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Spin & Win</span>: Have the chance to win 100 daily free spins on the ever-popular Book of Dead slot. 
+                                            25% Reload Mondays: If you're often affected by the Monday blues, you can soften the pain with this deposit bonus. 
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            <span className="font-bold">Tournaments</span>: Thrash your competition on regular tournaments organized by King Billy himself.
+                                            Daily VIP Cashback: This daily cashback up to 20% and 0.1 Bitcoin seems to prove our theory that all players get to be VIPs at mBit casino.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            mBit Races: Play on a high-speed, high-stakes Bitcoin race where top Free Spin prizes are up for grabs. All-day long, every single day.
                                         </div>
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        King Billy Casino's VIP Program
+                                        VIP Program
                                     </div>
                                     <div>
-                                        Your journey to royalty starts humbly at first; when you first join the realm, you're only a citizen. 
+                                        In case you want to take the bonuses to another level - or, rather, another planet - you can join mBit's exclusive VIP Space journey.
                                     </div>
                                     <div>
-                                        If you play your cards right, however, you can become a baron, duke, prince, and even a king!
+                                        You'll travel from Earth to other planets, and you can even reach for the moon! Along the way, you get to enjoy many benefits:
                                     </div>
-                                    <div className="font-bold">
-                                        How It Works:
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Redeemable loyalty points
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Personalized rewards
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Exclusive bonuses
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Personal VIP manager
+                                            </div>
+                                        </div>
                                     </div>
                                     <div>
-                                        You can climb up the social ladder by playing selected games and collecting points. 
-                                    </div>
-                                    <div>
-                                        Once you do become royalty, you're in for a few treats:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Weekly cashback of up to 13%.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Dedicated VIP manager with exclusive rewards.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Chance to change loyalty points into cash.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Level up bonuses, including free spins and surprise rewards.
-                                        </div>
+                                        It's hands-down one of the most original and rewarding VIP programs we've reviewed so far.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -865,15 +773,15 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Themed VIP program</div>
+                                            <div className="w-[230px]">Generous welcome bonus</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Tiered welcome bonus</div>
+                                            <div className="w-[230px]">Fun VIP program</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Consistent and rewarding promotions</div>
+                                            <div className="w-[230px]">A lot of other promotions</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -882,7 +790,7 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Not all games count for the VIP club</div>
+                                            <div className="w-[230px]">Bitcoin players are favored</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -912,7 +820,7 @@ const KingBillyGameReview = () => {
                                             Look & Feel
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            All hail King Billy and his beautiful casino!
+                                            Smooth navigation on all platforms
                                         </div>
                                     </div>
                                 </div>
@@ -938,49 +846,40 @@ const KingBillyGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        As soon as you register, King Billy will welcome you to his realm (that is, the casino).
+                                        mBit has a very distinct visual identity, which is both clean and creative.
                                     </div>
                                     <div>
-                                        This royal rascal will be there to cheer you every step of the way. Don't worry - he won't bother you too much, just enough to keep you company.
+                                        On one side, its dark colors and plain background help minimize distractions. There is very little visual clutter, and the options that are available to you are few and straightforward.
                                     </div>
                                     <div>
-                                        His presence, in our opinion, is part of what makes King Billy Casino stand out from the rest:
+                                        However, there is also a more whimsical side to mBit. This is a casino with an almost cartoony soul, with colorful and detail-rich artwork on its promotional banners.
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            Its medieval feel is definitely original.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            There is a whimsical side to King Billy's design and tone of voice, which is a surprising but welcome addition.
+                                            Unlike many of its competitors, mBit is not overly serious. It is unabashedly a gaming platform, a place to have fun, and its visual identity certainly helps create this feeling without being too disruptive.
                                         </div>
                                     </div>
                                     <div>
-                                        Despite this creative flair, King Billy has a clean and simple look, and you won't be overwhelmed.
+                                        Navigating across the website is smooth and fast, and so is finding your way among more than 2,000 games.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        General Layout
+                                        mBit Mobile Experience
                                     </div>
                                     <div>
-                                        There is room for improvement here. For instance, you can only reach the games lobby from the homepage or the bottom bar.
+                                        This website's mobile version has been strongly streamlined, in order to facilitate navigation on a smaller screen.
                                     </div>
                                     <div>
-                                        If you do navigate to a different page, you'll have to find your way back home (by clicking on the casino's lobby), which is counter-intuitive.
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            King Billy's winner's section is a saving grace: knowing the top winners can help build trust, and getting your name there is all the more exciting!
-                                        </div>
+                                        It's probably one of the best mobile integrations we've reviewed so far, which makes us believe that mBit is more than mobile-friendly: it's mobile-first.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Load Speed
+                                        Other Features
                                     </div>
                                     <div>
-                                        Both games and pages load smoothly on desktop and handheld devices.
+                                        There is a player chat on the right-hand side of the screen on desktop, which will take over your screen on mobile. If you're not very social, you can easily close and ignore it.
+                                    </div>
+                                    <div>
+                                        You can also take advantage of the 'Get Started' pop-up, which will give you a quick overview of your balance, bonuses, and suggest a new game every month.
                                     </div>
                                     <div className="w-[350px] xl:w-[600px] flex justify-center">
                                         <Swiper
@@ -1043,28 +942,15 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Original medieval theme</div>
+                                            <div className="w-[230px]">Easy navigation</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Great mascot</div>
+                                            <div className="w-[230px]">Clean and creative design</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Smooth loading</div>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col gap-y-3 px-5">
-                                        <div className="font-bold text-red-900">
-                                            CONS
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Clunky navigation</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Games can be hard to find</div>
+                                            <div className="w-[230px]">Excellent mobile experience</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1075,7 +961,7 @@ const KingBillyGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open King Billy Casino
+                                            Open mBit
                                         </Button>
                                     </div>
                                 </div>
@@ -1094,7 +980,7 @@ const KingBillyGameReview = () => {
                                             Game Selection
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            A royal amount of games
+                                            A few known Swedes are nowhere to be found
                                         </div>
                                     </div>
                                 </div>
@@ -1120,10 +1006,10 @@ const KingBillyGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        King Billy offers a good mix of classics and new games from more than 30 providers.
+                                        We've said it before, but it's such an impressive number that it's worth mentioning it twice: there are over 2,000 different games at mBit Casino.
                                     </div>
                                     <div>
-                                        The casino caters to many tastes with its varied portfolio, including:
+                                        They come in all shapes and sizes as well, except the most coveted of them all: provably fair games.
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1135,25 +1021,13 @@ const KingBillyGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Jackpots
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Roulette
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
                                                 Blackjack
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Baccarat
+                                                Video Poker
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1165,42 +1039,85 @@ const KingBillyGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
+                                                Roulette
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Baccarat
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Jackpots
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Lottery
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Dice
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
                                                 Poker
                                             </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        All games are available in demo mode, which you can access even before creating an account.
-                                    </div>
-                                    <div>
-                                        Browsing this smorgarsboard of casino games is surprisingly easy, due to the casino's search bar and 'favorites' feature.
-                                    </div>
-                                    <div>
-                                        If there's one thing we've got to nitpick about King Billy's game selection is that there are no provably fair games.
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Sic Bo
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Scratchcards
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Drops & Wins
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="text-xl font-bold mt-5">
                                         Slot Machines And Jackpots
                                     </div>
                                     <div>
-                                        Familiar titles from household names such as NetEnt's Dead Or Alive and Yggdrasil's Vikings Go Berzerk are alive and well at King Billy, alongside games from up-and-coming providers.
+                                        Most of the games available at mBit are slot machines from some of the world's most renowned providers, such as Pragmatic Play and Betsoft.
                                     </div>
                                     <div>
-                                        If you're more into jackpots, you're in luck as well. From progressive classics such as Microgaming's Mega Moolah to fixed jackpots such as Yggdrasil's Ozwin's Jackpots, there's a game for everyone.
+                                        Your keen eye might notice that a few major game studios are missing. Swedish giants NetEnt, Yggdrasil, or Quickspin are notoriously absent, which means you can't play classics such as Starburst or Immortal Romance.
+                                    </div>
+                                    <div>
+                                        If it's jackpot slots you're looking for, then you're in for a treat! There are 70+ different options available, although Microgaming's popular hits are not.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Live Casino And Table Games
+                                        Table Games And Live Casino Games
                                     </div>
                                     <div>
-                                        King Billy's table games cover a wide range of popular games such as roulette, blackjack, poker, baccarat, and more.
+                                        Just like in any other casino, you can find a table games section here as well.
                                     </div>
                                     <div>
-                                        Our favorites can be found at King Billy's comprehensive live casino.
+                                        Roulette, blackjack, and baccarat are all on offer, as well as several different games of dice.
                                     </div>
                                     <div>
-                                        Here, you can find the likes of Monopoly Live and Dream Catcher from Evolution Gaming alongside more traditional roulette and blackjack tables. 
+                                        Most of these table games can also be played in the 'Live Dealer' section, which offers more than 50 differnt titles from popular providers such as Evolution Gaming.
                                     </div>
                                     <div>
-                                        However, the video table games section is not to be dismissed. Try it out if you'd like to put your video poker, blackjack, and roulette skills to the test before facing real dealers.
+                                        <span className="font-bold">Interested in honing your poker skills?</span> mBit might not have a live poker client, but it does feature a dedicated video poker section with dozens of games where you can learn all the best poker hands by heart.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1213,19 +1130,11 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Many games on offer</div>
+                                            <div className="w-[230px]">Over 2,000 different games</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Over 30 software providers</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Option to play for fun before registering</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Comprehensive live casino section</div>
+                                            <div className="w-[230px]">Large video poker section</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1236,6 +1145,10 @@ const KingBillyGameReview = () => {
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
                                             <div className="w-[230px]">No provably fair games</div>
                                         </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Quickspin, NetEnt, and Yggdrasil are missing</div>
+                                        </div>
                                     </div>
                                     <div className="flex justify-center py-5">
                                         <Button
@@ -1245,7 +1158,7 @@ const KingBillyGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open King Billy Casino
+                                            Open mBit
                                         </Button>
                                     </div>
                                 </div>
@@ -1264,7 +1177,7 @@ const KingBillyGameReview = () => {
                                             Licensing & Safety
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            The King won't let anything happen to his subjects
+                                            As safe as it gets
                                         </div>
                                     </div>
                                 </div>
@@ -1290,66 +1203,51 @@ const KingBillyGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        King Billy casino has a reputation for being a reliable gambling website, with many happy customers.
+                                        As part of the multi-brand Direx N.V. group (which also owns household brands such as BitStarz or 7BitCasino), mBit holds a Curaçao license.
                                     </div>
                                     <div>
-                                        We believe this is more than hearsay. In fact, there seems to be a <span className="font-bold">serious commitment to creating a safe and fun player experience</span> at the casino.
+                                        This license assures a high degree of safety, since it is widely recognised all over the world and ensures the validty of your gameplay. However, it does come with a few drawbacks:
                                     </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            here is a strong focus on fun and responsible gaming.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            The casino has a complaints' tab, which lets you leave your complaints.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            King Billy holds a gambling license from the government of <a className="text-blue-600" href="https://validator.antillephone.com/validate?domain=www.kingbillycasino.com&seal_id=5c7e61a33e6d6ddc82588c01ca96d979cc5987c5a4199dce7a765b9b61f4b6ac51781eef807d5987e186ee69a88b6647&stamp=9445fe4e0c4b6f198b45538d173332aa" target="_blank" rel="noreferrer">Curaçao</a>.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Most online reviews seem positive towards the casino.
-                                        </div>
+                                    <div className="text-base">
+                                        <Timeline position="right">
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">1</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        Since it requires a KYC check, your anonymity is not guaranteed.
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">2</div>
+                                                    </TimelineDot>
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        Players from several countries, such as the United States and the United Kingdom, cannot register at mBit.
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                        </Timeline>
                                     </div>
                                     <div>
-                                        All these factors help build player trust in the King Billy brand and, as far as we're concerned, are a great sign of its quality.
-                                    </div>
-                                    <div>
-                                        The lack of provably fair games and the fact that several countries are restricted are, however, a bit disappointing.
+                                        There are also no provably fair games, which could've added an extra layer of security to this casino.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        In What Countries Is King Billy Legal?
+                                        Other mBit Safety Features
                                     </div>
                                     <div>
-                                        At the moment, King Billy accepts players from countries where online gambling is not illegal or heavily restricted. This rules out players from the United Kingdom or the United States, who won't even be able to load the website without using a VPN.
+                                        mBit casino uses the SoftSwiss gaming platform to power its games and process payments. This technology is recognized across the industry as trusted and secure.
                                     </div>
                                     <div>
-                                        On the other hand, <span className="font-bold">players from Canada and Australia are welcome at King Billy.</span>
-                                    </div>
-                                    <div>
-                                        The brand caters to Canadians and Australians with features such as:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            CAD and AUD bonuses
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Customer support in English and French
-                                            <br/>
-                                            Dedicated versions of the website for both Canada and Australia
-                                        </div>
+                                        The website is also protected by SSL 128 Bit Encryption, which is widely regarded as nearly-impossible to crack.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1362,15 +1260,19 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Player safety is a priority</div>
+                                            <div className="w-[230px]">Large mother company</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Complaints' tab</div>
+                                            <div className="w-[230px]">SSL 128 bit encryption</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
                                             <div className="w-[230px]">Curaçao license</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">SoftSwiss platform</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1379,11 +1281,11 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Restricted territoriesn</div>
+                                            <div className="w-[230px]">Some restricted territories</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No provably fair games</div>
+                                            <div className="w-[230px]">KYC required</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1394,7 +1296,7 @@ const KingBillyGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open King Billy Casino
+                                            Open mBit
                                         </Button>
                                     </div>
                                 </div>
@@ -1413,7 +1315,7 @@ const KingBillyGameReview = () => {
                                             Payment Options
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Pay with the currency that you prefer
+                                            Hassle-free payments
                                         </div>
                                     </div>
                                 </div>
@@ -1439,7 +1341,7 @@ const KingBillyGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        At King Billy casino, you can play with five cryptocurrencies:                                    
+                                        Right now, you can choose from 6 different cryptocurrencies when playing at mBit Casino:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1469,86 +1371,57 @@ const KingBillyGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
+                                                Dogecoin
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
                                                 Tether
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        Although the number is not impressive, the available coins are some of the most commonly used, so it shouldn't be a huge dealbreaker.
+                                        As we mentioned before, mBit bonuses tend to be more interesting in Bitcoin, so we highrly recommend this currency.
                                     </div>
                                     <div>
-                                        If you prefer to play with fiat money, you can pay using credit cards, online banking, e-wallets, Paysafecard, ecoPayz, and other country-specific options.
+                                        Of course, if you do prefer one of the six other options, that's entirely possible.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Mbit Casino Withdrawals and Deposits
                                     </div>
                                     <div>
-                                        The following currencies are available:
-                                    </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Euro
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                U.S. Dollar
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Australian Dollar
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                New Zealand Dollar
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Japanese Yen
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Indian Rupee
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                South African Rand
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Canadian Dollar
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Russian Rouble
-                                            </div>
-                                        </div>
+                                        mBit casino claims to have a 10 minute processing time on all withdrawals. In our experience, withdrawing winnings at mBit casino is indeed a lightning-fast and hassle-free process.
                                     </div>
                                     <div>
-                                        All <span className="font-bold">deposits and withdrawals are free and instant</span>. 
+                                        This is true for all the available cryptocurrencies.
                                     </div>
                                     <div>
-                                        There is one notable exception: online banking. You might be subject to processing times on your bank's side when choosing this payment method.
+                                        However, there is an account verification process (a KYC check) that you must complete before making your first withdrawal.
                                     </div>
                                     <div>
-                                        Regardless of currency, you may be <span className="font-bold">subjected to a KYC check when requesting your first withdrawal</span>. 
+                                        Much to our delight, there are absolutely no transaction fees. However, there are some transaction limits that you should be aware of:
                                     </div>
-                                    <div>
-                                        This a standard process and should be fast and hassle-free, although we understand that it might feel cumbersome to some.
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Minimum deposit</span>: 0.0001 BTC (or currency equivalent)
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Minimum withdrawal</span>: 0.001 BTC (or currency equivalent)
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Maximum withdrawal</span>: 10 BTC (or currency equivalent)
+                                        </div>
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Transaction limits are common across all Bitcoin casinos, and mBit's are on the lower end of the spectrum, so there's nothing to worry about here.s
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1561,11 +1434,15 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Good selection of payment options</div>
+                                            <div className="w-[230px]">10 minute withdrawals</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Fast processing</div>
+                                            <div className="w-[230px]">Absolutely no casino fees</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Low transaction limits</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1574,11 +1451,11 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No anonymity</div>
+                                            <div className="w-[230px]">KYC required</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Only a few cryptocurrencies</div>
+                                            <div className="w-[230px]">Withdrawal limits</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1589,7 +1466,7 @@ const KingBillyGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open King Billy Casino
+                                            Open mBit
                                         </Button>
                                     </div>
                                 </div>
@@ -1608,7 +1485,7 @@ const KingBillyGameReview = () => {
                                             Customer Support
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            You need to speak King Billy's language
+                                            Why not complain if something's wrong?
                                         </div>
                                     </div>
                                 </div>
@@ -1634,10 +1511,7 @@ const KingBillyGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        King Billy offers a thorough FAQ section for both the casino itself and its cryptocurrencies. When you have questions about your gameplay at King Billy, we suggest you start there since there's a high chance you'll find the answer to what you're looking for.
-                                    </div>
-                                    <div>
-                                        Of course, if you do need to get in touch with the casino, you'll be glad to know you can do so 24/7, using one of the contact methods available.
+                                        In case of doubt, you can get easily get help at mBit casino, using one of the several options available:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1652,19 +1526,37 @@ const KingBillyGameReview = () => {
                                                 Email
                                             </div>
                                         </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Complaints' form
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Players chat
+                                            </div>
+                                        </div>
                                     </div>
                                     <div>
-                                        Our experience with King Billy's customer support has been generally positive, so we believe you shouldn't have any major issues.
+                                        The customer support team is <span className="font-bold">available round-the-clock in 4 different languages</span> via live chat or email. If you're looking up something on the website, they will proactively chat with you, which is always appreciated.
                                     </div>
                                     <div>
-                                        If you speak English, that is. At the time of writing, King Billy's live chat was only available in English. If you're more comfortable with other languages.
+                                        Even though we hope you won't need it, there is also a complaints' form on the website. This feature goes above and beyond and shows that mBit aims to provide the best customer experience possible.
+                                    </div>
+                                    <div>
+                                        If you're in need of tips or just looking for a friendly chat, you can always ask other users directly using the player chat on the right-hand side (on mobile, it's on the bottom menu).
+                                    </div>
+                                    <div>
+                                        You can also follow mBit on the following platforms:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
                                                 <a 
-                                                    href="https://www.facebook.com/kingbillyworld"
+                                                    href="https://www.facebook.com/mbitcasino"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
@@ -1676,23 +1568,11 @@ const KingBillyGameReview = () => {
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
                                                 <a 
-                                                    href="https://www.instagram.com/accounts/login/?next=/KingBillyCasino/"
+                                                    href="https://twitter.com/mBitCasino"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
-                                                    Instagram
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://www.youtube.com/channel/UCixstHr2CxB9nqXPwF0FT4A"
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                >
-                                                    Youtube
+                                                    Twitter
                                                 </a>
                                             </div>
                                         </div>
@@ -1708,7 +1588,11 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">FAQ page</div>
+                                            <div className="w-[230px]">Players chat</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Complaints' form</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
@@ -1721,7 +1605,7 @@ const KingBillyGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Limited number of languages available</div>
+                                            <div className="w-[230px]">Only 4 languages available</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1732,7 +1616,7 @@ const KingBillyGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open King Billy Casino
+                                            Open mBit
                                         </Button>
                                     </div>
                                 </div>
@@ -1750,7 +1634,7 @@ const KingBillyGameReview = () => {
                                         F.A.Q.
                                     </div>
                                     <div className="text-sm text-gray-500">
-                                        Everything you need to know about your new kingdom
+                                        If you didn't read everything, at least read the FAQs
                                     </div>
                                 </div>
                             </div>
@@ -1759,11 +1643,11 @@ const KingBillyGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ1(!openFAQ1) }}
                                 >
-                                    1. Can I play with fiat currencies at King Billy?
+                                    1. Is mBit casino legit?
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes, you can pay with the following currencies; Euro (€), US Dollar ($), Canadian Dollar (C$), Australian Dollar (A$), New Zealand Dollar (NZ$), Norwegian Krone (KR), Japanese Yen (¥), Indian Rupee (₹), South African Rand (R), Russian Ruble (₽).
+                                        Backed by a renowned mother company with many popular casino brands, mBit Casino is a reputable Bitcoin casino. It holds a trusted Curaçao license and it's secured by a highly-robust encryption protocol.
                                     </div>
                                 }
                             </div>
@@ -1772,11 +1656,11 @@ const KingBillyGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ2(!openFAQ2) }}
                                 >
-                                    2. Can I deposit using Bitcoin at King Billy Casino?
+                                    2. Can you easily withdraw winnings on mBit casino?
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        Definitely! Besides Bitcoin, you can deposit at <a href={"https://" + siteData.link} target="" className="text-blue-600">King Billy Casino</a> using Bitcoin Cash, Litecoin, Ethereum, and Tether, as well as multiple fiat currencies.
+                                        Yes! mBit Casino guarantees fast, 10-minute withdrawals, as long as your account is verified. Do note that there is a mandatory KYC check before you can withdraw any winnings. Also, of course, you will have to play through any bonuses you might still have.
                                     </div>
                                 }
                             </div>
@@ -1785,24 +1669,11 @@ const KingBillyGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ3(!openFAQ3) }}
                                 >
-                                    3. Is there a sign up bonus at King Billy Casino?
+                                    3. Does mBit casino have a no deposit bonus?
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        Yes. King Billy Casino's sign up bonus offers <a href={"https://" + siteData.link} target="" className="text-blue-600">up to 5 Bitcoin and 200 free spins</a> on your first four deposits
-                                    </div>
-                                }
-                            </div>
-                            <div className="flex flex-col border-b border-gray-400 px-2 py-2">
-                                <div
-                                    className="text-black font-medium cursor-pointer"
-                                    onClick={() => { setOpenFAQ4(!openFAQ4) }}
-                                >
-                                    4. Is King Billy Casino legit?
-                                </div>
-                                {openFAQ4 &&
-                                    <div className="text-black mt-5">
-                                        Yes! <a href={"https://" + siteData.link} target="" className="text-blue-600">King Billy Casino</a> is a legitimate online casino, which holds a gambling license issued by the government of Curaçao. Most of the reviews about the casino are positive, including ours.
+                                        Unfortunately, there is no mBit Casino deposit bonus. However, there are many other promotions, including a rewarding VIP program and daily races offering free spins.
                                     </div>
                                 }
                             </div>
@@ -1873,4 +1744,4 @@ const KingBillyGameReview = () => {
     )
 }
 
-export default KingBillyGameReview;
+export default MBitGameReview;
