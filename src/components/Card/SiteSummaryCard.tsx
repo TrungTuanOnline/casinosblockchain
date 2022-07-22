@@ -39,7 +39,7 @@ const SiteSummaryCard = (props: IProps) => {
                     {siteData.rank === 1 && <img className="h-8" src={rankFirstImg} alt="CardImg"></img>}
                     {siteData.rank === 2 && <img className="h-8" src={rankSecondImg} alt="CardImg"></img>}
                     {siteData.rank === 3 && <img className="h-8" src={rankThirdImg} alt="CardImg"></img>}
-                    {siteData.rank > 3 && 
+                    {siteData.rank > 3 &&
                         <div className="w-7 h-7 rounded-full bg-gray-500 flex items-center justify-center">
                             {siteData.rank}
                         </div>}
@@ -54,14 +54,14 @@ const SiteSummaryCard = (props: IProps) => {
                     </div>
                 </div>
                 <div className="w-28 flex items-center justify-start">
-                    { siteData.bonus &&
-                        <Button 
+                    {siteData.bonus &&
+                        <Button
                             className="w-36 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between gap-x-2"
-                            endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400"/>}
+                            endIcon={<KeyboardArrowRightICon className="text-black rounded-full bg-orange-400" />}
                             href={"https://" + siteData.link}
                             target="_BLANK"
                         >
-                            <img className="h-3" src={giftImg}></img>
+                            <img className="h-3" src={giftImg} alt="giftImg" />
                             <span className="text-sm text-black">{siteData.bonus}</span>
                         </Button>
                     }
@@ -71,20 +71,20 @@ const SiteSummaryCard = (props: IProps) => {
                     {siteData.features.length > 1 && <div className="text-sm">{siteData.features[1]}</div>}
                 </div>
                 <div className="w-20 flex items-center justify-center relative">
-                    <CircularProgress 
-                        size={56} 
-                        thickness={2} 
-                        sx={{color: 'lightgray'}} 
-                        variant="determinate" 
-                        value={100} 
+                    <CircularProgress
+                        size={56}
+                        thickness={2}
+                        sx={{ color: 'lightgray' }}
+                        variant="determinate"
+                        value={100}
                         className="absolute"
                     />
-                    <CircularProgress 
-                        size={56} 
-                        thickness={2} 
-                        sx={Number(siteData.overview.rating.total) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                        variant="determinate" 
-                        value={Number(siteData.overview.rating.total) * 20} 
+                    <CircularProgress
+                        size={56}
+                        thickness={2}
+                        sx={Number(siteData.overview.rating.total) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                        variant="determinate"
+                        value={Number(siteData.overview.rating.total) * 20}
                     />
                     <div className="absolute flex items-center justify-center inset-0 text-sm">{siteData.overview.rating.total}/5%</div>
                 </div>
@@ -104,7 +104,7 @@ const SiteSummaryCard = (props: IProps) => {
                         className="text-white"
                         variant="contained"
                         color="primary"
-                        startIcon={<OpenInNewIcon/>}
+                        startIcon={<OpenInNewIcon />}
                         href={"https://" + siteData.link}
                         target="_BLANK"
                     >
