@@ -7,7 +7,11 @@ import Guide2 from './pages/Guides/Guide2';
 import Guide3 from './pages/Guides/Guide3';
 import Providers from './pages/Providers';
 
+// review pages start
 import BCGameReview from './pages/Reviews/BCGameReview';
+import StakeCasinoReview from './pages/Reviews/StakeCasinoReview';
+import RocketpotGameReview from './pages/Reviews/RocketpotGameReview';
+// review pages end
 
 function App() {
   return (
@@ -19,7 +23,11 @@ function App() {
         <Route path='/stablecoin-casinos' element={<Guide2 />} />
         <Route path='/metamask-casinos' element={<Guide3 />} />
 
+        {/* review pages start */}
         <Route path='/review/bc.game' element={<BCGameReview />} />
+        <Route path='/review/stake.com' element={<StakeCasinoReview />} />
+        <Route path='/review/rocketpot.io' element={<RocketpotGameReview />} />
+        {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />
     </div>

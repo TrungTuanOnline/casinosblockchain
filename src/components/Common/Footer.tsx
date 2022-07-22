@@ -13,7 +13,7 @@ const Footer = () => {
                         casinoblockchain.io
                     </Button>
                 </div>
-                <div className="flex flex-row gap-x-5">
+                {/* <div className="flex flex-row gap-x-5">
                     <Button href='/' className="text-white text-sm hover:text-amber-500">
                         {t("ABOUT")}
                     </Button>
@@ -29,7 +29,7 @@ const Footer = () => {
                     <Button href='/' className="text-white text-sm hover:text-amber-500">
                         {t("title12")}
                     </Button>
-                </div>
+                </div> */}
                 <div className="text-white text-sm flex items-center">
                     © Casinos Blockchain, 2022. All rights reserved.
                 </div>

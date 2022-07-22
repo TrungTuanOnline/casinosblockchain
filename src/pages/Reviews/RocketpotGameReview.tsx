@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
-import { Box } from "@mui/material";
+import { Box, Fab } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Button } from '@mui/material';
@@ -14,7 +18,6 @@ import TimelineDot from '@mui/lab/TimelineDot';
 
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
 import AdUnitsOutlinedIcon from '@mui/icons-material/AdUnitsOutlined';
@@ -23,63 +26,50 @@ import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import MarkChatReadOutlinedIcon from '@mui/icons-material/MarkChatReadOutlined';
 import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
+import { NavigateBefore, NavigateNext } from "@mui/icons-material"
 
 import TopBar from "../../components/Common/Topbar";
 import Footer from "../../components/Common/Footer";
 import {siteDatas} from "../../Interfaces/SiteDatas";
 
 // crypto images
-import avalancheCryptoImg from "../../Assets/images/cryptocurrency/avalanche.png";
-import batCryptoImg from "../../Assets/images/cryptocurrency/BAT.png";
 import bnbCryptoImg from "../../Assets/images/cryptocurrency/bnb.png";
 import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
 import bitcoinCashCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-cash.png";
-import bitcoinSvCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-sv.png";
-import bitTorrentCryptoImg from "../../Assets/images/cryptocurrency/bit-torrent.png";
 import cardanoCryptoImg from "../../Assets/images/cryptocurrency/cardano.png";
-import chainlinkCryptoImg from "../../Assets/images/cryptocurrency/chainlink.png";
-import daiCryptoImg from "../../Assets/images/cryptocurrency/dai.png";
-import dashCryptoImg from "../../Assets/images/cryptocurrency/dash.png";
 import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
 import eosCryptoImg from "../../Assets/images/cryptocurrency/eos.png";
 import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
 import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
-import moneroCryptoImg from "../../Assets/images/cryptocurrency/monero.png";
-import polkadotCryptoImg from "../../Assets/images/cryptocurrency/Polkadot.png";
+import neoCryptoImg from "../../Assets/images/cryptocurrency/neo.png";
 import rippleCryptoImg from "../../Assets/images/cryptocurrency/ripple.png";
-import shibaInuCryptoImg from "../../Assets/images/cryptocurrency/shiba-inu.png";
-import solanaCryptoImg from "../../Assets/images/cryptocurrency/solana.png";
-import sunCryptoImg from "../../Assets/images/cryptocurrency/sun.png";
 import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
 import tronCryptoImg from "../../Assets/images/cryptocurrency/tron.png";
-import trueusdCryptoImg from "../../Assets/images/cryptocurrency/trueusd.png";
-import unisawpCryptoImg from "../../Assets/images/cryptocurrency/unisawp.png";
-import usdcCryptoImg from "../../Assets/images/cryptocurrency/usdc.png";
 
 // game images
 import baccaratGameImg from "../../Assets/images/games/baccarat.png";
 import blackjackGameImg from "../../Assets/images/games/blackjack.png";
-import crashGameImg from "../../Assets/images/games/crash.png";
 import diceGameImg from "../../Assets/images/games/dice.png";
+import jackpotGameImg from "../../Assets/images/games/jackpot.png";
 import kenoGameImg from "../../Assets/images/games/keno.png";
 import liveCasinoGameImg from "../../Assets/images/games/live-casino.png";
+import lotteryGameImg from "../../Assets/images/games/lottery.png";
 import plinkoGameImg from "../../Assets/images/games/plinko.png";
 import pokerGameImg from "../../Assets/images/games/poker.png";
+import sicBoGameImg from "../../Assets/images/games/sic-bo.png";
 import rouletteGameImg from "../../Assets/images/games/roulette.png";
 import slotsGameImg from "../../Assets/images/games/slots.png";
+import sportsBettingGameImg from "../../Assets/images/games/sports-betting.png";
 
 // review images
-import reviewImg1 from "../../Assets/images/reviews/1-bc-game/1-bc-review.png";
-import reviewImg2 from "../../Assets/images/reviews/1-bc-game/2-bc-review.png";
-import reviewImg3 from "../../Assets/images/reviews/1-bc-game/3-bc-review.png";
-import reviewImg4 from "../../Assets/images/reviews/1-bc-game/4-bc-review.png";
-import reviewImg5 from "../../Assets/images/reviews/1-bc-game/5-bc-review.png";
-import reviewImg6 from "../../Assets/images/reviews/1-bc-game/6-bc-review.png";
-import reviewImg7 from "../../Assets/images/reviews/1-bc-game/7-bc-review.png";
-import reviewImg8 from "../../Assets/images/reviews/1-bc-game/8-bc-review.png";
+import reviewImg1 from "../../Assets/images/reviews/3-rocketpot-game/1-rocketpot-review.png";
+import reviewImg2 from "../../Assets/images/reviews/3-rocketpot-game/2-rocketpot-review.png";
+import reviewImg3 from "../../Assets/images/reviews/3-rocketpot-game/3-rocketpot-review.png";
+import reviewImg4 from "../../Assets/images/reviews/3-rocketpot-game/4-rocketpot-review.png";
+import reviewImg5 from "../../Assets/images/reviews/3-rocketpot-game/5-rocketpot-review.png";
 
 // country flag
-import { SA, CN, GB, FR, IN, ID, JP, KR, PT, RU, ES, PH, TR, VN } from 'country-flag-icons/react/1x1';
+import { GB, DE, JP, ES } from 'country-flag-icons/react/1x1';
 
 const StyledRating = styled(Rating)({
 });
@@ -106,14 +96,6 @@ const RatingEmptydDiv = () => {
 
 const cryptocurrenciesObj: Array<any> = [
     {
-        img: avalancheCryptoImg,
-        name: "Avalanche"
-    },
-    {
-        img: batCryptoImg,
-        name: "BAT"
-    },
-    {
         img: bnbCryptoImg,
         name: "Binance Coin"
     },
@@ -126,28 +108,8 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Bitcoin Cash"
     },
     {
-        img: bitcoinSvCryptoImg,
-        name: "Bitcoin SV"
-    },
-    {
-        img: bitTorrentCryptoImg,
-        name: "BitTorrent Token"
-    },
-    {
         img: cardanoCryptoImg,
         name: "Cardano"
-    },
-    {
-        img: chainlinkCryptoImg,
-        name: "Chainlink"
-    },
-    {
-        img: daiCryptoImg,
-        name: "Dai"
-    },
-    {
-        img: dashCryptoImg,
-        name: "Dash"
     },
     {
         img: dogecoinCryptoImg,
@@ -166,28 +128,12 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Litecoin"
     },
     {
-        img: moneroCryptoImg,
-        name: "Monero"
-    },
-    {
-        img: polkadotCryptoImg,
-        name: "Polkadot"
+        img: neoCryptoImg,
+        name: "Neo"
     },
     {
         img: rippleCryptoImg,
         name: "Ripple"
-    },
-    {
-        img: shibaInuCryptoImg,
-        name: "Shiba Inu"
-    },
-    {
-        img: solanaCryptoImg,
-        name: "Solana"
-    },
-    {
-        img: sunCryptoImg,
-        name: "SUN"
     },
     {
         img: tetherCryptoImg,
@@ -196,18 +142,6 @@ const cryptocurrenciesObj: Array<any> = [
     {
         img: tronCryptoImg,
         name: "Tron"
-    },
-    {
-        img: trueusdCryptoImg,
-        name: "TrueUSD"
-    },
-    {
-        img: unisawpCryptoImg,
-        name: "Uniswap"
-    },
-    {
-        img: usdcCryptoImg,
-        name: "USD Coin"
     }
 ];
 
@@ -221,12 +155,12 @@ const gamesObj: Array<any> = [
         name: "Blackjack"
     },
     {
-        img: crashGameImg,
-        name: "Crash"
-    },
-    {
         img: diceGameImg,
         name: "Dice"
+    },
+    {
+        img: jackpotGameImg,
+        name: "Jackpots"
     },
     {
         img: kenoGameImg,
@@ -235,6 +169,10 @@ const gamesObj: Array<any> = [
     {
         img: liveCasinoGameImg,
         name: "Live Casino"
+    },
+    {
+        img: lotteryGameImg,
+        name: "Lottery"
     },
     {
         img: plinkoGameImg,
@@ -249,28 +187,26 @@ const gamesObj: Array<any> = [
         name: "Roulette"
     },
     {
+        img: sicBoGameImg,
+        name: "Sic Bo"
+    },
+    {
         img: slotsGameImg,
         name: "Slots"
+    },
+    {
+        img: sportsBettingGameImg,
+        name: "Sports Betting"
     }
 ]
 
-const BCGameReview = () => {
-    const siteData = siteDatas[0];
+const RocketpotGameReview = () => {
+    const siteData = siteDatas[2];
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
     const [openFAQ2, setOpenFAQ2] = useState(false);
     const [openFAQ3, setOpenFAQ3] = useState(false);
     const [openFAQ4, setOpenFAQ4] = useState(false);
-    
-    // const [isTablet, setIsTablet] = useState(false);
-    // useEffect(() => {
-    //     function updateSize() {
-    //         setIsTablet(window.innerWidth < 1024);
-    //     }
-    //     window.addEventListener('resize', updateSize);
-    //     updateSize();
-    //     return () => window.removeEventListener('resize', updateSize);
-    // }, []);
 
     useEffect(() => {
         const partSections = document.getElementsByClassName("part-section");
@@ -369,7 +305,7 @@ const BCGameReview = () => {
                                         {siteData.name} Overview
                                     </div>
                                     <div className="text-base">
-                                        Your robust BC.Game casino review - come for the prizes, stay for the games!
+                                        It's all about that crypto!
                                     </div>
                                 </div>
                             </div>
@@ -395,7 +331,7 @@ const BCGameReview = () => {
                                                                     className="w-5 h-5">
                                                                 </img>
                                                             </div>
-                                                            <div className="text-center">
+                                                            <div className="text-base">
                                                                 {data.name}
                                                             </div>
                                                         </div>
@@ -421,7 +357,7 @@ const BCGameReview = () => {
                                                                     className="h-10">
                                                                 </img>
                                                             </div>
-                                                            <div className="text-base">
+                                                            <div className="text-center">
                                                                 {data.name}
                                                             </div>
                                                         </div>
@@ -437,60 +373,20 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-wrap gap-4 mt-5">
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <SA className="h-5 rounded-full" />
-                                                <div className="text-base">Arabic</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <CN className="h-5 rounded-full" />
-                                                <div className="text-base">Chinese</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <GB className="h-5 rounded-full" />
                                                 <div className="text-base">English</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <FR className="h-5 rounded-full" />
-                                                <div className="text-base">French</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <IN className="h-5 rounded-full" />
-                                                <div className="text-base">Hindi</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <ID className="h-5 rounded-full" />
-                                                <div className="text-base">Indonesian</div>
+                                                <DE className="h-5 rounded-full" />
+                                                <div className="text-base">Germany</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <JP className="h-5 rounded-full" />
                                                 <div className="text-base">Japanese</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <KR className="h-5 rounded-full" />
-                                                <div className="text-base">Korean</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <PT className="h-5 rounded-full" />
-                                                <div className="text-base">Portuguese</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <RU className="h-5 rounded-full" />
-                                                <div className="text-base">Russian</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <ES className="h-5 rounded-full" />
                                                 <div className="text-base">Spanish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <PH className="h-5 rounded-full" />
-                                                <div className="text-base">Tagalog</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <TR className="h-5 rounded-full" />
-                                                <div className="text-base">Turkish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <VN className="h-5 rounded-full" />
-                                                <div className="text-base">Vietnamese</div>
                                             </div>
                                         </div>
                                     </div>
@@ -504,31 +400,35 @@ const BCGameReview = () => {
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Very low house edge</div>
+                                                        <div className="w-[230px]">Easy registration</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Daily wheel spin (for free)</div>
+                                                        <div className="w-[230px]">Large variety of games</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Provably fair original games</div>
+                                                        <div className="w-[230px]">Sportsbook available</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">65+ cryptocurrencies accepted</div>
+                                                        <div className="w-[230px]">Emphasys on privacy</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Stellar social features</div>
+                                                        <div className="w-[230px]">Functional website</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Original promotions</div>
+                                                        <div className="w-[230px]">Daily cashbacks</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Cryptocurrency exchange</div>
+                                                        <div className="w-[230px]">Long list of game providers</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                                        <div className="w-[230px]">Crypto purchases available from website</div>
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col gap-y-3">
@@ -538,7 +438,11 @@ const BCGameReview = () => {
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">Lacks a deposit bonus</div>
+                                                        <div className="w-[230px]">Withdrawal fees</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                                        <div className="w-[230px]">x3 wagering requirement for ALL deposits</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -789,7 +693,7 @@ const BCGameReview = () => {
                                             Bonuses
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Wheel spins, VIP club, BC.Game shitcodes... Even a deposit bonus!
+                                            Take off with a stellar welcome bonus!
                                         </div>
                                     </div>
                                 </div>
@@ -814,11 +718,11 @@ const BCGameReview = () => {
                             </div>
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
-                                    <div className="text-base">
-                                        BC.Game used to be a no-welcome-bonus casino... Not anymore! Now you get a deposit bonus AND a daily chance to win 5 BTC.
+                                    <div>
+                                        At Rocketpot, you're entitled to a straightforward Bitcoin bonus that matches your first deposit with up to 1 BTC in bonus money.
                                     </div>
-                                    <div className="text-base">
-                                        With the current new user scheme, you can get up to 780% deposit match on your first four transactions. Here is how it works:
+                                    <div>
+                                        Here's how it works:
                                     </div>
                                     {/* timeline 1 */}
                                     <div className="text-base">
@@ -831,22 +735,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col gap-y-2">
-                                                        <div className="text-base font-bold">
-                                                            1st Deposit - 80-180% match
-                                                        </div>
-                                                        <div>
-                                                            Depending on the amount you deposit, you will get a:
-                                                        </div>
-                                                        <div>
-                                                            - 80% match if you deposit between $30 and $80
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $80 - $400
-                                                        </div>
-                                                        <div>
-                                                            - 180% for deposits over $400
-                                                        </div>
+                                                    <div>
+                                                        Sign up at Rocketpot.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -858,22 +748,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col gap-y-2">
-                                                        <div className="font-bold">
-                                                            2nd Deposit - 100-200% match
-                                                        </div>
-                                                        <div>
-                                                            For the second deposit, you can receive:
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $60-$120 deposits
-                                                        </div>
-                                                        <div>
-                                                            - 150% match for $120-$600 deposits
-                                                        </div>
-                                                        <div>
-                                                            - 200% match for $600 and above
-                                                        </div>
+                                                    <div>
+                                                        Choose Bitcoin as your selected currency.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -885,22 +761,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col">
-                                                        <div className="font-bold gap-y-2">
-                                                            3rd Deposit - 100-220% match
-                                                        </div>
-                                                        <div>
-                                                            Once again, your deposit amount determines how much you get:
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $120-$300
-                                                        </div>
-                                                        <div>
-                                                            - 150% match for $300-$1500
-                                                        </div>
-                                                        <div>
-                                                            - 220% match for deposits over $1500
-                                                        </div>
+                                                    <div>
+                                                        Make your deposit and claim the 100% deposit bonus.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -911,182 +773,53 @@ const BCGameReview = () => {
                                                     </TimelineDot>
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col">
-                                                        <div className="font-bold">
-                                                            4th Deposit - 100-240% match
-                                                        </div>
-                                                        <div>
-                                                            Finally, for your fourth deposit, you can receive:
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $150-$400
-                                                        </div>
-                                                        <div>
-                                                            - 150% match for $400-$3000
-                                                        </div>
-                                                        <div>
-                                                            - 240% match for deposits over $3000
-                                                        </div>
+                                                    <div>
+                                                        Get up to 1 BTC on top of your deposit.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
                                         </Timeline>
                                     </div>
-                                    {/*  */}
-                                    <div>
-                                        BC.Game has over 65 different cryptocurrencies, so it doesn't matter what crypto you use - you will get the bonus in the dollar equivalent.
+                                    <div className="text-xl font-bold mt-5">
+                                        Is Rocketpot's Bitcoin Welcome Bonus Worth It?
                                     </div>
                                     <div>
-                                        Come again? Dollar equivalent?
+                                        Since not all Bitcoin casinos offer welcome bonuses, the mere existence of Rocketpot's offer is an advantage when compared with brands like Roobet that don't have them.
                                     </div>
                                     <div>
-                                        That's right - BC.Game has its own token, BCD, whose value is equivalent to 1 USDT. You can use BCD to play games on the platform and unlock to withdraw them.
+                                        But there's no rose without thorns, and there are a few catches with this promotion:
                                     </div>
-                                    <div>
-                                        To unlock your bonus BCD, you will have to wager:
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="font-bold text-gray-400">
-                                            How to Unlock BCD?
-                                        </div>
-                                        <div className="text-white font-bold text-2xl">
-                                            Wager amount x 1% x 25% = Unlock amount
+                                    <div className="flex flex-row items-start gap-x-2">
+                                        <div className="w-1 h-1 rounded-full bg-black mt-[11px]"></div>
+                                        <div>
+                                            It's only valid if you pick Bitcoin as your deposit method: while you can use other cryptocurrencies at Rocketpot, they're not eligible for the bonus.
                                         </div>
                                     </div>
-                                    <div>
-                                        Along with the regular welcome bonus, at BC.Game casino, you get the chance to spin a prize-giving wheel, which almost works as a no deposit bonus.
-                                    </div>
-                                    <div>
-                                        The BC.Game gamewheel rewards are random and can give you one of the following real-money prizes, among others:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 5 BTC
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 0.15 ETH
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 5 XRP
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 25 USDT
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="font-bold text-gray-400">
-                                            Free crypto
-                                        </div>
-                                        <div className="text-white font-bold text-2xl">
-                                            That's right: you can win up to 5 BTC for free at BC.Game casino!
+                                    <div className="flex flex-row items-start gap-x-2">
+                                        <div className="w-1 h-1 rounded-full bg-black  mt-[11px]"></div>
+                                        <div>
+                                            Its 100x wagering requirement (requiring you to play through your bonus a total of 100 times) is considerably higher than similar offers.
                                         </div>
                                     </div>
                                     <div>
-                                        You can come back and spin the wheel every single day - the clock resets on 12:00 AM GMT.
+                                        Additionally, other Bitcoin welcome bonuses are more generous than Rocketpot's. True Flip, for instance, gives you 30 free spins for simply completing your signup process, with a very palatable wagering requirement of x1.
                                     </div>
                                     <div>
-                                        The best part? There are no wagering requirements for your crypto wins. If you hit the 1BTC, you can cash out instantly - no questions asked. This, along with the daily opportunity to win, makes BC.Game's Lucky Wheel spin one of our favorite Bitcoin free spin offers out there.
-                                    </div>
-                                    <div>
-                                        Is this a traditional no deposit bonus? No, definitely not.
-                                    </div>
-                                    <div>
-                                        Since it does pay out cryptocurrency prizes regularly, the BC.Game gamewheel of fortune works more like a Bitcoin faucet. However, a significant difference is that it's highly random, which means you're not guaranteed to get a specific prize (much like with free spins you get on sign-up.)
+                                        Does that mean you should pick True Flip over Rocketpot exclusively because it gives you a better newcomer deal? We don't think so. Keep reading to find out why.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Other BC.Game Promotions
+                                        Other Promotions - Rocketpot's Daily Cashback and Loyalty Rewards
                                     </div>
                                     <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg1}
-                                            alt="reviewImg">
-                                        </img>
+                                        Rocketpot's daily cashback lets you win back <span className="font-bold">10% of your net losses</span> on a daily basis, as long as you played at least 30$ the previous day.
                                     </div>
                                     <div>
-                                        It's not just the welcome offer that is innovative at BC.Game: the other promotions are too.
+                                        It's perhaps not the most enticing offer, but it's solid and consistent and especially relevant if you play regularly.
                                     </div>
                                     <div>
-                                        The casino offers a range of unique bonus schemes:
+                                        High rollers will also be pleased with the brand's VIP program, which rewards your loyalty with <span className="font-bold">unlockable chests that give guaranteed mBTC prizes:</span>
                                     </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Task Bonuses</span> - get rewarded with small crypto prizes for finishing small tasks, such as setting 2-FA, placing your first bet, or verifying your email.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Master Medals</span> - finish casino achievements for the bragging rights... and BCD prizes.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Where is COCO</span> - every six hours, BC.Game's mascot Coco comes out of hiding. What follows is a 10-minute period where she appear at different places on the casino. Click her to get a reward - you'll receive at least 0.005 BCD, but VIP members get more.
-                                        </div>
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        BC.Game Shitcodes
-                                    </div>
-                                    <div>
-                                        On top of all the perks, BC.Game shitcodes are hiding all over the web (and even in truck stop restrooms).
-                                    </div>
-                                    <div>
-                                        <span className="font-bold">A shitcode will add a gift to your account balance</span> - free money to play with! But where do you find them?
-                                    </div>
-                                    <div>
-                                        Some of the <span className="font-bold">best places for shitcodes</span> include:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            BC.Game forum
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Player chatroom
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Social media pages
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Special announcements and campaigns
-                                        </div>
-                                    </div>
-                                    <div className="font-bold">
-                                        How do I use a shitcode?
-                                    </div>
-                                    <div>
-                                        First, you need a <span className="font-bold">profile on BC.Game.</span>
-                                    </div>
-                                    <div>
-                                        Sign up (if you haven't yet) and log in. Then, in the left-hand menu <span className="font-bold">click Promotions</span> and scroll down to find the shitcodes space. <span className="font-bold">Enter your BC.Game shitcode</span> here and enjoy your gift!
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        VIP Club
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg2}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        Last but not least, <span className="font-bold">BC.Game also has a VIP club</span>, giving out bonuses, cash backs, giveaways, all-expenses-paid trips, personalized customer care, and more.
-                                    </div>
-                                    <div>
-                                        The VIP level system sets <span className="font-bold">14 VIP Secret Treasures</span>, each corresponding to a respective card:
-                                    </div>
-                                    <div className="text-base -mt-8">
+                                    <div className="text-base">
                                         <Timeline position="right">
                                             <TimelineItem>
                                                 <TimelineSeparator>
@@ -1096,13 +829,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Bronze Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 1-7)
-                                                        </div>
+                                                    <div>
+                                                        Every time you place a bet, you <span className="font-bold">collect experience points.</span>
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -1114,13 +842,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Silver Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 8-21)
-                                                        </div>
+                                                    <div>
+                                                        Bets with bonus money only accumulate 1/3 of the experience points.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -1132,13 +855,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Gold Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 22-37)
-                                                        </div>
+                                                    <div>
+                                                        When you gather enough experience points, you will <span className="font-bold">level up.</span>
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -1149,13 +867,8 @@ const BCGameReview = () => {
                                                     </TimelineDot>
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Platinum Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 38-69)
-                                                        </div>
+                                                    <div>
+                                                        You will unlock a chest with a <span className="font-bold">guaranteed mBTC prize</span> when you reach a new level.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -1166,62 +879,15 @@ const BCGameReview = () => {
                                                     </TimelineDot>
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Diamond Card
-                                                        </div>
-                                                        <div>
-                                                            (SVIP members)
-                                                        </div>
+                                                    <div>
+                                                        The rewards are random, <span className="font-bold">but the higher the level, the better</span> the potential rewards.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
                                         </Timeline>
                                     </div>
                                     <div>
-                                        To become a member, you collect XP - for every $1 wagered, you receive 1XP. Different levels have different XP requirements, with Diamond and Platinum requiring some serious player activity. But, the rewards are also worth it.
-                                    </div>
-                                    <div>
-                                        Along with the concierge service, annual parties (that's right, BC.Game will treat you to a Hollywood-style event), and trips to exotic destinations, there are also unique, VIP-only promotions. Some of our favorite treats in this category include:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Roll Competition</span> at levels 4 and above, a daily dice roll for free DOGE.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Rakeback</span> over level 14 to receive up to 20% of the house commission back (whether you win or lose the wagers).
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">RB booster</span> (also over level 14), which can increase your rakeback by 5% for a period of time.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Recharge bonus</span> (over level 22) with free cashback available in as little as 10 minutes!
-                                        </div>
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        So... Are the Bonuses Worth It?
-                                    </div>
-                                    <div>
-                                        Short answer: <span className="font-bold">absolutely!</span>
-                                    </div>
-                                    <div>
-                                        BC.Game is similar to other crypto casinos like Stake, which doesn't rely on traditional offers to lure in new players but instead focuses on delivering a stellar player experience
-                                    </div>
-                                    <div>
-                                        In fact, we think that, with its original and engaging promotions, BC.Game goes the extra mile even when compared to brands like Stake.
-                                    </div>
-                                    <div>
-                                        Between the free spins, unique offers, and VIP club, we love how they prioritize loyal players and reward them. Even better, active chat players can also get rewarded with "rain", which offers them free crypto prizes - with no wagering strings attached, either.
+                                        There is a fun, gamified component to leveling up: inside each chest, there's a "free spin" to a wheel of fortune. Spinning that wheel is what will unveil your final mBTC prize!
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1234,19 +900,11 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Daily chance to win 5 BTC</div>
+                                            <div className="w-[230px]">10% daily cashback</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Wager-free crypto rewards</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">VIP club</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Engaging challenges</div>
+                                            <div className="w-[230px]">Fun and engaging VIP rewards</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1255,11 +913,11 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Few traditional promotions</div>
+                                            <div className="w-[230px]">High wagering requirements</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No free spin offers for slots</div>
+                                            <div className="w-[230px]">Only available in BTC</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1289,7 +947,7 @@ const BCGameReview = () => {
                                             Look & Feel
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Easy navigation and a modern look
+                                            Simple Design, Some Navigation Flaws
                                         </div>
                                     </div>
                                 </div>
@@ -1315,8 +973,168 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BC.Game is a modern website with the sleek and smooth template we've come to associate with crypto casinos. It's not an original look, but, in our opinion, it's still attractive.
+                                        Rocketpot has a clean and streamlined design without particular visual appeal.
                                     </div>
+                                    <div>
+                                        We don't necessarily find the website unattractive: we just don't think it's special, and that's ok. It doesn't have to be.
+                                    </div>
+                                    <div>
+                                        The issue comes when design affects functionality. And, unfortunately, we have one complaint there:
+                                    </div>
+                                    <div>
+                                        ❌ <span className="font-bold">The casino lobby navigation is somewhat confusing</span>, lacking the option to filter games by provider.
+                                    </div>
+                                    <div>
+                                        Let's take the slots section for example:
+                                    </div>
+                                    <div>
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg1}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                        You can see the slot thumbnails clearly. However, there is no way to filter by provider to find your favorite games - Arena of Gold by Microgaming appears alongside Aztec Magic by bgaming and Bonanza by Big Time Gaming.
+                                    </div>
+                                    <div>
+                                        Since this isn't just a 'prettiness' issue, but a functionality problem, we took off a point for this section.
+                                    </div>
+                                    <div>
+                                        If there's something that deserves extra praise, however, it is the sign-up process. You have to:
+                                    </div>
+                                    <div className="text-base">
+                                        <Timeline position="right">
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">1</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        Click sign up
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">2</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        Insert your email
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">3</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        Choose a user name and password
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                        </Timeline>
+                                    </div>
+                                    <div>
+                                        That's it! Rocketpot <span className="font-bold">doesn't request any personal information</span> apart from your email, and you can even use a suggested password and username combination if you wish.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Rocketpot's Mobile Experience
+                                    </div>
+                                    <div>
+                                        Like most Bitcoin casinos these days, Rocketpot is fully optimized for smaller screens and an "on-the-go" experience.
+                                    </div>
+                                    <div>
+                                        Rocketpot might not offer an app, but you don't need one: the mobile version of the website is responsive and easy to use on both iOS and Android devices.
+                                    </div>
+                                    <div className="w-[320px] xl:w-[500px] flex justify-center">
+                                        <Swiper
+                                            // slidesPerView={1}
+                                            // spaceBetween={10}
+                                            // navigation={{
+                                            //     prevEl: '.Swiper-prev',
+                                            //     nextEl: '.Swiper-next'
+                                            // }}
+                                            pagination={true}
+                                            // breakpoints={{
+                                            //     1024: {
+                                            //         slidesPerView: 3,
+                                            //         spaceBetween: 30,
+                                            //     },
+                                            //     640: {
+                                            //         slidesPerView: 2,
+                                            //         spaceBetween: 20,
+                                            //     },
+                                            // }}
+                                            modules={[Pagination]}
+                                        >
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-[320px] xl:w-[500px]">
+                                                    <img 
+                                                        className="w-[300px] xl:w-[480px]"
+                                                        src={reviewImg2}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                                
+                                            </SwiperSlide>
+                                            <SwiperSlide>
+                                            <div className="flex justify-center items-center w-[320px] xl:w-[500px]">
+                                                    <img 
+                                                        className="w-[300px] xl:w-[480px]"
+                                                        src={reviewImg3}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide>
+                                            <div className="flex justify-center items-center w-[320px] xl:w-[500px]">
+                                                    <img 
+                                                        className="w-[300px] xl:w-[480px]"
+                                                        src={reviewImg4}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                            </SwiperSlide>
+                                            {/* <div className="Swiper-prev">
+                                                <Fab className="bg-[#272822] text-white border border-red-400 border-solid" aria-label="prev" color="default" size="small">
+                                                    <NavigateBefore />
+                                                </Fab>
+                                            </div>
+                                            <div className="Swiper-next">
+                                                <Fab className="bg-[#272822] text-white" aria-label="next" color="default" size="small">
+                                                    <NavigateNext />
+                                                </Fab>
+                                            </div> */}
+                                        </Swiper>
+                                    </div >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                     <div>
                                         The bluish-grey and green color scheme that feels familiar, while the mascot is cute and friendly. Game thumbnails have a simple, yet visually pleasing style. The tone of voice is fun, too.
                                     </div>
@@ -1410,7 +1228,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Rocketpot
                                         </Button>
                                     </div>
                                 </div>
@@ -1462,13 +1280,6 @@ const BCGameReview = () => {
                                     </div>
                                     <div className="text-xl font-bold mt-5">
                                         BC Originals
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg6}
-                                            alt="reviewImg">
-                                        </img>
                                     </div>
                                     <div>
                                         BC.Game has a selection of provably fair originals, including their popular roulette game.
@@ -1548,13 +1359,6 @@ const BCGameReview = () => {
                                         Mainstream Providers
                                     </div>
                                     <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg7}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
                                         The Madame Destiny slot by Pragmatic Play offers a truly enchanting experience.
                                     </div>
                                     <div>
@@ -1568,13 +1372,6 @@ const BCGameReview = () => {
                                     </div>
                                     <div className="text-xl font-bold mt-5">
                                         Live Casino Games at BC.Game
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg8}
-                                            alt="reviewImg">
-                                        </img>
                                     </div>
                                     <div>
                                         BC.Game boasts a stellar selection of live games, including your favorites from big-name providers.
@@ -1770,7 +1567,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Rocketpot
                                         </Button>
                                     </div>
                                 </div>
@@ -1821,7 +1618,7 @@ const BCGameReview = () => {
                                         In previous editions of this casino review, licensing was our biggest issue. For the a long time, BC used to be unlicensed - and that didn't particularly win our trust. But hurrah, the situation has changed!
                                     </div>
                                     <div>
-                                        <a href="https://gateway.pinata.cloud/ipfs/QmZbpAZ4c9izhEYKmJ4gqkx2Kq4fs88h3hGF1kcMXPHWRg/license.jpg" target="_blank" rel="noreferrer" className="font-bold text-blue-600">BC.Game now has a gambling license from Curaçao</a>, which definitely boosts our confidence (and gives players peace of mind).
+                                        <a href="https://gateway.pinata.cloud/ipfs/QmZbpAZ4c9izhEYKmJ4gqkx2Kq4fs88h3hGF1kcMXPHWRg/license.jpg" target="_blank" className="font-bold text-blue-600">BC.Game now has a gambling license from Curaçao</a>, which definitely boosts our confidence (and gives players peace of mind).
                                     </div>
                                     <div>
                                         But, it's not just about the license. Here are some of the additional safety features that caught our attention:
@@ -1835,19 +1632,19 @@ const BCGameReview = () => {
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank"  rel="noreferrer" >Crypto Gambling Foundation seal of approval.</a>
+                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank">Crypto Gambling Foundation seal of approval.</a>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank" rel="noreferrer">verified its randomness.</a>
+                                            iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank">verified its randomness.</a>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank" rel="noreferrer">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
+                                            The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
                                         </div>
                                     </div>
                                     <div>
@@ -1931,7 +1728,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Rocketpot
                                         </Button>
                                     </div>
                                 </div>
@@ -1987,7 +1784,7 @@ const BCGameReview = () => {
                                     <div>
                                         Here are just a few of the most common cryptocurrencies that are supported at BC.Game casino:
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
+                                    <div className="flex flex-wrap gap-x-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
@@ -2119,10 +1916,10 @@ const BCGameReview = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <a href="https://degenverse.com/" target="_blank" rel="noreferrer" className="text-blue-600">Degenpass</a> is particularly noteworthy as it's a <span className="font-bold">virtual entry pass to the Degenverse ecosystem</span> and a range of eligible casinos.
+                                        <a href="https://degenverse.com/" target="_blank" className="text-blue-600">Degenpass</a> is particularly noteworthy as it's a <span className="font-bold">virtual entry pass to the Degenverse ecosystem</span> and a range of eligible casinos.
                                     </div>
                                     <div>
-                                        As <a href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" rel="noreferrer" className="text-blue-600">Metaverse gambling</a> grows in importance and popularity, so will NFTs. By offering the Degenpass, BC.Game is already one step ahead of the competition and proving they're at the edge of innovation when it comes to the online gambling industry.
+                                        As <a href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" className="text-blue-600">Metaverse gambling</a> grows in importance and popularity, so will NFTs. By offering the Degenpass, BC.Game is already one step ahead of the competition and proving they're at the edge of innovation when it comes to the online gambling industry.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
                                         Deposit and Withdrawal Times and Fees
@@ -2226,7 +2023,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Rocketpot
                                         </Button>
                                     </div>
                                 </div>
@@ -2279,7 +2076,7 @@ const BCGameReview = () => {
                                     <div>
                                         You can reach out to BC.Game in multiple ways, though:
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
+                                    <div className="flex flex-wrap gap-x-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
@@ -2317,14 +2114,13 @@ const BCGameReview = () => {
                                     <div>
                                         BC.Game casino also has a strong <span className="font-bold">social media presence</span> through the following platforms:
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
+                                    <div className="flex flex-wrap gap-x-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
                                                 <a 
                                                     href="https://github.com/bc-game-project/bcgame-crash"
                                                     target="_blank"
-                                                    rel="noreferrer"
                                                 >
                                                     GitHub
                                                 </a>
@@ -2336,7 +2132,6 @@ const BCGameReview = () => {
                                                 <a 
                                                     href="https://medium.com/@BC.Game"
                                                     target="_blank"
-                                                    rel="noreferrer"
                                                 >
                                                     Medium
                                                 </a>
@@ -2348,7 +2143,6 @@ const BCGameReview = () => {
                                                 <a 
                                                     href="https://twitter.com/BCGameOfficial"
                                                     target="_blank"
-                                                    rel="noreferrer"
                                                 >
                                                     Twitter
                                                 </a>
@@ -2360,7 +2154,6 @@ const BCGameReview = () => {
                                                 <a 
                                                     href="https://www.facebook.com/bcgamewin"
                                                     target="_blank"
-                                                    rel="noreferrer"
                                                 >
                                                     Facebook
                                                 </a>
@@ -2372,7 +2165,6 @@ const BCGameReview = () => {
                                                 <a 
                                                     href="https://discord.com/invite/mQh3M6UDkR"
                                                     target="_blank"
-                                                    rel="noreferrer"
                                                 >
                                                     Discord
                                                 </a>
@@ -2384,7 +2176,6 @@ const BCGameReview = () => {
                                                 <a 
                                                     href="https://bitcointalk.org/index.php?topic=5088875.0"
                                                     target="_blank"
-                                                    rel="noreferrer"
                                                 >
                                                     BitcoinTalk
                                                 </a>
@@ -2434,7 +2225,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Rocketpot
                                         </Button>
                                     </div>
                                 </div>
@@ -2575,4 +2366,4 @@ const BCGameReview = () => {
     )
 }
 
-export default BCGameReview;
+export default RocketpotGameReview;
