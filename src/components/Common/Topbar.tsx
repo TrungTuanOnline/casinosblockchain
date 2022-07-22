@@ -9,6 +9,24 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { Link } from 'react-router-dom';
 import { US, FR, ID, KR, PT, ES, TR, VN } from 'country-flag-icons/react/1x1';
 
+import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
+import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
+import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
+import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
+import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
+import rippleCryptoImg from "../../Assets/images/cryptocurrency/ripple.png";
+import bnbCryptoImg from "../../Assets/images/cryptocurrency/bnb.png";
+import cardanoCryptoImg from "../../Assets/images/cryptocurrency/cardano.png";
+
+import crashGameImg from "../../Assets/images/games/crash.png";
+import jackpotGameImg from "../../Assets/images/games/jackpot.png";
+import slotsGameImg from "../../Assets/images/games/slots.png";
+import rouletteGameImg from "../../Assets/images/games/roulette.png";
+import blackjackGameImg from "../../Assets/images/games/blackjack.png";
+import diceGameImg from "../../Assets/images/games/dice.png";
+import plinkoGameImg from "../../Assets/images/games/plinko.png";
+import pokerGameImg from "../../Assets/images/games/poker.png";
+
 const useStyles = makeStyles({
     menuPaper: {
         backgroundColor: "rgb(231 229 228) !important"
@@ -189,28 +207,100 @@ const Topbar = () => {
                                 onMouseEnter={() => { setOverCryptoCurrencyMenu(true) }}
                                 onMouseLeave={() => { setOverCryptoCurrencyMenu(false) }}
                             >
-                                <Link to='/best-bitcoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/best-bitcoin-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={bitcoinCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Bitcoin
                                 </Link>
-                                <Link to='/best-ethereum-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/best-ethereum-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={etherCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Ethereum
                                 </Link>
-                                <Link to='/tether-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/tether-casinos'
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={tetherCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Tether
                                 </Link>
-                                <Link to='/dogecoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/dogecoin-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={dogecoinCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Dogecoin
                                 </Link>
-                                <Link to='/litecoin-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/litecoin-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={litecoinCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Litecoin
                                 </Link>
-                                <Link to='/ripple-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/ripple-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={rippleCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Ripple
                                 </Link>
-                                <Link to='/binance-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/binance-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={bnbCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Binance
                                 </Link>
-                                <Link to='/cardano-casinos' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/cardano-casinos' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={cardanoCryptoImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Cardano
                                 </Link>
                             </div>
@@ -227,32 +317,104 @@ const Topbar = () => {
                         </Button>
                         {(openGameMenu || overGameMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-full bg-neutral-800 py-2 rounded z-10"
+                                className="absolute flex flex-col gap-y-2 w-28 bg-neutral-800 py-2 rounded z-10"
                                 onMouseEnter={() => { setOverGameMenu(true) }}
                                 onMouseLeave={() => { setOverGameMenu(false) }}
                             >
-                                <Link to='/crash-crypto-game' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/crash-crypto-game' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={crashGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Crash
                                 </Link>
-                                <Link to='/bitcoin-jackpot' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/bitcoin-jackpot' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={jackpotGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Jackpots
                                 </Link>
-                                <Link to='/slots-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/slots-bitcoin-casino' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={slotsGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Slots
                                 </Link>
-                                <Link to='/roulette-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link  
+                                    to='/roulette-bitcoin-casino' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={rouletteGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Roulette
                                 </Link>
-                                <Link to='/blackjack-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/blackjack-bitcoin-casino' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={blackjackGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Blackjack
                                 </Link>
-                                <Link to='/dice-bitcoin-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/dice-bitcoin-casino' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={diceGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Dice
                                 </Link>
-                                <Link to='/plinko-casino' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/plinko-casino' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={plinkoGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Plinko
                                 </Link>
-                                <Link to='/bitcoin-poker-sites' className=" px-2 text-white text-sm hover:bg-neutral-700">
+                                <Link 
+                                    to='/bitcoin-poker-sites' 
+                                    className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
+                                    <div className="flex justify-center items-center">
+                                        <img 
+                                            className="w-4"
+                                            src={pokerGameImg}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
                                     Poker
                                 </Link>
                             </div>
