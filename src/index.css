@@ -32,13 +32,9 @@
     }
 }
 
-<<<<<<< HEAD
 .css-ha3bif-MuiTimelineItem-root:before {
     display: none !important;
 }
-=======
-
->>>>>>> 4f40cc849fa27f160caed2698bea75a83f28f841
 
 .divHasTempBG {
     background: url(../src/Assets/images/tempBG1.png), radial-gradient(100% 100% at 100% 100%, #2f0857 0%, #000331 100%);

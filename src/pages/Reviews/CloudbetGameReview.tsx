@@ -260,7 +260,7 @@ const gamesObj: Array<any> = [
     }
 ]
 
-const BCGameReview = () => {
+const CloudbetGameReview = () => {
     const siteData = siteDatas[0];
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
@@ -375,7 +375,7 @@ const BCGameReview = () => {
                                         {siteData.name} Overview
                                     </div>
                                     <div className="text-base">
-                                        Your robust BC.Game casino review - come for the prizes, stay for the games!
+                                        Play all your favorite games on the legacy site
                                     </div>
                                 </div>
                             </div>
@@ -1446,7 +1446,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Cloudbet
                                         </Button>
                                     </div>
                                 </div>
@@ -1806,7 +1806,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Cloudbet
                                         </Button>
                                     </div>
                                 </div>
@@ -1967,7 +1967,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Cloudbet
                                         </Button>
                                     </div>
                                 </div>
@@ -2262,7 +2262,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Cloudbet
                                         </Button>
                                     </div>
                                 </div>
@@ -2470,7 +2470,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open Cloudbet
                                         </Button>
                                     </div>
                                 </div>
@@ -2611,4 +2611,4 @@ const BCGameReview = () => {
     )
 }
 
-export default BCGameReview;
+export default CloudbetGameReview;

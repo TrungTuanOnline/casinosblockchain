@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
-import { Box } from "@mui/material";
+import { Box, Fab } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Button } from '@mui/material';
@@ -14,6 +18,7 @@ import TimelineDot from '@mui/lab/TimelineDot';
 
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
+import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import CardGiftcardOutlinedIcon from '@mui/icons-material/CardGiftcardOutlined';
@@ -1069,27 +1074,56 @@ const StakeCasinoReview = () => {
                                     <div>
                                         If you're worried about anonymity on the chat and winner's feed, you're not alone. Stake understands that players might not want their activity exposed on the website. You can always opt-out of having your username revealed in the results overview.
                                     </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg3}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg4}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg5}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
+                                    <div className="w-[350px] xl:w-[600px] flex justify-center">
+                                        <Swiper
+                                            slidesPerView={1}
+                                            navigation={{
+                                                prevEl: '.Swiper-prev',
+                                                nextEl: '.Swiper-next'
+                                            }}
+                                            pagination={true}
+                                            modules={[Navigation, Pagination]}
+                                        >
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
+                                                    <img 
+                                                        className=""
+                                                        src={reviewImg3}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                                
+                                            </SwiperSlide>
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
+                                                    <img 
+                                                        className=""
+                                                        src={reviewImg4}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                            </SwiperSlide>
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
+                                                    <img 
+                                                        className=""
+                                                        src={reviewImg5}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                            </SwiperSlide>
+                                            <div className="Swiper-prev">
+                                                <Fab className="bg-[#272822] text-white" aria-label="prev" color="default" size="small">
+                                                    <NavigateBefore />
+                                                </Fab>
+                                            </div>
+                                            <div className="Swiper-next">
+                                                <Fab className="bg-[#272822] text-white" aria-label="next" color="default" size="small">
+                                                    <NavigateNext />
+                                                </Fab>
+                                            </div>
+                                        </Swiper>
+                                    </div >
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
                                     <div className="text-xl font-bold bg-gray-200 px-5 py-3 rounded-t-xl">

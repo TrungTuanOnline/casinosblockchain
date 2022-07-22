@@ -40,6 +40,7 @@ import Guide3 from './pages/Guides/Guide3';
 import BCGameReview from './pages/Reviews/BCGameReview';
 import StakeCasinoReview from './pages/Reviews/StakeCasinoReview';
 import RocketpotGameReview from './pages/Reviews/RocketpotGameReview';
+import CloudbetGameReview from './pages/Reviews/CloudbetGameReview';
 // review pages end
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
         <Route path='/review/bc.game' element={<BCGameReview />} />
         <Route path='/review/stake.com' element={<StakeCasinoReview />} />
         <Route path='/review/rocketpot.io' element={<RocketpotGameReview />} />
+        <Route path='/review/cloudbet.com' element={<CloudbetGameReview />} />
         {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />

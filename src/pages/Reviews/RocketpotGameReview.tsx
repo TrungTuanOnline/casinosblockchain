@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,7 +26,7 @@ import VerifiedOutlinedIcon from '@mui/icons-material/VerifiedOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import MarkChatReadOutlinedIcon from '@mui/icons-material/MarkChatReadOutlined';
 import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
-import { NavigateBefore, NavigateNext } from "@mui/icons-material"
+import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 
 import TopBar from "../../components/Common/Topbar";
 import Footer from "../../components/Common/Footer";
@@ -865,6 +865,7 @@ const RocketpotGameReview = () => {
                                                     <TimelineDot>
                                                         <div className="w-8 h-8 rounded-full bg-black text-center pt-1">4</div>
                                                     </TimelineDot>
+                                                    <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
@@ -1036,7 +1037,6 @@ const RocketpotGameReview = () => {
                                                     <TimelineDot>
                                                         <div className="w-8 h-8 rounded-full bg-black text-center pt-1">3</div>
                                                     </TimelineDot>
-                                                    <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
                                                     <div>
@@ -1058,31 +1058,20 @@ const RocketpotGameReview = () => {
                                     <div>
                                         Rocketpot might not offer an app, but you don't need one: the mobile version of the website is responsive and easy to use on both iOS and Android devices.
                                     </div>
-                                    <div className="w-[320px] xl:w-[500px] flex justify-center">
+                                    <div className="w-[350px] xl:w-[600px] flex justify-center">
                                         <Swiper
-                                            // slidesPerView={1}
-                                            // spaceBetween={10}
-                                            // navigation={{
-                                            //     prevEl: '.Swiper-prev',
-                                            //     nextEl: '.Swiper-next'
-                                            // }}
+                                            slidesPerView={1}
+                                            navigation={{
+                                                prevEl: '.Swiper-prev',
+                                                nextEl: '.Swiper-next'
+                                            }}
                                             pagination={true}
-                                            // breakpoints={{
-                                            //     1024: {
-                                            //         slidesPerView: 3,
-                                            //         spaceBetween: 30,
-                                            //     },
-                                            //     640: {
-                                            //         slidesPerView: 2,
-                                            //         spaceBetween: 20,
-                                            //     },
-                                            // }}
-                                            modules={[Pagination]}
+                                            modules={[Navigation, Pagination]}
                                         >
                                             <SwiperSlide>
-                                                <div className="flex justify-center items-center w-[320px] xl:w-[500px]">
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
-                                                        className="w-[300px] xl:w-[480px]"
+                                                        className=""
                                                         src={reviewImg2}
                                                         alt="reviewImg">
                                                     </img>
@@ -1090,25 +1079,25 @@ const RocketpotGameReview = () => {
                                                 
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                            <div className="flex justify-center items-center w-[320px] xl:w-[500px]">
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
-                                                        className="w-[300px] xl:w-[480px]"
+                                                        className=""
                                                         src={reviewImg3}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                            <div className="flex justify-center items-center w-[320px] xl:w-[500px]">
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
                                                     <img 
-                                                        className="w-[300px] xl:w-[480px]"
+                                                        className=""
                                                         src={reviewImg4}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
                                             </SwiperSlide>
-                                            {/* <div className="Swiper-prev">
-                                                <Fab className="bg-[#272822] text-white border border-red-400 border-solid" aria-label="prev" color="default" size="small">
+                                            <div className="Swiper-prev">
+                                                <Fab className="bg-[#272822] text-white" aria-label="prev" color="default" size="small">
                                                     <NavigateBefore />
                                                 </Fab>
                                             </div>
@@ -1116,79 +1105,9 @@ const RocketpotGameReview = () => {
                                                 <Fab className="bg-[#272822] text-white" aria-label="next" color="default" size="small">
                                                     <NavigateNext />
                                                 </Fab>
-                                            </div> */}
+                                            </div>
                                         </Swiper>
                                     </div >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    <div>
-                                        The bluish-grey and green color scheme that feels familiar, while the mascot is cute and friendly. Game thumbnails have a simple, yet visually pleasing style. The tone of voice is fun, too.
-                                    </div>
-                                    <div>
-                                        Here are some of the best UX features BC.Game has to offfer:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Vibrant players' chat</span> on the right-hand side of the screen (participation is entirely optional, but it can be rewarding).
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Winners' feed and bet backlog</span> on the homepage for total transparency (you can hide your username for privacy).
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            <span className="font-bold">Fuss-free social media signup</span> with optional safety features available (more on that below).
-                                        </div>
-                                    </div>
-                                    <div>
-                                        In our experience, navigation was intuitive and hassle-free, both on the browser version and BC.Game's mobile app.
-                                    </div>
-                                    <div>
-                                        There are, however, a few grammar mistakes and untranslated areas (in some languages) that could negatively influence your gameplay. This is an area where we'd like to see the brand improve.
-                                    </div>
-                                    <div>
-                                        Additionally, we did experience slow loading times on more demanding games, namely Saviour Sword, but we were browsing with a VPN, which can reduce loading speed.
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg3}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg4}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        <img 
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg5}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
                                     <div className="text-xl font-bold bg-gray-200 px-5 py-3 rounded-t-xl">
@@ -1200,15 +1119,11 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Social features</div>
+                                            <div className="w-[230px]">Easy registration</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Mobile app</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Intuitive navigation</div>
+                                            <div className="w-[230px]">Functional design</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1217,7 +1132,7 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Occasional language issues</div>
+                                            <div className="w-[230px]">Can't filter games by provider</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1247,7 +1162,7 @@ const RocketpotGameReview = () => {
                                             Game Selection
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Popular games, live tables, and 100% provably fair originals
+                                            A jaw-dropping variety of games
                                         </div>
                                     </div>
                                 </div>
@@ -1273,25 +1188,99 @@ const RocketpotGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        We can't have a full BC.Game review without looking at the games, right? Well, we're happy to report that the <span className="font-bold">game portfolio is full of exciting opportunities.</span>
+                                        When reviewing a casino, we often list what game types are available.
                                     </div>
                                     <div>
-                                        From provably fair originals to big-name slots and live games, this online casino has it all. Let's break down the main game types:
+                                        In total, there are <span className="font-bold">more than 3,000 games</span>, from slot machines to live tables, and much more.
+                                    </div>
+                                    <div>
+                                        When we first reviewed this casino, we were disappointed to notice there was no Rocketpot Crash game available. Luckily, this is no longer the case - you can, indeed, play the trading-inspired game although Rocketpot calls it Space XY:
+                                    </div>
+                                    <div>
+                                        <img 
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg5}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                    Space XY is a Crash-type game, available at Rocketpot
+                                    </div>
+                                    <div>
+                                        While some games are provably fair, they are not identified as such. Additionally, Rocketpot doesn't offer any exclusive games.
+                                    </div>
+                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
+                                        <div className="font-bold text-gray-400">
+                                            TOP TIP!
+                                        </div>
+                                        <div className="text-white font-bold text-2xl">
+                                            Use the search bar to find provably fair games by Bgaming!
+                                        </div>
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        BC Originals
+                                        Slot Games at Rocketpot
                                     </div>
                                     <div>
-                                        BC.Game has a selection of provably fair originals, including their popular roulette game.
+                                        Rocketpot has one of the largest collections of slot machines that we've seen at a Bitcoin casino, with <span className="font-bold">more than 2,600 games</span> from a smorgasbord of different providers.
                                     </div>
                                     <div>
-                                        BC.Game's original games are exclusively provably fair, and include a solid selection of about 20 internally-developed games, including all the crowd-pleasing casino classics:
+                                        This veritable slot machine feast includes titles from powerhouses like:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Slots
+                                                NetEnt
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Microgaming
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Yggdrasil
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                ...and 50 other providers!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        There was no slot machine that we looked for we couldn't find, which is something we rarely say.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Live Casino Games
+                                    </div>
+                                    <div>
+                                        All the infamous live blackjack and live roulette tables from Ezugi and Evolution are available at Rocketpot and fully playable with Bitcoin and other cryptocurrencies.
+                                    </div>
+                                    <div>
+                                        You can also play:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Live game shows
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Live dice
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Casino poker
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1303,231 +1292,123 @@ const RocketpotGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Dice
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Keno
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Crash
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Roulette
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Blackjack
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Plinko
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Poker
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Hi-Lo
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Wheel of Fortune
+                                                Sic Bo
                                             </div>
                                         </div>
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Mainstream Providers
+                                        Rocketpot's Sportsbook
                                     </div>
                                     <div>
-                                        The Madame Destiny slot by Pragmatic Play offers a truly enchanting experience.
+                                        Rocketpot may have a jaw-dropping amount of casino brands, but there's more to this brand than just slot machines and live tables.
                                     </div>
                                     <div>
-                                        BC.Game also offers a selection of games by <span className="font-bold">popular providers like Pragmatic Play and Yggdrasil.</span>
+                                        There is also a decent sportsbook featuring in-play and pre-match odds.
                                     </div>
                                     <div>
-                                        While their portfolio is growing exponentially, it's still nowhere as big as brands like Stake, which offer a larger variety of mainstream games alongside their provably fair titles.
-                                    </div>
-                                    <div>
-                                        That said, BC.Game is still a newish casino, and while <span className="font-bold">we think they can improve their</span> offering, they've already come a long way.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Live Casino Games at BC.Game
-                                    </div>
-                                    <div>
-                                        BC.Game boasts a stellar selection of live games, including your favorites from big-name providers.
-                                    </div>
-                                    <div>
-                                        Who doesn't love a live game? <span className="font-bold">Hosted by live dealers</span> and featuring a range of exciting awards, they get you closer to an in-person experience than ever.
-                                    </div>
-                                    <div>
-                                        BC.Game is continuously improving their live casino games offer. The current selection includes:
+                                        It might not be the most popular Bitcoin sports betting site - it's hard to take that title from more established brands like Cloudbet and Stake - but it still comes with:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            Traditional <span className="font-bold">blackjack and roulette tables</span> with real dealers
+                                            Decent odds on mainstream sports
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            The infamous live casino <span className="font-bold">game shows</span> from Evolution Gaming
+                                            eSports markets
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{color: "green"}}/>
                                         <div>
-                                            Classic <span className="font-bold">tables with a twist.</span> like Lightning Roulette
+                                            Live streaming (on selected matches)
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Casino <span className="font-bold">poker tables</span>, baccarat, dice, and much more!
-                                        </div>
-                                    </div>
-                                    <div>
-                                        In total, there are more than <span className="font-bold">100 different crypto-friendly live tables</span> where you can put your skills to the test!
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        House Edge at BC.Game Originals
+                                        Rocketpot Vs Competition
                                     </div>
                                     <div>
-                                        Arguably one of the biggest perks we noticed during our BC.Game review - the <span className="font-bold">high RTP and low house edge.</span>
+                                        So, how does Rocketpot compare to other major brands like <a href="https://bc.game/" target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> and <a href="https://stake.com/" target="_blank" rel="noreferrer" className="text-blue-600">Stake</a>?
                                     </div>
                                     <div>
-                                        Let's look at the numbers for some of BC's most popular games:
-                                    </div>
-                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
-                                        <div className="flex flex-row text-center bg-violet-800 rounded-t-xl py-3">
-                                            <div className="w-1/3 text-white">
-                                                Game Type
-                                            </div>
-                                            <div className="w-1/3 text-white">
-                                                RTP
-                                            </div>
-                                            <div className="w-1/3 text-white">
-                                                House Edge
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Blackjack
-                                            </div>
-                                            <div className="w-1/3">
-                                                99.52%
-                                            </div>
-                                            <div className="w-1/3">
-                                                0.48%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center py-3">
-                                            <div className="w-1/3">
-                                                Crash
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Dice
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center py-3">
-                                            <div className="w-1/3">
-                                                Keno and Plinko
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Others
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center py-3">
-                                            <div className="w-1/3">
-                                                Roulette
-                                            </div>
-                                            <div className="w-1/3">
-                                                97.3%
-                                            </div>
-                                            <div className="w-1/3">
-                                                2.7%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Slots
-                                            </div>
-                                            <div className="w-1/3">
-                                                97.51-99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1-2.49%
-                                            </div>
-                                        </div>
+                                        In terms of games:
                                     </div>
                                     <div>
-                                        BC.Game offers more value for money than most competitors, with <span className="font-bold">an extremely low 1% house edge</span> (sometimes even lower!) on most of its original games, including popular games like Crash.
+                                        ? <span className="font-bold">Rocketpot has 3,000+ games</span>, including slots, table games, and a live casino.
                                     </div>
                                     <div>
-                                        This is translated into high Return-to-Player percentages, giving you more bang for your buck in the long run.
+                                        BC.Game offers a whooping 5,000+ games, while Stake has around 3,000.
                                     </div>
                                     <div>
-                                        Do note that games from <span className="font-bold">mainstream providers will still have their regular payouts</span> since those are outside of BC.Games' hands.
+                                        <span className="font-bold">? Rocketpot doesn't have in-house developed options.</span>
+                                    </div>
+                                    <div>
+                                        Both BC.Game and Stake have original productions, which are also provably fair. True Flip has even nicer (better designed, more polished) original games, but they're not provably fair.
+                                    </div>
+                                    <div>
+                                        <span className="font-bold">? Rocketpot has sport betting on 20+ different disciplines.</span>
+                                    </div>
+                                    <div>
+                                        BC.Game lacks a sportsbook. Stake has a much more polished sports betting option, though. Their sportsbook features all major events and even boasts key partnerships with your favorite athletes.
+                                    </div>
+                                    <div>
+                                        All in all, Rocketpot has a decent game offer, but there is definitely room for improvement. Which leads us to the question:
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Do BC.Game Strategies Work?
+                                        Are Rocketpot's Games Enough?
                                     </div>
                                     <div>
-                                        Any seasoned casino player will tell you that there is <span className="font-bold">no such thing as a guaranteed win.</span>
+                                        The answer to this question is clear: yes!
                                     </div>
                                     <div>
-                                        However, this doesn't stop people from trying to develop strategies that they think will give them an edge. These might give you the illusion of better odds. Ultimately, <span className="font-bold">the house always has an advantage</span>, and even the best players can have losing streaks.
+                                        What else can you wish for when you have more than 3,000 games to choose from?
                                     </div>
                                     <div>
-                                        So, instead of focusing on betting strategies, <span className="font-bold">aim to optimize your bankroll management.</span> This will help you keep your losses to a minimum, and improve your winnings over the long term.
+                                        There are two areas, however, where we think Rocketpot could up its game:
+                                    </div>
+                                    <div className="text-base">
+                                        <Timeline position="right">
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">1</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div className="flex flex-col gap-y-2">
+                                                        <div className="text-base font-bold">
+                                                            Improving Game Navigation
+                                                        </div>
+                                                        <div>
+                                                            While there were provably fair games at Rocketpot, we mentioned before that they were hard to find. The same is true for slot machines with specific features or whole game types like keno or poker.
+                                                        </div>
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">2</div>
+                                                    </TimelineDot>
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div className="flex flex-col gap-y-2">
+                                                        <div className="font-bold">
+                                                            Adding Exclusive Games
+                                                        </div>
+                                                        <div>
+                                                            Smaller brands, and even humble gambling Dapps like Earnbet, offer unique provably fair games, while Rocketpot doesn't. It wouldn't be an issue for more mainstream casinos, but originality and provable fairness are fundamental in the world of cryptocurrency casinos.
+                                                        </div>
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                        </Timeline>
+                                    </div>
+                                    <div>
+                                        It's important to say that none of these aspects is a deal-breaker, just areas where the brand could improve.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1540,23 +1421,24 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Very low house edge</div>
+                                            <div className="w-[230px]">3,000+ games</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Provably fair games</div>
+                                            <div className="w-[230px]">Sports betting available</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">100+ live tables</div>
+                                            <div className="w-[230px]">All the popular providers</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-y-3 px-5">
+                                        <div className="font-bold text-red-900">
+                                            CONS
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Attractive original games</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Plenty of known providers</div>
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">No exclusive games</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1586,7 +1468,7 @@ const RocketpotGameReview = () => {
                                             Licensing & Safety
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Newly-acquired Curaçao license
+                                            A trustworthy newcomer
                                         </div>
                                     </div>
                                 </div>
@@ -1612,78 +1494,125 @@ const RocketpotGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        <span className="font-bold">Is BC.Game a legit site?</span> Yes, they are. BC.Game is a legal crypto gambling site that holds a license and offers multiple security features.
+                                        You may be wondering: is Rocketpot legit?
                                     </div>
                                     <div>
-                                        In previous editions of this casino review, licensing was our biggest issue. For the a long time, BC used to be unlicensed - and that didn't particularly win our trust. But hurrah, the situation has changed!
+                                        Considering how recent the brand is, this is a fair question: after all, newer cryptocurrency casinos have to prove themselves worthy of the public's trust.
                                     </div>
                                     <div>
-                                        <a href="https://gateway.pinata.cloud/ipfs/QmZbpAZ4c9izhEYKmJ4gqkx2Kq4fs88h3hGF1kcMXPHWRg/license.jpg" target="_blank" className="font-bold text-blue-600">BC.Game now has a gambling license from Curaçao</a>, which definitely boosts our confidence (and gives players peace of mind).
+                                        One thing that works in the casino's favor is that it holds a <a href="https://rocketpot.io/static/pdf/rocketpot.io.063bf704d979.pdf" target="_blank" rel="noreferrer" className="text-blue-600">Curaçao eGaming license</a>. We always recommend against playing at unlicensed casinos, especially if they are brand-new.
                                     </div>
                                     <div>
-                                        But, it's not just about the license. Here are some of the additional safety features that caught our attention:
+                                        While negative surprises may happen, licensed casinos like Rocketpot are much less likely to scam you out of your money.
                                     </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Players can secure their account with <span className="font-bold">2-factor authentication.</span>
+                                    <div>
+                                        On the flipside, the license obliges Rocketpot to run Know Your Consumer (KYC) checks. These usually happen for larger withdrawals - and they're obligatory if you cash out over $2,500. As per the Terms & Conditions:
+                                    </div>
+                                    <div>
+                                        11.4. Rocketpot reserves the right to carry out KYC verification procedures before processing <span className="font-bold">withdrawals exceeding the equivalent of 0.05 BTC or $2,500</span>. Rocketpot reserves the right to carry out such verification procedures in case of smaller withdrawals, as demanded by our gaming license.
+                                    </div>
+                                    <div>
+                                        A smaller withdrawal amount is less likely to trigger a KYC, but you still might get checked at any time. To avoid any issues, provide truthful information at every step. We're happy to report the KYC is fairly quick and painless that way.
+                                    </div>
+                                    <div>
+                                        Much like most of their counterparts, Rocketpot offers additional safety features, like:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                SSL encryption on data
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank">Crypto Gambling Foundation seal of approval.</a>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                2-factor authentication on login
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank">verified its randomness.</a>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
-                                        </div>
-                                    </div>
-                                    <div>
-                                        Another common question we get is:
-                                    </div>
-                                    <div className="font-bold">
-                                        Is BC.Game fair?
-                                    </div>
-                                    <div>
-                                        The answer is yes.
-                                    </div>
-                                    <div>
-                                        In fact, BC.Game excels in provable fairness, which means the algorithm cannot be rigged. Provably fair games are random by design and the casino couldn't manipulate the outcome even if they tried.
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="text-white font-bold text-2xl">
-                                            All BC.Game originals are provably fair - check the results yourself at any time!
-                                        </div>
-                                    </div>
-                                    <div>
-                                        BC.Game is licensed, provably fair, and boasts multiple security features. <span className="font-bold">But what about our playtest?</span>
-                                    </div>
-                                    <div>
-                                        We personally and anonymously test all casinos that we review. There is no replacement for first-hand experience - and, we're glad to report <span className="font-bold">it was all smooth sailing</span> with BC.Game. Throughout the entire experience, we didn't find any issues. No problems with the games, none with bonuses, withdrawals were a piece of cake, too.
-                                    </div>
-                                    <div>
-                                        So, all things considered, we think <span className="font-bold">BC.Game is a trusted, secure brand</span>.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Do They Run KYC Checks?
+                                        What About Rocketpot's Games? Are They Fair?
                                     </div>
                                     <div>
-                                        A Know-Your-Consumer check is when a company verifies that you are who you say you are. This is usually done by matching your name and address to a government-issued ID.
-                                    </div>
-                                    <div className="font-bold">
-                                        BC.Game doesn't run KYC on registration. Instead, they might ask you for ID if you want to make a withdrawal.
+                                        Unlike other cryptocurrency casinos, only a fraction of Rocketpot's games is provably fair. That is, you can only verify the fairness of some of their games (namely, those from Bgaming) yourself.
                                     </div>
                                     <div>
-                                        In our experience, this happens for larger cash-outs, but random checks are still possible. So if you're looking for an anonymous casino, this is a good option. Just be aware that if you do win big, you might have to verify your identity before you can cash out.
+                                        For all the other games, you have to trust the casino's reputation, its licensing entity, and the game provider.
+                                    </div>
+                                    <div>
+                                        Since Rocketpot games come from reputable, well-known game studios, we can confidently say that we <span className="font-bold">trust their RNG's fairness</span>. However, as usual, we'd prefer to see more provably fair games.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Where Is Rocketpot Available?
+                                    </div>
+                                    <div>
+                                        While Rocketpot does not request personal information from users (unless they withdraw considerable sums of money, more on that below), they exclude players from certain countries in their terms and conditions.
+                                    </div>
+                                    <div>
+                                        The list of excluded countries includes territories where online gambling is regulated or restricted, like:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                United Kingdom
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                United States
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                France
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                The Netherlands
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Spain
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        If you currently reside in one of these countries, please keep that in mind if you're considering opening an account at Rocketpot.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        Rocketpot Vs Competitors
+                                    </div>
+                                    <div>
+                                        So, how does Rocketpot stack up to other major brands? Here's what you should know:
+                                    </div>
+                                    <div>
+                                        ? <span className="font-bold">Rocketpot holds a Curaçao gambling license</span>, which provides extra peace-of-mind to players.
+                                    </div>
+                                    <div>
+                                        The Curaçao license is fairly standard in the gambling industry. In fact, all three of our top favorites (BC.Game, Stake, and True Flip) have it.
+                                    </div>
+                                    <div>
+                                        ? <span className="font-bold">Rocketpot runs KYC checks</span> at withdrawal.
+                                    </div>
+                                    <div>
+                                        This is also common with online casinos. Both BC.Game and Stake will let you play without confirming your identity. True Flip rewards you for completing KYC (you get free spins), but the check is not a must to play.
+                                    </div>
+                                    <div>
+                                        Come withdrawal, Rocketpot tells you when KYC is more likely (with larger withdrawals), whereas their competitors don't give out this information.
+                                    </div>
+                                    <div>
+                                        ? <span className="font-bold">Rocketpot restricts certain territories</span> like the US and UK.
+                                    </div>
+                                    <div>
+                                        Unfortunately, this is also reasonably standard. Since these markets are more regulated, online casinos are either completely cut off, or need a stricter license to operate.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1696,19 +1625,19 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Curaçao License</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">SSL encryption</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
                                             <div className="w-[230px]">2-factor authentication</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Crypto Gambling Foundation seal</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">RNG tested and verified</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Gambling license</div>
+                                            <div className="w-[230px]">Privacy oriented</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1717,7 +1646,7 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No established reputation</div>
+                                            <div className="w-[230px]">Some restricted territories</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1747,7 +1676,7 @@ const RocketpotGameReview = () => {
                                             Payment Options
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Crypto-only. Stellar coin availability, though.
+                                            Crypto-exclusive casino with fast payments
                                         </div>
                                     </div>
                                 </div>
@@ -1773,34 +1702,16 @@ const RocketpotGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BC.Game is a <span className="font-bold">crypto-exclusive casino where you cannot play with fiat money.</span>
+                                        Rocketpot is a cryptocurrency-exclusive casino. That means that, unfortunately, you won't be allowed to play with fiat money (like CAD or USD) here.
                                     </div>
                                     <div>
-                                        Instead, you have a comprehensive number of cryptocurrencies available, ranging from established coins like Bitcoin to the most obscure altcoins.
+                                        Instead, a considerable amount of cryptocurrencies are available, including the following:
                                     </div>
-                                    <div>
-                                        The list of available tokens is too lengthy to include here in full, but last time we counted it included <span className="font-bold">66 different coins.</span>
-                                    </div>
-                                    <div>
-                                        Here are just a few of the most common cryptocurrencies that are supported at BC.Game casino:
-                                    </div>
-                                    <div className="flex flex-wrap gap-x-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Ethereum
-                                            </div>
-                                        </div>
+                                    <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
                                                 Bitcoin
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Bitcoin Cash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1812,7 +1723,7 @@ const RocketpotGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Litecoin
+                                                Cardano
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1824,7 +1735,13 @@ const RocketpotGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{color: "green"}}/>
                                             <div>
-                                                Tether
+                                                Ethereum
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <div>
+                                                Litecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -1833,148 +1750,75 @@ const RocketpotGameReview = () => {
                                                 Ripple
                                             </div>
                                         </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Cardano SHIB
-                                            </div>
-                                        </div>
                                     </div>
                                     <div>
-                                        The casino also has its own currency, <span className="font-bold">BC Dollars (BCD)</span>, which works as a stablecoin on the site.
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="text-white font-bold text-2xl">
-                                            BCD is tied to the value of Tether:
-                                            <br/>
-                                            BCD = 1 USDT = 1 USD.
-                                        </div>
+                                        The lack of fiat payments isn't necessarily a deal-breaker since our reviews primarily focus on cryptocurrency payments. However, having choices is always a plus, and other casinos that offer the same payment options go the extra mile.
                                     </div>
                                     <div>
-                                        This makes it particularly handy when you're cashing out - with BCD you can take your profits and not risk them to volatility.
+                                        True Flip casino, for instance, allows for Tether and Ripple payments, and it even has its in-house token. For a full list of casinos accepting other coins, please check our cryptocurrencies section.
                                     </div>
                                     <div>
-                                        But, BC.Game is also one of the most prominent stablecoin casinos, offering Tether, USDC, Dai, and more.
-                                    </div>
-                                    <div>
-                                        BC.Game is compatible with a range of Bitcoin wallets and other crypto safeguarding services. It comes with its own exchange, which allows you to convert from one coin to another directly on the platform. Do note that, just like any exchange, there is a fee to cover the transaction costs.
-                                    </div>
-                                    <div>
-                                        And, recently, they also became one of the first crypto casinos to offer NFTs:
+                                        However, Rocketpot does have an in-house cryptocurrency exchange where you can buy crypto using credit cards directly from the website.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        BC.Game Allows You to Deposit NFTs
+                                        Payment Speed And Safety
                                     </div>
                                     <div>
-                                        That's right - the NFT craze is clearly here to stay. You can now deposit using one of these NFT collectibles:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            BAYC
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Degenpass
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            CryptoPunks
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            CloneX
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Azuki
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Doodles
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            Mfers
-                                        </div>
-                                    </div><div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
-                                        <div>
-                                            MekaVerse
-                                        </div>
+                                        As expected from a cryptocurrency-exclusive casino, <span className="font-bold">all payments are processed instantly</span>.
                                     </div>
                                     <div>
-                                        <a href="https://degenverse.com/" target="_blank" className="text-blue-600">Degenpass</a> is particularly noteworthy as it's a <span className="font-bold">virtual entry pass to the Degenverse ecosystem</span> and a range of eligible casinos.
+                                        This is true for both deposits and withdrawals. However, in extraordinary circumstances, withdrawals may be delayed due to a <span className="font-bold">user verification check</span>.
                                     </div>
                                     <div>
-                                        As <a href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" className="text-blue-600">Metaverse gambling</a> grows in importance and popularity, so will NFTs. By offering the Degenpass, BC.Game is already one step ahead of the competition and proving they're at the edge of innovation when it comes to the online gambling industry.
+                                        User verification, or Know Your Customer checks, are becoming the norm, even at privacy-minded casinos like Rocketpot. They are a regulator requirement and are in place mostly to counter fraudulent activities, like money laundering.
+                                    </div>
+                                    <div>
+                                        From our understanding, the casino only <span className="font-bold">performs KYC checks if you withdraw more than 0.05 BTC</span> or if otherwise required by the regulator. Additionally, we advise you always to provide accurate information if the casino requests it.
+                                    </div>
+                                    <div>
+                                        When we tested the payment processing, we kept our deposits and withdrawals low and didn't have to provide any personal data.
+                                    </div>
+                                    <div>
+                                        While all transactions were fast, they weren't "instant". As expected from Bitcoin transactions, they sometimes took <span className="font-bold">up to 30 minutes</span> to arrive for both deposits and withdrawals.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Deposit and Withdrawal Times and Fees
+                                        Deposits and Withdrawals At Rocketpot
                                     </div>
                                     <div>
-                                        How much until your money gets to and from the casino? We tested it and here's what we found:
+                                        There are a few costs and transaction limits that you should be aware of when playing at Rocketpot:
                                     </div>
-                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
-                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3 rounded-t-xl">
-                                            <div className="w-1/2">
-                                                Casino Fees
-                                            </div>
-                                            <div className="w-1/2">
-                                                None
-                                            </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Minimum Deposits:</span> 0.01 BTC/ETH/LTC, etc
                                         </div>
-                                        <div className="flex flex-row justify-between px-3 py-3">
-                                            <div className="w-1/2">
-                                                Transaction Fees
-                                            </div>
-                                            <div className="w-1/2">
-                                                Depends on the currency
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Maximum Deposits:</span> none
                                         </div>
-                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
-                                            <div className="w-1/2">
-                                                Average Withdrawal Time
-                                            </div>
-                                            <div className="w-1/2">
-                                                10 minutes
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Minimum Withdrawals:</span> 0.002 BTC
                                         </div>
-                                        <div className="flex flex-row justify-between px-3 py-3">
-                                            <div className="w-1/2">
-                                                Maximum Withdrawal Time
-                                            </div>
-                                            <div className="w-1/2">
-                                                6 hours
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Maximum Withdrawals:</span> $10,000
                                         </div>
                                     </div>
                                     <div>
-                                        Withdrawals are subject to a transaction fee, which varies per currency.
+                                        Do note that there is a <span className="font-bold">0.0006 BTC/ETH/LTC transaction fee</span>, which is standard at cryptocurrency casinos. This doesn't make a lot of sense to us - 0.0006 BTC doesn't cost the same as 0.0006 LTC. With this rule, Rocketpot is effectively punishing players that use 'more expensive' cryptos.
                                     </div>
                                     <div>
-                                        Bitcoin transactions, for instance, have a 0.0006 BTC cost. However, this isn't a casino fee (BC.Game doesn't charge you for sending the money). Instead, it's a standard <span className="font-bold">reward for blockchain participants who verify the transaction</span> - that's why it varies depending on how busy the network is.
+                                        You should also be aware that you must deposit and withdraw using the same cryptocurrency. That is, if you deposited using Bitcoin, you could not withdraw your winnings in Ether.
                                     </div>
                                     <div>
-                                        Although they're not instant, <span className="font-bold">BC.Game transactions are quick</span> - for us, they only took around 10 minutes, but the maximum time is six hours. On exceptional occasions, transaction times may be longer (due to congestion on the Bitcoin network, for instance), but we never experienced that.
-                                    </div>
-                                    <div>
-                                        If you're mindful of your privacy, one very positive aspect is that the casino <span className="font-bold">does not require an invasive Know Your Customer verification check.</span> They can still ask you to confirm your identity, though, especially for larger cash-outs.
-                                    </div>
-                                    <div>
-                                        We always stress the importance of only sharing truthful information - this is because lying to the casino could lead to trouble at withdrawal or even blocked transactions.
+                                        Another issue we found with withdrawals was the <span className="font-bold">x3 wagering requirement</span>. You read that right! You should wager x3 your original deposit amount to be allowed to cash out. That's much higher than competitors and it's definitely a major drawback.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1987,23 +1831,15 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Large variety of cryptos (66+)</div>
+                                            <div className="w-[230px]">Fast payments</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Cryptocurrency exchange</div>
+                                            <div className="w-[230px]">Easy to withdraw</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Fast and easy transactions</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">No invasive KYC</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">In-house stablecoin</div>
+                                            <div className="w-[230px]">Variety of cryptos</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -2012,7 +1848,15 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No fiat payments</div>
+                                            <div className="w-[230px]">Withdrawal fee</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">x3 wagering requirement on all bets</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">No fiat</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -2042,7 +1886,7 @@ const RocketpotGameReview = () => {
                                             Customer Support
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Social casino with a very friendly team
+                                            Polite and fast live chat
                                         </div>
                                     </div>
                                 </div>
@@ -2068,119 +1912,31 @@ const RocketpotGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BC.Game is a multilingual website that is available in sixteen different languages. So, whether you speak English, Mandarin, or French, you can rest assured the casino does speak your language, and so does the player chat.
+                                        You can reach out to the customer support team via:
                                     </div>
-                                    <div>
-                                        However, the help center and support team are only available in English.
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Email
+                                        </div>
                                     </div>
-                                    <div>
-                                        You can reach out to BC.Game in multiple ways, though:
-                                    </div>
-                                    <div className="flex flex-wrap gap-x-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Live Chat
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                FAQ
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Telegram
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Email
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                Skype
-                                            </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            Live chat (available 24/7)
                                         </div>
                                     </div>
                                     <div>
-                                        When we contacted the team, we were pleasantly surprised by the speedy response. It only took a few seconds to get a personal response in the live chat. Agents provided comprehensive and helpful information and we couldn't be happier about the ease of access.
+                                        Additionally, you can also use the brand's FAQ if you're looking for more general information. While it's not the most in-depth FAQ guide that we've come across, we found it to cover the most common questions related to bonuses, payments, and related to your account.
                                     </div>
                                     <div>
-                                        BC.Game casino also has a strong <span className="font-bold">social media presence</span> through the following platforms:
+                                        Even before creating an account at Rocketpot, we tested its customer support channels.
                                     </div>
-                                    <div className="flex flex-wrap gap-x-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://github.com/bc-game-project/bcgame-crash"
-                                                    target="_blank"
-                                                >
-                                                    GitHub
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://medium.com/@BC.Game"
-                                                    target="_blank"
-                                                >
-                                                    Medium
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://twitter.com/BCGameOfficial"
-                                                    target="_blank"
-                                                >
-                                                    Twitter
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://www.facebook.com/bcgamewin"
-                                                    target="_blank"
-                                                >
-                                                    Facebook
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://discord.com/invite/mQh3M6UDkR"
-                                                    target="_blank"
-                                                >
-                                                    Discord
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
-                                            <div>
-                                                <a 
-                                                    href="https://bitcointalk.org/index.php?topic=5088875.0"
-                                                    target="_blank"
-                                                >
-                                                    BitcoinTalk
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        Our experience was positive before and after registering, although we thought there was some <span className="font-bold">room for improvement when it came to the email support</span>, which could have been faster.
+                                    </div>
+                                    <div>
+                                        Unless directed otherwise by the live chat team, we suggest you use the live chat as your preferential method of contact with the brand, as, in our experience, it was faster and more useful.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -2193,19 +1949,7 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">24/7 live chat</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Friendly support team</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Skype and Telegram support</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Social media presence</div>
+                                            <div className="w-[230px]">Fast and friendly</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -2214,7 +1958,7 @@ const RocketpotGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Support only in English</div>
+                                            <div className="w-[230px]">Only live chat and email available</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -2243,7 +1987,7 @@ const RocketpotGameReview = () => {
                                         F.A.Q.
                                     </div>
                                     <div className="text-sm text-gray-500">
-                                        All you need to know about BC.Game
+                                        Rocketpot in a Nutshell
                                     </div>
                                 </div>
                             </div>
@@ -2252,11 +1996,11 @@ const RocketpotGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ1(!openFAQ1) }}
                                 >
-                                    1. Is BC casino legit?
+                                    1. Is Rocketpot legit?
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes, <a href={"https://" + siteData.link} target="" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
+                                        In our opinion, <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> is a new but trustworthy casino. The brand holds a gambling license from Curaçao and offers additional safety features, including 2-factor authentication.
                                     </div>
                                 }
                             </div>
@@ -2265,11 +2009,11 @@ const RocketpotGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ2(!openFAQ2) }}
                                 >
-                                    2. What currencies can I use at BC.Game?
+                                    2. Are the games fair at Rocketpot?
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        BC.Game supports a wide range of cryptocurrencies, including Bitcoin, Ethereum, Dogecoin, Ripple, Tether, and more. Unfortunately, you cannot play with fiat money at this casino.
+                                        Since the games at <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> are from reputable providers, we can confidently say that they are fair. What's more, some of their games are provably fair.
                                     </div>
                                 }
                             </div>
@@ -2278,11 +2022,11 @@ const RocketpotGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ3(!openFAQ3) }}
                                 >
-                                    3. Does BC.Game offer a deposit welcome bonus?
+                                    3. In what countries is Rocketpot available?
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        Yes, there is a traditional deposit bonus at BC.Game on a regular basis, you can spin a wheel every day and win a random prize, including up to 5 BTC. The best part? You can do that right after sign up, even before your first deposit. There are also limited offers from time to time, where you can indeed unlock a deposit bonus paid in BCD (the casino's own token).
+                                        <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> is currently open to players from all over the world, excluding a few countries where online gambling is restricted. These include the United States, United Kingdom, France, and The Netherlands.
                                     </div>
                                 }
                             </div>
@@ -2291,11 +2035,11 @@ const RocketpotGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ4(!openFAQ4) }}
                                 >
-                                    4. Is BC.Game safe?
+                                    4. Is Rocketpot an anonymous casino?
                                 </div>
                                 {openFAQ4 &&
                                     <div className="text-black mt-5">
-                                        Along with the Curaçao license, BC.Game offers a few safety reassurances to its players. For instance, this casino is provably fair and holds a Crypto Gambling Foundation seal of approval.
+                                        For the most part, yes, you can play at <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> anonymously. However, if you withdraw large amounts of money, you may have to provide personal details.
                                     </div>
                                 }
                             </div>
