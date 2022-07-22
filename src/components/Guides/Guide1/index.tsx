@@ -525,7 +525,7 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 const MainPage1 = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
-            <div className="w-full h-32 bg-black" />
+            <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
                 {/* <div className="p-10 w-full flex flex-col justify-center">

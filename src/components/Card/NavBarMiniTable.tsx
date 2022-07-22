@@ -15,7 +15,7 @@ const NavBarMiniTable = (props: IProps) => {
             <div className="flex flex-row justify-between border border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
                 <div className="w-full flex flex-row justify-start gap-x-4" >
                     <div className="flex w-16 items-center justify-center">
-                        <img className=" rounded-full" src={logoImg} alt="MainPageImg" />
+                        <img className=" rounded-full" src={summaryData.logo} alt="MainPageImg" />
                     </div>
                     <div className="flex flex-col justify-center gap-y-0.5 w-full">
                         <span className="text-base font-bold">{summaryData.name}</span>
@@ -34,7 +34,7 @@ const NavBarMiniTable = (props: IProps) => {
                     </div>
                 </div>
 
-                <div className="w-48 flex items-center justify-center">
+                <div className="w-48 flex items-center justify-end">
                     <div className='block'>
                         <Button
                             className="text-white text-[10px] h-8"

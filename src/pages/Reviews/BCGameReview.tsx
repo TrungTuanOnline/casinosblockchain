@@ -32,7 +32,7 @@ import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlin
 
 import TopBar from "../../components/Common/Topbar";
 import Footer from "../../components/Common/Footer";
-import {siteDatas} from "../../Interfaces/SiteDatas";
+import { siteDatas } from "../../Interfaces/SiteDatas";
 
 // crypto images
 import avalancheCryptoImg from "../../Assets/images/cryptocurrency/avalanche.png";
@@ -267,7 +267,7 @@ const BCGameReview = () => {
     const [openFAQ2, setOpenFAQ2] = useState(false);
     const [openFAQ3, setOpenFAQ3] = useState(false);
     const [openFAQ4, setOpenFAQ4] = useState(false);
-    
+
     // const [isTablet, setIsTablet] = useState(false);
     // useEffect(() => {
     //     function updateSize() {
@@ -286,7 +286,7 @@ const BCGameReview = () => {
 
             for (let i = 0; i < partSections.length; i++) {
                 let offset = partSections[i].getBoundingClientRect();
-                
+
                 if (offset.top <= 100 && offset.bottom > 100) {
                     current = partSections[i].getAttribute("id");
                 }
@@ -304,7 +304,7 @@ const BCGameReview = () => {
 
     return (
         <Box className="bg-gray-100 flex flex-col items-center">
-            <TopBar/>
+            <TopBar />
             <div className="w-11/12 flex flex-col py-10 gap-y-5">
                 {/* header */}
                 <div className="bg-white rounded-xl flex flex-col xl:flex-row justify-between p-5">
@@ -329,7 +329,7 @@ const BCGameReview = () => {
                                 </div>
                                 <div className="flex flex-row justify-between items-center gap-x-3">
                                     <div className="flex items-center">
-                                        <Rating readOnly defaultValue={Number(siteData.overview.rating.total)} precision={0.1} className=""/>
+                                        <Rating readOnly defaultValue={Number(siteData.overview.rating.total)} precision={0.1} className="" />
                                     </div>
                                     <div className="">
                                         {siteData.overview.rating.total}
@@ -353,7 +353,7 @@ const BCGameReview = () => {
                                 className="text-white h-10  text-xs xl:text-base"
                                 variant="contained"
                                 color="primary"
-                                startIcon={<OpenInNewIcon/>}
+                                startIcon={<OpenInNewIcon />}
                                 href={"https://" + siteData.link}
                                 target="_BLANK"
                             >
@@ -368,7 +368,7 @@ const BCGameReview = () => {
                         <div id="overview-section" className="part-section bg-white flex flex-col rounded-xl p-5 gap-y-10">
                             <div className="flex flex-row gap-x-5">
                                 <div className="flex justify-center items-center">
-                                    <InfoOutlinedIcon/>
+                                    <InfoOutlinedIcon />
                                 </div>
                                 <div className="flex flex-col">
                                     <div className="text-2xl font-bold">
@@ -390,13 +390,13 @@ const BCGameReview = () => {
                                             Accepted Cryptocurrencies
                                         </div>
                                         <div className="flex flex-wrap gap-3 mt-5">
-                                            { 
+                                            {
                                                 cryptocurrenciesObj.map((data: any, index: number) => {
                                                     return (
                                                         <div key={index} className="flex flex-row gap-2 justify-center items-center bg-gray-300 px-3 py-1 rounded-full">
                                                             <div>
-                                                                <img 
-                                                                    src={data.img} 
+                                                                <img
+                                                                    src={data.img}
                                                                     alt="CoinImg"
                                                                     className="w-5 h-5">
                                                                 </img>
@@ -416,13 +416,13 @@ const BCGameReview = () => {
                                             Available Games
                                         </div>
                                         <div className="flex flex-wrap gap-4 mt-5">
-                                            { 
+                                            {
                                                 gamesObj.map((data: any, index: number) => {
                                                     return (
                                                         <div key={index} className="flex flex-col gap-2 justify-center items-center w-24 py-1 border">
                                                             <div>
-                                                                <img 
-                                                                    src={data.img} 
+                                                                <img
+                                                                    src={data.img}
                                                                     alt="CoinImg"
                                                                     className="h-10">
                                                                 </img>
@@ -553,20 +553,20 @@ const BCGameReview = () => {
                                 </div>
                                 <div className="flex flex-col justify-center w-min order-first xl:order-last gap-y-5">
                                     <div className="flex items-center justify-center relative">
-                                        <CircularProgress 
-                                            size={100} 
-                                            thickness={2} 
-                                            sx={{color: 'lightgray'}} 
-                                            variant="determinate" 
-                                            value={100} 
+                                        <CircularProgress
+                                            size={100}
+                                            thickness={2}
+                                            sx={{ color: 'lightgray' }}
+                                            variant="determinate"
+                                            value={100}
                                             className="absolute"
                                         />
-                                        <CircularProgress 
-                                            size={100} 
-                                            thickness={2} 
-                                            sx={Number(siteData.overview.rating.total) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                            variant="determinate" 
-                                            value={Number(siteData.overview.rating.total) * 20} 
+                                        <CircularProgress
+                                            size={100}
+                                            thickness={2}
+                                            sx={Number(siteData.overview.rating.total) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                            variant="determinate"
+                                            value={Number(siteData.overview.rating.total) * 20}
                                         />
                                         <div className="absolute flex items-center justify-center inset-0 text-3xl">{siteData.overview.rating.total}</div>
                                     </div>
@@ -574,7 +574,7 @@ const BCGameReview = () => {
                                         Overall Rating
                                     </div>
                                     <div className="flex flex-col gap-y-5">
-                                        { Number(siteData.overview.rating.bonus) > 0 &&
+                                        {Number(siteData.overview.rating.bonus) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -594,7 +594,7 @@ const BCGameReview = () => {
                                                 />
                                             </div>
                                         }
-                                        { Number(siteData.overview.rating.lookAndFeel) > 0 &&
+                                        {Number(siteData.overview.rating.lookAndFeel) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -614,7 +614,7 @@ const BCGameReview = () => {
                                                 />
                                             </div>
                                         }
-                                        { Number(siteData.overview.rating.LicenceAndSafety) > 0 &&
+                                        {Number(siteData.overview.rating.LicenceAndSafety) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -634,7 +634,7 @@ const BCGameReview = () => {
                                                 />
                                             </div>
                                         }
-                                        { Number(siteData.overview.rating.gameSelection) > 0 &&
+                                        {Number(siteData.overview.rating.gameSelection) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -654,7 +654,7 @@ const BCGameReview = () => {
                                                 />
                                             </div>
                                         }
-                                        { Number(siteData.overview.rating.paymentOption) > 0 &&
+                                        {Number(siteData.overview.rating.paymentOption) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -674,7 +674,7 @@ const BCGameReview = () => {
                                                 />
                                             </div>
                                         }
-                                        { Number(siteData.overview.rating.customerSupport) > 0 &&
+                                        {Number(siteData.overview.rating.customerSupport) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -694,7 +694,7 @@ const BCGameReview = () => {
                                                 />
                                             </div>
                                         }
-                                        { Number(siteData.overview.rating.customerReview) > 0 &&
+                                        {Number(siteData.overview.rating.customerReview) > 0 &&
                                             <div className="flex flex-col gap-y-2">
                                                 <div className="flex flex-row items-center justify-between px-1">
                                                     <div className="text-base">
@@ -723,7 +723,7 @@ const BCGameReview = () => {
                                             </div>
                                             <Button
                                                 className="text-blue text-base lowercase text-end"
-                                                endIcon={<OpenInNewIcon className="w-4"/>}
+                                                endIcon={<OpenInNewIcon className="w-4" />}
                                                 href={"https://" + siteData.link}
                                                 target="_BLANK"
                                             >
@@ -788,7 +788,7 @@ const BCGameReview = () => {
                             <div className="flex flex-row justify-center xl:justify-between">
                                 <div className="flex flex-row gap-x-5">
                                     <div className="flex justify-center items-center">
-                                        <CardGiftcardOutlinedIcon/>
+                                        <CardGiftcardOutlinedIcon />
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="text-2xl font-bold">
@@ -800,20 +800,20 @@ const BCGameReview = () => {
                                     </div>
                                 </div>
                                 <div className="w-20 flex items-center justify-center relative">
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={{color: 'lightgray'}} 
-                                        variant="determinate" 
-                                        value={100} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={{ color: 'lightgray' }}
+                                        variant="determinate"
+                                        value={100}
                                         className="absolute"
                                     />
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={Number(siteData.overview.rating.bonus) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                        variant="determinate" 
-                                        value={Number(siteData.overview.rating.bonus) * 20} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={Number(siteData.overview.rating.bonus) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                        variant="determinate"
+                                        value={Number(siteData.overview.rating.bonus) * 20}
                                     />
                                     <div className="absolute flex items-center justify-center inset-0 text-base">{siteData.overview.rating.bonus}/5</div>
                                 </div>
@@ -966,16 +966,16 @@ const BCGameReview = () => {
                                         The BC.Game gamewheel rewards are random and can give you one of the following real-money prizes, among others:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 5 BTC
+                                        <CheckOutlinedIcon style={{ color: "green" }} /> 5 BTC
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 0.15 ETH
+                                        <CheckOutlinedIcon style={{ color: "green" }} /> 0.15 ETH
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 5 XRP
+                                        <CheckOutlinedIcon style={{ color: "green" }} /> 5 XRP
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/> 25 USDT
+                                        <CheckOutlinedIcon style={{ color: "green" }} /> 25 USDT
                                     </div>
                                     <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
                                         <div className="font-bold text-gray-400">
@@ -1001,7 +1001,7 @@ const BCGameReview = () => {
                                         Other BC.Game Promotions
                                     </div>
                                     <div>
-                                        <img 
+                                        <img
                                             className="w-[320px] xl:w-[500px]"
                                             src={reviewImg1}
                                             alt="reviewImg">
@@ -1014,19 +1014,19 @@ const BCGameReview = () => {
                                         The casino offers a range of unique bonus schemes:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Task Bonuses</span> - get rewarded with small crypto prizes for finishing small tasks, such as setting 2-FA, placing your first bet, or verifying your email.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Master Medals</span> - finish casino achievements for the bragging rights... and BCD prizes.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Where is COCO</span> - every six hours, BC.Game's mascot Coco comes out of hiding. What follows is a 10-minute period where she appear at different places on the casino. Click her to get a reward - you'll receive at least 0.005 BCD, but VIP members get more.
                                         </div>
@@ -1044,25 +1044,25 @@ const BCGameReview = () => {
                                         Some of the <span className="font-bold">best places for shitcodes</span> include:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             BC.Game forum
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Player chatroom
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Social media pages
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Special announcements and campaigns
                                         </div>
@@ -1080,7 +1080,7 @@ const BCGameReview = () => {
                                         VIP Club
                                     </div>
                                     <div>
-                                        <img 
+                                        <img
                                             className="w-[320px] xl:w-[500px]"
                                             src={reviewImg2}
                                             alt="reviewImg">
@@ -1192,25 +1192,25 @@ const BCGameReview = () => {
                                         Along with the concierge service, annual parties (that's right, BC.Game will treat you to a Hollywood-style event), and trips to exotic destinations, there are also unique, VIP-only promotions. Some of our favorite treats in this category include:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Roll Competition</span> at levels 4 and above, a daily dice roll for free DOGE.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Rakeback</span> over level 14 to receive up to 20% of the house commission back (whether you win or lose the wagers).
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">RB booster</span> (also over level 14), which can increase your rakeback by 5% for a period of time.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Recharge bonus</span> (over level 22) with free cashback available in as little as 10 minutes!
                                         </div>
@@ -1289,7 +1289,7 @@ const BCGameReview = () => {
                             <div className="flex flex-row justify-center xl:justify-between">
                                 <div className="flex flex-row gap-x-5">
                                     <div className="flex justify-center items-center">
-                                        <AdUnitsOutlinedIcon/>
+                                        <AdUnitsOutlinedIcon />
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="text-2xl font-bold">
@@ -1301,20 +1301,20 @@ const BCGameReview = () => {
                                     </div>
                                 </div>
                                 <div className="w-20 flex items-center justify-center relative">
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={{color: 'lightgray'}} 
-                                        variant="determinate" 
-                                        value={100} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={{ color: 'lightgray' }}
+                                        variant="determinate"
+                                        value={100}
                                         className="absolute"
                                     />
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={Number(siteData.overview.rating.lookAndFeel) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                        variant="determinate" 
-                                        value={Number(siteData.overview.rating.lookAndFeel) * 20} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={Number(siteData.overview.rating.lookAndFeel) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                        variant="determinate"
+                                        value={Number(siteData.overview.rating.lookAndFeel) * 20}
                                     />
                                     <div className="absolute flex items-center justify-center inset-0 text-base">{siteData.overview.rating.lookAndFeel}/5</div>
                                 </div>
@@ -1331,19 +1331,19 @@ const BCGameReview = () => {
                                         Here are some of the best UX features BC.Game has to offfer:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Vibrant players' chat</span> on the right-hand side of the screen (participation is entirely optional, but it can be rewarding).
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Winners' feed and bet backlog</span> on the homepage for total transparency (you can hide your username for privacy).
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             <span className="font-bold">Fuss-free social media signup</span> with optional safety features available (more on that below).
                                         </div>
@@ -1369,17 +1369,17 @@ const BCGameReview = () => {
                                         >
                                             <SwiperSlide>
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
-                                                    <img 
+                                                    <img
                                                         className=""
                                                         src={reviewImg3}
                                                         alt="reviewImg">
                                                     </img>
                                                 </div>
-                                                
+
                                             </SwiperSlide>
                                             <SwiperSlide>
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
-                                                    <img 
+                                                    <img
                                                         className=""
                                                         src={reviewImg4}
                                                         alt="reviewImg">
@@ -1388,7 +1388,7 @@ const BCGameReview = () => {
                                             </SwiperSlide>
                                             <SwiperSlide>
                                                 <div className="flex justify-center items-center w-full px-16 py-10">
-                                                    <img 
+                                                    <img
                                                         className=""
                                                         src={reviewImg5}
                                                         alt="reviewImg">
@@ -1458,7 +1458,7 @@ const BCGameReview = () => {
                             <div className="flex flex-row justify-center xl:justify-between">
                                 <div className="flex flex-row gap-x-5">
                                     <div className="flex justify-center items-center">
-                                        <MobileFriendlyOutlinedIcon/>
+                                        <MobileFriendlyOutlinedIcon />
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="text-2xl font-bold">
@@ -1470,20 +1470,20 @@ const BCGameReview = () => {
                                     </div>
                                 </div>
                                 <div className="w-20 flex items-center justify-center relative">
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={{color: 'lightgray'}} 
-                                        variant="determinate" 
-                                        value={100} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={{ color: 'lightgray' }}
+                                        variant="determinate"
+                                        value={100}
                                         className="absolute"
                                     />
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={Number(siteData.overview.rating.gameSelection) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                        variant="determinate" 
-                                        value={Number(siteData.overview.rating.gameSelection) * 20} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={Number(siteData.overview.rating.gameSelection) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                        variant="determinate"
+                                        value={Number(siteData.overview.rating.gameSelection) * 20}
                                     />
                                     <div className="absolute flex items-center justify-center inset-0 text-base">{siteData.overview.rating.gameSelection}/5</div>
                                 </div>
@@ -1500,7 +1500,7 @@ const BCGameReview = () => {
                                         BC Originals
                                     </div>
                                     <div>
-                                        <img 
+                                        <img
                                             className="w-[320px] xl:w-[500px]"
                                             src={reviewImg6}
                                             alt="reviewImg">
@@ -1514,67 +1514,67 @@ const BCGameReview = () => {
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Slots
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Baccarat
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Dice
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Keno
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Crash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Roulette
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Blackjack
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Plinko
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Poker
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Hi-Lo
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Wheel of Fortune
                                             </div>
@@ -1584,7 +1584,7 @@ const BCGameReview = () => {
                                         Mainstream Providers
                                     </div>
                                     <div>
-                                        <img 
+                                        <img
                                             className="w-[320px] xl:w-[500px]"
                                             src={reviewImg7}
                                             alt="reviewImg">
@@ -1606,7 +1606,7 @@ const BCGameReview = () => {
                                         Live Casino Games at BC.Game
                                     </div>
                                     <div>
-                                        <img 
+                                        <img
                                             className="w-[320px] xl:w-[500px]"
                                             src={reviewImg8}
                                             alt="reviewImg">
@@ -1622,25 +1622,25 @@ const BCGameReview = () => {
                                         BC.Game is continuously improving their live casino games offer. The current selection includes:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Traditional <span className="font-bold">blackjack and roulette tables</span> with real dealers
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             The infamous live casino <span className="font-bold">game shows</span> from Evolution Gaming
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Classic <span className="font-bold">tables with a twist.</span> like Lightning Roulette
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Casino <span className="font-bold">poker tables</span>, baccarat, dice, and much more!
                                         </div>
@@ -1818,7 +1818,7 @@ const BCGameReview = () => {
                             <div className="flex flex-row justify-center xl:justify-between">
                                 <div className="flex flex-row gap-x-5">
                                     <div className="flex justify-center items-center">
-                                        <VerifiedOutlinedIcon/>
+                                        <VerifiedOutlinedIcon />
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="text-2xl font-bold">
@@ -1830,20 +1830,20 @@ const BCGameReview = () => {
                                     </div>
                                 </div>
                                 <div className="w-20 flex items-center justify-center relative">
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={{color: 'lightgray'}} 
-                                        variant="determinate" 
-                                        value={100} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={{ color: 'lightgray' }}
+                                        variant="determinate"
+                                        value={100}
                                         className="absolute"
                                     />
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={Number(siteData.overview.rating.LicenceAndSafety) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                        variant="determinate" 
-                                        value={Number(siteData.overview.rating.LicenceAndSafety) * 20} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={Number(siteData.overview.rating.LicenceAndSafety) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                        variant="determinate"
+                                        value={Number(siteData.overview.rating.LicenceAndSafety) * 20}
                                     />
                                     <div className="absolute flex items-center justify-center inset-0 text-base">{siteData.overview.rating.LicenceAndSafety}/5</div>
                                 </div>
@@ -1863,25 +1863,25 @@ const BCGameReview = () => {
                                         But, it's not just about the license. Here are some of the additional safety features that caught our attention:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Players can secure their account with <span className="font-bold">2-factor authentication.</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank"  rel="noreferrer" >Crypto Gambling Foundation seal of approval.</a>
+                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank" rel="noreferrer" >Crypto Gambling Foundation seal of approval.</a>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank" rel="noreferrer">verified its randomness.</a>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank" rel="noreferrer">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
                                         </div>
@@ -1979,7 +1979,7 @@ const BCGameReview = () => {
                             <div className="flex flex-row justify-center xl:justify-between">
                                 <div className="flex flex-row gap-x-5">
                                     <div className="flex justify-center items-center">
-                                        <AccountBalanceWalletOutlinedIcon/>
+                                        <AccountBalanceWalletOutlinedIcon />
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="text-2xl font-bold">
@@ -1991,20 +1991,20 @@ const BCGameReview = () => {
                                     </div>
                                 </div>
                                 <div className="w-20 flex items-center justify-center relative">
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={{color: 'lightgray'}} 
-                                        variant="determinate" 
-                                        value={100} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={{ color: 'lightgray' }}
+                                        variant="determinate"
+                                        value={100}
                                         className="absolute"
                                     />
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={Number(siteData.overview.rating.paymentOption) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                        variant="determinate" 
-                                        value={Number(siteData.overview.rating.paymentOption) * 20} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={Number(siteData.overview.rating.paymentOption) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                        variant="determinate"
+                                        value={Number(siteData.overview.rating.paymentOption) * 20}
                                     />
                                     <div className="absolute flex items-center justify-center inset-0 text-base">{siteData.overview.rating.paymentOption}/5</div>
                                 </div>
@@ -2025,55 +2025,55 @@ const BCGameReview = () => {
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Ethereum
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Bitcoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Bitcoin Cash
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Binance
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Litecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Dogecoin
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Tether
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Ripple
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Cardano SHIB
                                             </div>
@@ -2085,7 +2085,7 @@ const BCGameReview = () => {
                                     <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
                                         <div className="text-white font-bold text-2xl">
                                             BCD is tied to the value of Tether:
-                                            <br/>
+                                            <br />
                                             BCD = 1 USDT = 1 USD.
                                         </div>
                                     </div>
@@ -2108,48 +2108,48 @@ const BCGameReview = () => {
                                         That's right - the NFT craze is clearly here to stay. You can now deposit using one of these NFT collectibles:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             BAYC
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Degenpass
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             CryptoPunks
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             CloneX
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Azuki
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Doodles
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             Mfers
                                         </div>
                                     </div><div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
                                             MekaVerse
                                         </div>
@@ -2274,7 +2274,7 @@ const BCGameReview = () => {
                             <div className="flex flex-row justify-center xl:justify-between">
                                 <div className="flex flex-row gap-x-5">
                                     <div className="flex justify-center items-center">
-                                        <MarkChatReadOutlinedIcon/>
+                                        <MarkChatReadOutlinedIcon />
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="text-2xl font-bold">
@@ -2286,20 +2286,20 @@ const BCGameReview = () => {
                                     </div>
                                 </div>
                                 <div className="w-20 flex items-center justify-center relative">
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={{color: 'lightgray'}} 
-                                        variant="determinate" 
-                                        value={100} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={{ color: 'lightgray' }}
+                                        variant="determinate"
+                                        value={100}
                                         className="absolute"
                                     />
-                                    <CircularProgress 
-                                        size={56} 
-                                        thickness={2} 
-                                        sx={Number(siteData.overview.rating.customerSupport) > 3 ? {color: 'green'} : {color: 'goldenrod'}} 
-                                        variant="determinate" 
-                                        value={Number(siteData.overview.rating.customerSupport) * 20} 
+                                    <CircularProgress
+                                        size={56}
+                                        thickness={2}
+                                        sx={Number(siteData.overview.rating.customerSupport) > 3 ? { color: 'green' } : { color: 'goldenrod' }}
+                                        variant="determinate"
+                                        value={Number(siteData.overview.rating.customerSupport) * 20}
                                     />
                                     <div className="absolute flex items-center justify-center inset-0 text-base">{siteData.overview.rating.customerSupport}/5</div>
                                 </div>
@@ -2317,31 +2317,31 @@ const BCGameReview = () => {
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Live Chat
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 FAQ
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Telegram
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Email
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 Skype
                                             </div>
@@ -2355,9 +2355,9 @@ const BCGameReview = () => {
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                <a 
+                                                <a
                                                     href="https://github.com/bc-game-project/bcgame-crash"
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -2367,9 +2367,9 @@ const BCGameReview = () => {
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                <a 
+                                                <a
                                                     href="https://medium.com/@BC.Game"
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -2379,9 +2379,9 @@ const BCGameReview = () => {
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                <a 
+                                                <a
                                                     href="https://twitter.com/BCGameOfficial"
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -2391,9 +2391,9 @@ const BCGameReview = () => {
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                <a 
+                                                <a
                                                     href="https://www.facebook.com/bcgamewin"
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -2403,9 +2403,9 @@ const BCGameReview = () => {
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                <a 
+                                                <a
                                                     href="https://discord.com/invite/mQh3M6UDkR"
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -2415,9 +2415,9 @@ const BCGameReview = () => {
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{color: "green"}}/>
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                <a 
+                                                <a
                                                     href="https://bitcointalk.org/index.php?topic=5088875.0"
                                                     target="_blank"
                                                     rel="noreferrer"
@@ -2481,7 +2481,7 @@ const BCGameReview = () => {
                             {/* header */}
                             <div className="flex flex-row gap-x-5">
                                 <div className="flex justify-center items-center">
-                                    <ContactSupportOutlinedIcon/>
+                                    <ContactSupportOutlinedIcon />
                                 </div>
                                 <div className="flex flex-col">
                                     <div className="text-2xl font-bold">
@@ -2548,65 +2548,65 @@ const BCGameReview = () => {
                     </div>
                     <div className="min-w-[300px] bg-white rounded-xl hidden xl:flex flex-col px-1 py-5 h-min shadow-xl fixed xl:sticky top-20 xl:top-10">
                         <Button
-                                className="rightbarBtn overview-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<InfoOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#overview-section"
-                            >
-                                {siteData.name} Overview
+                            className="rightbarBtn overview-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<InfoOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#overview-section"
+                        >
+                            {siteData.name} Overview
                         </Button>
                         <Button
-                                className="rightbarBtn bonus-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<CardGiftcardOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#bonus-section"
-                            >
-                                Bonuses
+                            className="rightbarBtn bonus-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<CardGiftcardOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#bonus-section"
+                        >
+                            Bonuses
                         </Button>
                         <Button
-                                className="rightbarBtn lookFeel-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<AdUnitsOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#lookFeel-section"
-                            >
-                                Look & Feel
+                            className="rightbarBtn lookFeel-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<AdUnitsOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#lookFeel-section"
+                        >
+                            Look & Feel
                         </Button>
                         <Button
-                                className="rightbarBtn gameSelection-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<MobileFriendlyOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#gameSelection-section"
-                            >
-                                Game Selection
+                            className="rightbarBtn gameSelection-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<MobileFriendlyOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#gameSelection-section"
+                        >
+                            Game Selection
                         </Button>
                         <Button
-                                className="rightbarBtn licensing-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<VerifiedOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#licensing-section"
-                            >
-                                Licensing & Safety
+                            className="rightbarBtn licensing-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<VerifiedOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#licensing-section"
+                        >
+                            Licensing & Safety
                         </Button>
                         <Button
-                                className="rightbarBtn payment-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<AccountBalanceWalletOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#payment-section"
-                            >
-                                Payment Options
+                            className="rightbarBtn payment-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<AccountBalanceWalletOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#payment-section"
+                        >
+                            Payment Options
                         </Button>
                         <Button
-                                className="rightbarBtn customer-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<MarkChatReadOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#customer-section"
-                            >
-                                Customer Support
+                            className="rightbarBtn customer-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<MarkChatReadOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#customer-section"
+                        >
+                            Customer Support
                         </Button>
                         <Button
-                                className="rightbarBtn faq-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
-                                startIcon={<ContactSupportOutlinedIcon sx={{fontSize: "25px !important"}}/>}
-                                href="#faq-section"
-                            >
-                                F.A.Q
+                            className="rightbarBtn faq-section text-black flex justify-start items-center px-5 py-3 text-base normal-case"
+                            startIcon={<ContactSupportOutlinedIcon sx={{ fontSize: "25px !important" }} />}
+                            href="#faq-section"
+                        >
+                            F.A.Q
                         </Button>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </Box>
     )
 }
