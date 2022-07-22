@@ -18,74 +18,16 @@ import { ExpandMore } from "@mui/icons-material";
 
 import { ISiteRankBlogCardObj } from "../../../Interfaces";
 import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
+import { siteDatas } from "../../../Interfaces/SiteDatas"
 
-const dummyInfos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "BetFury",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "",
-        features: ["Gambling Dapp", "Free Faucet"]
-    },
-    {
-        rank: 4,
-        name: "Roobet",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "",
-        features: ["Provably Fair Games", "Gryptocurrency Only"]
-    }
-];
+const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[0], siteDatas[1], siteDatas[15], siteDatas[17]];
 
 const testedCasinos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "Roobet",
-        link: "https://roobet.com/?ref=cb123",
-        bonus: "",
-        features: ["Provably Fair Games", "Gryptocurrency Only"]
-    },
-    {
-        rank: 4,
-        name: "Cloudbet",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "5B",
-        features: ["Great Rewards", "Nice Payment Limits"]
-    },
-    {
-        rank: 5,
-        name: "FortuneJack",
-        link: "https://fortunejack.com/promotions/welcome-offers",
-        bonus: "6B",
-        features: ["Top Game Providers", "Good Reputation"]
-    },
+    siteDatas[0],
+    siteDatas[1],
+    siteDatas[17],
+    siteDatas[3],
+    siteDatas[13],
 ];
 
 
@@ -193,12 +135,12 @@ const Content = () => {
                         <p className="text-sm">Change game modes from the upper left-hand corner.</p>
                         <p className="mt-8"><strong>Classic Mode</strong><br />On classic mode, you place a bet and then <strong>manually decide when to cash out</strong>. Do it before the game crashes and you get your bet times the multiplier at the time you withdrew.</p>
                         <p>Since you can cash out at any time, you get the chance to win big (as long as you withdraw on time). Check out a video of gameplay here:</p>
-                        <iframe className="w-full h-auto" src="https://www.youtube.com/embed/Ol23Wxazpy8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        {/* <iframe className="w-full h-auto" src="https://www.youtube.com/embed/Ol23Wxazpy8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
                         <p className="mt-8"><strong>Trenball Mode</strong><br />With trenball, you bet on one of three possible outcomes and winnings are set at a fix amount: </p>
                         <ul className="is-style-checked-list_sm"><li><strong>Red </strong>- the round ends before the graph reaches a 2x multiplier; it pays 1.98x your stake.</li><li><strong>Green </strong>- you win if the graph goes above 2x; it pays 2x your stake.</li><li><strong>Moon </strong>- you need a 10x multiplier to win your bet; it pays 10x your stake.</li></ul>
                         <p>When we tried it out, <strong>we did win (betting on a x2 multiplier)</strong> - but then, the multuplier went way up. So, while we didn't lose, we missed out on some profits.</p>
                         <p>Check out our video of BC.Game Trenball gameplay here:</p>
-                        <iframe src="https://www.youtube.com/embed/aYwGz5v_r68" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        {/* <iframe src="https://www.youtube.com/embed/aYwGz5v_r68" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
                         <p className="mt-8"><strong>Which game mode is best? </strong>It depends on what you're looking for. </p>
                         <p>With trenball, you have lower potential payout - but the risk is also lower. Classic mode can get you some amazing prizes - or, you might also lose big.</p>
                         <div className="h3">Auto Bet Function</div>
@@ -390,7 +332,7 @@ const Content = () => {
                         <p>Otherwise, they use a truly random game - some even let you check the randomness of it all. </p>
                         <p>We won't go into detail over the mathematical probabilities behind a game of crash, because, frankly, this video does it much better. </p>
                         <p>If you're interested in learning more, <strong>we highly recommend you have a look at it</strong>.</p>
-                        <iframe className="w-full h-auto" src="https://www.youtube.com/embed/F1HA7e3acSI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                        {/* <iframe className="w-full h-auto" src="https://www.youtube.com/embed/F1HA7e3acSI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe> */}
                         <p className="mt-5"><strong>Didn't feel like watching the whole thing? </strong>To sum it up:</p>
                         <p className="mt-5"><strong>The random algorithm means strategies, based on previous outcomes, simply don't work. </strong></p>
                         <p className="mt-5"><strong>But is the game rigged, then? No. </strong></p>

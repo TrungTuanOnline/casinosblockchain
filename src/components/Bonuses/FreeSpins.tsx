@@ -19,6 +19,7 @@ import FirstMobileWallet from "../../Assets/images/Content/first-mobile-wallet.p
 import BcGame from "../../Assets/images/Content/bcgame.png"
 import CasinoStake from "../../Assets/images/Content/casino-stake.png"
 import Cloudbet1 from "../../Assets/images/Content/Cloudbet1.jpg"
+import { siteDatas } from "../../Interfaces/SiteDatas";
 
 
 interface IProps {
@@ -28,29 +29,7 @@ interface IProps {
 
 
 
-const dummyInfos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses", "test3"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "third",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "5B",
-        features: ["Great Rewards", "Nice Payment Limits", "test4"]
-    }
-];
+const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[0], siteDatas[4], siteDatas[3]];
 
 const MainContent = () => {
     useEffect(() => {

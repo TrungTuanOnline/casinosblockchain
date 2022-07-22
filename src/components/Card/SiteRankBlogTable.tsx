@@ -5,7 +5,6 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 import giftImg from "../../Assets/images/gift.png";
-import logoImg from "../../Assets/images/logos/bc-game.png";
 
 
 import { ISiteRankBlogCardObj } from "../../Interfaces";
@@ -23,7 +22,7 @@ const SiteRankBlogTable = (props: IProps) => {
             <div className="flex flex-row justify-between border-b border-l border-r border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
                 <div className="w-full md:w-40 flex flex-row justify-start gap-x-4" >
                     <div className="flex items-center justify-center">
-                        <img className="w-16 rounded-full" src={logoImg} alt="RankBlogImg" />
+                        <img className="w-16 rounded-full" src={summaryData.logo} alt="RankBlogImg" />
                     </div>
                     <div className="flex flex-col justify-center gap-y-0.5 w-full">
                         <span className="text-base font-bold">{summaryData.name}</span>

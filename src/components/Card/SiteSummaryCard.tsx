@@ -37,12 +37,12 @@ const SiteSummaryCard = (props: IProps) => {
         <React.Fragment>
             <div className="flex flex-row justify-between border-b border-l border-r border-gray-300 py-3 bg-white shadow-xl hover:bg-gray-200">
                 <div className="w-24 flex items-center justify-center">
-                    {siteData.rank === 1 && <img className="h-8" src={rankFirstImg} alt="CardImg"></img>}
-                    {siteData.rank === 2 && <img className="h-8" src={rankSecondImg} alt="CardImg"></img>}
-                    {siteData.rank === 3 && <img className="h-8" src={rankThirdImg} alt="CardImg"></img>}
-                    {siteData.rank > 3 &&
+                    {(props.siteIndex + 1) === 1 && <img className="h-8" src={rankFirstImg} alt="CardImg"></img>}
+                    {(props.siteIndex + 1) === 2 && <img className="h-8" src={rankSecondImg} alt="CardImg"></img>}
+                    {(props.siteIndex + 1) === 3 && <img className="h-8" src={rankThirdImg} alt="CardImg"></img>}
+                    {(props.siteIndex + 1) > 3 &&
                         <div className="w-7 h-7 rounded-full bg-gray-500 flex items-center justify-center">
-                            {siteData.rank}
+                            {props.siteIndex + 1}
                         </div>}
                 </div>
                 <div className="w-64 flex flex-row justify-start gap-x-4">

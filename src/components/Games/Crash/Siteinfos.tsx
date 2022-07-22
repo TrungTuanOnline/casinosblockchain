@@ -7,6 +7,8 @@ const SiteInfos = () => {
     const [openSubInfoIndex, setOpenSubInfoIndex] = useState<null | number>(null);
     const [showSiteNumbers, setShowSiteNumbers] = useState(10);
 
+    const dummyInfos = [siteDatas[0], siteDatas[1], siteDatas[3], siteDatas[9], siteDatas[10], siteDatas[13], siteDatas[15], siteDatas[17], siteDatas[32]];
+
     return (
         <div className="bg-gray-100 flex items-center justify-center pb-10">
             <div className="w-11/12 -mt-24">
@@ -34,24 +36,20 @@ const SiteInfos = () => {
                         </div>
                     </div>
                 }
-                {siteDatas.length > 0 &&
-                    siteDatas.map((summaryInfo: ISiteInfoObj, index: number) => {
+                {dummyInfos.length > 0 &&
+                    dummyInfos.map((summaryInfo: ISiteInfoObj, index: number) => {
                         if (index < showSiteNumbers) {
-                            if (index <= 10) {
-                                return (
-                                    <SiteSummaryCard
-                                        key={index}
-                                        siteIndex={index}
-                                        openSubInfoIndex={openSubInfoIndex}
-                                        setOpenSubInfoIndex={setOpenSubInfoIndex}
-                                        siteData={summaryInfo}
-                                    />
-                                )
-
-                            }
+                            return (
+                                <SiteSummaryCard
+                                    key={index}
+                                    siteIndex={index}
+                                    openSubInfoIndex={openSubInfoIndex}
+                                    setOpenSubInfoIndex={setOpenSubInfoIndex}
+                                    siteData={summaryInfo}
+                                />
+                            )
                         }
                         return "";
-
                     })
                 }
             </div>

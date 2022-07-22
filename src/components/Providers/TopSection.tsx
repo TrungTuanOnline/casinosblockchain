@@ -9,6 +9,9 @@ import BetSoftLogo from "../../Assets/images/betfsoft-logo.png"
 
 import TopSectionCard from "./TopSectionCard"
 import { ITopSectionCardDataObj } from "../../Interfaces"
+
+import "./css/index.css"
+
 const TopSection = () => {
 
     const TopSectionCardData: Array<ITopSectionCardDataObj> = [
@@ -54,29 +57,47 @@ const TopSection = () => {
     ]
 
     return (
-        <div className="bg-center bg-cover py-10 px-14 flex justify-center" style={{ backgroundImage: `url(${backgroundImg})` }}>
-            <div className="flex flex-col justify-start w-11/12 gap-y-12">
-                <div className="text-white font-bold text-3xl md:text-6xl">
-                    Game Providers
+        <div className="header-block header-block_taxonomy has_most" style={{ backgroundImage: `url(${backgroundImg})` }}>
+            <div className="container">
+                <div className="row">
+                    <h1>
+                        Game Providers
+                    </h1>
+                    <h3>Top Providers in Crypto Casinos of 2022</h3>
                 </div>
-                <div className="flex flex-col items-start justify-start gap-y-6">
-                    <div className="text-white font-bold text-xl md:text-3xl">
-                        Top Providers in Crypto Casions of 2022
-                    </div>
-                    <div className="flex flex-col md:flex-row  w-full justify-between gap-6 flex-wrap mt-3">
-                        {
-                            TopSectionCardData.map((item: ITopSectionCardDataObj) => (
-                                <div key={item.id}>
-                                    <TopSectionCard item={item} />
-                                </div>
-                            ))
-                        }
-                    </div>
+                <div className="flex flex-col md:flex-row  w-full justify-between gap-3 flex-wrap mt-3 ">
+                    {
+                        TopSectionCardData.map((item: ITopSectionCardDataObj) => (
+                            <div key={item.id}>
+                                <TopSectionCard item={item} />
+                            </div>
+                        ))
+                    }
                 </div>
-
             </div>
         </div >
     )
 }
 
 export default TopSection;
+
+/* <div className="flex flex-col justify-start w-11/12 gap-y-12">
+<div className="text-white font-bold text-3xl md:text-6xl">
+    Game Providers
+</div>
+<div className="flex flex-col items-start justify-start gap-y-6">
+    <div className="text-white font-bold text-xl md:text-3xl">
+        Top Providers in Crypto Casions of 2022
+    </div>
+    <div className="flex flex-col md:flex-row  w-full justify-between gap-6 flex-wrap mt-3">
+        {
+            TopSectionCardData.map((item: ITopSectionCardDataObj) => (
+                <div key={item.id}>
+                    <TopSectionCard item={item} />
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+</div> */
