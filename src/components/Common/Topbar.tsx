@@ -134,7 +134,7 @@ const Topbar = () => {
     }
 
     return (
-        <div className="flex justify-center item-center bg-black">
+        <div className="flex justify-center item-center w-full py-5" style={{backgroundColor: "#000331"}}>
             <div className="w-11/12 flex flex-row justify-between">
                 <div className="text-2xl cursor-pointer">
                     <span className="text-red-700">casinos</span>

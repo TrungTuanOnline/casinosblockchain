@@ -8,7 +8,6 @@ import React, { useEffect } from "react";
 import { Check } from "@mui/icons-material"
 
 import ReadMoreCards from "../../Card/ReadMoreCards";
-
 import OlieMan from "../../../Assets/images/Content/olieman-eth.jpg"
 import BlockstreamGreen from "../../../Assets/images/Content/blockstream-green.png"
 import BlockstreamNewWallet from "../../../Assets/images/Content/blockstream-new-wallet.png"
@@ -55,7 +54,7 @@ const MainContent = () => {
                     <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
                     <div className="h1">Best Bitcoin Wallet for Online Gambling -2022 Top Picks</div>
                     <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
-                    <p >In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
+                    <p className="mt-2">In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
                     <ul className="pl-8">
                         <li>
                             What <b>types of Bitcoin wallets</b> are there?
@@ -70,7 +69,7 @@ const MainContent = () => {
                             Our top <b>picks of 2022</b> (including advanced and beginner-friendly options)
                         </li>
                     </ul>
-                    <p >
+                    <p className="mt-2">
                         let's jump right in:
                     </p>
                     <section id="quick-picks">
@@ -80,19 +79,19 @@ const MainContent = () => {
                         <p >
                             In a time crunch? We won’t keep you waiting. These are the <b>top gamblers’ wallet options</b> for 2022:
                         </p>
-                        <p >
-                            <b>Best Overall: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500" rel="noreferrer">Blockstream</a>
+                        <p className="mt-2">
+                            <b>eBst Overall: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500" rel="noreferrer">Blockstream</a>
                         </p>
-                        <p >
+                        <p className="mt-2">
                             <b>Best for Beginners: </b><a href="https://blockstream.com/" target="_blank" rel="noreferrer" className="text-blue-500">Blockstream</a>
                         </p>
-                        <p >
+                        <p className="mt-2">
                             <b>Best for Privacy: </b><a href="https://electrum.org/#home" target="_blank" rel="noreferrer" className="text-blue-500">Electrum</a>
                         </p>
-                        <p >
+                        <p className="mt-2">
                             <b>Best for Mobile: </b><a href="https://brd.com" target="_blank" rel="noreferrer" className="text-blue-500">BRD</a>
                         </p>
-                        <p >
+                        <p className="mt-2">
                             All of these wallets are safe, user-friendly, and allow betting. And where do you go with your Bitcoin gambling wallet? Here are our favorite crypto casinos to spend your BTC:
                         </p>
                         <div className="mt-4">
@@ -453,7 +452,6 @@ const MainContent = () => {
                         <p>You know where to buy your BTC and which casinos to play at. We’ve also given you our recommendations to help you choose the best Bitcoin wallet for online gambling. </p>
                         <p><strong>What are you waiting for? Start your crypto player journey now!</strong></p>
                     </section>
-
                 </div>
             </div>
             {/* RightNavBar */}
@@ -491,12 +489,12 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
                                 Best for Beginners: Blockstream
                             </li>
                         </a>
-                        <a href="#best-for-privacy" className="best-for-privacy hover:text-[#3e47e0] no-underline cursor-pointer">
+                        <a href="#Best-for-Beginners" className="Best-for-Beginners hover:text-[#3e47e0] no-underline cursor-pointer">
                             <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
                                 Best for Privacy: Electrum
                             </li>
                         </a>
-                        <a href="#best-for-mobile" className="best-for-mobile hover:text-[#3e47e0] no-underline cursor-pointer">
+                        <a href="#Best-for-Beginners" className="Best-for-Beginners hover:text-[#3e47e0] no-underline cursor-pointer">
                             <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
                                 Best for Mobile: BRD
                             </li>
@@ -517,7 +515,7 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
                 </div>
             </div>
 
-        </div >
+        </div>
     )
 }
 
