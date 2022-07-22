@@ -26,29 +26,19 @@ import { useEffect, useState } from "react";
 
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import { ExpandMore } from "@mui/icons-material";
+import { siteDatas } from "../../../Interfaces/SiteDatas";
 
 const dummyInfos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses", "test3"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "third",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "5B",
-        features: ["Great Rewards", "Nice Payment Limits", "test4"]
-    }
+    siteDatas[0],
+    siteDatas[1],
+    siteDatas[4],
+    siteDatas[3],
+    siteDatas[2],
+    siteDatas[6],
+    siteDatas[7],
+    siteDatas[8],
+    siteDatas[9],
+    siteDatas[11],
 ];
 
 const MainContent = () => {
@@ -98,7 +88,8 @@ const MainContent = () => {
                         <div className="h2">Best MetaMask Casinos: Quick Guide	</div>
                         <p>Excited to get started already? Here’s an <strong>overview of our favorite MetaMask gambling</strong> spots. We personally tried and tested them – this way, we know we’re only giving you the good stuff:</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
+                            {
+                                dummyInfos.length > 0 &&
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
                                         <SiteRankBlogTable
@@ -139,21 +130,11 @@ const MainContent = () => {
                         <p>While BC.Game offers <strong>exciting bonuses </strong>like spin-the-wheel and wager-free promos, there is <strong>no traditional welcome bonus</strong>. Are you getting the short end of the stick? We don’t think so. The casino still <strong>gives you plenty of extra games</strong> where you could potentially win more than a depost-match could ever give you. Still, if you prefer a traditional welcome bonus, BC.Game might not be the place for you.&nbsp;</p>
                         <p>Ultimately, BC.Game is <strong>fun, safe, and value-packed </strong>thanks to the low house edge and additional perks. Since it supports <strong>ETH and ERC-20 tokens</strong> like<strong> </strong>Chainlink, BC.Game is also the perfect casino for all MetaMask enthusiasts out there.&nbsp;</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 0) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    } else {
-                                        return 0;
-                                    }
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={0}
+                                siteIndex={0}
+                                summaryData={siteDatas[0]}
+                            />
                         </div>
 
                     </section>
@@ -510,13 +491,13 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 const MainPage3 = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
-            <div className="w-full h-32 bg-black" />
+            <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
-                <div className="p-10 w-full flex flex-col justify-center">
+                {/* <div className="p-10 w-full flex flex-col justify-center">
                     <div className="h1">Latest News</div>
                     <ReadMoreCards />
-                </div>
+                </div> */}
             </div>
         </div>
     )

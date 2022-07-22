@@ -1,13 +1,11 @@
+import React, { useEffect } from "react";
+
 import BitcoinFaucetsScaled from "../../Assets/images/bitcoin-faucets-scaled.jpg"
 import backgroundImg from "../../Assets/images/Header.svg"
-import giftImg from "../../Assets/images/gift.png";
-import logoImg from "../../Assets/images/logos/bc-game.png";
 
 import { ISiteRankBlogCardObj } from "../../Interfaces"
 import SiteRankBlogTable from "../Card/SiteRankBlogTable"
-import React, { useEffect } from "react";
-import { Button } from "@mui/material"
-import { Check, KeyboardArrowRight } from "@mui/icons-material"
+import { Check } from "@mui/icons-material"
 
 import ReadMoreCards from "../Card/ReadMoreCards"
 
@@ -19,38 +17,10 @@ import FirstMobileWallet from "../../Assets/images/Content/first-mobile-wallet.p
 import BcGame from "../../Assets/images/Content/bcgame.png"
 import CasinoStake from "../../Assets/images/Content/casino-stake.png"
 import Cloudbet1 from "../../Assets/images/Content/Cloudbet1.jpg"
+import { siteDatas } from "../../Interfaces/SiteDatas";
+import NavBarMiniTable from "../Card/NavBarMiniTable";
 
-
-interface IProps {
-    siteIndex: number,
-    summaryData: ISiteRankBlogCardObj
-}
-
-
-
-const dummyInfos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses", "test3"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "third",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "5B",
-        features: ["Great Rewards", "Nice Payment Limits", "test4"]
-    }
-];
+const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[0], siteDatas[4], siteDatas[3]];
 
 const MainContent = () => {
     useEffect(() => {
@@ -591,57 +561,10 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
     )
 }
 
-
-const NavBarMiniTable = (props: IProps) => {
-    const summaryData = props.summaryData;
-    return (
-        <React.Fragment>
-            <div className="flex flex-row justify-between border border-gray-300 p-3 bg-white shadow-xl hover:bg-gray-200 cursor-pointer">
-                <div className="w-full flex flex-row justify-start gap-x-4" >
-                    <div className="flex w-16 items-center justify-center">
-                        <img className=" rounded-full" src={logoImg} alt="MainPageImg" />
-                    </div>
-                    <div className="flex flex-col justify-center gap-y-0.5 w-full">
-                        <span className="text-base font-bold">{summaryData.name}</span>
-                        <div className='flex'>
-                            {summaryData.bonus &&
-                                <Button
-                                    className="w-20 flex flex-row bg-orange-700 rounded-full px-2 py-0.5 items-center justify-between"
-                                    endIcon={<KeyboardArrowRight className="text-black text-xs rounded-full bg-orange-400" />}
-                                >
-                                    <img className="h-3" src={giftImg} alt="MainPageImg" />
-                                    <span className="text-[10px] text-black">{summaryData.bonus}</span>
-                                </Button>
-                            }
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="w-48 flex items-center justify-center">
-                    <div className='block'>
-                        <Button
-                            className="text-white text-[10px] h-8"
-                            variant="contained"
-                            size='small'
-                            color="primary"
-                            href={summaryData.link}
-                            target="_BLANK"
-                        >
-                            Play
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </React.Fragment>
-    )
-}
-
-
-const Faucets = () => {
+const FreeSpins = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
-            <div className="w-full h-32 bg-black" />
+            <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
                 <div className="p-10 w-full flex flex-col justify-center">
@@ -653,4 +576,4 @@ const Faucets = () => {
     )
 }
 
-export default Faucets;
+export default FreeSpins;

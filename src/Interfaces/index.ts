@@ -1,6 +1,6 @@
 export interface ISiteRankBlogCardObj {
     rank: number,
-    // logo: da,
+    logo: any,
     name: string,
     link: string,
     bonus: string | null,
@@ -84,4 +84,10 @@ export interface IReadMoreDataObj {
     title: string,
     content: string,
     link: string,
+}
+
+
+export interface IProps {
+    siteIndex: number,
+    summaryData: ISiteRankBlogCardObj
 }

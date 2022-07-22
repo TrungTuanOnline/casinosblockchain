@@ -22,30 +22,8 @@ import { useEffect, useState } from "react";
 
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import { ExpandMore } from "@mui/icons-material";
-
-const dummyInfos: Array<ISiteRankBlogCardObj> = [
-    {
-        rank: 1,
-        name: "BC.Game Casino",
-        link: "https://bc.game",
-        bonus: "5B",
-        features: ["Low House Edge", "Original Bonuses", "test3"]
-    },
-    {
-        rank: 2,
-        name: "Stake Casino",
-        link: "https://stake.com/registration",
-        bonus: "$5,000",
-        features: ["Weekly Giveaways", "Stellar Sportsbook"]
-    },
-    {
-        rank: 3,
-        name: "third",
-        link: "https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd",
-        bonus: "5B",
-        features: ["Great Rewards", "Nice Payment Limits", "test4"]
-    }
-];
+import { siteDatas } from "../../../Interfaces/SiteDatas";
+import NavBarMiniTable from "../../Card/NavBarMiniTable";
 
 const MainContent = () => {
     const [expanded, setExpanded] = useState<string | false>(false);
@@ -101,8 +79,8 @@ const MainContent = () => {
                     <p><strong>But which stablecoin to pick – and how do you choose a stablecoin casino to play in?</strong>&nbsp; </p>
                     <p>Our top stablecoin casinos are: </p>
                     <div className="mt-4">
-                        {dummyInfos.length > 0 &&
-                            dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                        {
+                            [siteDatas[0], siteDatas[4], siteDatas[3]].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                 return (
                                     <SiteRankBlogTable
                                         key={index}
@@ -119,20 +97,11 @@ const MainContent = () => {
                         <ul className="is-style-dotted-list"><li><strong>Stability</strong> – as the name suggests, stablecoins are more ‘solid’, a haven from the sharp swings of other cryptos.</li><li><strong>Reduce risk</strong> – with stablecoins, you’re no longer gambling on the bet AND the price of your crypto. You can (theoretically) reduce losses – but also wins. </li><li><strong>Enjoy crypto casino perks</strong> – stablecoins are still cryptocurrencies, so you can enjoy all the perks of gambling with crypto like lower <a href="https://casinosblockchain.io/house-edge-casinos/" target="_blank" rel="noreferrer noopener">house edges</a>.</li></ul>
                         <p>Our <strong>number one stablecoin casino</strong> is <a href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener">BC.Game</a> for the awesome game selection, social experience, and the range of cryptos they accept.</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 0) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={0}
+                                siteIndex={0}
+                                summaryData={siteDatas[0]}
+                            />
                         </div>
                         <p><br />Curious to learn more? Read on…</p>
                     </section>
@@ -230,20 +199,11 @@ const MainContent = () => {
                         <p> ?  <strong>What Stablecoins Are Available?&nbsp;</strong></p>
                         <p>BC.Game Casino has DAI, Tether, Binance USD (BUSD), and USDC. There are 65+ cryptocurrencies in total.</p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 2) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={0}
+                                siteIndex={0}
+                                summaryData={siteDatas[0]}
+                            />
                         </div>
                     </section>
                     <section id="Cloudbet-casino">
@@ -253,20 +213,11 @@ const MainContent = () => {
                         <p>The game selection features over 50 providers, a range of live table games, and a comprehensive sportsbook (though if you’re into eSports we recommend <a className="text-blue-600" href="https://casinosblockchain.io/thunderpick-review/" target="_blank" rel="noreferrer noopener">Thunderpick</a> instead). Cloudbet also has over 1000 slots, as well as a provably fair selection of crypto favorites.&nbsp;</p>
                         <p> ?  <strong>What Stablecoins Are Available?</strong></p>
                         <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 3) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                            <SiteRankBlogTable
+                                key={3}
+                                siteIndex={3}
+                                summaryData={siteDatas[3]}
+                            />
                         </div>
                     </section>
                     <section id="get-started">
@@ -432,6 +383,18 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
                             </li>
                         </a>
                     </ul>
+                    <p className="font-bold my-8">Popular Casinos</p>
+                    {
+                        [siteDatas[0], siteDatas[1], siteDatas[4]].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                            return (
+                                <NavBarMiniTable
+                                    key={index}
+                                    siteIndex={index}
+                                    summaryData={summaryInfo}
+                                />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
@@ -441,7 +404,7 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 const MainPage = () => {
     return (
         <div className="h-full w-full flex flex-col items-center">
-            <div className="w-full h-32 bg-black" />
+            <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
 
