@@ -27,15 +27,15 @@ const ICORejectModal = (props: IProps) => {
         >
             <Box sx={style}>
                 <div className="text-center">
-                    <img src="assets/images/Redux_icon_color.png" alt="" style={{maxWidth: "90px", height: "auto", marginTop: "-125px"}}/>
-                    <h2 style={{color: "#3e5740"}}>{t("thanks_interest")}</h2>
+                    <img src="assets/images/Redux_icon_color.png" alt="" style={{ maxWidth: "90px", height: "auto", marginTop: "-125px" }} />
+                    <div className="h2" style={{ color: "#3e5740" }}>{t("thanks_interest")}</div>
                 </div>
-                <div className="text-center" style={{marginTop: "30px"}}>
+                <div className="text-center" style={{ marginTop: "30px" }}>
                     <button className="btn nsbtn" onClick={props.handleClose}>{t("okay")}</button>
                 </div>
             </Box>
         </Modal>
-        
+
     )
 }
 

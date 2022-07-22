@@ -127,7 +127,7 @@ const GameProvider = () => {
                 <div className="gap-1 flex w-full justify-center flex-wrap max-w-[668px] lg:max-w-max">
                     {
                         SortString.map(item => (
-                            <a href={"/game-providers/" + item.Link} key={item.id}>
+                            <a href={item.Link} key={item.id}>
                                 <button className="w-8 h-8 border border-gray-400 text-xl text-gray-800 font-bold">{item.str}</button>
                             </a>
                         ))

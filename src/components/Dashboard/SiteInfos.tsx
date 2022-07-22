@@ -12,7 +12,7 @@ const SiteInfos = () => {
     return (
         <div className="bg-gray-100 flex items-center justify-center pb-28">
             <div className="w-11/12 -mt-24">
-                { siteDatas.length > 0 &&
+                {siteDatas.length > 0 &&
                     <div className="flex flex-row justify-between py-2 bg-gray-700 text-white rounded-t-xl shadow-xl">
                         <div className="w-24 flex items-center justify-center">
                             #
@@ -33,10 +33,10 @@ const SiteInfos = () => {
                         </div>
                         <div className="w-44 mr-6 flex items-center justify-start">
                             Website
-                        </div>            
+                        </div>
                     </div>
                 }
-                { siteDatas.length > 0 &&
+                {siteDatas.length > 0 &&
                     siteDatas.map((summaryInfo: ISiteInfoObj, index: number) => {
                         if (index < showSiteNumbers) {
                             return (
@@ -49,20 +49,21 @@ const SiteInfos = () => {
                                 />
                             )
                         }
-                        
+                        return "";
+
                     })
                 }
-                { showSiteNumbers < siteDatas.length &&
-                    <Button 
+                {showSiteNumbers < siteDatas.length &&
+                    <Button
                         className="w-full mt-10 text-black bg-white py-3 justify-center gap-x-4 rounded-lg shadow-xl hover:bg-gray-200"
-                        endIcon={<KeyboardArrowRightICon className="text-black"/>}
-                        onClick={() => {setShowSiteNumbers(showSiteNumbers + 10)}}
+                        endIcon={<KeyboardArrowRightICon className="text-black" />}
+                        onClick={() => { setShowSiteNumbers(showSiteNumbers + 10) }}
                     >
                         Show More
                     </Button>
                 }
             </div>
-            
+
         </div>
     )
 }

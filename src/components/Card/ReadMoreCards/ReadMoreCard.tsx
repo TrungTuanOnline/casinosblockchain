@@ -1,7 +1,7 @@
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { IReadMoreDataObj } from "../../Interfaces"
+import { IReadMoreDataObj } from "../../../Interfaces"
 
 interface IReadMoreProps {
     index: number,
