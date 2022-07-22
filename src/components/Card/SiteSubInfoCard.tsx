@@ -55,7 +55,7 @@ const SiteSubInfoCard = (props: IProps) => {
                                 <Button
                                     className="text-blue text-sm lowercase text-end"
                                     endIcon={<OpenInNewIcon className="w-4"/>}
-                                    href="/"
+                                    href={"https://" + siteData.link}
                                     target="_BLANK"
                                 >
                                     {siteData.link}
@@ -220,8 +220,7 @@ const SiteSubInfoCard = (props: IProps) => {
                     <div>
                         <Button
                             className="text-blue"
-                            href="/"
-                            target="_BLANK"
+                            href={"/review/" + siteData.link}
                         >
                             Read Review
                         </Button>

@@ -36,6 +36,13 @@ import Guide1 from './pages/Guides/Guide1';
 import Guide2 from './pages/Guides/Guide2';
 import Guide3 from './pages/Guides/Guide3';
 
+// review pages start
+import BCGameReview from './pages/Reviews/BCGameReview';
+import StakeCasinoReview from './pages/Reviews/StakeCasinoReview';
+import RocketpotGameReview from './pages/Reviews/RocketpotGameReview';
+import CloudbetGameReview from './pages/Reviews/CloudbetGameReview';
+// review pages end
+
 function App() {
   return (
     <div className='App'>
@@ -68,6 +75,13 @@ function App() {
         <Route path='/best-bitcoin-wallet-for-online-gambling' element={<Guide1 />} />
         <Route path='/stablecoin-casinos' element={<Guide2 />} />
         <Route path='/metamask-casinos' element={<Guide3 />} />
+
+        {/* review pages start */}
+        <Route path='/review/bc.game' element={<BCGameReview />} />
+        <Route path='/review/stake.com' element={<StakeCasinoReview />} />
+        <Route path='/review/rocketpot.io' element={<RocketpotGameReview />} />
+        <Route path='/review/cloudbet.com' element={<CloudbetGameReview />} />
+        {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />
     </div>
