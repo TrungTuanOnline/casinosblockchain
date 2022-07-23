@@ -130,7 +130,7 @@ const GameProvider = () => {
                     {
                         SortString.map(item => (
                             <a href={item.Link} key={item.id}>
-                                <button className="w-8 h-8 border border-gray-400 text-xl text-gray-800 font-bold">{item.str}</button>
+                                <button className="w-8 h-8 border border-gray-400 shadow-md shadow-gray-500 text-xl text-gray-800 font-bold">{item.str}</button>
                             </a>
                         ))
                     }
