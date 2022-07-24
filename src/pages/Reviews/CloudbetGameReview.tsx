@@ -1693,7 +1693,7 @@ const CloudbetGameReview = () => {
                                         <span className="font-bold">Should you use a VPN to play at Cloudbet if you're from the US?</span> We don't recommend this, since there are occasional KYC checks where you may be asked to provide official documents that verify your identity, including proof of address.
                                     </div>
                                     <div>
-                                        You don't have to worry about safety at this casino as all RNG games hold an official certificate from <a href="https://gaminglabs.com/" target="" className="text-blue-600 font-bold">Gaming Laboratories International</a>, which is an authority on this matter. They provide independent testing of games to make sure they are fair and secure.
+                                        You don't have to worry about safety at this casino as all RNG games hold an official certificate from <a href="https://gaminglabs.com/" target="_blank" rel="noreferrer" className="text-blue-600 font-bold">Gaming Laboratories International</a>, which is an authority on this matter. They provide independent testing of games to make sure they are fair and secure.
                                     </div>
                                     <div>
                                         And when it comes to Responsible Gaming, Cloudbet has a partnership with BeGambleAware. This will ensure you that you'll always have somewhere to turn to in case you lose control of your gambling.
@@ -2192,7 +2192,7 @@ const CloudbetGameReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        To earn loyalty points at <a href={"https://" + siteData.link} target="" className="text-blue-600">Cloudbet,</a> you simply have to play at the casino and place sports bets. Playing for fun (in demo mode) does not earn you any loyalty points, so you must make sure you're playing for real.
+                                        To earn loyalty points at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Cloudbet,</a> you simply have to play at the casino and place sports bets. Playing for fun (in demo mode) does not earn you any loyalty points, so you must make sure you're playing for real.
                                     </div>
                                 }
                             </div>
@@ -2205,7 +2205,7 @@ const CloudbetGameReview = () => {
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        <a href={"https://" + siteData.link} target="" className="text-blue-600">Cloudbet</a> accepts players from most countries including Canada and Australia, but it does exclude registrations from the United States, the United Kingdom, Hong Kong, and Singapore. If you're from a country where online gaming is regulated or forbidden, playing at Cloudbet could also be illegal.
+                                        <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Cloudbet</a> accepts players from most countries including Canada and Australia, but it does exclude registrations from the United States, the United Kingdom, Hong Kong, and Singapore. If you're from a country where online gaming is regulated or forbidden, playing at Cloudbet could also be illegal.
                                     </div>
                                 }
                             </div>
@@ -2218,7 +2218,7 @@ const CloudbetGameReview = () => {
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        A VPN can help you protect your privacy online, so using one when playing at <a href={"https://" + siteData.link} target="" className="text-blue-600">Cloudbet</a> can be a good option for you. However, you shouldn't use a VPN to play from unlicensed locations since there is a KYC process in place before you can withdraw your profits.
+                                        A VPN can help you protect your privacy online, so using one when playing at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Cloudbet</a> can be a good option for you. However, you shouldn't use a VPN to play from unlicensed locations since there is a KYC process in place before you can withdraw your profits.
                                     </div>
                                 }
                             </div>

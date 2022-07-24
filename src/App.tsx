@@ -49,6 +49,8 @@ import MBitGameReview from './pages/Reviews/MBitGameReview';
 import EarnBetGameReview from './pages/Reviews/EarnBetGameReview';
 import ThunderpickGameReview from './pages/Reviews/ThunderpickGameReview';
 import BodogGameReview from './pages/Reviews/BodogGameReview';
+import BaoCasinoGameReview from './pages/Reviews/BaoCasinoGameReview';
+import FortuneJackGameReview from './pages/Reviews/FortuneJackGameReview';
 // review pages end
 
 function App() {
@@ -97,6 +99,8 @@ function App() {
         <Route path='/review/earnbet.io' element={<EarnBetGameReview />} />
         <Route path='/review/thunderpick.com' element={<ThunderpickGameReview />} />
         <Route path='/review/bodog.eu' element={<BodogGameReview />} />
+        <Route path='/review/baocasino.com' element={<BaoCasinoGameReview />} />
+        <Route path='/review/fortunejack.com' element={<FortuneJackGameReview />} />
         {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />

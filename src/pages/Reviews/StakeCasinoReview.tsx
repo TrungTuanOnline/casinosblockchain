@@ -2352,7 +2352,7 @@ const StakeCasinoReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Unfortunately, no, since you can only use cryptocurrencies at <a href={"https://" + siteData.link} target="" className="text-blue-600">Stake</a>. However, you can buy cryptocurrencies directly on the website and even trade your alt-coins for the 8 different cryptos supported by this website.
+                                        Unfortunately, no, since you can only use cryptocurrencies at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Stake</a>. However, you can buy cryptocurrencies directly on the website and even trade your alt-coins for the 8 different cryptos supported by this website.
                                     </div>
                                 }
                             </div>

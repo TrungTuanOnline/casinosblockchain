@@ -2501,7 +2501,7 @@ const BCGameReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes, <a href={"https://" + siteData.link} target="" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
+                                        Yes, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
                                     </div>
                                 }
                             </div>
