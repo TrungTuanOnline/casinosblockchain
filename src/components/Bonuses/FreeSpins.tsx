@@ -1,28 +1,37 @@
-import React, { useEffect } from "react";
 
-import BitcoinFaucetsScaled from "../../Assets/images/bitcoin-faucets-scaled.jpg"
+
+import { useEffect, useState } from "react";
+
+import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
+import { ExpandMore } from "@mui/icons-material";
+
+import BitcoinSlotMachine from "../../Assets/images/bitcoin-slot-machines.jpg"
 import backgroundImg from "../../Assets/images/Header.svg"
 
-import { ISiteRankBlogCardObj } from "../../Interfaces"
-import SiteRankBlogTable from "../Card/SiteRankBlogTable"
-import { Check } from "@mui/icons-material"
+import { ISiteRankBlogCardObj } from "../../Interfaces";
+import SiteRankBlogTable from "../Card/SiteRankBlogTable";
 
-import ReadMoreCards from "../Card/ReadMoreCards"
+import ReadMoreCards from "../Card/ReadMoreCards";
 
-import OlieMan from "../../Assets/images/Content/olieman-eth.jpg"
-import BlockstreamGreen from "../../Assets/images/Content/blockstream-green.png"
-import BlockstreamNewWallet from "../../Assets/images/Content/blockstream-new-wallet.png"
-import EtherDefaultWallet from "../../Assets/images/Content/ether-default-wallet.png"
-import FirstMobileWallet from "../../Assets/images/Content/first-mobile-wallet.png"
-import BcGame from "../../Assets/images/Content/bcgame.png"
-import CasinoStake from "../../Assets/images/Content/casino-stake.png"
-import Cloudbet1 from "../../Assets/images/Content/Cloudbet1.jpg"
 import { siteDatas } from "../../Interfaces/SiteDatas";
-import NavBarMiniTable from "../Card/NavBarMiniTable";
 
-const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[0], siteDatas[4], siteDatas[3]];
+import trueflip2 from "../../Assets/images/Content/trueflip2.png"
+import BcgameSpin from "../../Assets/images/Content/bcgame-spin.png"
+import trueflip3 from "../../Assets/images/Content/trueflip3.png"
+
+import "./css/index.css"
+
+
+const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[0], siteDatas[4], siteDatas[3], siteDatas[5], siteDatas[6], siteDatas[7], siteDatas[8]];
 
 const MainContent = () => {
+    const [expanded, setExpanded] = useState<string | false>(false);
+
+    const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
+
     useEffect(() => {
         const sections = document.querySelectorAll("section");
         const navLi = document.querySelectorAll("div.container ul a");
@@ -45,240 +54,83 @@ const MainContent = () => {
     }, [])
 
     return (
-        <div className="w-full flex gap-6 justify-center">
-            <div className="xl:w-8/12 w-full h-full ">
-                <div className="w-full xl:h-[435px] md:h-[380px] rounded-md border-4 border-white">
-                    <img alt="MainPageImg" src={BitcoinFaucetsScaled} className="w-full max-h-full object-cover " />
+        <div className="w-full flex gap-6 justify-center ">
+            <div className="xl:w-8/12 w-full h-full bg-white rounded-md shadow-sm shadow-gray-400 mb-10">
+                <div className="w-full h-[435px] rounded-md border-4 border-white ">
+                    <img alt="MainPageImg" src={BitcoinSlotMachine} className="w-full max-h-full object-cover rounded-md " />
                 </div>
                 <div className="blog pl-24 pt-3 pb-16 w-10/12">
-                    <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 29, 2022</span></p>
-                    <div className="h1">A Beginner’s Guide to Bitcoin Free Spins</div>
-                    <p>Looking to bet with Bitcoin? You need a secure wallet to keep your crypto. But how do you even choose one? We are here to guide you.</p>
-                    <p >In this article, <b>we’ll help you choose the best Bitcoin wallet for online gambling</b> – whether you’re a rookie or a seasoned gambler. Read on to learn about:</p>
-                    <ul className="pl-8">
-                        <li>
-                            What <b>types of Bitcoin wallets</b> are there?
-                        </li>
-                        <li>
-                            The <b>features</b> to look for in a BTC wallet
-                        </li>
-                        <li>
-                            How to <b>get started</b> with a Bitcoin wallet?
-                        </li>
-                        <li>
-                            Our top <b>picks of 2022</b> (including advanced and beginner-friendly options)
-                        </li>
-                    </ul>
-                    <p >
-                        let's jump right in:
-                    </p>
-                    <section id="quick-picks">
+                    <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">June 30, 2022</span></p>
+                    <div className="h1">A Beginner's Guide to Bitcoin Free Spins</div>
+                    <p>Who doesn’t love an extra chance to win? If you’re looking for Bitcoin free spins, you’ve come to the right place!</p>
+                    <p>We’ve compiled a list of <strong>Bitcoin casinos where you can win free spins</strong>, either as part of normal gameplay or as a specific promotional offer.</p>
+                    <p>But we don’t stop there. We’ll also tell you exactly how free spins work, what restrictions apply to them, and whether or not they’re worth your time.</p>
+                    <p>The goal here is to give you the tools you need to find the best Bitcoin free spin offers and play them without getting trapped by unreasonable terms and conditions.</p>
+                    <section id="bitcoin-free-spin-casinos">
+                        <div className="h2">Bitcoin Free Spin Casino List</div>
+                        <p className="mt-4">In a time crunch? Here are <strong>top three picks</strong> for the best Bitcoin spins. </p>
+                        <p>These casinos are all well-loved in the crypto gaming community and offer a great selection of games and bonuses (not just free spins): </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            {
+                                [siteDatas[0], siteDatas[4], siteDatas[3]].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                                    return (
+                                        <SiteRankBlogTable
+                                            key={index}
+                                            siteIndex={index}
+                                            summaryData={summaryInfo}
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
+                    </section>
+                    <section id="what-are-btc-free-spins">
                         <div className="h2">
-                            Best Bitcoin Gambling Wallet: Quick Picks
+                            What Are Bitcoin Free Spins?
                         </div>
-                        <p >
-                            In a time crunch? We won’t keep you waiting. These are the <b>top gamblers’ wallet options</b> for 2022:
-                        </p>
-                        <p >
-                            <b>Best Overall: </b><a href="https://blockstream.com/" target="_blank" className="text-blue-500" rel="noreferrer">Blockstream</a>
-                        </p>
-                        <p >
-                            <b>Best for Beginners: </b><a href="https://blockstream.com/" target="_blank" rel="noreferrer" className="text-blue-500">Blockstream</a>
-                        </p>
-                        <p >
-                            <b>Best for Privacy: </b><a href="https://electrum.org/#home" target="_blank" rel="noreferrer" className="text-blue-500">Electrum</a>
-                        </p>
-                        <p >
-                            <b>Best for Mobile: </b><a href="https://brd.com" target="_blank" rel="noreferrer" className="text-blue-500">BRD</a>
-                        </p>
-                        <p >
-                            All of these wallets are safe, user-friendly, and allow betting. And where do you go with your Bitcoin gambling wallet? Here are our favorite crypto casinos to spend your BTC:
-                        </p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    return (
-                                        <SiteRankBlogTable
-                                            key={index}
-                                            siteIndex={index}
-                                            summaryData={summaryInfo}
-                                        />
-                                    )
-                                })
-                            }
-                        </div>
-                    </section>
-                    <section id="How-to-Choose">
-                        <div className="h2 mt-8" >How to Choose the Best Gambler's Wallet?</div>
-                        <p>
-                            Now that we had a quick look at our favorite BTC wallets for gambling, we can talk about <b>why they made the list</b>. What should you look for when choosing a Bitcoin gambling wallet? How did we make our picks?
-                        </p>
-                        <p className="my-4">Let’s break it down in more detail:</p>
-                        <section id="What is a Bitcoin-Wallet" />
-                    </section>
-                    <section id="What-Is-Bitcoin-Wallet">
-                        <div className="h3" >What is a Bitcoin Wallet?</div>
-                        <h4>First things first - what even is a Bitcoin wallet?</h4>
-                        <div className="w-full h-[220px] p-10  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
-                            <p className="uppercase text-xs  md:text-base text-white opacity-50">In the most basic terms</p>
+                        <p>If you’re unfamiliar with the concept of free spins, it’s pretty straightforward: <strong>you get extra spins on a slot machine for free.</strong>  You can then use the free spins to play the game without spending your own money. </p>
+                        <div className="w-full h-[200px] flex px-10 jusitfy-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <div className="h2 text-white text-lg md:text-2xl">
-                                A Bitcoin wallet is a digital storage space for your Bitcoin.
+                                Even though you’re playing “for free,” the potential prizes are real and they’re yours to keep.
                             </div>
                         </div>
-                        <p >It’s like your bank account, where you can keep, receive, and send your Bitcoin.</p>
-                        <p >But <b>unlike a bank account, a Bitcoin wallet can be decentralized</b> – meaning there is no central authority or middleman controlling your Bitcoin. Even when a central authority (like a Coinbase gambling wallet,) there are fewer restrictions – but also fewer safety measures.</p>
-                        <p ><b>Every Bitcoin wallet has private keys</b> (kind of like your bank account number or credit card number) that correspond to your blockchain address. </p>
-                        <p ><b>You use the keys to sign transactions</b>, which is why it’s so important to keep them safe. If an attacker gets hold of your private key, they can control your Bitcoin, sending them wherever they’d want.</p>
-                        <p >Even though all wallets use this basic principle, there are still <b>different types of BTC storage</b> – some better for casinos than others. Here’s what you should know before choosing your Bitcoin gambling wallet: </p>
-                        <div className="h3">
-                            Types of Bitcoin Wallets
-                        </div>
-                        <img src={OlieMan} className="w-full h-full" alt="olieman" />
-                        <p >Here are the four main types of Bitcoin wallets:</p>
-                        <p ><b>Desktop Wallets</b></p>
-                        <p >Desktop wallets live (you guessed it) on your desktop computer. </p>
-                        <p >You <b>install the wallet on your PC</b> or laptop and you can use it to send and receive Bitcoin. Of course, to process transactions, you’ll need a connection to the Internet. This means <b>desktop wallets are “hot” storage</b> – a type of wallet, which is inherently less secure.</p>
-                        <p >The <b>main advantages </b>of desktop wallets<b> </b>include:</p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                You have full control over your private keys.
-                            </li>
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                You can receive and send Bitcoin with ease.
-                            </li>
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                It’s easy to install and use.
-                            </li>
-                        </ul>
-                        <p >But, there are still <strong>some downsides:</strong></p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                ❌ You need to keep your computer safe from malware, viruses and hacking.
-                            </li>
-                            <li className="mt-2">
-                                ❌ If your computer crashes or your hard drive is corrupted, you can lose your Bitcoin.
-                            </li>
-
-                        </ul>
-                        <p ><strong>Mobile Wallets</strong></p>
-                        <p><strong>Mobile wallets are just like desktop ones – except on your phone. </strong>These apps are convenient because they can be used anywhere, and you can spend your Bitcoin to pay for goods and services just like you would with physical currency.</p>
-                        <p>The chief <strong>perks of mobile wallets </strong>are:</p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                They are always with you.
-                            </li>
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                Mobile apps are usually easier to use than desktop ones.
-                            </li>
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                You can use Bitcoin to pay for things just like you would with regular cash.
-                            </li>
-                        </ul>
-                        <p>However, don’t forget about <strong>the disadvantages:</strong></p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                ❌  If you lose your phone, you lose your Bitcoin.
-                            </li>
-                            <li className="mt-2">
-                                ❌  It’s still hot storage (your phone is connected to the Internet), so hacking is a danger.
-                            </li>
-                        </ul>
-                        <p><strong>Web Wallet</strong></p>
-                        <p>Here’s the catch:<br /><strong>A web wallet might not be a wallet at all.</strong></p>
-                        <p>Most online wallets are <strong>services that store your crypto for you</strong>. On the plus side, this means they’re very accessible and usually the most beginner-friendly. It’s like Google Drive for your Bitcoin.</p>
-                        <p>Sadly, this is also the least secure option.</p>
-                        <p><strong>Web wallets attract hundreds of hackers every day</strong> – because criminals know where the money is at. Not unlike a bank safe, except your money isn’t insured against robbery.</p>
-                        <p>To complicate things even more, a web wallet <strong>might not work for casinos </strong>since many of the services prohibit gambling. </p>
-                        <p>The <strong>pros of web wallets </strong>include:</p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                Super easy and intuitive.
-                            </li>
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                You can access your Bitcoin anywhere, anytime.
-                            </li>
-                        </ul>
-                        <p>The <strong>cons</strong>, on the other hand, are:</p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                ❌  You don’t control your private keys.
-                            </li>
-                            <li className="mt-2">
-                                ❌  You’re at the mercy of the service provider.
-                            </li>
-                            <li className="mt-2">
-                                ❌  Hackers love to target web wallets.
-                            </li>
-                            <li className="mt-2">
-                                ❌   Gambling might be prohibited.
-                            </li>
-                        </ul>
-                        <p><strong>Hardware Wallet</strong></p>
-                        <p><strong>Finally, a “cold” storage option. </strong></p>
-                        <p>Reminder: this means your private key (and your Bitcoin) is on a device that is not connected to the Internet.</p>
-                        <p>Hardware wallets are the <strong>most expensive and complicated</strong> option on this list. But they’re also the <strong>most secure</strong>, since you only plug in the device when you want to make a transaction. Otherwise, you’re away from hackers – and away from viruses.</p>
-                        <p>The hardware wallet <strong>advantages </strong>you should know about are:</p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                You control your private keys.
-                            </li>
-                            <li>
-                                <Check fontSize="small" color="success" className="mr-2 mt-2" />
-                                It’s the highest level of security possible.
-                            </li>
-                        </ul>
-                        <p><strong>Disadvantages:</strong></p>
-                        <ul className="pl-4 list-none">
-                            <li>
-                                ❌  Hardware wallets are more expensive than other types.
-                            </li>
-                            <li className="mt-2">
-                                ❌ They’re more complicated and time-consuming to use.
-                            </li>
-                        </ul>
-                        <p><strong>So, what type of wallet do we recommend?</strong> </p>
-                        <p>Well, if it were your life savings, definitely go for a hardware wallet. However, if you’ll be betting with your BTC (or even trading them through a strategy like <a href="https://casinosblockchain.io/bitcoin-spread-betting/" target="_blank" rel="noreferrer noopener">spread betting</a>), a complicated (and pricey) option doesn’t make sense.</p>
-                        <div className="w-full h-[220px] p-10 mb-4 bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
-                            <p className="uppercase text-[8px]  md:text-xs text-white opacity-50">Choose a convenient Bitcoin gambling wallet</p>
+                        <p className="mt-10">Plenty of online casinos offer free spins to draw in new players or as a fun reward for their regulars. Just search for “free spins” in casino reviews and you’ll realize how common the bonus is.</p>
+                        <p><strong>Free spins are often tied to a particular game </strong>, meaning you can’t just spend them willy-nilly. The slot is usually specified in the promotional materials for the bonus – for the most part, it’s a game that the casino wants to promote.</p>
+                        <p><strong>Bitcoin casino free spins aren’t any different than regular free spins, but most players withdraw in BTC (or mBTC, mili-bitcoin) instead of cash.</strong> Some <a className="text-blue-600" href="https://casinosblockchain.io/best-bitcoin-casinos/" target="_blank" rel="noreferrer noopener">Bitcoin casinos</a> also have gameplay with fiat money, meaning you could get any prizes you win in cash or crypto. </p>
+                        <p>The result is the same:</p>
+                        <div className="w-full h-[200px] flex px-10 jusitfy-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <div className="h2 text-white text-lg md:text-2xl">
-                                For online betting, go for a desktop or mobile wallet.
+                                Bitcoin free spins give you free rounds – and, if you’re lucky, you can win extra coin.
                             </div>
                         </div>
-                        <p>You can always buy a hardware wallet for your main stash of coins.</p>
-                    </section>
-                    <section id="what-makes-a-good-wallet">
+                        <p className="mt-10">Does it sound too good to be true? There is a catch and it’s called wagering requirements. </p>
+                        <p><strong>Virtually all free spin offers have wagering requirements (also known as play-through requirements) that you need to complete before you can withdraw any winnings. </strong></p>
+                        <p>Wagering requirements can help you evaluate if a free spin offer is worth it – the lower they are, the better.</p>
+                        <p>Let’s break them down:</p>
                         <div className="h3">
-                            What Makes a Good Bitcoin Wallet for Online Gambling?
+                            What Are Wagering Requirements?
                         </div>
-                        <p>Not all BTC wallets are casino-friendly. So <strong>how do you pick an option</strong> to bet with? There are three main things to look out for:</p>
-                        <ul className="is-style-dotted-list pl-4 list-none">
-                            <li>
-                                <strong>The wallet should be safe.</strong> <br />You are trusting this casino wallet with your coins, after all. Look for a well-known and well-reviewed option. Up-and-coming wallets might be nice, but we’ll always prefer the ones with a longer track record. <br />For security reasons, we also recommend that you don’t use online wallets. Desktop and mobile ones can be just as convenient – but they’re definitely safer.
-                            </li>
-                            <li>
-                                <strong>It should be easy to use.</strong><br />You don’t want to spend hours trying to figure out how to send or receive payments. The best Bitcoin casino wallet should have a simple and straightforward interface that you can navigate with ease.
-                            </li>
-                            <li><strong>The Terms &amp; Conditions should allow gambling.</strong><br />Not all wallets allow gambling-related transactions. Before you choose a gamblers’ wallet, make sure that it won’t block your payments to and from online casinos.</li>
-                        </ul>
-                        <p>Just FYI, <strong>the Bitcoin wallets we recommend in this article</strong> check all of these boxes – and more. We still recommend you do your own research before choosing one, though.</p>
+                        <p>Invariably, if you win from Bitcoin free spins, the prize is yours to keep. Wagering requirements are the fine print of this otherwise pretty sweet offer .</p>
+                        <p>Wagering requirements (or rollover) exist <a className="text-blue-600" href="https://casinosblockchain.io/" target="_blank" rel="noreferrer noopener">across casinos and sports betting sites</a>. They require you to play through your winnings a pre-defined amount of times before you can withdraw them. </p>
+                        <p><strong>While you have the money in your account, you must spend it multiple times over at the casino to cash out.</strong></p>
+                        <p>Check out a real-life example – <a className="text-blue-600" href="https://casinosblockchain.io/trueflip-casino-review/" target="_blank" rel="noreferrer noopener">True Flip’s</a> Citizen ID bonus, which includes 30 free spins :</p>
+                        <img src={trueflip2} className="w-full h-auto" alt="FreeSpinImage" />
+                        <p className="mt-4">The cool thing about this offer is it doesn’t require a deposit. <strong>All you have to do is sign up for True Flip and complete your profile. The free spins are a gift, but you get to keep anything you win. </strong></p>
+                        <p className="my-4">Here’s how playing and withdrawing would look like: </p>
+                        <ul className="is-style-dotted-list"><li><strong>You register </strong>and fill up your profile. </li><li><strong>True Flip gives you 30 free spins </strong>at the <em>Day and Night</em> slot. </li><li><strong>You play and win 1 mBTC</strong>, the money gets credited to your account. </li><li><strong>Since the wagering requirement is x1</strong>, you’ll have to play through one more mBTC to cash out. You have two options here: <br />a) You gamble with what you earned. If you get lucky, you make some money on your bets and you have leftover to cash out.<br />b) You deposit one more mBTC and play with that. </li><li><strong>Now you’ve placed bets for x1 your free spin earnings </strong>and True Flip allows you to cash out. </li></ul>
+                        <p>Is it worth it, then? It depends. There are two things that can happen:</p>
+                        <p>? <strong>You play and turn the wagering requirement into a much bigger, fully withdrawable prize. </strong>Yay! You’re free to cash out and enjoy your earnings. </p>
+                        <p>? <strong>You bet according to the wagering requirement. Unfortunately, you lose the money. </strong>It’s a shame, but you still got to enjoy the games for longer without spending extra cash.</p>
+                        <p>At the end of the day, it’s all a matter of luck.</p>
+                        <p>The key here is to see free spins as a <strong>way to extend your fun, which may lead to an awesome prize</strong> in the end!</p>
+                        <p>It goes without saying that this only applies to promotional free spins. Free spins that you can win during a normal game round don’t include wagering requirements (unless you won them while playing with bonus money).</p>
                     </section>
-                    <section id='best-btc-wallets'>
-                        <div className="h2"> What Is the Best Bitcoin Wallet for Online Gambling?</div>
-                        <p>You already know our top picks (we started with them, after all). But we haven’t broken them down one by one just yet. Now, lets recap the<strong> best Bitcoin wallet for online gambling in 2022</strong> and take a deeper dive into each of them: </p>
-                        <figure className="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>Best Overall</strong></td><td><a href="https://blockstream.com/" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">Blockstream</a></td></tr><tr><td><strong>Best for Beginners</strong></td><td><a href="https://blockstream.com/" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">Blockstream</a></td></tr><tr><td><strong>Best for Privacy</strong></td><td><a href="https://electrum.org/#home" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">Electrum</a></td></tr><tr><td><strong>Best for Mobile</strong></td><td><a href="https://brd.com/" target="_blank" rel="noreferrer noopener" className="text-[#007bff]">BRD</a></td></tr></tbody></table></figure>
-                        <div className="h3">Where to Use Your Wallet?</div>
-                        <p>Psst! Wondering where to use your BTC? Here are our favorite Bitcoin-friendly casinos – juicy bonuses and thousands of fun games ahead: </p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
+                    <section id="best-offers">
+                        <div className="h2">Bitcoin Casinos With the Best Free Spin Offers</div>
+                        <p>While all casinos in our list have slot machines where you can win free game rounds, only a select few regularly give Bitcoin free spins as part of a promotion.</p>
+                        <p>Without further ado, here they are:</p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            {
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
                                         <SiteRankBlogTable
@@ -290,270 +142,303 @@ const MainContent = () => {
                                 })
                             }
                         </div>
-                        <div className="mt-8 h3">Best Overall: Blockstream</div>
-                        <img src={BlockstreamGreen} className="w-full h-auto" alt="BlockstreamGreen" />
-                        <p className="mt-5"><strong>Blockstream is our # 1 pick for a gambling-friendly wallet.</strong></p>
-                        <p>It’s a user-friendly app available for all <strong>major desktop and mobile OS</strong>. With simple wallet creation and a smooth transaction process, it’s perfect even for BTC newbies. </p>
-                        <p>Plus, the app has been translated to <strong>11 different languages</strong>!</p>
-                        <p>Blockstream also offers <strong>stellar security features</strong> to keep your coins safe. If you have a hardware wallet, you can rest assured Blockstream will get along with it. The wallet supports all major cold storage options, including Ledger and Trezor.</p>
-                        <p>On the downside, <strong>you can’t buy BTC within Blockstream</strong> (other beginner-friendly services have that option) and the customer support could be more responsive. </p>
-                        <p>Still, this is a secure and user-friendly wallet that’s perfect for those looking to store their gambling winnings in BTC.</p>
-                    </section>
-                    <section id="Best-for-Beginners">
-                        <div className="h3">Best for Beginners: Blockstream	</div>
-                        <img src={BlockstreamNewWallet} className="w-full h-auto" alt="BlockstreamNewWallet" />
-                        <p className="mt-2 text-sm">Creating a wallet with Blockstream is very simple</p>
-                        <p>Not only is Blockstream our favorite BTC wallet overall, it’s also our best choice for newbies.</p>
-                        <p>The app strikes the perfect balance between being <strong>straightforward and feature-rich</strong>, while also providing top-notch security. And, the support for both <strong>Android and iOS devices </strong>makes it widely accessible.</p>
-                        <p>What sets it apart from other beginner-friendly options?</p>
-                        <p>Well, the biggest one that comes to mind is Coinbase. And, sure thing, it is popular. However, if you want to gamble with Coinbase, you’re in for a disappointment – it doesn’t allow casinos.</p>
-                        <p><strong>Blockstream</strong>, on the other hand, <strong>has everything you need to get started with BTC gambling</strong>, and then some.</p>
-                        <p>Our favorite, beginner-friendly casino for Blockstream users is BC.Game: </p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 0) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                        <div className="h3">
+                            Best Bitcoin Casino Free Spins
+                        </div>
+                        <p>Now, the good news is most of those casinos offer <em>multiple </em>free spin offers – not just one. To give you the best free spins offers, we’ve broken them down into:</p>
+                        <ul className="is-style-checked-list_sm"><li><strong>Best Signup Spins </strong>– casinos offer these as a no deposit bonus, just for signing up.</li><li><strong>Best First Deposit Spins</strong> – a lot of gambling sites include free spins in their welcome package.</li><li><strong>Best Tournament Free Spins</strong> – these are tournament prize free spins. </li></ul>
+                        <p>Let’s dig a bit deeper into some of these offers. You can also read our <a className="text-blue-600" href="https://casinosblockchain.io/" target="_blank" rel="noreferrer noopener">blockchain casino reviews</a> for more information about each brand, including an overview of each promotion.</p>
+                        <div className="h3">
+                            No Deposit Free Spins
+                        </div>
+                        <p><strong>Some casinos give you free spins simply for signing up.</strong> They’re a great way to try out new online casinos and games without having to put any of your own money on the line. </p>
+                        <p>Here are our favorite offers in this category, compared side-by-side:</p>
+                        <figure className="wp-block-table is-style-stripes"><table className="has-fixed-layout"><tbody><tr><td><strong>Casino</strong></td><td><strong>Free Spins</strong></td><td><strong>Requirements?</strong></td><td><strong>Wagering</strong></td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/bc-game/" target="_blank" rel="noreferrer noopener">BC.Game</a></td><td>1 (daily)</td><td>Sign up (no KYC)</td><td>None</td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/true-flip/" target="_blank" rel="noreferrer noopener">True Flip</a></td><td>30</td><td>Sign up (including KYC)</td><td>1x</td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/bitstarz/">BitStarz</a></td><td>20</td><td>Sign up (no KYC)</td><td>40x</td></tr></tbody></table></figure>
+                        <p className="mt-4">As you can see, <strong>some no deposit free spins don’t require a KYC</strong> (Know Your Consumer) check – all you have to do is create a username and password. This can be extremely useful for players who want to gamble with a particular casino and don’t want to waste any time with a lengthy registration process. </p>
+                        <p><strong>However,  keep in mind that these casinos can still ask for a KYC before a withdrawal.</strong></p>
+                        <p>This is why you should never lie about your ID or location – because you’d fail the KYC and never see your earnings anyway. </p>
+                        <p>Identity confirmation aside, the wagering requirements are the other major hitch with free spins. Since BC.Game’s daily lucky spin has no wagering requirements and no strings attached, it’s no wonder they take first place in this category. Check them out and try your luck at the wheel today: </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            <SiteRankBlogTable
+                                key={0}
+                                siteIndex={0}
+                                summaryData={siteDatas[0]}
+                            />
+                        </div>
+                        <div className="h3"><strong>First Deposit Spins</strong></div>
+                        <p>Bitcoin casino bonuses are the most popular way of attracting new users , but vary from provider to provider. </p>
+                        <p><strong>Some Bitcoin casinos give you free spins, along with matching your first deposit</strong>. Let’s compare the most popular offers in that category:</p>
+                        <figure className="wp-block-table is-style-stripes"><table className="has-fixed-layout"><tbody><tr><td><strong>Casino</strong></td><td><strong>Free Spins</strong></td><td><strong>Minimum deposit</strong></td><td><strong>Wagering</strong></td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/kingbilly-casino/" target="_blank" rel="noreferrer noopener">BitStarz</a></td><td>180</td><td>0.0008 BTC</td><td>40x</td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/kingbilly-casino/">King Billy</a></td><td>200</td><td>0.0003 BTC</td><td>30x</td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/kingbilly-casino/" target="_blank" rel="noreferrer noopener">mBit</a></td><td>300</td><td>0.005 BTC</td><td>40x</td></tr></tbody></table></figure>
+                        <p>As you can see, there is a wider range of first desposit spin terms and conditions. </p>
+                        <p>At first glance, King Billy’s offer seems the best – they have the lowest minimum deposit and wagering requirements and the number of free spins is decent. And, while King Billy is our top pick in this category, there is one thing to keep in mind: </p>
+                        <p><strong>Free spins are released in increments. </strong></p>
+                        <p className="mt-28">When you first sign up, you get 50 free spins (along with the deposit match.) Then, 23 hours later they add 50 more spins – but only if you made at least 1x wager of your deposit amount. Then, you get two more packs of 50 for the next few days. </p>
+                        <p>While this is a solid deal, if you don’t play immediately, you miss out. </p>
+                        <p>Check out King Billy here: </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            <SiteRankBlogTable
+                                key={7}
+                                siteIndex={7}
+                                summaryData={siteDatas[7]}
+                            />
+                        </div>
+                        <div className="h3"><strong>Tournament Free Spins</strong></div>
+                        <p>Last but not least, some casinos offer free spins as a tournament prize. Here are our favorite free spin competitions: </p>
+                        <figure className="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>Casino</strong></td><td><strong>Free Spins</strong></td><td><strong>Tournament</strong></td><td><strong>Wagering</strong></td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/bitcoin-games/">Bitcoin.com Games</a></td><td>2,000</td><td>Legends of Slots</td><td>1x</td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/kingbilly-casino/" target="_blank" rel="noreferrer noopener">BitStarz</a></td><td>5,000</td><td>Slot Wars</td><td>40x</td></tr><tr><td><a className="text-blue-600" href="https://casinosblockchain.io/go/kingbilly-casino/" target="_blank" rel="noreferrer noopener">mBit</a></td><td>500</td><td>Bonus Escalator</td><td>40x</td></tr></tbody></table></figure>
+                        <p>Keep in mind that these tournaments have participation requirements. </p>
+                        <p>If you’re looking for easy wins, mBit’s Bonus Escalator only asks you to make deposits on consecutive days. Yup, that’s really all it takes to claim that bonus: </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            <SiteRankBlogTable
+                                key={8}
+                                siteIndex={8}
+                                summaryData={siteDatas[8]}
+                            />
+                        </div>
+                        <p className="mt-10">However, our number one brand for this is actually Bitstarz. </p>
+                        <p>Their Slot Wars tournament is a weekly event, giving out $5,000 and 5,000 free spins to the lucky winners. You’re not limited to a specific slot, either. Simply play your favorite games to rack up points and potentially win the juicy bonus. </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            <SiteRankBlogTable
+                                key={6}
+                                siteIndex={6}
+                                summaryData={siteDatas[6]}
+                            />
                         </div>
                     </section>
-                    <section id="best-for-privacy">
-                        <div className="h3">Best for Privacy: Electrum	</div>
-                        <img src={EtherDefaultWallet} className="w-full h-auto" alt="EtherDefaultWallet" />
-                        <p className="mt-2 text-sm">The Electrum wallet has a very bare-bones design, but it’s extremely secure.</p>
-                        <p>Worried about security? You’re not alone. Electrum can give you some extra peace of mind.</p>
-                        <p>So why is this our favorite safe wallet?</p>
-                        <p>For starters, <strong>Electrum’s history goes way back</strong>. It has been around since 2011 and had very few security issues.</p>
-                        <p>Plus, it’s <strong>open-source and decentralized</strong>. That means that anyone can audit the code to make sure that there are no hidden backdoors. And, since no single entity controls the network, you can use it as a free, yet super secure wallet.</p>
-                        <p>Best of all, even though it boasts iron-clad protection, <strong>Electrum isn’t clunky at all</strong>. Because it uses servers that index the Bitcoin blockchain, it’s able to synchronize quickly and give you lighting-fast transactions. </p>
-                        <p>The big downside? <strong>The wallet design leaves much to be desired</strong>, with its overly simple look. </p>
-                        <p>Even so, if you’re looking for a great Bitcoin wallet that <strong>doesn’t compromise neither security, nor ease-of-use</strong>, then Electrum is the way to go.</p>
-                    </section>
-                    <section id="best-for-mobile">
-                        <div className="h3">Best for Mobile: BRD</div>
-                        <img src={FirstMobileWallet} className="w-full h-auto" alt="FirstMobileWallet" />
-                        <p className="mt-2 text-sm">BRD is the most comprehensive mobile wallet we’ve seen – and that’s saying something!</p>
-                        <p>All the wallets we mentioned so far have a mobile version. So why did we pick BRD as our top mobile-friendly Bitcoin wallet?</p>
-                        <p>Well, the answer is simple: no other option supports the same functionality.</p>
-                        <p>The BRD app is available in 1<strong>70+ countries and 14 different languages</strong>, it allows you to <strong>buy and sell right on the platform</strong>, and you can even earn BRD rewards. </p>
-                        <p>And, with $20B+ under protection and eight years on the market, it’s one of the <strong>most trusted wallets available today</strong>.</p>
-                        <p>Speaking of mobile-friendly, here’s our favorite mobile casino: </p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 1) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
+                    <section id="in-game-vs-promotional">
+                        <div className="h2">
+                            In-Game Free Spins or Deposit Free Spins? Which are Better?
                         </div>
-                        <div className="h2">How to Get Started with Your Bitcoin Wallet	</div>
-                        <p>Ready to start betting? <strong>We’ve got your back – even if you’re a complete BTC beginner.</strong> </p>
-                        <p>Here is the exact, step-by-step process to get started wagering with Bitcoin.</p>
-                        <div className="h3">Step 0: Do You Even Need a Wallet?</div>
-                        <p>First things first, <strong>you might not need a wallet to begin with</strong>. </p>
-                        <p>How come? Well, some casinos also have exchanges. </p>
-                        <p>You can just:</p>
-                        <ul className="is-style-dotted-list"><li><strong>Deposit fiat money</strong> (USD, CAD, EUR, or whatever your local currency is).</li><li><strong>Buy BTC </strong>with it on the casino exchange.</li><li>Play and (hopefully) win more Bitcoin.</li><li><strong>Exchange back into fiat</strong> and withdraw to your bank account.</li></ul>
-                        <p>It’s that simple! No need for a third-party BTC wallet.</p>
-                        <p>Of course, <strong>this only works if the casino you’re playing at also operates as a BTC exchange</strong>. Not all of them do – and not all that do are safe. Still, we can recommend some reliable and user-friendly ones like BC.Game (just go to Wallet &gt; Buy Crypto).</p>
-                        <p>Play wallet-free at these gambling sites:</p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    return (
-                                        <SiteRankBlogTable
-                                            key={index}
-                                            siteIndex={index}
-                                            summaryData={summaryInfo}
-                                        />
-                                    )
-                                })
-                            }
+                        <p>As we’ve mentioned before, there are two main types of free spins at Bitcoin casinos:</p>
+                        <ul className="is-style-checked-list_sm"><li>Free spins that you win during normal game rounds</li><li>Free spins given to you by the casino</li></ul>
+                        <p>They are in many ways similar – both give you extra rounds “on the house,” allowing you to win Bitcoin without spending your own coin – but there are a few differences. Let’s compare them!</p>
+                        <div className="w-full h-[200px] flex px-10 jusitfy-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
+                            <div className="h2 text-white text-lg md:text-2xl">
+                                When it comes to free spins from games, the pros are:
+                            </div>
                         </div>
-                        <div className="mt-3 h3">Step 1: Choose and Set Up a Wallet</div>
-                        <p>Looking for <strong>more control over your crypto</strong>? Getting a Bitcoin wallet is the way to go.</p>
-                        <p>Your first step would be <strong>picking the right one</strong>. We already covered our top choices – and the setup process is similar for all of them.</p>
-                        <ul className="is-style-dotted-list"><li><strong>You start out by downloading the program and installing it on your computer or mobile. </strong>Then, you want to create a new wallet. </li><li><strong>When making a new wallet, you’ll be assigned a private key</strong> – a unique string of numbers and letters that you use to access your wallet.<br />These keys are usually long and complex to remember. That’s why most programs also use seed phrases. Seeds are usually random words that you can use to access your wallet in case you lose your private key.</li><li><strong>Write down the seed phrase </strong>in multiple locations. This is the only way to recover your crypto if your device has any problem.</li><li><strong>Next, you will be asked to setup authentication methods. <br /></strong>These could include a PIN code, Two-Factor Authentication (2FA), or biometrics. These are used for extra security and are highly recommended.</li></ul>
-                        <p><strong>Finally, you get access to your new account. </strong></p>
-                        <p>Right now, there is no Bitcoin in there. Time to change that with step two:</p>
-                        <div className="h3">Step 2: Buy Your Bitcoin</div>
-                        <p><strong>If you picked BRD, this step is a piece of cake. </strong></p>
-                        <p>The app has the option to <strong>buy or trade BTC built-in</strong>. Just deposit in fiat (35 currencies available) and swap to Bitcoin. Ta-daa!</p>
-                        <p>But what if you chose one of the other options? In that case, you have to go to an exchange.</p>
+                        <p className="mt-10">✔️ You’ll find them in most Bitcoin casinos</p>
+                        <p>✔️ Often include a special game round with better odds</p>
+                        <p>✔️ No wagering requirements</p>
+                        <p>✔️ Available on almost all slot games</p>
+                        <p>But, there are still some cons:</p>
+                        <p>❌ Highly unreliable</p>
+                        <p className="mb-10"> ❌ Can require a considerable investment</p>
+                        <div className="w-full h-[160px] flex px-10 jusitfy-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
+                            <div className="h2 text-white text-lg md:text-2xl">
+                                What about deposit free spins?
+                            </div>
+                        </div>
+                        <p className="mt-10">The pros include:</p>
+                        <p>✔️ Easier to get</p>
+                        <p className="my-5">✔️ Some are wager-free </p>
+                        <p>Whereas the cons include: </p>
+                        <p>❌ Only available at some casinos</p>
+                        <p>❌ Casinos decide on which games to offer them</p>
+                        <p>❌ Casinos decide on which games to offer them</p>
+                        <p>❌ Usually give you normal extra spins, no higher value bets</p>
+                        <p>Which is better? </p>
                         <div className="w-full h-[220px] flex px-10 jusitfy-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <div className="h2 text-white text-lg md:text-2xl">
-                                An exchange is a website where you can buy or trade cryptocurrencies.
+                                Bitcoin free spins from normal game rounds feel more special – and they’re often often more rewarding.
                             </div>
                         </div>
-                        <p>The most popular ones for buying Bitcoin are <strong>Coinbase, Binance, and Kraken</strong>. However, there are over 200 exchanges out there – so we can’t go over all of them here. </p>
-                        <p>Instead, let’s focus on the process of buying Bitcoin on one of these websites. For that, <strong>we’re going to use Binance as an example</strong>.</p>
-                        <p>The first thing you need to do is <strong>create an account on the site</strong>. You give them your email, create a username and password, and go through the verification process.</p>
-                        <p>You can then <strong>purchase Bitcoin</strong> by:</p>
-                        <ul><li>Buying BTC with a credit or debit card – Binance supports both Visa and MasterCard.</li><li>Wiring cash to a stablecoin provider. Then, using the stablecoins to buy BTC.</li><li>Purchasing Bitcoin directly on the P2P exchange.</li><li>Exchanging other cryptocurrencies you own for Bitcoin.</li></ul>
-                        <p>From there, you can <strong>transfer your BTC</strong> to your wallet of choice – and send it to a casino to gamble with. Here is how to do that:</p>
-                        <div className="h3">Step 3: Transfer to the Wallet</div>
-                        <p>Once you’ve exchanged your fiat for Bitcoin, it’s time to send it to your wallet.</p>
-                        <p><strong>Every wallet has a unique deposit address</strong> – you use that to move the BTC. The exact steps vary between exchanges and wallets, but they all work in a similar way.</p>
-                        <p>You go to your wallet and <strong>find the deposit address</strong>. Copy that. Then, you head over to the exchange and go to the withdrawal page.</p>
-                        <p>You select Bitcoin from the list of assets, <strong>paste in the deposit address</strong>, and send away your crypto. You can see the estimated time it will take for the transaction to go through and the transaction fee (it’s usually fairly small). </p>
-                        <p><strong>Once it’s confirmed, you should see your BTC in your wallet. </strong>Now that the crypto is with you, you can do whatever you want with it. That includes sending it to a gambling site to play with.</p>
-                        <div className="h3">Step 4: Move Your Bitcoin to the Casino</div>
-                        <p><strong>The final (and most exciting) step is actually playing.</strong> Go to your casino of choice and look for the deposit page.</p>
-                        <p><strong>Copy the address</strong> a<strong>nd send over the amount you want to bet with.</strong> We highly recommend you keep a close eye on that – bankroll management is essential for safe gambling.</p>
-                        <p>And that’s it – you’re ready to go!</p>
-                        <p>If you want to <strong>cash out your winnings</strong>, you go through the <strong>same process in reverse</strong>. Except this time, you go to the cashout page of the casino and send the BTC to your wallet. It should be there within a few minutes.</p>
-                        <div className="h2" >Where to Use Your Bitcoin Wallet	</div>
-                        <p>So where do we spend out Bitcoin? Here are our top three picks for BTC casinos – and why we love them:</p>
-                        <div className="h3">BC.Game</div>
-                        <img src={BcGame} className="w-full h-auto" alt="BcGame" />
-                        <p className="mt-3"><a href="https://casinosblockchain.io/bc-game-review/" target="_blank" className="text-[#3e47e0]" rel="noreferrer noopener">BC.Game</a> is a fresh new casino with a <strong>huge selection of games and thrilling daily promotions</strong>.</p>
-                        <p >Their library includes slots, card games, dice, and more. They also support live dealers and have a pretty <strong>significant social aspect</strong>. Use the players’ chat to connect with other gamblers, share tips, and brag about your wins.</p>
-                        <p>The casino also has a <strong>loyalty program that gives back</strong> to regular players. The more you play, the higher up you go in the VIP ladder. You get better promos and more bonuses the higher you go.</p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 0) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
-                        </div>
-                        <div className="h3">Stake</div>
-                        <a href="https://stake.com/registration" target-="_blank" rel="noreferrer">
-                            <img src={CasinoStake} className="w-full h-auto" alt="CasinoStake" />
-                        </a>
-                        <p className="mt-3">Drake loves <a href="https://casinosblockchain.io/stake-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/stake-bitcoin-casino-review/" rel="noreferrer noopener">Stake </a>and we love Stake!</p>
-                        <p>Stake casino is currently <strong>one of the biggest crypto gambling sites</strong> – and for a good reason. They boast over 3000 games and a sleek website that’s super easy to navigate. </p>
-                        <p>Just like BC.Game, Stake also has a <strong>VIP program</strong> that rewards loyal customers with cashback, bonuses, and more. Even better – they also have a <strong>sportsbook</strong>, which BC.Game is yet to develop.</p>
-                        <p>And we weren’t joking about the Drake collab either.</p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 1) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
-                        </div>
-                        <div className="h3">Cloudbet</div>
-                        <a href="https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd" target-="_blank" rel="noreferrer">
-                            <img src={Cloudbet1} className="w-full h-auto" alt="Cloudbet1" />
-                        </a>
-                        <p className="mt-3">Finally, our third choice is <a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet</a>. They are one of the <strong>oldest crypto gambling sites</strong> and have a very solid reputation in the community.</p>
-                        <p>But don’t let age fool you – the selection of <strong>games, bonuses, and promotions </strong>is just as impressive. Much like Stake, Cloudbet also has a <strong>sports betting product</strong>. So if you like to mix things up, they are a great choice.</p>
-                        <div className="mt-4">
-                            {dummyInfos.length > 0 &&
-                                dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                                    if (index === 2) {
-                                        return (
-                                            <SiteRankBlogTable
-                                                key={index}
-                                                siteIndex={index}
-                                                summaryData={summaryInfo}
-                                            />
-                                        )
-                                    }
-                                    return ""
-                                })
-                            }
-                        </div>
-                        <div className="h3">Final Thoughts</div>
-                        <p>Now you know <strong>everything about Bitcoin wallets</strong> and how to use them to gamble online. </p>
-                        <p>You know where to buy your BTC and which casinos to play at. We’ve also given you our recommendations to help you choose the best Bitcoin wallet for online gambling. </p>
-                        <p><strong>What are you waiting for? Start your crypto player journey now!</strong></p>
+                        <p className="mt-4"><strong>However, with this type of promo it’s much less predictable when you’ll get them</strong>. Sometimes, you have to play through pretty significant amounts of money before you even get there. </p>
+                        <p>Casino free spin offers, on the other hand, are a great way to extend your fun and try a new game.</p>
+                        <p>But, there is one promo that beats both deposit and in-game free spins – the <strong>no deposit free spins!</strong></p>
                     </section>
+                    <section id="types-of-btc-free-spins">
+                        <div className="h2">Deposit or No Deposit Free Spins at Bitcoin Casinos</div>
+                        <p><strong>Promotional free spins at Bitcoin casinos come in many shapes and forms</strong>. Some bonuses require an initial deposit, others appear when you play a slot for a while. But there is one type of free spin promo with far less strings than the others:</p>
+                        <div className="w-full h-[160px] flex px-10 jusitfy-center items-center  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
+                            <div className="h2 text-white text-lg md:text-2xl">
+                                No deposit free spins!
+                            </div>
+                        </div>
+                        <p><strong>No deposit free spins are a kind of casino bonus that new players usually get when they sign up at a new casino.</strong> The number of free spins can vary from casino to casino – from a couple of them to hundreds of spins. </p>
+                        <p><strong>No deposit free spins are a kind of casino bonus that new players usually get when they sign up at a new casino.</strong> The number of free spins can vary from casino to casino – from a couple of them to hundreds of spins. </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            <SiteRankBlogTable
+                                key={4}
+                                siteIndex={4}
+                                summaryData={siteDatas[4]}
+                            />
+                        </div>
+                        <p>The casino will give you a chance to play a new or popular slot game without having to deposit any money. </p>
+                        <p><strong>No deposit free spins are a fantastic way to try out online slots.</strong> You can use them to play popular slots and most of these bonuses also offer a decent chance to win some money.</p>
+                        <p>In this section, we will look into the main advantages and disadvantages of deposit and no deposit free spins, as well as introduce you to other promotional offers.</p>
+                        <div className="h3">No Deposit Free Spins</div>
+                        <p><strong>No deposit free spins are awarded free of charge</strong>, usually to new players that have just opened an account with the casino.</p>
+                        <p>Their main advantage, of course, is that they let you play at the casino without risking your own Bitcoin! Here are the perks you get with a no deposit free spin: </p>
+                        <p>✔️ You don’t have to make any deposit to receive the free spins </p>
+                        <p>✔️ You can play with the spins right away </p>
+                        <p>✔️ If you win, your winnings are yours to keep (subject to wagering requirements) </p>
+                        <p>There are, however, a few things to keep in mind with no deposit free spins:</p>
+                        <p>❌ They often require you to verify your account first, so they aren’t ideal if you’d rather not give personal data.</p>
+                        <p>❌ Wagering requirements are likely to be very steep, often at least 40x (there is an exception here and we’ll talk about it).</p>
+                        <p>❌ They are usually only available on a specific game or set of games.</p>
+                        <p>❌ Expect individual free spins to have relatively low values plus a cap on winnings.</p>
+                        <p>In the end, no deposit free spins are <strong>better suited for those looking to try out a new casino</strong>, and are not a sustainable long term deal. Even so, some no deposit free spins are better than others.</p>
+                        <p><strong>? What No Deposit Free Spins Are Out There?</strong></p>
+                        <p>Our absolute favorite no deposit free spin is <strong>BC.Game’s daily wheel spin</strong>. You get one try at the Lucky Spin! promo every day – and you could win up to 1 BTC with no requirements (!), other than having a profile on BC.Game:</p>
+                        <img src={BcgameSpin} className="w-full h-auto" alt="FreeSpinsImage" />
+                        <p className="my-10">Another excellent no deposit free spin is <strong>True Flip’s Citizen ID bonus</strong>. You get 30 free spins at the Day and Night slot by TrueLabs just for registering with the casino and verifying your identity. </p>
+                        <img src={trueflip3} className="w-full h-auto" alt="FreeSpinsImage" />
+                        <p className="mt-3">Plus, the True Flip wagering requirements are also very fair at just x1.</p>
+                        <p>If you’re looking for more information on no deposit free spins, then check our page about <a className="text-blue-700" href="https://casinosblockchain.io/bitcoin-no-deposit-bonuses/" target="_blank" rel="noreferrer noopener">no deposit Bitcoin bonuses</a>.</p>
+                        <div className="h3">
+                            Welcome Bonus Free Spins
+                        </div>
+                        <p>Perhaps the most common type of free spins at Bitcoin casinos are the ones in welcome packages – e.g., what you get at mBit.</p>
+                        <p>Since they require an initial deposit before you can unlock them,  they’re not free. But, there are still <strong>some advantages</strong> to that type of offer:</p>
+                        <p>✔️ You can get a bigger number of free spins (for example, 200 vs 30) </p>
+                        <p>✔️ Some casinos will let you choose the game you use your free spins on </p>
+                        <p>✔️ The wagering requirements vary, but they can be very decent</p>
+                        <p>What are the downsides?</p>
+                        <p>❌ Game restrictions might still apply, you don’t get to pick out of the casinos entire offer. </p>
+                        <p>❌ You have to deposit, so there’s some risk involved. </p>
+                        <p>❌ There are caps on your earnings </p>
+                        <p>❌ The wagering requirements might ask you to play through the bonus plus deposit a number of times.</p>
+                        <p>Still, these free spins can be a good way to get some free spins at a great casino with a fair bonus.</p>
+                        <div className="h3">Regular or Seasonal Free Spins</div>
+                        <p>Most Bitcoin casinos that do reward their players with a welcome bonus – and even some who don’t, like <a className="text-blue-700" href="https://casinosblockchain.io/stake-bitcoin-casino-review/">Stake casino</a> – offer other types of promotions to regular players on a regular basis. </p>
+                        <p>While these offers aren’t limited to free spins, they are certainly one of the most common type of rewards players can get. </p>
+                        <p>You can unlock them in several ways, including:</p>
+                        <ul className="is-style-checked-list_sm"><li>With a qualifying deposit</li><li>When winning a competition, like a leaderboard challenge</li><li>As a <em>free bonus </em>given at the casino’s discretion</li><li>As an incentive to try out certain games</li><li>While wagering on specific games</li></ul>
+                        <p>When it comes to terms and conditions, these offers are <strong>generally more flexible than welcome bonuses</strong>, although not always. Our advice? Make sure you read the terms and conditions before taking part in any promotion.</p>
+                        <div className="h3">VIP Free Spins</div>
+                        <p>The best deals you can get at Bitcoin casinos, including the most generous Bitcoin casino free spins, are generally given out as VIP rewards or as part of loyalty clubs.</p>
+                        <p>All casinos work a bit differently here. Some are very secretive about their VIP tiers, which means you won’t know much about it until you are actually invited to join. Others have clearly defined reward systems that give you free spins <strong>when you level up</strong> by playing at the casino.</p>
+                        <p>In any case, VIP free spins tend to have the lowest wagering requirements and the highest value. It’s also not unusual for you to receive free spins that are catered to you, on games that you actually care about!</p>
+                        <div className="h3">Free Money Rounds</div>
+                        <p>While they’re not usually categorized alongside other free spin bonuses, <strong>demonstration game rounds</strong> (playable with virtual funds and, sometimes, worthless in-house tokens) <strong>are technically the same thing</strong>: game rounds that you can play for free at Bitcoin casinos.</p>
+                        <p>The main difference is that you <strong>cannot win real funds</strong>. For that reason, they’re suitable only for those that don’t want to gamble with real money but still enjoy the thrill or, more likely, if you’re just testing the casino or a new game.</p>
+                        <p>In any case, they’re always welcome, even if just for a bit of casual fun!</p>
+                    </section>
+                    <section id="bitcoin-free-spin-tips">
+                        <div className="h2">How to Choose the Best Bitcoin Free Spins</div>
+                        <p>If you’ve read this far, you already understand there are many types of free spin deals at Bitcoin casinos, and not all give you the same value. </p>
+                        <p>For that reason, it’s important to keep a few things in mind if you want to get the most out of your Bitcoin casino free spins:</p>
+                        <ol className="is-style-dotted-list"><li><strong>Free Spin Value</strong><br />Most casino games are made to cater to a wide variety of players, and <a className="text-blue-700" href="https://casinosblockchain.io/best-bitcoin-wallet-for-online-gambling/" target="_blank" rel="noreferrer noopener">wallets</a>. You can get pretty granular with your spending habits when you’re gambling your own money. Free spins on the other hand? They’re as much as the casino gives you. <br />Often, providers will tell you the <em>number </em>of free spins but hide their actual value deep in the <em>Terms &amp; Conditions</em>. But, if you want to truly compare and pick out the best offer, look for high-value spins, not just a high number.</li><li><strong>Eligible Games</strong><br />We’ve mentioned before that some Bitcoin free spin offers are stricter than others, with some being exclusively for one game, and others allowing you to pick between multiple games.<br />Much to our dismay, you don’t often find free spins on provably fair slots, especially those developed by the casinos themselves. There is one notable exception, however: <a className="text-blue-700" href="https://casinosblockchain.io/bgaming-bitcoin-casinos/">BGaming slots</a>. Keep an eye out for their special offers which give you even more bang for your buck!</li><li><strong>Wagering Requirements</strong><br />By now you should know that the “freer” the free spins, the higher the wagering requirements. <br />Deals like FortuneJack’s 50 wager-free and no deposit free spins are extremely hard to find, and even harder to beat, but even those come with other terms and conditions!</li><li><strong>Caps on Winnings</strong><br />Casinos are businesses – they don’t want to give out money for free. When you play and win with a no-deposit free spin, they get no profit. This is why a lot of gambling sites will cap your winnings when it comes to free spins.<br />Not all free spin offers limit how much Bitcoin you can win, though. As a rule of thumb, if the wagering requirements are minimal, there will probably be a limit. <br />It’s important that you’re aware of these caps so you’re not disappointed. After all, there’s nothing worse than thinking you’ve won big… Only to realize you can get a fraction of your prize! Cancel the champagne? Nope, just read the fine print first.</li></ol>
+                        <div className="h2">Final Thoughts</div>
+                        <p>Free spins allow you to enjoy casino games for free and still win prizes. But, they all come with a catch – you can’t withdraw the money until you complete the wagering requirements. </p>
+                        <p>When comparing Bitcoin free spins, this number can help you evaluate if the offer is worth it. For instance, if you have to play through x50 of your winnings, your actual profit is very low. And, don’t forget to consider other factors like caps on winnings, bet value, and the overall casino quality. </p>
+                        <p><strong>Ultimately, Bitcoin casino free spins help you explore new gambling sites </strong>and find exciting experiences to add to your routine. Don’t look at them as a way to make crazy money. Instead, use them to get a taste for casinos and pick out your favorite one. </p>
+                        <p>If you’re wondering which provider to choose, check out our top picks: BC.Game for their wager-free and deposit-free spins, and True Flip for their low-wager, no deposit welcome bonus. </p>
+                        <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md">
+                            {
+                                [siteDatas[0], siteDatas[4]].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
+                                    return (
+                                        <SiteRankBlogTable
+                                            key={index}
+                                            siteIndex={index}
+                                            summaryData={summaryInfo}
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
 
+                    </section>
+                    <section id="FAQ">
+                        <div className="h2">Frequently Asked Questions</div>
+                        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel1bh-content"
+                                id="panel1bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">Can I get free spins at Bitcoin casinos?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">Of course you can! In fact, free spins are one of the most common offers at Bitcoin casinos like BitStarz or <a className="text-blue-700" href="https://casinosblockchain.io/go/true-flip/">True Flip</a>. Do note that you may not be playing with Bitcoin, however, since it's not unusual for free spins to be paid out in fiat even if your account is in BTC or other coins.</div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel2bh-content"
+                                id="panel2bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">Are free spin offers actually free?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">
+                                    It depends. For the most part, no. Most free spin offers require an initial deposit. While some free spin offers are, indeed, on the house, they tend to have strict terms and conditions that make them less appealing. However, they're a good way to test new games without having to invest your own money. In that sense, free spin offers are, indeed, free, since you're not using real money (even if you have to make a deposit to unlock them).
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel3bh-content"
+                                id="panel3bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">Do all casinos on your list give out free spin rewards regularly?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">
+                                    No. We've included some casinos on our main list that don't regularly have free spin offers, but that do have games where you can win free spins as part of normal gameplay. Those are Stake, Rocketpot, and Bodog.
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} elevation={4}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel4bh-content"
+                                id="panel4bh-header"
+                            >
+                                <span className="text-[#262847] text-sm font-medium tracking-[-0.2px] leading-7">Which Bitcoin casinos give me free spins when I sign up?</span>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div className="text-gray-600 text-sm">
+                                    BitStarz and Fortunejack are Bitcoin casinos that give you free spins when you sign up. You don't need to deposit to receive these free spins!
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                    </section>
                 </div>
             </div>
             {/* RightNavBar */}
-            <div className="w-[22%] h-fit xl:block hidden 
-bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
+            <div className="w-[22%] h-fit xl:block hidden bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
                 <div className="container text-sm h-fit w-full p-2 ">
                     <ul className="list-none w-full text-[#80869e]">
-                        <a href="#quick-picks" className="quick-picks hover:text-[#3e47e0] no-underline cursor-pointer">
+                        <a href="#bitcoin-free-spin-casinos" className="bitcoin-free-spin-casinos hover:text-[#3e47e0] no-underline cursor-pointer">
                             <li className=" w-full p-3 pb-3 hover:bg-slate-200 rounded">
-                                Best BitCoin Gambling Wallet: Quick Picks
+                                Bitcoin Free Spin Casinos
                             </li>
                         </a>
-                        <a href="#How-to-Choose" className="How-to-Choose hover:text-[#3e47e0] no-underline cursor-pointer">
+                        <a href="#what-are-btc-free-spins" className="what-are-btc-free-spins hover:text-[#3e47e0] no-underline cursor-pointer">
                             <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
-                                How to Choose the Best Wallet?
+                                What Are They?
                             </li>
                         </a>
-                        <a href="#What-Is-Bitcoin-Wallet" className="What-Is-Bitcoin-Wallet hover:text-[#3e47e0] no-underline cursor-pointer">
-                            <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
-                                What is a Bitcoin Wallet?
-                            </li>
-                        </a>
-                        <a href="#what-makes-a-good-wallet" className="what-makes-a-good-wallet hover:text-[#3e47e0] no-underline cursor-pointer">
-                            <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
-                                What Makes a Good Wallet?
-                            </li>
-                        </a>
-                        <a href="#best-btc-wallets" className="best-btc-wallets hover:text-[#3e47e0] no-underline cursor-pointer">
+                        <a href="#best-offers" className="best-offers hover:text-[#3e47e0] no-underline cursor-pointer">
                             <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
-                                Best Bitcoin Gambling Wallets
+                                Best Bitcoin Free Spin Offers
                             </li>
                         </a>
-                        <a href="#Best-for-Beginners" className="Best-for-Beginners hover:text-[#3e47e0] no-underline cursor-pointer">
-                            <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
-                                Best for Beginners: Blockstream
+                        <a href="#in-game-vs-promotional" className="in-game-vs-promotional hover:text-[#3e47e0] no-underline cursor-pointer">
+                            <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
+                                In-Game vs. Promotional Bitcoin Free Spins
                             </li>
                         </a>
-                        <a href="#best-for-privacy" className="best-for-privacy hover:text-[#3e47e0] no-underline cursor-pointer">
-                            <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
-                                Best for Privacy: Electrum
+                        <a href="#types-of-btc-free-spins" className="types-of-btc-free-spins hover:text-[#3e47e0] no-underline cursor-pointer">
+                            <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
+                                Different Free Spin Offers
                             </li>
                         </a>
-                        <a href="#best-for-mobile" className="best-for-mobile hover:text-[#3e47e0] no-underline cursor-pointer">
-                            <li className="w-full p-3 pb-3 pl-8 hover:bg-slate-200 rounded">
-                                Best for Mobile: BRD
+                        <a href="#bitcoin-free-spin-tips" className="bitcoin-free-spin-tips hover:text-[#3e47e0] no-underline cursor-pointer">
+                            <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
+                                Tips & General Advice
                             </li>
                         </a>
+                        <a href="#FAQ" className="FAQ hover:text-[#3e47e0] no-underline cursor-pointer">
+                            <li className="w-full p-3 pb-3 hover:bg-slate-200 rounded">
+                                Frequently Asked Question
+                            </li>
+                        </a>
+
                     </ul>
-                    <p className="font-bold my-8">Popular Casinos</p>
-                    {dummyInfos.length > 0 &&
-                        dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
-                            return (
-                                <NavBarMiniTable
-                                    key={index}
-                                    siteIndex={index}
-                                    summaryData={summaryInfo}
-                                />
-                            )
-                        })
-                    }
                 </div>
             </div>
 
@@ -561,16 +446,17 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
     )
 }
 
+
 const FreeSpins = () => {
     return (
-        <div className="h-full w-full flex flex-col items-center">
+        <div className="h-full w-full flex flex-col items-center bg-[#F8F9FC]">
             <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
-                <div className="p-10 w-full flex flex-col justify-center">
+                {/* <div className="p-10 w-full flex flex-col justify-center">
                     <div className="h1">Latest News</div>
                     <ReadMoreCards />
-                </div>
+                </div> */}
             </div>
         </div>
     )

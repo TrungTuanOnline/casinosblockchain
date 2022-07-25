@@ -1,8 +1,8 @@
 import Footer from "../../components/Common/Footer"
 import Topbar from "../../components/Common/Topbar"
+import Content from "../../components/Cryptocurrencies/Dogecoin/Content"
 import Header from "../../components/Cryptocurrencies/Dogecoin/Header"
-import Content from "../../components/Games/Crash/Content"
-import SiteInfos from "../../components/Games/Crash/Siteinfos"
+import SiteInfos from "../../components/Cryptocurrencies/Dogecoin/Siteinfos"
 
 const Dogecoin = () => {
     return (

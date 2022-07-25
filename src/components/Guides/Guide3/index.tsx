@@ -73,9 +73,9 @@ const MainContent = () => {
 
     return (
         <div className="w-full flex gap-6 justify-center">
-            <div className="xl:w-8/12 w-full h-full ">
-                <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
-                    <img alt="MainPageImg" src={MetamaskCasinos} className="w-full max-h-full object-cover " />
+            <div className="xl:w-8/12 w-full h-full bg-white rounded-md shadow-sm shadow-gray-400 mb-10">
+                <div className="w-full h-[435px] rounded-md border-4 border-white">
+                    <img alt="MainPageImg" src={MetamaskCasinos} className="w-full max-h-full object-cover rounded-md " />
                 </div>
                 <div className="blog pl-24 pt-3 pb-16 w-10/12">
                     <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">July 15, 2022</span></p>
@@ -87,7 +87,7 @@ const MainContent = () => {
                     <section id="quick-guide">
                         <div className="h2">Best MetaMask Casinos: Quick Guide	</div>
                         <p>Excited to get started already? Here’s an <strong>overview of our favorite MetaMask gambling</strong> spots. We personally tried and tested them – this way, we know we’re only giving you the good stuff:</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {
                                 dummyInfos.length > 0 &&
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
@@ -129,7 +129,7 @@ const MainContent = () => {
                         <p>Is there a catch? Unfortunately, there is one.&nbsp;</p>
                         <p>While BC.Game offers <strong>exciting bonuses </strong>like spin-the-wheel and wager-free promos, there is <strong>no traditional welcome bonus</strong>. Are you getting the short end of the stick? We don’t think so. The casino still <strong>gives you plenty of extra games</strong> where you could potentially win more than a depost-match could ever give you. Still, if you prefer a traditional welcome bonus, BC.Game might not be the place for you.&nbsp;</p>
                         <p>Ultimately, BC.Game is <strong>fun, safe, and value-packed </strong>thanks to the low house edge and additional perks. Since it supports <strong>ETH and ERC-20 tokens</strong> like<strong> </strong>Chainlink, BC.Game is also the perfect casino for all MetaMask enthusiasts out there.&nbsp;</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             <SiteRankBlogTable
                                 key={0}
                                 siteIndex={0}
@@ -490,7 +490,7 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 
 const MainPage3 = () => {
     return (
-        <div className="h-full w-full flex flex-col items-center">
+        <div className="h-full w-full flex flex-col items-center bg-[#F8F9FC]">
             <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />

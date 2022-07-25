@@ -61,7 +61,7 @@ const Content = () => {
 
     return (
         <div className="w-full flex gap-6 justify-center">
-            <div className="xl:w-8/12 w-full h-full ">
+            <div className="xl:w-8/12 w-full h-full bg-white rounded-md shadow-sm shadow-gray-400 mb-10">
                 <div className="blog pl-24 pt-12 pb-16 w-10/12">
                     <p><strong>The Crash crypto game is on the rise in 2022.</strong> Simple, fun, and exciting, it's becoming an online casino staple. </p>
                     <p><strong>Ready to start playing Crash? This article is your complete, comprehensive guide</strong>. </p>
@@ -107,7 +107,7 @@ const Content = () => {
                         <p className="mt-8">There are multiple casinos that offer the Crash crypto game: </p>
                         <ul className="is-style-checked-list_sm"><li><a className="text-blue-600" href="https://casinosblockchain.io/go/bc-game/" target="_blank" rel="noreferrer noopener">BC.Game</a> boasts an exciting in-house game with amazing social features.</li><li><a className="text-blue-600" href="https://casinosblockchain.io/go/stake/" target="_blank" rel="noreferrer noopener">Stake </a>is notorious for the low house edge and high RTP.</li><li><a className="text-blue-600" href="https://casinosblockchain.io/go/roobet/" target="_blank" rel="noreferrer noopener">Roobet </a>is a polished, Aussie-friendly product we adore.</li></ul>
                         <p><strong>Here are our top picks for the best Crash casinos of 2022: </strong></p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {dummyInfos.length > 0 &&
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
@@ -373,7 +373,7 @@ const Content = () => {
                         <p>If you're a newcomer to Crash - and, especially, if you're a new gambler - it might be a good idea to keep the following tips in mind:</p>
                         <ul className="is-style-checked-list_sm"><li><strong>Choose reputable casinos</strong> - look for licensed gambling sites, provably fair games, and positive reviews online.</li><li><strong>Learn the game </strong>before you start playing - and, begin with smaller bets, too. </li><li><strong>Manage your gambling </strong>by setting bankroll limits, avoiding chasing losses, and cooling down if you fall on a losing streak.</li><li><strong>Get familiar with the casino rules </strong>and don't break them - e.g., by lying about your location. </li><li><strong>Have fun</strong>, that's what Crash is all about If there's a player's chat, get involved, make friends and keep it fun for everybody, too. </li></ul>
                         <p>We also recommend you play at one of our tried-and-tested casinos, which have provably fair games that can't be rigged.</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {testedCasinos.length > 0 &&
                                 testedCasinos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
@@ -393,7 +393,7 @@ const Content = () => {
                         <p><strong>But, keep in mind that, like any form of gambling, the outcomes here are a matter of luck. </strong>This is why it's always important to gamble responsibly and avoid loss-chasing strategies like the Martingale. Instead, focus on enjoying the game and setting a budget that you are comfortable with.</p>
                         <p><strong>And what about choosing a Crash casino? Our top choice is BC.Game </strong>because they offer a provably fair game with a low house edge. </p>
                         <p>They also have a great VIP program and regular daily bonuses. So, why not give it a try today? It might just become your favorite destination for the Crash crypto game.</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {testedCasinos.length > 0 &&
                                 testedCasinos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     if (index === 0) {

@@ -56,9 +56,9 @@ const MainContent = () => {
 
     return (
         <div className="w-full flex gap-6 justify-center">
-            <div className="xl:w-8/12 w-full h-full ">
-                <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
-                    <img alt="MainPageImg" src={ReadMoreImg8} className="w-full max-h-full object-cover " />
+            <div className="xl:w-8/12 w-full h-full bg-white rounded-md shadow-sm shadow-gray-400 mb-10">
+                <div className="w-full h-[435px] rounded-md border-4 border-white">
+                    <img alt="MainPageImg" src={ReadMoreImg8} className="w-full max-h-full object-cover rounded-md " />
                 </div>
                 <div className="blog pl-24 pb-16 w-10/12">
                     <p id="modified-date" className="text-sm" >
@@ -78,7 +78,7 @@ const MainContent = () => {
                     <p>Because stablecoins stay around the same value, you can use them to make bets without losing money to volatility. This makes them perfect for the gambling industry, which needs to be able to trust its currency.</p>
                     <p><strong>But which stablecoin to pick – and how do you choose a stablecoin casino to play in?</strong>&nbsp; </p>
                     <p>Our top stablecoin casinos are: </p>
-                    <div className="mt-4">
+                    <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                         {
                             [siteDatas[0], siteDatas[4], siteDatas[3]].map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                 return (
@@ -96,7 +96,7 @@ const MainContent = () => {
                         <p>Playing with stablecoins removes volatility from crypto casinos. There are three main reasons to pick USDT or DAI over traditional cryptos:</p>
                         <ul className="is-style-dotted-list"><li><strong>Stability</strong> – as the name suggests, stablecoins are more ‘solid’, a haven from the sharp swings of other cryptos.</li><li><strong>Reduce risk</strong> – with stablecoins, you’re no longer gambling on the bet AND the price of your crypto. You can (theoretically) reduce losses – but also wins. </li><li><strong>Enjoy crypto casino perks</strong> – stablecoins are still cryptocurrencies, so you can enjoy all the perks of gambling with crypto like lower <a href="https://casinosblockchain.io/house-edge-casinos/" target="_blank" rel="noreferrer noopener">house edges</a>.</li></ul>
                         <p>Our <strong>number one stablecoin casino</strong> is <a href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener">BC.Game</a> for the awesome game selection, social experience, and the range of cryptos they accept.</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             <SiteRankBlogTable
                                 key={0}
                                 siteIndex={0}
@@ -198,7 +198,7 @@ const MainContent = () => {
                         <p><strong>BC.Game also has a social aspect </strong>that rewards players with bonuses and free spins for participating in the community.&nbsp;</p>
                         <p> ?  <strong>What Stablecoins Are Available?&nbsp;</strong></p>
                         <p>BC.Game Casino has DAI, Tether, Binance USD (BUSD), and USDC. There are 65+ cryptocurrencies in total.</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             <SiteRankBlogTable
                                 key={0}
                                 siteIndex={0}
@@ -212,7 +212,7 @@ const MainContent = () => {
                         <p><a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">Cloudbet </a>is another great choice for crypto gambling. They’re one of the oldest and most well-established cryptocurrency casinos on this list.&nbsp;</p>
                         <p>The game selection features over 50 providers, a range of live table games, and a comprehensive sportsbook (though if you’re into eSports we recommend <a className="text-blue-600" href="https://casinosblockchain.io/thunderpick-review/" target="_blank" rel="noreferrer noopener">Thunderpick</a> instead). Cloudbet also has over 1000 slots, as well as a provably fair selection of crypto favorites.&nbsp;</p>
                         <p> ?  <strong>What Stablecoins Are Available?</strong></p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             <SiteRankBlogTable
                                 key={3}
                                 siteIndex={3}
@@ -403,7 +403,7 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 
 const MainPage = () => {
     return (
-        <div className="h-full w-full flex flex-col items-center">
+        <div className="h-full w-full flex flex-col items-center bg-[#F8F9FC]">
             <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />
