@@ -36,56 +36,44 @@ import { siteDatas } from "../../Interfaces/SiteDatas";
 
 // crypto images
 import avalancheCryptoImg from "../../Assets/images/cryptocurrency/avalanche.png";
-import batCryptoImg from "../../Assets/images/cryptocurrency/BAT.png";
 import bnbCryptoImg from "../../Assets/images/cryptocurrency/bnb.png";
 import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
 import bitcoinCashCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-cash.png";
-import bitcoinSvCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-sv.png";
+import bitcoinGoldCryptoImg from "../../Assets/images/cryptocurrency/bitcoin-gold.png";
 import bitTorrentCryptoImg from "../../Assets/images/cryptocurrency/bit-torrent.png";
 import cardanoCryptoImg from "../../Assets/images/cryptocurrency/cardano.png";
-import chainlinkCryptoImg from "../../Assets/images/cryptocurrency/chainlink.png";
 import daiCryptoImg from "../../Assets/images/cryptocurrency/dai.png";
 import dashCryptoImg from "../../Assets/images/cryptocurrency/dash.png";
 import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
 import eosCryptoImg from "../../Assets/images/cryptocurrency/eos.png";
 import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
+import etherClassicCryptoImg from "../../Assets/images/cryptocurrency/ethereum-classic.png";
 import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
 import moneroCryptoImg from "../../Assets/images/cryptocurrency/monero.png";
 import polkadotCryptoImg from "../../Assets/images/cryptocurrency/Polkadot.png";
 import rippleCryptoImg from "../../Assets/images/cryptocurrency/ripple.png";
 import shibaInuCryptoImg from "../../Assets/images/cryptocurrency/shiba-inu.png";
 import solanaCryptoImg from "../../Assets/images/cryptocurrency/solana.png";
-import sunCryptoImg from "../../Assets/images/cryptocurrency/sun.png";
 import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
 import tronCryptoImg from "../../Assets/images/cryptocurrency/tron.png";
-import trueusdCryptoImg from "../../Assets/images/cryptocurrency/trueusd.png";
-import unisawpCryptoImg from "../../Assets/images/cryptocurrency/unisawp.png";
 import usdcCryptoImg from "../../Assets/images/cryptocurrency/usdc.png";
+import zcashCryptoImg from "../../Assets/images/cryptocurrency/zcash.png";
 
 // game images
-import baccaratGameImg from "../../Assets/images/games/baccarat.png";
-import blackjackGameImg from "../../Assets/images/games/blackjack.png";
-import crashGameImg from "../../Assets/images/games/crash.png";
 import diceGameImg from "../../Assets/images/games/dice.png";
-import kenoGameImg from "../../Assets/images/games/keno.png";
-import liveCasinoGameImg from "../../Assets/images/games/live-casino.png";
-import plinkoGameImg from "../../Assets/images/games/plinko.png";
-import pokerGameImg from "../../Assets/images/games/poker.png";
-import rouletteGameImg from "../../Assets/images/games/roulette.png";
-import slotsGameImg from "../../Assets/images/games/slots.png";
+import jackpotGameImg from "../../Assets/images/games/jackpot.png";
 
 // review images
-import reviewImg1 from "../../Assets/images/reviews/1-bc-game/1-bc-review.png";
-import reviewImg2 from "../../Assets/images/reviews/1-bc-game/2-bc-review.png";
-import reviewImg3 from "../../Assets/images/reviews/1-bc-game/3-bc-review.png";
-import reviewImg4 from "../../Assets/images/reviews/1-bc-game/4-bc-review.png";
-import reviewImg5 from "../../Assets/images/reviews/1-bc-game/5-bc-review.png";
-import reviewImg6 from "../../Assets/images/reviews/1-bc-game/6-bc-review.png";
-import reviewImg7 from "../../Assets/images/reviews/1-bc-game/7-bc-review.png";
-import reviewImg8 from "../../Assets/images/reviews/1-bc-game/8-bc-review.png";
+import reviewImg1 from "../../Assets/images/reviews/17-duckdice-game/1-duckdice-review.png";
+import reviewImg2 from "../../Assets/images/reviews/17-duckdice-game/2-duckdice-review.png";
+import reviewImg3 from "../../Assets/images/reviews/17-duckdice-game/3-duckdice-review.png";
+import reviewImg4 from "../../Assets/images/reviews/17-duckdice-game/4-duckdice-review.png";
+import reviewImg5 from "../../Assets/images/reviews/17-duckdice-game/5-duckdice-review.png";
+import reviewImg6 from "../../Assets/images/reviews/17-duckdice-game/6-duckdice-review.png";
+import reviewImg7 from "../../Assets/images/reviews/17-duckdice-game/7-duckdice-review.png";
 
 // country flag
-import { SA, CN, GB, FR, IN, ID, JP, KR, PT, RU, ES, PH, TR, VN } from 'country-flag-icons/react/1x1';
+import { GB, IN, PT, RU, PH } from 'country-flag-icons/react/1x1';
 
 const StyledRating = styled(Rating)({
 });
@@ -116,10 +104,6 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Avalanche"
     },
     {
-        img: batCryptoImg,
-        name: "BAT"
-    },
-    {
         img: bnbCryptoImg,
         name: "Binance Coin"
     },
@@ -132,8 +116,8 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Bitcoin Cash"
     },
     {
-        img: bitcoinSvCryptoImg,
-        name: "Bitcoin SV"
+        img: bitcoinGoldCryptoImg,
+        name: "Bitcoin Gold"
     },
     {
         img: bitTorrentCryptoImg,
@@ -142,10 +126,6 @@ const cryptocurrenciesObj: Array<any> = [
     {
         img: cardanoCryptoImg,
         name: "Cardano"
-    },
-    {
-        img: chainlinkCryptoImg,
-        name: "Chainlink"
     },
     {
         img: daiCryptoImg,
@@ -166,6 +146,10 @@ const cryptocurrenciesObj: Array<any> = [
     {
         img: etherCryptoImg,
         name: "Ethereum"
+    },
+    {
+        img: etherClassicCryptoImg,
+        name: "Ethereum Classic"
     },
     {
         img: litecoinCryptoImg,
@@ -192,10 +176,6 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Solana"
     },
     {
-        img: sunCryptoImg,
-        name: "SUN"
-    },
-    {
         img: tetherCryptoImg,
         name: "Tether"
     },
@@ -204,79 +184,34 @@ const cryptocurrenciesObj: Array<any> = [
         name: "Tron"
     },
     {
-        img: trueusdCryptoImg,
-        name: "TrueUSD"
-    },
-    {
-        img: unisawpCryptoImg,
-        name: "Uniswap"
-    },
-    {
         img: usdcCryptoImg,
         name: "USD Coin"
+    },
+    {
+        img: zcashCryptoImg,
+        name: "Zcash"
     }
 ];
 
 const gamesObj: Array<any> = [
     {
-        img: baccaratGameImg,
-        name: "Baccarat"
-    },
-    {
-        img: blackjackGameImg,
-        name: "Blackjack"
-    },
-    {
-        img: crashGameImg,
-        name: "Crash"
-    },
-    {
         img: diceGameImg,
         name: "Dice"
     },
     {
-        img: kenoGameImg,
-        name: "Keno"
-    },
-    {
-        img: liveCasinoGameImg,
-        name: "Live Casino"
-    },
-    {
-        img: plinkoGameImg,
-        name: "Plinko"
-    },
-    {
-        img: pokerGameImg,
-        name: "Poker"
-    },
-    {
-        img: rouletteGameImg,
-        name: "Roulette"
-    },
-    {
-        img: slotsGameImg,
-        name: "Slots"
+        img: jackpotGameImg,
+        name: "Jackpots"
     }
 ]
 
-const BCGameReview = () => {
-    const siteData = siteDatas[0];
+const DuckDiceGameReview = () => {
+    const siteData = siteDatas[16];
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
     const [openFAQ2, setOpenFAQ2] = useState(false);
     const [openFAQ3, setOpenFAQ3] = useState(false);
     const [openFAQ4, setOpenFAQ4] = useState(false);
-
-    // const [isTablet, setIsTablet] = useState(false);
-    // useEffect(() => {
-    //     function updateSize() {
-    //         setIsTablet(window.innerWidth < 1024);
-    //     }
-    //     window.addEventListener('resize', updateSize);
-    //     updateSize();
-    //     return () => window.removeEventListener('resize', updateSize);
-    // }, []);
+    const [openFAQ5, setOpenFAQ5] = useState(false);
 
     useEffect(() => {
         const partSections = document.getElementsByClassName("part-section");
@@ -375,7 +310,7 @@ const BCGameReview = () => {
                                         {siteData.name} Overview
                                     </div>
                                     <div className="text-base">
-                                        Your robust BC.Game casino review - come for the prizes, stay for the games!
+                                        Let it drip, with a fabulous free BTC faucet!
                                     </div>
                                 </div>
                             </div>
@@ -443,36 +378,12 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-wrap gap-4 mt-5">
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <SA className="h-5 rounded-full" />
-                                                <div className="text-base">Arabic</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <CN className="h-5 rounded-full" />
-                                                <div className="text-base">Chinese</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <GB className="h-5 rounded-full" />
                                                 <div className="text-base">English</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <FR className="h-5 rounded-full" />
-                                                <div className="text-base">French</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <IN className="h-5 rounded-full" />
                                                 <div className="text-base">Hindi</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <ID className="h-5 rounded-full" />
-                                                <div className="text-base">Indonesian</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <JP className="h-5 rounded-full" />
-                                                <div className="text-base">Japanese</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <KR className="h-5 rounded-full" />
-                                                <div className="text-base">Korean</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <PT className="h-5 rounded-full" />
@@ -483,20 +394,8 @@ const BCGameReview = () => {
                                                 <div className="text-base">Russian</div>
                                             </div>
                                             <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <ES className="h-5 rounded-full" />
-                                                <div className="text-base">Spanish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
                                                 <PH className="h-5 rounded-full" />
                                                 <div className="text-base">Tagalog</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <TR className="h-5 rounded-full" />
-                                                <div className="text-base">Turkish</div>
-                                            </div>
-                                            <div className="flex flex-row gap-x-2 px-3 py-1 bg-gray-300 rounded-full justify-center items-center">
-                                                <VN className="h-5 rounded-full" />
-                                                <div className="text-base">Vietnamese</div>
                                             </div>
                                         </div>
                                     </div>
@@ -510,41 +409,41 @@ const BCGameReview = () => {
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Very low house edge</div>
+                                                        <div className="w-[230px]">100% provably fair</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Daily wheel spin (for free)</div>
+                                                        <div className="w-[230px]">Completely anonymous</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Provably fair original games</div>
+                                                        <div className="w-[230px]">Free faucets</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">65+ cryptocurrencies accepted</div>
+                                                        <div className="w-[230px]">Tons of cryptos supported</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Stellar social features</div>
+                                                        <div className="w-[230px]">Large amount of promotions</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Original promotions</div>
-                                                    </div>
-                                                    <div className="flex flex-row items-start gap-x-3">
-                                                        <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                                        <div className="w-[230px]">Cryptocurrency exchange</div>
+                                                        <div className="w-[230px]">Curaçao license</div>
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-col gap-y-3">
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">No fiat payments</div>
+                                                        <div className="w-[230px]">Dice only</div>
                                                     </div>
                                                     <div className="flex flex-row items-start gap-x-3">
                                                         <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                                        <div className="w-[230px]">Lacks a deposit bonus</div>
+                                                        <div className="w-[230px]">No fiat money accepted</div>
+                                                    </div>
+                                                    <div className="flex flex-row items-start gap-x-3">
+                                                        <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                                        <div className="w-[230px]">Dormant account fee</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -795,7 +694,7 @@ const BCGameReview = () => {
                                             Bonuses
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Wheel spins, VIP club, BC.Game shitcodes... Even a deposit bonus!
+                                            No welcome bonus? No problem!
                                         </div>
                                     </div>
                                 </div>
@@ -821,10 +720,64 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div className="text-base">
-                                        BC.Game used to be a no-welcome-bonus casino... Not anymore! Now you get a deposit bonus AND a daily chance to win 5 BTC.
+                                        Let's start with the bad news: yes, it's true, DuckDice does not offer a welcome bonus.
                                     </div>
-                                    <div className="text-base">
-                                        With the current new user scheme, you can get up to 780% deposit match on your first four transactions. Here is how it works:
+                                    <div>
+                                        However, unlike other similar casinos like <a href="/review/primedice.com" target="_blank" rel="noreferrer" className="text-blue-600">Primedice</a>, it does have a large variety of promotions for regular and casual users alike. Let's have a quick look at them:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Rakeback</span>: this is basically a cashback that returns part of your bet even if you lose. At DuckDice, you can get up to 10% of your stake, depending on your DuckDice Club level. But don't worry: even players on the first level can get something
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Faucets</span>: win free Bitcoin (and more!) when you outsmart your competition in a quick game of tic-tac-toe.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Jackpot</span>: have the chance to win ridiculous amounts of Bitcoin if your dice roll is full of sevens.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Lottery</span>: win tickets (or buy them) for a chance to bag a $100,000 prize.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Seasonal bonuses</span>: bag a bonus on your birthday or special occasions, like Christmas or Halloween.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Duck hunt bonus</span>: get your hands on more free BTC for shooting a duck that will randomly appear on DuckDice's chat.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{color: "green"}}/>
+                                        <div>
+                                            <span className="font-bold">Rain</span>: active chat members may be randomly selected to receive small bonuses from time to time.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        As you can see, some of these rewards are connected to the DuckDice Club (or VIP club), and you will certainly get better value if you're higher level. However, there is plenty of fun to be had if you're a beginner or a casual player!
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        DuckDice's Free Faucet
+                                    </div>
+                                    <div>
+                                        As we've mentioned before, there is a free Bitcoin faucet at DuckDice. But it's not the only one. You can also win free amounts of XRP, Litecoin, Dogecoin, and more!
+                                    </div>
+                                    <div>
+                                        Taking part is easy, and you can do it right from the start. Here's all you need to do:
                                     </div>
                                     {/* timeline 1 */}
                                     <div className="text-base">
@@ -837,22 +790,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col gap-y-2">
-                                                        <div className="text-base font-bold">
-                                                            1st Deposit - 80-180% match
-                                                        </div>
-                                                        <div>
-                                                            Depending on the amount you deposit, you will get a:
-                                                        </div>
-                                                        <div>
-                                                            - 80% match if you deposit between $30 and $80
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $80 - $400
-                                                        </div>
-                                                        <div>
-                                                            - 180% for deposits over $400
-                                                        </div>
+                                                    <div>
+                                                        Sign up at DuckDice.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -864,22 +803,8 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col gap-y-2">
-                                                        <div className="font-bold">
-                                                            2nd Deposit - 100-200% match
-                                                        </div>
-                                                        <div>
-                                                            For the second deposit, you can receive:
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $60-$120 deposits
-                                                        </div>
-                                                        <div>
-                                                            - 150% match for $120-$600 deposits
-                                                        </div>
-                                                        <div>
-                                                            - 200% match for $600 and above
-                                                        </div>
+                                                    <div>
+                                                        Go to the "My Finances" area of your account.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -891,22 +816,21 @@ const BCGameReview = () => {
                                                     <TimelineConnector />
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col">
-                                                        <div className="font-bold gap-y-2">
-                                                            3rd Deposit - 100-220% match
-                                                        </div>
-                                                        <div>
-                                                            Once again, your deposit amount determines how much you get:
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $120-$300
-                                                        </div>
-                                                        <div>
-                                                            - 150% match for $300-$1500
-                                                        </div>
-                                                        <div>
-                                                            - 220% match for deposits over $1500
-                                                        </div>
+                                                    <div>
+                                                        Click the tap icon that says "Claim".
+                                                    </div>
+                                                </TimelineContent>
+                                            </TimelineItem>
+                                            <TimelineItem>
+                                                <TimelineSeparator>
+                                                    <TimelineDot>
+                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">4</div>
+                                                    </TimelineDot>
+                                                    <TimelineConnector />
+                                                </TimelineSeparator>
+                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
+                                                    <div>
+                                                        Choose your currency and win a game of tic-tac-toe to win a small amount of Bitcoin.
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -917,22 +841,8 @@ const BCGameReview = () => {
                                                     </TimelineDot>
                                                 </TimelineSeparator>
                                                 <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-col">
-                                                        <div className="font-bold">
-                                                            4th Deposit - 100-240% match
-                                                        </div>
-                                                        <div>
-                                                            Finally, for your fourth deposit, you can receive:
-                                                        </div>
-                                                        <div>
-                                                            - 100% match for $150-$400
-                                                        </div>
-                                                        <div>
-                                                            - 150% match for $400-$3000
-                                                        </div>
-                                                        <div>
-                                                            - 240% match for deposits over $3000
-                                                        </div>
+                                                    <div>
+                                                        When your balance is back to zero, and enough time has passed, you can claim it again!
                                                     </div>
                                                 </TimelineContent>
                                             </TimelineItem>
@@ -940,295 +850,157 @@ const BCGameReview = () => {
                                     </div>
                                     {/*  */}
                                     <div>
-                                        BC.Game has over 65 different cryptocurrencies, so it doesn't matter what crypto you use - you will get the bonus in the dollar equivalent.
+                                        DuckDice's faucet is certainly fun and easy to use and, in our opinion, one of the best cryptocurrency faucets currently in the market. The question here is: is it worth it?
                                     </div>
                                     <div>
-                                        Come again? Dollar equivalent?
-                                    </div>
-                                    <div>
-                                        That's right - BC.Game has its own token, BCD, whose value is equivalent to 1 USDT. You can use BCD to play games on the platform and unlock to withdraw them.
-                                    </div>
-                                    <div>
-                                        To unlock your bonus BCD, you will have to wager:
+                                        The truth is, like any other faucet, the amount of Bitcoin you can win daily is very small. What's more, you can only claim it if you don't have any other funds in your account. In fact:
                                     </div>
                                     <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="font-bold text-gray-400">
-                                            How to Unlock BCD?
-                                        </div>
                                         <div className="text-white font-bold text-2xl">
-                                            Wager amount x 1% x 25% = Unlock amount
+                                            DuckDice explicitly forbids "winning too much".
                                         </div>
                                     </div>
                                     <div>
-                                        Along with the regular welcome bonus, at BC.Game casino, you get the chance to spin a prize-giving wheel, which almost works as a no deposit bonus.
+                                        As per their Terms of Use:
                                     </div>
                                     <div>
-                                        The BC.Game gamewheel rewards are random and can give you one of the following real-money prizes, among others:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} /> 5 BTC
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} /> 0.15 ETH
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} /> 5 XRP
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} /> 25 USDT
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="font-bold text-gray-400">
-                                            Free crypto
-                                        </div>
-                                        <div className="text-white font-bold text-2xl">
-                                            That's right: you can win up to 5 BTC for free at BC.Game casino!
-                                        </div>
+                                        "It is forbidden (...) to excessively use Faucet (to have Faucet transactions more than 80% of your total transactions)"
                                     </div>
                                     <div>
-                                        You can come back and spin the wheel every single day - the clock resets on 12:00 AM GMT.
-                                    </div>
-                                    <div>
-                                        The best part? There are no wagering requirements for your crypto wins. If you hit the 1BTC, you can cash out instantly - no questions asked. This, along with the daily opportunity to win, makes BC.Game's Lucky Wheel spin one of our favorite Bitcoin free spin offers out there.
-                                    </div>
-                                    <div>
-                                        Is this a traditional no deposit bonus? No, definitely not.
-                                    </div>
-                                    <div>
-                                        Since it does pay out cryptocurrency prizes regularly, the BC.Game gamewheel of fortune works more like a Bitcoin faucet. However, a significant difference is that it's highly random, which means you're not guaranteed to get a specific prize (much like with free spins you get on sign-up.)
+                                        In our experience, it's similar to a Bitcoin no deposit bonus, like the Free Spins you can get at BitStarz or Fortunejack: it's good if you're getting started, to play around and give the casino a spin before you invest your own money, but it's not a reliable source of funds (or fun!)
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Other BC.Game Promotions
+                                        DuckDice vs. Primedice: Which Is Better?
                                     </div>
                                     <div>
-                                        <img
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg1}
-                                            alt="reviewImg">
-                                        </img>
+                                        When it comes to dice games you can play with Bitcoin, there are two options that stand out from the rest: Primedice, and DuckDice.
                                     </div>
                                     <div>
-                                        It's not just the welcome offer that is innovative at BC.Game: the other promotions are too.
+                                        Both brands focus on dice games, offer regular BTC jackpots and have no welcome bonus, but, at least when it comes to promotions, that's where the similarities stop.
                                     </div>
                                     <div>
-                                        The casino offers a range of unique bonus schemes:
+                                        The fact is that DuckDice is considerably more generous, perhaps because it simply can't compete with Primedice's reputation. It was, after all, <a href="/review/primedice.com" target="_blank" rel="noreferrer" className="text-blue-600">one of the first Bitcoin casinos</a> ever.
                                     </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">Task Bonuses</span> - get rewarded with small crypto prizes for finishing small tasks, such as setting 2-FA, placing your first bet, or verifying your email.
+                                    <div>
+                                        We compared both brands so you don't have to. Let's have a closer look:
+                                    </div>
+                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
+                                        <div className="flex flex-row text-center bg-violet-800 rounded-t-xl py-3">
+                                            <div className="w-1/3 text-white">
+                                                Bonuses
+                                            </div>
+                                            <div className="w-1/3 text-white">
+                                                DuckDice
+                                            </div>
+                                            <div className="w-1/3 text-white">
+                                                Primedice
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Welcome Bonus
+                                            </div>
+                                            <div className="w-1/3">
+                                                None
+                                            </div>
+                                            <div className="w-1/3">
+                                                None
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                VIP Program
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Bitcoin Jackpot
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Faucets
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                            <div className="w-1/3">
+                                                No
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Rakeback
+                                            </div>
+                                            <div className="w-1/3">
+                                                Up To 10%
+                                            </div>
+                                            <div className="w-1/3">
+                                                VIP Only
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Weekly Lottery
+                                            </div>
+                                            <div className="w-1/3">
+                                                $100K
+                                            </div>
+                                            <div className="w-1/3">
+                                                No
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Deposit Bonuses
+                                            </div>
+                                            <div className="w-1/3">
+                                                Upon Invitation
+                                            </div>
+                                            <div className="w-1/3">
+                                                VIP Only
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center py-3">
+                                            <div className="w-1/3">
+                                                Seasonal Offers
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                            <div className="w-1/3">
+                                                No
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row text-center bg-gray-300 py-3">
+                                            <div className="w-1/3">
+                                                Community Offers
+                                            </div>
+                                            <div className="w-1/3">
+                                                Yes
+                                            </div>
+                                            <div className="w-1/3">
+                                                No
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">Master Medals</span> - finish casino achievements for the bragging rights... and BCD prizes.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">Where is COCO</span> - every six hours, BC.Game's mascot Coco comes out of hiding. What follows is a 10-minute period where she appear at different places on the casino. Click her to get a reward - you'll receive at least 0.005 BCD, but VIP members get more.
-                                        </div>
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        BC.Game Shitcodes
+                                    <div>
+                                        As you can see, DuckDice offers considerably more promotional variety, and it's hands-down the brand to choose if you're looking for a bargain.
                                     </div>
                                     <div>
-                                        On top of all the perks, BC.Game shitcodes are hiding all over the web (and even in truck stop restrooms).
-                                    </div>
-                                    <div>
-                                        <span className="font-bold">A shitcode will add a gift to your account balance</span> - free money to play with! But where do you find them?
-                                    </div>
-                                    <div>
-                                        Some of the <span className="font-bold">best places for shitcodes</span> include:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            BC.Game forum
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Player chatroom
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Social media pages
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Special announcements and campaigns
-                                        </div>
-                                    </div>
-                                    <div className="font-bold">
-                                        How do I use a shitcode?
-                                    </div>
-                                    <div>
-                                        First, you need a <span className="font-bold">profile on BC.Game.</span>
-                                    </div>
-                                    <div>
-                                        Sign up (if you haven't yet) and log in. Then, in the left-hand menu <span className="font-bold">click Promotions</span> and scroll down to find the shitcodes space. <span className="font-bold">Enter your BC.Game shitcode</span> here and enjoy your gift!
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        VIP Club
-                                    </div>
-                                    <div>
-                                        <img
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg2}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        Last but not least, <span className="font-bold">BC.Game also has a VIP club</span>, giving out bonuses, cash backs, giveaways, all-expenses-paid trips, personalized customer care, and more.
-                                    </div>
-                                    <div>
-                                        The VIP level system sets <span className="font-bold">14 VIP Secret Treasures</span>, each corresponding to a respective card:
-                                    </div>
-                                    <div className="text-base -mt-8">
-                                        <Timeline position="right">
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">1</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Bronze Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 1-7)
-                                                        </div>
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">2</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Silver Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 8-21)
-                                                        </div>
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">3</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Gold Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 22-37)
-                                                        </div>
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">4</div>
-                                                    </TimelineDot>
-                                                    <TimelineConnector />
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Platinum Card
-                                                        </div>
-                                                        <div>
-                                                            (levels 38-69)
-                                                        </div>
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                            <TimelineItem>
-                                                <TimelineSeparator>
-                                                    <TimelineDot>
-                                                        <div className="w-8 h-8 rounded-full bg-black text-center pt-1">5</div>
-                                                    </TimelineDot>
-                                                </TimelineSeparator>
-                                                <TimelineContent sx={{ py: '24px', px: 2 }}>
-                                                    <div className="flex flex-row gap-x-2">
-                                                        <div className="font-bold">
-                                                            Diamond Card
-                                                        </div>
-                                                        <div>
-                                                            (SVIP members)
-                                                        </div>
-                                                    </div>
-                                                </TimelineContent>
-                                            </TimelineItem>
-                                        </Timeline>
-                                    </div>
-                                    <div>
-                                        To become a member, you collect XP - for every $1 wagered, you receive 1XP. Different levels have different XP requirements, with Diamond and Platinum requiring some serious player activity. But, the rewards are also worth it.
-                                    </div>
-                                    <div>
-                                        Along with the concierge service, annual parties (that's right, BC.Game will treat you to a Hollywood-style event), and trips to exotic destinations, there are also unique, VIP-only promotions. Some of our favorite treats in this category include:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">Roll Competition</span> at levels 4 and above, a daily dice roll for free DOGE.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">Rakeback</span> over level 14 to receive up to 20% of the house commission back (whether you win or lose the wagers).
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">RB booster</span> (also over level 14), which can increase your rakeback by 5% for a period of time.
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            <span className="font-bold">Recharge bonus</span> (over level 22) with free cashback available in as little as 10 minutes!
-                                        </div>
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        So... Are the Bonuses Worth It?
-                                    </div>
-                                    <div>
-                                        Short answer: <span className="font-bold">absolutely!</span>
-                                    </div>
-                                    <div>
-                                        BC.Game is similar to other crypto casinos like Stake, which doesn't rely on traditional offers to lure in new players but instead focuses on delivering a stellar player experience
-                                    </div>
-                                    <div>
-                                        In fact, we think that, with its original and engaging promotions, BC.Game goes the extra mile even when compared to brands like Stake.
-                                    </div>
-                                    <div>
-                                        Between the free spins, unique offers, and VIP club, we love how they prioritize loyal players and reward them. Even better, active chat players can also get rewarded with "rain", which offers them free crypto prizes - with no wagering strings attached, either.
+                                        Primedice does stand out on one regard, however: its Bitcoin jackpot can go above 100 BTC! If you trust your luck, then <a href="https://primedice.com/" target="_blank" rel="noreferrer" className="text-blue-600">go for Primedice</a> instead.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1241,19 +1013,19 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Daily chance to win 5 BTC</div>
+                                            <div className="w-[230px]">Too many promotions to list here!</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Wager-free crypto rewards</div>
+                                            <div className="w-[230px]">Bitcoin jackpot</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Free faucets</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
                                             <div className="w-[230px]">VIP club</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Engaging challenges</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1262,11 +1034,7 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Few traditional promotions</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No free spin offers for slots</div>
+                                            <div className="w-[230px]">No welcome bonus</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1296,7 +1064,7 @@ const BCGameReview = () => {
                                             Look & Feel
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Easy navigation and a modern look
+                                            It's duck hunt season!
                                         </div>
                                     </div>
                                 </div>
@@ -1322,40 +1090,128 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BC.Game is a modern website with the sleek and smooth template we've come to associate with crypto casinos. It's not an original look, but, in our opinion, it's still attractive.
+                                        Bugs Bunny would be glad: it's always duck hunt season at DuckDice!
                                     </div>
                                     <div>
-                                        The bluish-grey and green color scheme that feels familiar, while the mascot is cute and friendly. Game thumbnails have a simple, yet visually pleasing style. The tone of voice is fun, too.
+                                        This unusual dice casino is full of the feathered fowl: you can find ducks on its logo, promotional banners, player's chat, and even on some of the brand's Bitcoin-paying mini games.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        DuckDice Casino Test
                                     </div>
                                     <div>
-                                        Here are some of the best UX features BC.Game has to offfer:
+                                        As you can see from our banter, we are fans of DuckDice's theme. We believe it gives the brand some character, and a very unique feel.
+                                    </div>
+                                    <div className="font-bold">
+                                        But what did we like so much about it?
+                                    </div>
+                                    <div>
+                                        To put it bluntly: that they weren't lazy about the casino
+                                    </div>
+                                    <div>
+                                        DuckDice could have been a very bland Bitcoin casino - after all, there is one game here, dice - but its many mini games and interactive promotions spice things up, and set it apart from the competition. Competitors like Primedice are a fine choice if you just want a simple dice game, but DuckDice is a better choice if you're looking for something a bit more entertaining.
+                                    </div>
+                                    <div>
+                                        Some of our favorite features that stood out during the UX test were:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            <span className="font-bold">Vibrant players' chat</span> on the right-hand side of the screen (participation is entirely optional, but it can be rewarding).
+                                            <span className="font-bold">Speed and responsiveness</span> - we don't want to get old as we wait for a page to load; DuckDice was smooth and fast-loading throughout the test.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            <span className="font-bold">Winners' feed and bet backlog</span> on the homepage for total transparency (you can hide your username for privacy).
+                                            <span className="font-bold">Smooth graphics</span> that prioritize functionality, but don't compromise on looks.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            <span className="font-bold">Fuss-free social media signup</span> with optional safety features available (more on that below).
+                                            <span className="font-bold">Easy navigation</span> - we were never lost on the website, access to different features was straightforward and user-friendly.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            <span className="font-bold">BTC prize always visible</span> - you can always see the current BTC exchange rate, which is super handy for an online casino.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            <span className="font-bold">No hidden promos</span> - we don't like it when casinos "hide" promotions in obscure corners of the site; DuckDice has everything out in the open.
                                         </div>
                                     </div>
                                     <div>
-                                        In our experience, navigation was intuitive and hassle-free, both on the browser version and BC.Game's mobile app.
+                                        The deposit page stood out during the DuckDice casino test, too:
                                     </div>
                                     <div>
-                                        There are, however, a few grammar mistakes and untranslated areas (in some languages) that could negatively influence your gameplay. This is an area where we'd like to see the brand improve.
+                                        <img
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg1}
+                                            alt="reviewImg">
+                                        </img>
                                     </div>
                                     <div>
-                                        Additionally, we did experience slow loading times on more demanding games, namely Saviour Sword, but we were browsing with a VPN, which can reduce loading speed.
+                                        The deposit window is easy to navigate and offers plenty of options. We liked that DuckDice doesn't add extra steps for finding the Bitcoin wallet address.
+                                    </div>
+                                    <div>
+                                        Notice how the customer support button is also easy to access.
+                                    </div>
+                                    <div>
+                                        Finally, our DuckDice mobile test was also very impressive:
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        DuckDice's Mobile Experience
+                                    </div>
+                                    <div>
+                                        At the moment, there is no mobile app at DuckDice. The website, however, is fully optimized for smartphones.
+                                    </div>
+                                    <div>
+                                        We tested DuckDice's loading speed on different handheld devices, and found that the website loaded fast and smoothly even on older, more outdated versions of both iOS and Android systems.
+                                    </div>
+                                    <div>
+                                        Our only complaint was the integration of the chat system, which, on mobile takes up the whole screen, forcing you to choose between placing a bet, or being active on the chat: you simply can't do both at the same time. This, of course, means you might miss out on the duck hunt mini game if you're on your phone.
+                                    </div>
+                                    <div className="text-xl font-bold mt-5">
+                                        DuckDice's Social Features
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="w-[320px] xl:w-[500px]"
+                                            src={reviewImg2}
+                                            alt="reviewImg">
+                                        </img>
+                                    </div>
+                                    <div>
+                                        The DuckDice forum is a great place to learn about updates, meet the community, and have fun!
+                                    </div>
+                                    <div>
+                                        Like many other Bitcoin casinos, DuckDice is a highly social brand, where interaction with other players is encouraged. You can:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            Talk to other players on the player's chat. You can sometimes find interesting betting tips there!
+                                            <br/>
+                                            Check the latest winners on the live feed at the bottom of the page.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            Stay in the loop by participating in the player's forum.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            Compete with other players on the tic-tac-toe game that lets you claim your faucets.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        Of course, you can also choose to opt out entirely of DuckDice's more social sides if you value your privacy. For instance, you can choose not to display your bets or wins on the winner's feed, and hide that you're online.
                                     </div>
                                     <div className="w-[350px] xl:w-[600px] flex justify-center">
                                         <Swiper
@@ -1395,6 +1251,15 @@ const BCGameReview = () => {
                                                     </img>
                                                 </div>
                                             </SwiperSlide>
+                                            <SwiperSlide>
+                                                <div className="flex justify-center items-center w-full px-16 py-10">
+                                                    <img
+                                                        className=""
+                                                        src={reviewImg6}
+                                                        alt="reviewImg">
+                                                    </img>
+                                                </div>
+                                            </SwiperSlide>
                                             <div className="Swiper-prev">
                                                 <Fab className="bg-[#272822] text-white" aria-label="prev" color="default" size="small">
                                                     <NavigateBefore />
@@ -1418,15 +1283,19 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Social features</div>
+                                            <div className="w-[230px]">Highly thematic website</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Mobile app</div>
+                                            <div className="w-[230px]">Very interactive</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Intuitive navigation</div>
+                                            <div className="w-[230px]">Engaging social features</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
+                                            <div className="w-[230px]">Smooth performance on all devices</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1435,7 +1304,7 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Occasional language issues</div>
+                                            <div className="w-[230px]">No mobile app</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1446,7 +1315,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open DuckDice
                                         </Button>
                                     </div>
                                 </div>
@@ -1465,7 +1334,7 @@ const BCGameReview = () => {
                                             Game Selection
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Popular games, live tables, and 100% provably fair originals
+                                            Sometimes you just have to roll a hard six!
                                         </div>
                                     </div>
                                 </div>
@@ -1491,97 +1360,10 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        We can't have a full BC.Game review without looking at the games, right? Well, we're happy to report that the <span className="font-bold">game portfolio is full of exciting opportunities.</span>
+                                        While promotions come in many different flavors at DuckDice, its games do not.
                                     </div>
                                     <div>
-                                        From provably fair originals to big-name slots and live games, this online casino has it all. Let's break down the main game types:
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        BC Originals
-                                    </div>
-                                    <div>
-                                        <img
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg6}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        BC.Game has a selection of provably fair originals, including their popular roulette game.
-                                    </div>
-                                    <div>
-                                        BC.Game's original games are exclusively provably fair, and include a solid selection of about 20 internally-developed games, including all the crowd-pleasing casino classics:
-                                    </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Slots
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Baccarat
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Dice
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Keno
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Crash
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Roulette
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Blackjack
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Plinko
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Poker
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Hi-Lo
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Wheel of Fortune
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Mainstream Providers
+                                        The name says it all: the only actual casino game available here is a simple, no-frills dice game.
                                     </div>
                                     <div>
                                         <img
@@ -1591,182 +1373,55 @@ const BCGameReview = () => {
                                         </img>
                                     </div>
                                     <div>
-                                        The Madame Destiny slot by Pragmatic Play offers a truly enchanting experience.
+                                        DuckDice's simple dice game is straightforward, but still super entertaining!
                                     </div>
                                     <div>
-                                        BC.Game also offers a selection of games by <span className="font-bold">popular providers like Pragmatic Play and Yggdrasil.</span>
+                                        While features like the lottery, the tic-tac-toe faucet mini game, and the Sniper Race (a competition where you can win modest prizes playing against other users) are interactive, they are not casino games in the traditional sense.
                                     </div>
                                     <div>
-                                        While their portfolio is growing exponentially, it's still nowhere as big as brands like Stake, which offer a larger variety of mainstream games alongside their provably fair titles.
+                                        This is, of course, a huge drawback if you're looking for something a bit more versatile. If that's the case, we recommend you look at other brands with provably fair games, such as <a href="https://stake.com/" target="_blank" rel="noreferrer" className="text-blue-600">Stake</a> or even <a href="https://roobet.com/" target="_blank" rel="noreferrer" className="text-blue-600">Roobet</a>.
                                     </div>
                                     <div>
-                                        That said, BC.Game is still a newish casino, and while <span className="font-bold">we think they can improve their</span> offering, they've already come a long way.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Live Casino Games at BC.Game
+                                        However, as you may have noticed by now, our DuckDice review rates its Game Selection with a humble but passing grade. Why? Because a casino doesn't have to offer many games to be a good choice, as long as the games it does offer are good enough.
                                     </div>
                                     <div>
-                                        <img
-                                            className="w-[320px] xl:w-[500px]"
-                                            src={reviewImg8}
-                                            alt="reviewImg">
-                                        </img>
-                                    </div>
-                                    <div>
-                                        BC.Game boasts a stellar selection of live games, including your favorites from big-name providers.
-                                    </div>
-                                    <div>
-                                        Who doesn't love a live game? <span className="font-bold">Hosted by live dealers</span> and featuring a range of exciting awards, they get you closer to an in-person experience than ever.
-                                    </div>
-                                    <div>
-                                        BC.Game is continuously improving their live casino games offer. The current selection includes:
+                                        Here's why:
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            Traditional <span className="font-bold">blackjack and roulette tables</span> with real dealers
+                                            The game is 100% provably fair.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            The infamous live casino <span className="font-bold">game shows</span> from Evolution Gaming
+                                            You can choose between auto, manual, and (for more seasoned players) the fast flash mode, depending on your preference.
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            Classic <span className="font-bold">tables with a twist.</span> like Lightning Roulette
+                                            The game is uncomplicated and easy to understand yet flexible enough to suit every playstyle (and every wallet).
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-x-2">
                                         <CheckOutlinedIcon style={{ color: "green" }} />
                                         <div>
-                                            Casino <span className="font-bold">poker tables</span>, baccarat, dice, and much more!
+                                            It offers a "demo" mode, which you can use to try the game and put new strategies to the test.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            It has a simple animation that you can opt-out from if you'd like a more simplistic playing experience.
                                         </div>
                                     </div>
                                     <div>
-                                        In total, there are more than <span className="font-bold">100 different crypto-friendly live tables</span> where you can put your skills to the test!
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        House Edge at BC.Game Originals
+                                        As we mentioned when we had a look at DuckDice's bonus, it's, in many ways, similar to Primedice. Both brands even have the same 1% house edge!
                                     </div>
                                     <div>
-                                        Arguably one of the biggest perks we noticed during our BC.Game review - the <span className="font-bold">high RTP and low house edge.</span>
-                                    </div>
-                                    <div>
-                                        Let's look at the numbers for some of BC's most popular games:
-                                    </div>
-                                    <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
-                                        <div className="flex flex-row text-center bg-violet-800 rounded-t-xl py-3">
-                                            <div className="w-1/3 text-white">
-                                                Game Type
-                                            </div>
-                                            <div className="w-1/3 text-white">
-                                                RTP
-                                            </div>
-                                            <div className="w-1/3 text-white">
-                                                House Edge
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Blackjack
-                                            </div>
-                                            <div className="w-1/3">
-                                                99.52%
-                                            </div>
-                                            <div className="w-1/3">
-                                                0.48%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center py-3">
-                                            <div className="w-1/3">
-                                                Crash
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Dice
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center py-3">
-                                            <div className="w-1/3">
-                                                Keno and Plinko
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Others
-                                            </div>
-                                            <div className="w-1/3">
-                                                99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center py-3">
-                                            <div className="w-1/3">
-                                                Roulette
-                                            </div>
-                                            <div className="w-1/3">
-                                                97.3%
-                                            </div>
-                                            <div className="w-1/3">
-                                                2.7%
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row text-center bg-gray-300 py-3">
-                                            <div className="w-1/3">
-                                                Slots
-                                            </div>
-                                            <div className="w-1/3">
-                                                97.51-99%
-                                            </div>
-                                            <div className="w-1/3">
-                                                1-2.49%
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        BC.Game offers more value for money than most competitors, with <span className="font-bold">an extremely low 1% house edge</span> (sometimes even lower!) on most of its original games, including popular games like Crash.
-                                    </div>
-                                    <div>
-                                        This is translated into high Return-to-Player percentages, giving you more bang for your buck in the long run.
-                                    </div>
-                                    <div>
-                                        Do note that games from <span className="font-bold">mainstream providers will still have their regular payouts</span> since those are outside of BC.Games' hands.
-                                    </div>
-                                    <div className="text-xl font-bold mt-5">
-                                        Do BC.Game Strategies Work?
-                                    </div>
-                                    <div>
-                                        Any seasoned casino player will tell you that there is <span className="font-bold">no such thing as a guaranteed win.</span>
-                                    </div>
-                                    <div>
-                                        However, this doesn't stop people from trying to develop strategies that they think will give them an edge. These might give you the illusion of better odds. Ultimately, <span className="font-bold">the house always has an advantage</span>, and even the best players can have losing streaks.
-                                    </div>
-                                    <div>
-                                        So, instead of focusing on betting strategies, <span className="font-bold">aim to optimize your bankroll management.</span> This will help you keep your losses to a minimum, and improve your winnings over the long term.
+                                        In our opinion, neither option is necessarily any better or worse, although Primedice's advanced mode may be more suited for advanced players looking to play around with different automation rules.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1779,23 +1434,28 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Very low house edge</div>
+                                            <div className="w-[230px]">100% provably fair</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Provably fair games</div>
+                                            <div className="w-[230px]">Customizable bets</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">100+ live tables</div>
+                                            <div className="w-[230px]">Demo mode</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Attractive original games</div>
+                                            <div className="w-[230px]">1% house edge</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-y-3 px-5">
+                                        <div className="font-bold text-red-900">
+                                            CONS
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Plenty of known providers</div>
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Dice-only casino</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1806,7 +1466,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open DuckDice
                                         </Button>
                                     </div>
                                 </div>
@@ -1825,7 +1485,7 @@ const BCGameReview = () => {
                                             Licensing & Safety
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Newly-acquired Curaçao license
+                                            Come for the games, stay for the security!
                                         </div>
                                     </div>
                                 </div>
@@ -1851,78 +1511,60 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        <span className="font-bold">Is BC.Game a legit site?</span> Yes, they are. BC.Game is a legal crypto gambling site that holds a license and offers multiple security features.
+                                        DuckDice is a regulated blockchain casino, with a <a href="https://validator.antillephone.com/validate?domain=duckdice.io&seal_id=c4c3f6d8cecec0446f819d5221c4162f5cdfc33d82d2cf5b626fd2cfcd0d0549f932655c3668c898f80f0dd7246fbaa9&stamp=ec35be7ac3cf7e4ae060594e71979e41" target="_blank" rel="noreferrer" className="text-blue-600">gambling license</a> from Curaçao.
                                     </div>
                                     <div>
-                                        In previous editions of this casino review, licensing was our biggest issue. For the a long time, BC used to be unlicensed - and that didn't particularly win our trust. But hurrah, the situation has changed!
+                                        Unlike other Bitcoin casinos with a similar license, however, DuckDice is fully committed to protecting your privacy, and it offers a completely anonymous online gambling experience.
                                     </div>
                                     <div>
-                                        <a href="https://gateway.pinata.cloud/ipfs/QmZbpAZ4c9izhEYKmJ4gqkx2Kq4fs88h3hGF1kcMXPHWRg/license.jpg" target="_blank" rel="noreferrer" className="font-bold text-blue-600">BC.Game now has a gambling license from Curaçao</a>, which definitely boosts our confidence (and gives players peace of mind).
+                                        What's more, it has a seal of approval from the Crypto Gambling Foundation, an organization that recognizes the best provably fair blockchain casinos.
                                     </div>
                                     <div>
-                                        But, it's not just about the license. Here are some of the additional safety features that caught our attention:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Players can secure their account with <span className="font-bold">2-factor authentication.</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            The casino holds a <a className="text-blue-600" href="https://cryptogambling.org/" target="_blank" rel="noreferrer" >Crypto Gambling Foundation seal of approval.</a>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            iTech Labs has evaluated BC.Game casino's RNG and <a className="text-blue-600" href="https://itechlabs.com/certificates/BCGame/RNG_Certificate_UK_BCGame_ITL2002455_12Oct20.pdf" target="_blank" rel="noreferrer">verified its randomness.</a>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            The casino has easy access to <a className="text-blue-600" href="https://www.begambleaware.org/" target="_blank" rel="noreferrer">BeGambleAware</a>, a foundation that promotes safe and responsible gambling.
-                                        </div>
+                                        And yes, of course, this does mean that DuckDice is 100% provably fair!
                                     </div>
                                     <div>
-                                        Another common question we get is:
-                                    </div>
-                                    <div className="font-bold">
-                                        Is BC.Game fair?
-                                    </div>
-                                    <div>
-                                        The answer is yes.
-                                    </div>
-                                    <div>
-                                        In fact, BC.Game excels in provable fairness, which means the algorithm cannot be rigged. Provably fair games are random by design and the casino couldn't manipulate the outcome even if they tried.
-                                    </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="text-white font-bold text-2xl">
-                                            All BC.Game originals are provably fair - check the results yourself at any time!
-                                        </div>
-                                    </div>
-                                    <div>
-                                        BC.Game is licensed, provably fair, and boasts multiple security features. <span className="font-bold">But what about our playtest?</span>
-                                    </div>
-                                    <div>
-                                        We personally and anonymously test all casinos that we review. There is no replacement for first-hand experience - and, we're glad to report <span className="font-bold">it was all smooth sailing</span> with BC.Game. Throughout the entire experience, we didn't find any issues. No problems with the games, none with bonuses, withdrawals were a piece of cake, too.
-                                    </div>
-                                    <div>
-                                        So, all things considered, we think <span className="font-bold">BC.Game is a trusted, secure brand</span>.
+                                        If you'd like an extra layer of security, we recommend that you set up 2-factor authentication, which is an extra layer of security that is also offered at DuckDice.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Do They Run KYC Checks?
+                                        Where Is DuckDice Available?
                                     </div>
                                     <div>
-                                        A Know-Your-Consumer check is when a company verifies that you are who you say you are. This is usually done by matching your name and address to a government-issued ID.
-                                    </div>
-                                    <div className="font-bold">
-                                        BC.Game doesn't run KYC on registration. Instead, they might ask you for ID if you want to make a withdrawal.
+                                        At the moment, DuckDice's terms and conditions restrict players from a selected group of countries, including the Netherlands and the United States.
                                     </div>
                                     <div>
-                                        In our experience, this happens for larger cash-outs, but random checks are still possible. So if you're looking for an anonymous casino, this is a good option. Just be aware that if you do win big, you might have to verify your identity before you can cash out.
+                                        While we can't be everywhere, we put our VPN to good use and tried to access the casino from the following countries:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                United States
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Canada
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                United Kingdom
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Australia
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        In all cases, our test was successful, and we managed to play, deposit and withdrawal from all locations without experiencing any issues, including the United States.
+                                    </div>
+                                    <div>
+                                        Do note, however, that we don't recommend you use a VPN to play from a restricted region, nor if online gambling is against the law in your country or state of residence.
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -1935,19 +1577,15 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">2-factor authentication</div>
+                                            <div className="w-[230px]">100% anonymous</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Crypto Gambling Foundation seal</div>
+                                            <div className="w-[230px]">Curaçao licensed</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">RNG tested and verified</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Gambling license</div>
+                                            <div className="w-[230px]">Crypto gambling foundation seal</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -1956,7 +1594,7 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No established reputation</div>
+                                            <div className="w-[230px]">Some restricted countries</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -1967,7 +1605,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open DuckDice
                                         </Button>
                                     </div>
                                 </div>
@@ -1986,7 +1624,7 @@ const BCGameReview = () => {
                                             Payment Options
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Crypto-only. Stellar coin availability, though.
+                                            Crypto only - but plenty of choice!
                                         </div>
                                     </div>
                                 </div>
@@ -2012,58 +1650,16 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BC.Game is a <span className="font-bold">crypto-exclusive casino where you cannot play with fiat money.</span>
+                                        If you're looking for a website that supports fiat payments, you've come to the wrong place: at DuckDice, you can only play using cryptocurrencies.
                                     </div>
                                     <div>
-                                        Instead, you have a comprehensive number of cryptocurrencies available, ranging from established coins like Bitcoin to the most obscure altcoins.
-                                    </div>
-                                    <div>
-                                        The list of available tokens is too lengthy to include here in full, but last time we counted it included <span className="font-bold">66 different coins.</span>
-                                    </div>
-                                    <div>
-                                        Here are just a few of the most common cryptocurrencies that are supported at BC.Game casino:
+                                        The amount of coins on offer, however, is plentiful. At the time of writing, the following coins were supported:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                Ethereum
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
                                                 Bitcoin
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Bitcoin Cash
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Binance
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Litecoin
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Dogecoin
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Tether
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
@@ -2075,145 +1671,157 @@ const BCGameReview = () => {
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
-                                                Cardano SHIB
+                                                Doge
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Ethereum
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Litecoin
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Bitcoin Cash
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Tether
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Dash
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                And more!
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        The casino also has its own currency, <span className="font-bold">BC Dollars (BCD)</span>, which works as a stablecoin on the site.
+                                        As you can see from the variety of coins listed above, DuckDice does go above and beyond most of its direct competitors.
                                     </div>
-                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
-                                        <div className="text-white font-bold text-2xl">
-                                            BCD is tied to the value of Tether:
-                                            <br />
-                                            BCD = 1 USDT = 1 USD.
+                                    <div>
+                                        You can also exchange your coins for your native currency directly on the website. Do note that while the brand claims that they offer "the best exchange rates", that's often not the case. It's a handy feature to have, and we even listed it as a pro, but you're basically paying for convenience!
+                                    </div>
+                                    <div>
+                                        DuckDice also supports fiat money withdrawals in the following currencies:
+                                    </div>
+                                    <div className="flex flex-wrap gap-3">
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Ukrainian Hryvnia (UAH)
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Russian Rubles (RUB)
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                American Dollars (USD)
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                Euro (EUR)
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
-                                        This makes it particularly handy when you're cashing out - with BCD you can take your profits and not risk them to volatility.
-                                    </div>
-                                    <div>
-                                        But, BC.Game is also one of the most prominent stablecoin casinos, offering Tether, USDC, Dai, and more.
-                                    </div>
-                                    <div>
-                                        BC.Game is compatible with a range of Bitcoin wallets and other crypto safeguarding services. It comes with its own exchange, which allows you to convert from one coin to another directly on the platform. Do note that, just like any exchange, there is a fee to cover the transaction costs.
-                                    </div>
-                                    <div>
-                                        And, recently, they also became one of the first crypto casinos to offer NFTs:
+                                        Do note that DuckDice charges a "dormancy fee" for older, inactive accounts: if you don't log in for more than 6 months, the casino will start deducting small amounts of cryptocurrency from your outstanding balance. If you know that you won't be active for a long time, do remember to withdraw any money you may still have on your account.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        BC.Game Allows You to Deposit NFTs
+                                        Payment Speed And Safety
                                     </div>
                                     <div>
-                                        That's right - the NFT craze is clearly here to stay. You can now deposit using one of these NFT collectibles:
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            BAYC
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Degenpass
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            CryptoPunks
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            CloneX
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Azuki
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Doodles
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            Mfers
-                                        </div>
-                                    </div><div className="flex flex-row gap-x-2">
-                                        <CheckOutlinedIcon style={{ color: "green" }} />
-                                        <div>
-                                            MekaVerse
-                                        </div>
+                                        DuckDice claims that withdrawals may take up to 48 hours to be processed, especially in cases of a security check. We experienced no delays when trying to withdraw our cryptocurrency winnings.
                                     </div>
                                     <div>
-                                        <a href="https://degenverse.com/" target="_blank" rel="noreferrer" className="text-blue-600">Degenpass</a> is particularly noteworthy as it's a <span className="font-bold">virtual entry pass to the Degenverse ecosystem</span> and a range of eligible casinos.
+                                        Fiat withdrawals are a different matter: they can take several days to you, depending on your choice of payment provider. For that reason (and to avoid exchange fees), we suggest you withdraw directly in your coin of choice.
                                     </div>
                                     <div>
-                                        As <a href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" rel="noreferrer" className="text-blue-600">Metaverse gambling</a> grows in importance and popularity, so will NFTs. By offering the Degenpass, BC.Game is already one step ahead of the competition and proving they're at the edge of innovation when it comes to the online gambling industry.
+                                        As for deposits, you can expect a 5-10 minute waiting time, depending on the speed of the blockchain network.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
-                                        Deposit and Withdrawal Times and Fees
+                                        Deposits and Withdrawal Fees At DuckDice
                                     </div>
                                     <div>
-                                        How much until your money gets to and from the casino? We tested it and here's what we found:
+                                        While DuckDice does not require you to pay any fees to the casino itself on withdrawals, you may have to pay a transaction fee to cover the cost of the blockchain transaction, which is a standard procedure at blockchain casinos.
+                                    </div>
+                                    <div>
+                                        The brand does offer you some flexibility when it comes to these fees: you can either pay a higher fee for a speedier transaction, or choose to wait and pay a much smaller fee.
+                                    </div>
+                                    <div>
+                                        There are also minimum withdrawal limit, which varies per cryptocurrency. Here's what it looks like for the major cryptos:
                                     </div>
                                     <div className="flex flex-col min-w-[320px] xl:min-w-[500px] border rounded-xl">
                                         <div className="flex flex-row justify-between bg-gray-300 px-3 py-3 rounded-t-xl">
                                             <div className="w-1/2">
-                                                Casino Fees
+                                                
                                             </div>
                                             <div className="w-1/2">
-                                                None
+                                                Minimum Withdrawal
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-between px-3 py-3">
                                             <div className="w-1/2">
-                                                Transaction Fees
+                                                Bitcoin
                                             </div>
                                             <div className="w-1/2">
-                                                Depends on the currency
+                                                0.00046168 BTC
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
                                             <div className="w-1/2">
-                                                Average Withdrawal Time
+                                                Ethereum
                                             </div>
                                             <div className="w-1/2">
-                                                10 minutes
+                                                0.00613186 ETH
                                             </div>
                                         </div>
                                         <div className="flex flex-row justify-between px-3 py-3">
                                             <div className="w-1/2">
-                                                Maximum Withdrawal Time
+                                                Dogecoin
                                             </div>
                                             <div className="w-1/2">
-                                                6 hours
+                                                137.60486626 DOGE
                                             </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        Withdrawals are subject to a transaction fee, which varies per currency.
-                                    </div>
-                                    <div>
-                                        Bitcoin transactions, for instance, have a 0.0006 BTC cost. However, this isn't a casino fee (BC.Game doesn't charge you for sending the money). Instead, it's a standard <span className="font-bold">reward for blockchain participants who verify the transaction</span> - that's why it varies depending on how busy the network is.
-                                    </div>
-                                    <div>
-                                        Although they're not instant, <span className="font-bold">BC.Game transactions are quick</span> - for us, they only took around 10 minutes, but the maximum time is six hours. On exceptional occasions, transaction times may be longer (due to congestion on the Bitcoin network, for instance), but we never experienced that.
-                                    </div>
-                                    <div>
-                                        If you're mindful of your privacy, one very positive aspect is that the casino <span className="font-bold">does not require an invasive Know Your Customer verification check.</span> They can still ask you to confirm your identity, though, especially for larger cash-outs.
-                                    </div>
-                                    <div>
-                                        We always stress the importance of only sharing truthful information - this is because lying to the casino could lead to trouble at withdrawal or even blocked transactions.
+                                        <div className="flex flex-row justify-between bg-gray-300 px-3 py-3">
+                                            <div className="w-1/2">
+                                                Litecoin
+                                            </div>
+                                            <div className="w-1/2">
+                                                0.17768 LTC
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-row justify-between px-3 py-3">
+                                            <div className="w-1/2">
+                                                Tether
+                                            </div>
+                                            <div className="w-1/2">
+                                                19.99351078 USDT
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -2226,23 +1834,15 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Large variety of cryptos (66+)</div>
+                                            <div className="w-[230px]">Large variety of coins available</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Cryptocurrency exchange</div>
+                                            <div className="w-[230px]">On-site currency exchange</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Fast and easy transactions</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">No invasive KYC</div>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-start">
-                                            <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">In-house stablecoin</div>
+                                            <div className="w-[230px]">Flexible fees for speedier withdrawals</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -2251,7 +1851,15 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">No fiat payments</div>
+                                            <div className="w-[230px]">No fiat money</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Blockchain transaction fees</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Fee for dormant accounts</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -2262,7 +1870,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open DuckDice
                                         </Button>
                                     </div>
                                 </div>
@@ -2281,7 +1889,7 @@ const BCGameReview = () => {
                                             Customer Support
                                         </div>
                                         <div className="text-sm text-gray-500">
-                                            Social casino with a very friendly team
+                                            Speedy
                                         </div>
                                     </div>
                                 </div>
@@ -2307,62 +1915,54 @@ const BCGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        BC.Game is a multilingual website that is available in sixteen different languages. So, whether you speak English, Mandarin, or French, you can rest assured the casino does speak your language, and so does the player chat.
+                                        DuckDice has perhaps one of the best onboarding journeys to its website, with a new-player tutorial and a demo version that allows you to play test the dice game even before you open an account.
                                     </div>
                                     <div>
-                                        However, the help center and support team are only available in English.
+                                        If you come across any issues, you can also contact the website's customer support team, which is available via:
                                     </div>
-                                    <div>
-                                        You can reach out to BC.Game in multiple ways, though:
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            Live chat (in English and Russian only)
+                                        </div>
                                     </div>
-                                    <div className="flex flex-wrap gap-3">
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Live Chat
-                                            </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            Email
                                         </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                FAQ
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Telegram
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Email
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                Skype
-                                            </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            Website form (more languages supported)
                                         </div>
                                     </div>
                                     <div>
-                                        When we contacted the team, we were pleasantly surprised by the speedy response. It only took a few seconds to get a personal response in the live chat. Agents provided comprehensive and helpful information and we couldn't be happier about the ease of access.
+                                        Do note that, unlike most other blockchain casino brands, the live chat support is not available round the clock, although you can always use the other support channels at your disposal.
                                     </div>
                                     <div>
-                                        BC.Game casino also has a strong <span className="font-bold">social media presence</span> through the following platforms:
+                                        We're happy to report, however, that they have been improving in that domain. The live support isn't quite 24/7 yet, but it's pretty close and response times have improved over time.
+                                    </div>
+                                    <div>
+                                        If you need a quick fix, the live chat support is an excellent option. In our experience, however, more complex issues are better handled via email.
+                                    </div>
+                                    <div>
+                                        Additionally, DuckDice also has a comprehensive FAQ and help centre, where you can find guidance on some of the most common issues players experience on the website.
+                                    </div>
+                                    <div>
+                                        DuckDice is a very social brand, which is also active on the following platforms:
                                     </div>
                                     <div className="flex flex-wrap gap-3">
                                         <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 <a
-                                                    href="https://github.com/bc-game-project/bcgame-crash"
+                                                    href="https://bitcointalk.org/index.php?topic=1676313"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
-                                                    GitHub
+                                                    Bitcointalk
                                                 </a>
                                             </div>
                                         </div>
@@ -2370,19 +1970,7 @@ const BCGameReview = () => {
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 <a
-                                                    href="https://medium.com/@BC.Game"
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                >
-                                                    Medium
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
-                                            <CheckOutlinedIcon style={{ color: "green" }} />
-                                            <div>
-                                                <a
-                                                    href="https://twitter.com/BCGameOfficial"
+                                                    href="https://twitter.com/duckdiceio"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
@@ -2394,7 +1982,7 @@ const BCGameReview = () => {
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 <a
-                                                    href="https://www.facebook.com/bcgamewin"
+                                                    href="https://www.facebook.com/duckdiceio/"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
@@ -2406,11 +1994,11 @@ const BCGameReview = () => {
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 <a
-                                                    href="https://discord.com/invite/mQh3M6UDkR"
+                                                    href="https://www.youtube.com/channel/UCnzvjGe-8DYzZO_AWdHOo3A"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
-                                                    Discord
+                                                    Youtube
                                                 </a>
                                             </div>
                                         </div>
@@ -2418,14 +2006,76 @@ const BCGameReview = () => {
                                             <CheckOutlinedIcon style={{ color: "green" }} />
                                             <div>
                                                 <a
-                                                    href="https://bitcointalk.org/index.php?topic=5088875.0"
+                                                    href="https://t.me/DuckDice_Official"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
-                                                    BitcoinTalk
+                                                    Telegram
                                                 </a>
                                             </div>
                                         </div>
+                                        <div className="flex flex-row justify-center items-center gap-x-2 rounded-full bg-green-200 pl-2 pr-3">
+                                            <CheckOutlinedIcon style={{ color: "green" }} />
+                                            <div>
+                                                <a
+                                                    href="https://discord.com/invite/3RjXcAj"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Discord
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        That said, we have to acknowledge some of their controversies over time. There is a <a href="https://bitcointalk.org/index.php?topic=5384155.msg59194578#msg59194578" target="_blank" rel="noreferrer" className="text-blue-600">Bitcointalk reputation thread</a> that details the issues, but essentially they've been:
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            <span className="font-bold">Mishandling a situation</span> where a player had made profit by playing through the deposit bonus but then (for some reason) cancelled the bonus; DuckDice initially didn't refund the original balance, although eventually they fixed it
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            <span className="font-bold">Multi-account bans</span> - a user had been accused of using DuckDice to promote child pornography; DuckDice banned him on all associated accounts without proper investigation (given how serious the accusations were, this didn't go over too well.)
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            <span className="font-bold">Withdrawal reviews</span>- some people have had their withdrawals flagged by the system and slowed down, triggering scam accusations.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-x-2">
+                                        <CheckOutlinedIcon style={{ color: "green" }} />
+                                        <div>
+                                            <span className="font-bold">Accidentaly won 3+ BTC? You can't have it.</span> - DuckDice had an issue with the rain bot and 10 users received 3.11 BTC. Because this had been a bug, the casino took the money back. This is perfectly fine per the ToC, but it's still no fun to those who got the money.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        There have been a few more situations where people accused DuckDice of mishandling their case. But here's the thing:
+                                    </div>
+                                    <div className="divHasTempBG2 flex flex-col p-10 rounded-xl w-80 xl:w-[450px]">
+                                        <div className="text-white font-bold text-2xl">
+                                            As much as we love Bitcointalk, take these reviews with a grain of salt.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        All reviews (including ours) are subjective by design. The people who won and lost 3.11 BTC? It can't have been nice, but it's not actually a scam.
+                                    </div>
+                                    <div>
+                                        Does this mean we distrust all Bitcointalk users? Not at all!
+                                    </div>
+                                    <div>
+                                        We thoroughly respect the community out there and their commitment to supporting quality casinos. In the case of DuckDice, they seem to have followed procedure but responded standoffishly at first - which brought a lot of hate their way.
+                                    </div>
+                                    <div>
+                                        What is our takeaway from the situation? We don't think DuckDice is a scam, but we're not fans of how they've handled the issues, either.
+                                    </div>
+                                    <div>
+                                        The good news? They seem to have learned - now their customer support is better, the team's responsiveness has grown, and they're even more active on socials. Win-win in our book!
                                     </div>
                                 </div>
                                 <div className="flex flex-col min-w-[300px] border rounded-xl gap-y-5">
@@ -2438,19 +2088,19 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">24/7 live chat</div>
+                                            <div className="w-[230px]">Dice tutorial</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Friendly support team</div>
+                                            <div className="w-[230px]">Helpful FAQ</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Skype and Telegram support</div>
+                                            <div className="w-[230px]">Many social support platforms</div>
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-green-300 w-[20px] h-[20px] rounded-full text-green-900 flex justify-center items-center mt-0.5">+</div>
-                                            <div className="w-[230px]">Social media presence</div>
+                                            <div className="w-[230px]">Live chat</div>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-y-3 px-5">
@@ -2459,7 +2109,11 @@ const BCGameReview = () => {
                                         </div>
                                         <div className="flex flex-row justify-between items-start">
                                             <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
-                                            <div className="w-[230px]">Support only in English</div>
+                                            <div className="w-[230px]">Support channels only in English and Russian</div>
+                                        </div>
+                                        <div className="flex flex-row justify-between items-start">
+                                            <div className="bg-red-300 w-[20px] h-[20px] rounded-full text-red-900 flex justify-center items-center mt-0.5">-</div>
+                                            <div className="w-[230px]">Live chat not available 24/7</div>
                                         </div>
                                     </div>
                                     <div className="flex justify-center py-5">
@@ -2470,7 +2124,7 @@ const BCGameReview = () => {
                                             href={"https://" + siteData.link}
                                             target="_BLANK"
                                         >
-                                            Open BC.Game Casino
+                                            Open DuckDice
                                         </Button>
                                     </div>
                                 </div>
@@ -2488,7 +2142,7 @@ const BCGameReview = () => {
                                         F.A.Q.
                                     </div>
                                     <div className="text-sm text-gray-500">
-                                        All you need to know about BC.Game
+                                        Have any questions?
                                     </div>
                                 </div>
                             </div>
@@ -2497,11 +2151,11 @@ const BCGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ1(!openFAQ1) }}
                                 >
-                                    1. Is BC casino legit?
+                                    1. Is DuckDice legit?
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
+                                        Although DuckDice does not hold a gambling license, it is provably fair, which allows you to verify the fairness of its games yourself. What's more, it offers instant payments. From our experience, it's a trustworthy casino that lets you play completely anonymously.
                                     </div>
                                 }
                             </div>
@@ -2510,11 +2164,17 @@ const BCGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ2(!openFAQ2) }}
                                 >
-                                    2. What currencies can I use at BC.Game?
+                                    2. How do I play on DuckDice?
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> supports a wide range of cryptocurrencies, including Bitcoin, Ethereum, Dogecoin, Ripple, Tether, and more. Unfortunately, you cannot play with fiat money at this casino.
+                                        DuckDice offers a simple but fun dice game that you can play simply by pressing a button. Before you can play, you just have to:
+                                        <br/>
+                                        1. Open an account (you can do so with your Google email!)
+                                        <br/>
+                                        2. Make a cryptocurrency deposit or use the faucet feature
+                                        <br/>
+                                        3. Choose your bet and roll the dice!
                                     </div>
                                 }
                             </div>
@@ -2523,11 +2183,11 @@ const BCGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ3(!openFAQ3) }}
                                 >
-                                    3. Does BC.Game offer a deposit welcome bonus?
+                                    3. Is DuckDice provably fair?
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        Yes, there is a traditional deposit bonus at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> on a regular basis, you can spin a wheel every day and win a random prize, including up to 5 BTC. The best part? You can do that right after sign up, even before your first deposit. There are also limited offers from time to time, where you can indeed unlock a deposit bonus paid in BCD (the casino's own token).
+                                        Yes! The dice game at DuckDice is 100% provably fair, allowing you to check the fairness of every round yourself.
                                     </div>
                                 }
                             </div>
@@ -2536,11 +2196,32 @@ const BCGameReview = () => {
                                     className="text-black font-medium cursor-pointer"
                                     onClick={() => { setOpenFAQ4(!openFAQ4) }}
                                 >
-                                    4. Is BC.Game safe?
+                                    4. What's the best DuckDice strategy?
                                 </div>
                                 {openFAQ4 &&
                                     <div className="text-black mt-5">
-                                        Along with the Curaçao license, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> offers a few safety reassurances to its players. For instance, this casino is provably fair and holds a Crypto Gambling Foundation seal of approval.
+                                        There are many strategies that you can try at DuckDice. We recommend that you:
+                                        <br/>
+                                        1. Claim the free faucet first.
+                                        <br/>
+                                        2. Use the free coins to play test the dice game.
+                                        <br/>
+                                        3. Play around with the bet types. Try the lowest winning chances first with a better payout (you're playing with free money after all!), then adjust if you feel uncomfortable with the low odds.
+                                        <br/><br/>
+                                        After a few rounds of testing, you should have found the bet type that better suits your playstyle!
+                                    </div>
+                                }
+                            </div>
+                            <div className="flex flex-col border-b border-gray-400 px-2 py-2">
+                                <div
+                                    className="text-black font-medium cursor-pointer"
+                                    onClick={() => { setOpenFAQ5(!openFAQ5) }}
+                                >
+                                    5. Is there a faucet at DuckDice?
+                                </div>
+                                {openFAQ5 &&
+                                    <div className="text-black mt-5">
+                                        Yes, there is! With DuckDice's Bitcoin faucet you can win small amounts of BTC for free, which allows you to try out the casino with no risk.
                                     </div>
                                 }
                             </div>
@@ -2611,4 +2292,4 @@ const BCGameReview = () => {
     )
 }
 
-export default BCGameReview;
+export default DuckDiceGameReview;

@@ -53,6 +53,10 @@ import BaoCasinoGameReview from './pages/Reviews/BaoCasinoGameReview';
 import FortuneJackGameReview from './pages/Reviews/FortuneJackGameReview';
 import PrimediceGameReview from './pages/Reviews/PrimediceGameReview';
 import BetFuryGameReview from './pages/Reviews/BetFuryGameReview';
+import DuckDiceGameReview from './pages/Reviews/DuckDiceGameReview';
+import RoobetGameReview from './pages/Reviews/RoobetGameReview';
+import BetsGameReview from './pages/Reviews/BetsGameReview';
+import BitcasinoGameReview from './pages/Reviews/BitcasinoGameReview';
 // review pages end
 
 function App() {
@@ -105,6 +109,10 @@ function App() {
         <Route path='/review/fortunejack.com' element={<FortuneJackGameReview />} />
         <Route path='/review/primedice.com' element={<PrimediceGameReview />} />
         <Route path='/review/betfury.io' element={<BetFuryGameReview />} />
+        <Route path='/review/duckdice.io' element={<DuckDiceGameReview />} />
+        <Route path='/review/roobet.com' element={<RoobetGameReview />} />
+        <Route path='/review/bets.io' element={<BetsGameReview />} />
+        <Route path='/review/bitcasino.io' element={<BitcasinoGameReview />} />
         {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />
