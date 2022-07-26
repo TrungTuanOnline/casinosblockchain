@@ -49,7 +49,7 @@ const SiteSummaryCard = (props: IProps) => {
                         <img className="w-16 rounded-full" src={siteData.logo} alt="CardImg" />
                     </div>
                     <div className="flex flex-col justify-center gap-y-0.5">
-                        <span className="text-xl font-bold">{siteData.name}</span>
+                        <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-xl font-bold text-black">{siteData.name}</a>
                         <span className="text-sm">{siteData.link}</span>
                     </div>
                 </div>
