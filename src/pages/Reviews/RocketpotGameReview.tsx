@@ -2000,7 +2000,7 @@ const RocketpotGameReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        In our opinion, <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> is a new but trustworthy casino. The brand holds a gambling license from Curaçao and offers additional safety features, including 2-factor authentication.
+                                        In our opinion, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Rocketpot</a> is a new but trustworthy casino. The brand holds a gambling license from Curaçao and offers additional safety features, including 2-factor authentication.
                                     </div>
                                 }
                             </div>
@@ -2013,7 +2013,7 @@ const RocketpotGameReview = () => {
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        Since the games at <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> are from reputable providers, we can confidently say that they are fair. What's more, some of their games are provably fair.
+                                        Since the games at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Rocketpot</a> are from reputable providers, we can confidently say that they are fair. What's more, some of their games are provably fair.
                                     </div>
                                 }
                             </div>
@@ -2026,7 +2026,7 @@ const RocketpotGameReview = () => {
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> is currently open to players from all over the world, excluding a few countries where online gambling is restricted. These include the United States, United Kingdom, France, and The Netherlands.
+                                        <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Rocketpot</a> is currently open to players from all over the world, excluding a few countries where online gambling is restricted. These include the United States, United Kingdom, France, and The Netherlands.
                                     </div>
                                 }
                             </div>
@@ -2039,7 +2039,7 @@ const RocketpotGameReview = () => {
                                 </div>
                                 {openFAQ4 &&
                                     <div className="text-black mt-5">
-                                        For the most part, yes, you can play at <a href={"https://" + siteData.link} target="" rel="noreferrer" className="text-blue-600">Rocketpot</a> anonymously. However, if you withdraw large amounts of money, you may have to provide personal details.
+                                        For the most part, yes, you can play at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Rocketpot</a> anonymously. However, if you withdraw large amounts of money, you may have to provide personal details.
                                     </div>
                                 }
                             </div>

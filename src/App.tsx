@@ -47,6 +47,29 @@ import BitStarzGameReview from './pages/Reviews/BitStarzGameReview';
 import KingBillyGameReview from './pages/Reviews/KingBillyGameReview';
 import MBitGameReview from './pages/Reviews/MBitGameReview';
 import EarnBetGameReview from './pages/Reviews/EarnBetGameReview';
+import ThunderpickGameReview from './pages/Reviews/ThunderpickGameReview';
+import BodogGameReview from './pages/Reviews/BodogGameReview';
+import BaoCasinoGameReview from './pages/Reviews/BaoCasinoGameReview';
+import FortuneJackGameReview from './pages/Reviews/FortuneJackGameReview';
+import PrimediceGameReview from './pages/Reviews/PrimediceGameReview';
+import BetFuryGameReview from './pages/Reviews/BetFuryGameReview';
+import DuckDiceGameReview from './pages/Reviews/DuckDiceGameReview';
+import RoobetGameReview from './pages/Reviews/RoobetGameReview';
+import BetsGameReview from './pages/Reviews/BetsGameReview';
+import BitcasinoGameReview from './pages/Reviews/BitcasinoGameReview';
+import BitcoinCasinoGameReview from './pages/Reviews/BitcoinCasinoGameReview';
+import OnexSlotsGameReview from './pages/Reviews/1xSlotsGameReview';
+import SevenBitCasinoGameReview from './pages/Reviews/7BitCasinoGameReview';
+import WinkGameReview from './pages/Reviews/WinkGameReview';
+import CryptoWildGameReview from './pages/Reviews/CryptoWildGameReview';
+import ZetCasinoGameReview from './pages/Reviews/ZetCasinoGameReview';
+import CryptoGamesReview from './pages/Reviews/CryptoGamesReview';
+import BetcoinGameReview from './pages/Reviews/BetcoinGameReview';
+import OnexBitGameReview from './pages/Reviews/1xBitGameReview';
+import BspinCasinoGameReview from './pages/Reviews/BspinCasinoGameReview';
+import NitrogenSportsGameReview from './pages/Reviews/NitrogenSportsGameReview';
+import CryptoThrillsGameReview from './pages/Reviews/CryptoThrillsGameReview';
+import EdgelessCasinoGameReview from './pages/Reviews/EdgelessCasinoGameReview';
 // review pages end
 
 function App() {
@@ -93,6 +116,29 @@ function App() {
         <Route path='/review/kingbillycasino.com' element={<KingBillyGameReview />} />
         <Route path='/review/mbitcasino.com' element={<MBitGameReview />} />
         <Route path='/review/earnbet.io' element={<EarnBetGameReview />} />
+        <Route path='/review/thunderpick.com' element={<ThunderpickGameReview />} />
+        <Route path='/review/bodog.eu' element={<BodogGameReview />} />
+        <Route path='/review/baocasino.com' element={<BaoCasinoGameReview />} />
+        <Route path='/review/fortunejack.com' element={<FortuneJackGameReview />} />
+        <Route path='/review/primedice.com' element={<PrimediceGameReview />} />
+        <Route path='/review/betfury.io' element={<BetFuryGameReview />} />
+        <Route path='/review/duckdice.io' element={<DuckDiceGameReview />} />
+        <Route path='/review/roobet.com' element={<RoobetGameReview />} />
+        <Route path='/review/bets.io' element={<BetsGameReview />} />
+        <Route path='/review/bitcasino.io' element={<BitcasinoGameReview />} />
+        <Route path='/review/bitcoincasino.io' element={<BitcoinCasinoGameReview />} />
+        <Route path='/review/1xslot.com' element={<OnexSlotsGameReview />} />
+        <Route path='/review/7bitcasino.com' element={<SevenBitCasinoGameReview />} />
+        <Route path='/review/tron.wink.org' element={<WinkGameReview />} />
+        <Route path='/review/cryptowild.com' element={<CryptoWildGameReview />} />
+        <Route path='/review/zetcasino.com' element={<ZetCasinoGameReview />} />
+        <Route path='/review/crypto.games' element={<CryptoGamesReview />} />
+        <Route path='/review/betcoin.ag' element={<BetcoinGameReview />} />
+        <Route path='/review/1xbit.com' element={<OnexBitGameReview />} />
+        <Route path='/review/bspin.io' element={<BspinCasinoGameReview />} />
+        <Route path='/review/nitrogensports.eu' element={<NitrogenSportsGameReview />} />
+        <Route path='/review/cryptothrills.io' element={<CryptoThrillsGameReview />} />
+        <Route path='/review/edgeless.io' element={<EdgelessCasinoGameReview />} />
         {/* review pages end */}
       </Routes>
       <ToastContainer style={{ fontSize: '16px' }} theme='dark' />

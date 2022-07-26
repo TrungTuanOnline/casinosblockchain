@@ -721,7 +721,7 @@ const BitcoinComGameReview = () => {
                                     <div className="flex flex-row items-start gap-x-2">
                                         <div className="w-1 h-1 rounded-full bg-black  mt-[11px]"></div>
                                         <div>
-                                            If you prefer more straightforward deposit bonuses like those you can get at <a href="https://rocketpot.io/" target="" className="text-blue-600">Rocketpot</a> or <a href="https://trueflip.io/" target="" className="text-blue-600">True Flip</a>, then you're probably going to be disappointed with this one.
+                                            If you prefer more straightforward deposit bonuses like those you can get at <a href="https://rocketpot.io/" target="_blank" rel="noreferrer" className="text-blue-600">Rocketpot</a> or <a href="https://trueflip.io/" target="" className="text-blue-600">True Flip</a>, then you're probably going to be disappointed with this one.
                                         </div>
                                     </div>
                                     <div className="flex flex-row items-start gap-x-2">
@@ -1802,7 +1802,7 @@ const BitcoinComGameReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Signing up at <a href={"https://" + siteData.link} target="" className="text-blue-600">Bitcoin.com Games</a> is as easy as:
+                                        Signing up at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">Bitcoin.com Games</a> is as easy as:
                                         <br/>
                                         1. Clicking the sign up button.
                                         <br/>

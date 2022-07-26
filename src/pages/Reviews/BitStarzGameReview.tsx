@@ -1354,7 +1354,7 @@ const BitStarzGameReview = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        As a side note, BitStarz also holds a Curaçao license, which isn't a deal-maker on its own but adds nicely to the mix - just like the fact that they have an RNG <a href="https://itechlabs.com/certification-services/rng-testing-certification/" target="" className="text-blue-600">certification</a> by iTech Labs.
+                                        As a side note, BitStarz also holds a Curaçao license, which isn't a deal-maker on its own but adds nicely to the mix - just like the fact that they have an RNG <a href="https://itechlabs.com/certification-services/rng-testing-certification/" target="_blank" rel="noreferrer" className="text-blue-600">certification</a> by iTech Labs.
                                     </div>
                                     <div className="text-xl font-bold mt-5">
                                         Is BitStarz a Scam?
@@ -1863,7 +1863,7 @@ const BitStarzGameReview = () => {
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        All new BitStarz players are entitled to a no-deposit bonus of 20 Free Spins (no bonus code required), plus a deposit bonus of up to 5 Bitcoins and 180 Free Spins. To get them, you just have to <a href={"https://" + siteData.link} target="" className="text-blue-600">create a new account</a>!
+                                        All new BitStarz players are entitled to a no-deposit bonus of 20 Free Spins (no bonus code required), plus a deposit bonus of up to 5 Bitcoins and 180 Free Spins. To get them, you just have to <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">create a new account</a>!
                                     </div>
                                 }
                             </div>
