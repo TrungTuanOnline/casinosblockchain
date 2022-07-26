@@ -61,7 +61,7 @@ const Content = () => {
 
     return (
         <div className="w-full flex gap-6 justify-center">
-            <div className="xl:w-8/12 w-full h-full ">
+            <div className="xl:w-8/12 w-full h-full bg-white rounded-md shadow-sm shadow-gray-400 mb-10">
                 <div className="blog pl-24 pt-12 pb-16 w-10/12">
                     <p><strong>The Crash crypto game is on the rise in 2022.</strong> Simple, fun, and exciting, it's becoming an online casino staple. </p>
                     <p><strong>Ready to start playing Crash? This article is your complete, comprehensive guide</strong>. </p>
@@ -76,7 +76,7 @@ const Content = () => {
                     <p>? <strong>Crash appeared back when blockchain casinos had very few gambling options</strong> - mostly basic dice games. And then, this new thing came around. </p>
                     <p>It was a familiar concept for Bitcoin aficionados.<strong> </strong>If you're into crypto, you know the thrill of watching your investments grow, knowing they may crash at any time. <strong>Crash mimics crypto's price movements, turning them into entertainment.</strong></p>
                     <p>Gripping, easy to play, yet allowing for a lot more creativity from the casino - no wonder it grew so fast. </p>
-                    <p><strong>It was an instant hit with crypto gamblers</strong>, but it is mostly limited to <a className="text-blue-600" href="https://casinosblockchain.io/" target="_blank" rel="noreferrer noopener">blockchain casinos</a> and played with cryptocurrencies. Even today, Crash can be tough to find at fiat casinos or a more mainstream gambling website.</p>
+                    <p><strong>It was an instant hit with crypto gamblers</strong>, but it is mostly limited to <a className="text-blue-600" href="/" target="_blank" rel="noreferrer noopener">blockchain casinos</a> and played with cryptocurrencies. Even today, Crash can be tough to find at fiat casinos or a more mainstream gambling website.</p>
                     <p>But, we think that will change very soon - because it strikes a perfect balance between electrifying gameplay and simple rules.</p>
                     <div className="w-full h-[220px] p-10  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                         <p className="text-sm  text-white opacity-50">How to Play Crash</p>
@@ -89,7 +89,7 @@ const Content = () => {
                     <p><strong>The longer you stay in the game, the better your payout. </strong>But remember: if it crashes, you lose!</p>
                     <p>When to cash out is entirely up to you. Do it too early, and your winnings might not be worth the risk. Wait too long and you might go home empty-handed.</p>
                     <div className="h3">Types of Bitcoin Crash Games</div>
-                    <p>Most Bitcoin Crash games mimic the ebbs and flows of Bitcoin's value - but not all. Some games (like those  at <a className="text-blue-600" href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">Cloudbet</a> and <a href="https://casinosblockchain.io/fortunejack-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">FortuneJack</a>) have other themes: a plane flight or a heartbeat flatlining, respectively.</p>
+                    <p>Most Bitcoin Crash games mimic the ebbs and flows of Bitcoin's value - but not all. Some games (like those  at <a className="text-blue-600" href="/cloudbet-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">Cloudbet</a> and <a href="/fortunejack-bitcoin-casino-review/" target="_blank" rel="noreferrer noopener">FortuneJack</a>) have other themes: a plane flight or a heartbeat flatlining, respectively.</p>
                     <p>What they all have in common is the concept. Place a bet, wait for the multiplier to grow, keep your fingers crossed it doesn't crash. </p>
                     <p>You'll find two main types of Crash games: </p>
                     <p><strong>In-House Crash Games </strong></p>
@@ -105,9 +105,9 @@ const Content = () => {
                     <section id="play-crash-online">
                         <div className="h2"> Where Can I Play Crash With Crypto? </div>
                         <p className="mt-8">There are multiple casinos that offer the Crash crypto game: </p>
-                        <ul className="is-style-checked-list_sm"><li><a className="text-blue-600" href="https://casinosblockchain.io/go/bc-game/" target="_blank" rel="noreferrer noopener">BC.Game</a> boasts an exciting in-house game with amazing social features.</li><li><a className="text-blue-600" href="https://casinosblockchain.io/go/stake/" target="_blank" rel="noreferrer noopener">Stake </a>is notorious for the low house edge and high RTP.</li><li><a className="text-blue-600" href="https://casinosblockchain.io/go/roobet/" target="_blank" rel="noreferrer noopener">Roobet </a>is a polished, Aussie-friendly product we adore.</li></ul>
+                        <ul className="is-style-checked-list_sm"><li><a className="text-blue-600" href="/go/bc-game/" target="_blank" rel="noreferrer noopener">BC.Game</a> boasts an exciting in-house game with amazing social features.</li><li><a className="text-blue-600" href="/go/stake/" target="_blank" rel="noreferrer noopener">Stake </a>is notorious for the low house edge and high RTP.</li><li><a className="text-blue-600" href="/go/roobet/" target="_blank" rel="noreferrer noopener">Roobet </a>is a polished, Aussie-friendly product we adore.</li></ul>
                         <p><strong>Here are our top picks for the best Crash casinos of 2022: </strong></p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {dummyInfos.length > 0 &&
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
@@ -152,13 +152,13 @@ const Content = () => {
                     </section>
                     <section id="bitcoin-crash-dapps">
                         <div className="h3">Bitcoin Crash Dapps	</div>
-                        <p><strong>The Crash Bitcoin game is widely available at <a className="text-blue-600" href="https://casinosblockchain.io/best-gambling-dapps/" target="_blank" rel="noreferrer noopener">gambling Dapps</a>.</strong></p>
+                        <p><strong>The Crash Bitcoin game is widely available at <a className="text-blue-600" href="/best-gambling-dapps/" target="_blank" rel="noreferrer noopener">gambling Dapps</a>.</strong></p>
                         <p>Since these platforms often create their own provably fair games and cater exclusively to crypto players, they tend to do crash gambling games more regularly.</p>
                         <p>Let's have a closer look at some of the best gambling Dapps where you can play Crash with Bitcoin and other cryptocurrencies.</p>
                         <a href="https://earnbet.io/" target="_blank" rel="noreferrer">
                             <img alt='Crash-Content-Img' src={EarnbetCasinoLogo} className="w-full h-auto" />
                         </a>
-                        <p><a href="https://earnbet.io/" target="_blank" rel="noreferrer noopener">E</a><a href="https://casinosblockchain.io/earnbet-review/" target="_blank" rel="noreferrer noopener">arnbet</a> accepts Bitcoin, as well as Ethereum and several other cryptocurrencies.</p>
+                        <p><a href="https://earnbet.io/" target="_blank" rel="noreferrer noopener">E</a><a href="/earnbet-review/" target="_blank" rel="noreferrer noopener">arnbet</a> accepts Bitcoin, as well as Ethereum and several other cryptocurrencies.</p>
                         <p>Its <strong>house edge</strong> when playing Crash <strong>is only 1.5%</strong>, which makes it a very competitive product. Granted, the game is somewhat plain in looks but the RTP more than makes up for it: </p>
                         <img alt='Crash-Content-Img' src={CrashJackpot} className="w-full h-auto" />
                         <p className="mt-5">EarnBet's Crash game comes with a bunch of perks, including: </p>
@@ -170,7 +170,7 @@ const Content = () => {
                         <a href="https://betfury.io" target="_blank" rel="noreferrer noopener">
                             <img alt='Crash-Content-Img' src={BetFuryWideLogo} className="w-full h-auto" />
                         </a>
-                        <p className="mt-3">Betfury is a comprehensive gambling Dapp that <a className="text-blue-600" href="https://casinosblockchain.io/betfury-casino-review/" target="_blank" rel="noreferrer noopener">looks and feels like a regular casino</a>, but with many advantages of a decentralized casino. </p>
+                        <p className="mt-3">Betfury is a comprehensive gambling Dapp that <a className="text-blue-600" href="/betfury-casino-review/" target="_blank" rel="noreferrer noopener">looks and feels like a regular casino</a>, but with many advantages of a decentralized casino. </p>
                         <p>Instead of just a small selection of games, it offers <strong>more than 1,000 different titles</strong> from mainstream providers alongside a relevant section of exclusive <strong>provably fair games</strong>, including Bitcoin crash. </p>
                         <p>Fly high with their rocket-inspired Crash game: </p>
                         <a href="https://betfury.io" target="_blank" rel="noreferrer noopener">
@@ -188,9 +188,9 @@ const Content = () => {
                         </p>
                         <ul className="is-style-checked-list_sm"><li>It's provably fair.</li><li>The house edge is super low </li><li>It's exclusive to BC.Game.</li><li>It's thematic and appealing.</li><li>There is a strong social aspect of the game - and the entire casino, too.</li></ul>
                         <div className="h3">More Crash Game Options</div>
-                        <p>If you already know BC.Game's Bitcoin Crash and are just looking for an alternative, we also recommend the games available at <a className="text-blue-600" href="https://casinosblockchain.io/stake-bitcoin-casino-review/">Stake</a> and <a href="https://casinosblockchain.io/earnbet-review/">EarnBet</a>. Both options are also <strong>provably fair</strong> and <strong>exclusive </strong>to each of the casinos.</p>
-                        <p>Another popular game is the similarly rocket-based crash game at <a className="text-blue-600" href="https://casinosblockchain.io/roobet-review/" target="_blank" rel="noreferrer noopener">Roobet</a>, which took off after several high-profile streamers documented their ups and downs while playing the game. Like most crypto games, it's also provably fair:</p>
-                        <p>Another popular game is the similarly rocket-based crash game at <a className="text-blue-600" href="https://casinosblockchain.io/roobet-review/" target="_blank" rel="noreferrer noopener">Roobet</a>, which took off after several high-profile streamers documented their ups and downs while playing the game. Like most crypto games, it's also provably fair:</p>
+                        <p>If you already know BC.Game's Bitcoin Crash and are just looking for an alternative, we also recommend the games available at <a className="text-blue-600" href="/stake-bitcoin-casino-review/">Stake</a> and <a href="/earnbet-review/">EarnBet</a>. Both options are also <strong>provably fair</strong> and <strong>exclusive </strong>to each of the casinos.</p>
+                        <p>Another popular game is the similarly rocket-based crash game at <a className="text-blue-600" href="/roobet-review/" target="_blank" rel="noreferrer noopener">Roobet</a>, which took off after several high-profile streamers documented their ups and downs while playing the game. Like most crypto games, it's also provably fair:</p>
+                        <p>Another popular game is the similarly rocket-based crash game at <a className="text-blue-600" href="/roobet-review/" target="_blank" rel="noreferrer noopener">Roobet</a>, which took off after several high-profile streamers documented their ups and downs while playing the game. Like most crypto games, it's also provably fair:</p>
                         <img src={RoobetCrash} alt="Roobet Crash" className="w-full h-auto" />
                         <p className="text-sm">
                             We love Roobet's Crash - it's well-animated, fun, and sociable!
@@ -225,7 +225,7 @@ const Content = () => {
                         <p><strong>It's always a good idea to look for information about a casino before creating an account.</strong></p>
                         <p>Where do you find trustworthy information? </p>
                         <p>? <strong>Blockchain forums</strong>, where real gamblers share their first-hand experience, are a great place to start.</p>
-                        <ul className="is-style-checked-list_sm"><li>The opinion of the majority is what you should look for; if almost all critics are negative or positive, that's a good indicator of the casino's reputation. Plus, these forums are also a great place to educate yourself on other crypto and finance topics like trading and <a className="text-blue-600" href="https://casinosblockchain.io/bitcoin-spread-betting/" target="_blank" rel="noreferrer noopener">Bitcoin spread betting</a>. </li><li>Take individual critics with a grain of salt, since they can be very subjective.</li></ul>
+                        <ul className="is-style-checked-list_sm"><li>The opinion of the majority is what you should look for; if almost all critics are negative or positive, that's a good indicator of the casino's reputation. Plus, these forums are also a great place to educate yourself on other crypto and finance topics like trading and <a className="text-blue-600" href="/bitcoin-spread-betting/" target="_blank" rel="noreferrer noopener">Bitcoin spread betting</a>. </li><li>Take individual critics with a grain of salt, since they can be very subjective.</li></ul>
                         <p><strong>Don't forget about experts</strong> either:</p>
                         <div className="w-full h-[220px] p-10  bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <p className="text-sm  text-white opacity-50">TRUST THE EXPERTS</p>
@@ -259,10 +259,10 @@ const Content = () => {
                         <div className="h2">Playing Crash With Cryptocurrencies</div>
                         <p>Unusually, it's <strong>easier to play Crash with cryptocurrencies than it is with fiat money</strong>!</p>
                         <p>It's not hard to find casinos where you can play with the strongest cryptos, such as:</p>
-                        <ul className="is-style-checked-list_bubbles"><li>Ethereum</li><li>Bitcoin</li><li><a className="text-blue-600" href="https://casinosblockchain.io/litecoin-casinos/">Litecoin</a></li><li><a className="text-blue-600" href="https://casinosblockchain.io/ripple-casinos/">Ripple</a></li><li><a className="text-blue-600" href="https://casinosblockchain.io/tron-casinos/">Tron</a></li><li><a className="text-blue-600" href="https://casinosblockchain.io/eos-casinos/">EOS</a></li></ul>
+                        <ul className="is-style-checked-list_bubbles"><li>Ethereum</li><li>Bitcoin</li><li><a className="text-blue-600" href="/litecoin-casinos/">Litecoin</a></li><li><a className="text-blue-600" href="/ripple-casinos/">Ripple</a></li><li><a className="text-blue-600" href="/tron-casinos/">Tron</a></li><li><a className="text-blue-600" href="/eos-casinos/">EOS</a></li></ul>
                         <p>Just like with casinos, the number one cryptocurrency for Crash gambling Dapps is Ethereum, but there are other cryptos available:</p>
-                        <ul className="is-style-checked-list_bubbles"><li>Ethereum</li><li>Bitcoin</li><li><a className="text-blue-600" href="https://casinosblockchain.io/bitcoin-cash-casinos/">Bitcoin Cash</a></li><li>Ripple</li><li>Litecoin</li><li>EOS</li></ul>
-                        <p>You can even find <strong>Dogecoin crash games</strong> at some websites offering both, like <a className="text-blue-600" href="https://casinosblockchain.io/fortunejack-bitcoin-casino-review/">FortuneJack</a>.</p>
+                        <ul className="is-style-checked-list_bubbles"><li>Ethereum</li><li>Bitcoin</li><li><a className="text-blue-600" href="/bitcoin-cash-casinos/">Bitcoin Cash</a></li><li>Ripple</li><li>Litecoin</li><li>EOS</li></ul>
+                        <p>You can even find <strong>Dogecoin crash games</strong> at some websites offering both, like <a className="text-blue-600" href="/fortunejack-bitcoin-casino-review/">FortuneJack</a>.</p>
                     </section>
                     <section id="safety">
                         <div className="h3"> Is It Safe To Play Crash With Bitcoin And Other Cryptos?	</div>
@@ -373,7 +373,7 @@ const Content = () => {
                         <p>If you're a newcomer to Crash - and, especially, if you're a new gambler - it might be a good idea to keep the following tips in mind:</p>
                         <ul className="is-style-checked-list_sm"><li><strong>Choose reputable casinos</strong> - look for licensed gambling sites, provably fair games, and positive reviews online.</li><li><strong>Learn the game </strong>before you start playing - and, begin with smaller bets, too. </li><li><strong>Manage your gambling </strong>by setting bankroll limits, avoiding chasing losses, and cooling down if you fall on a losing streak.</li><li><strong>Get familiar with the casino rules </strong>and don't break them - e.g., by lying about your location. </li><li><strong>Have fun</strong>, that's what Crash is all about If there's a player's chat, get involved, make friends and keep it fun for everybody, too. </li></ul>
                         <p>We also recommend you play at one of our tried-and-tested casinos, which have provably fair games that can't be rigged.</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {testedCasinos.length > 0 &&
                                 testedCasinos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     return (
@@ -393,7 +393,7 @@ const Content = () => {
                         <p><strong>But, keep in mind that, like any form of gambling, the outcomes here are a matter of luck. </strong>This is why it's always important to gamble responsibly and avoid loss-chasing strategies like the Martingale. Instead, focus on enjoying the game and setting a budget that you are comfortable with.</p>
                         <p><strong>And what about choosing a Crash casino? Our top choice is BC.Game </strong>because they offer a provably fair game with a low house edge. </p>
                         <p>They also have a great VIP program and regular daily bonuses. So, why not give it a try today? It might just become your favorite destination for the Crash crypto game.</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {testedCasinos.length > 0 &&
                                 testedCasinos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
                                     if (index === 0) {

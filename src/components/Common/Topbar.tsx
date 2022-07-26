@@ -152,7 +152,7 @@ const Topbar = () => {
     }
 
     return (
-        <div className="flex justify-center item-center w-full py-5" style={{backgroundColor: "#000331"}}>
+        <div className="flex justify-center item-center w-full py-5" style={{ backgroundColor: "#000331" }}>
             <div className="w-11/12 flex flex-row justify-between">
                 <div className="text-2xl cursor-pointer">
                     <span className="text-red-700">casinos</span>
@@ -203,15 +203,15 @@ const Topbar = () => {
                         </Button>
                         {(openCryptoCurrencyMenu || overCryptoCurrencyMenu) &&
                             <div
-                                className="absolute flex flex-col gap-y-2 w-32 right-2.5 bg-neutral-800 py-2 rounded z-10"
+                                className="absolute flex flex-col gap-y-2 w-32 right-2.5 bg-neutral-800 py-2 rounded z-50"
                                 onMouseEnter={() => { setOverCryptoCurrencyMenu(true) }}
                                 onMouseLeave={() => { setOverCryptoCurrencyMenu(false) }}
                             >
-                                <Link 
-                                    to='/best-bitcoin-casinos' 
+                                <Link
+                                    to='/best-bitcoin-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={bitcoinCryptoImg}
                                             alt="reviewImg">
@@ -219,11 +219,11 @@ const Topbar = () => {
                                     </div>
                                     Bitcoin
                                 </Link>
-                                <Link 
-                                    to='/best-ethereum-casinos' 
+                                <Link
+                                    to='/best-ethereum-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={etherCryptoImg}
                                             alt="reviewImg">
@@ -231,11 +231,11 @@ const Topbar = () => {
                                     </div>
                                     Ethereum
                                 </Link>
-                                <Link 
+                                <Link
                                     to='/tether-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={tetherCryptoImg}
                                             alt="reviewImg">
@@ -243,11 +243,11 @@ const Topbar = () => {
                                     </div>
                                     Tether
                                 </Link>
-                                <Link 
-                                    to='/dogecoin-casinos' 
+                                <Link
+                                    to='/dogecoin-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={dogecoinCryptoImg}
                                             alt="reviewImg">
@@ -255,11 +255,11 @@ const Topbar = () => {
                                     </div>
                                     Dogecoin
                                 </Link>
-                                <Link 
-                                    to='/litecoin-casinos' 
+                                <Link
+                                    to='/litecoin-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={litecoinCryptoImg}
                                             alt="reviewImg">
@@ -267,11 +267,11 @@ const Topbar = () => {
                                     </div>
                                     Litecoin
                                 </Link>
-                                <Link 
-                                    to='/ripple-casinos' 
+                                <Link
+                                    to='/ripple-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={rippleCryptoImg}
                                             alt="reviewImg">
@@ -279,11 +279,11 @@ const Topbar = () => {
                                     </div>
                                     Ripple
                                 </Link>
-                                <Link 
-                                    to='/binance-casinos' 
+                                <Link
+                                    to='/binance-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={bnbCryptoImg}
                                             alt="reviewImg">
@@ -291,11 +291,11 @@ const Topbar = () => {
                                     </div>
                                     Binance
                                 </Link>
-                                <Link 
-                                    to='/cardano-casinos' 
+                                <Link
+                                    to='/cardano-casinos'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={cardanoCryptoImg}
                                             alt="reviewImg">
@@ -321,11 +321,11 @@ const Topbar = () => {
                                 onMouseEnter={() => { setOverGameMenu(true) }}
                                 onMouseLeave={() => { setOverGameMenu(false) }}
                             >
-                                <Link 
-                                    to='/crash-crypto-game' 
+                                <Link
+                                    to='/crash-crypto-game'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={crashGameImg}
                                             alt="reviewImg">
@@ -333,11 +333,11 @@ const Topbar = () => {
                                     </div>
                                     Crash
                                 </Link>
-                                <Link 
-                                    to='/bitcoin-jackpot' 
+                                <Link
+                                    to='/bitcoin-jackpot'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={jackpotGameImg}
                                             alt="reviewImg">
@@ -345,11 +345,11 @@ const Topbar = () => {
                                     </div>
                                     Jackpots
                                 </Link>
-                                <Link 
-                                    to='/slots-bitcoin-casino' 
+                                <Link
+                                    to='/slots-bitcoin-casino'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={slotsGameImg}
                                             alt="reviewImg">
@@ -357,11 +357,11 @@ const Topbar = () => {
                                     </div>
                                     Slots
                                 </Link>
-                                <Link  
-                                    to='/roulette-bitcoin-casino' 
+                                <Link
+                                    to='/roulette-bitcoin-casino'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={rouletteGameImg}
                                             alt="reviewImg">
@@ -369,11 +369,11 @@ const Topbar = () => {
                                     </div>
                                     Roulette
                                 </Link>
-                                <Link 
-                                    to='/blackjack-bitcoin-casino' 
+                                <Link
+                                    to='/blackjack-bitcoin-casino'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={blackjackGameImg}
                                             alt="reviewImg">
@@ -381,11 +381,11 @@ const Topbar = () => {
                                     </div>
                                     Blackjack
                                 </Link>
-                                <Link 
-                                    to='/dice-bitcoin-casino' 
+                                <Link
+                                    to='/dice-bitcoin-casino'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={diceGameImg}
                                             alt="reviewImg">
@@ -393,11 +393,11 @@ const Topbar = () => {
                                     </div>
                                     Dice
                                 </Link>
-                                <Link 
-                                    to='/plinko-casino' 
+                                <Link
+                                    to='/plinko-casino'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={plinkoGameImg}
                                             alt="reviewImg">
@@ -405,11 +405,11 @@ const Topbar = () => {
                                     </div>
                                     Plinko
                                 </Link>
-                                <Link 
-                                    to='/bitcoin-poker-sites' 
+                                <Link
+                                    to='/bitcoin-poker-sites'
                                     className="flex flex-row gap-x-3 px-2 text-white text-sm hover:bg-neutral-700">
                                     <div className="flex justify-center items-center">
-                                        <img 
+                                        <img
                                             className="w-4"
                                             src={pokerGameImg}
                                             alt="reviewImg">
