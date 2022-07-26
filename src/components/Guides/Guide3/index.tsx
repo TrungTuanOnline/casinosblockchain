@@ -73,9 +73,9 @@ const MainContent = () => {
 
     return (
         <div className="w-full flex gap-6 justify-center">
-            <div className="xl:w-8/12 w-full h-full ">
-                <div className="w-full xl:w-fit h-fit xl:h-[435px] rounded-md border-4 border-white">
-                    <img alt="MainPageImg" src={MetamaskCasinos} className="w-full max-h-full object-cover " />
+            <div className="xl:w-8/12 w-full h-full bg-white rounded-md shadow-sm shadow-gray-400 mb-10">
+                <div className="w-full h-[435px] rounded-md border-4 border-white">
+                    <img alt="MainPageImg" src={MetamaskCasinos} className="w-full max-h-full object-cover rounded-md " />
                 </div>
                 <div className="blog pl-24 pt-3 pb-16 w-10/12">
                     <p className="text-[#262847]">Updated: <span className="text-black font-bold text-base">July 15, 2022</span></p>
@@ -87,7 +87,7 @@ const MainContent = () => {
                     <section id="quick-guide">
                         <div className="h2">Best MetaMask Casinos: Quick Guide	</div>
                         <p>Excited to get started already? Here’s an <strong>overview of our favorite MetaMask gambling</strong> spots. We personally tried and tested them – this way, we know we’re only giving you the good stuff:</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             {
                                 dummyInfos.length > 0 &&
                                 dummyInfos.map((summaryInfo: ISiteRankBlogCardObj, index: number) => {
@@ -113,7 +113,7 @@ const MainContent = () => {
                         <div className="h3">BC.Game Casino	</div>
                         <img src={BcgameCasino} className="w-full h-auto" alt="BcgameCasino" />
                         <p className="mt-2 text-sm">1% house edge or lower? Count us in!</p>
-                        <p><a className="text-blue-600" href="https://casinosblockchain.io/bc-game-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/bc-game-review/" rel="noreferrer noopener">BC.Game Casino</a> is <strong>our favorite crypto casino </strong>out there, not just for MetaMask users but overall.&nbsp;</p>
+                        <p><a className="text-blue-600" href="/bc-game-review/" target="_blank" data-type="URL" data-id="/bc-game-review/" rel="noreferrer noopener">BC.Game Casino</a> is <strong>our favorite crypto casino </strong>out there, not just for MetaMask users but overall.&nbsp;</p>
                         <p>With a <strong>tiny house edge</strong> (as low as 0.48% on blackjack) and <strong>excellent</strong> <strong>Return-to-Player percentages</strong> – 99% and up, it gives you more bang for your buck than most crypto casinos. But that’s not the only thing we love about BC.Game. The crypto-exclusive casino<strong> </strong>comes with tons of perks for blockchain lovers:</p>
                         <ul className="pl-4 list-none">
 
@@ -123,13 +123,13 @@ const MainContent = () => {
                             <li> <Check fontSize="small" color="success" className="mr-2 " /><strong>100+ live tables </strong>to prove your skills</li>
                             <li> <Check fontSize="small" color="success" className="mr-2 " /><strong>Smooth user experience </strong>with intuitive design and social features</li>
                             <li> <Check fontSize="small" color="success" className="mr-2 " /><strong>Multi-layer security </strong>and third-party certifications (Crypto Gambling Foundation, iTech Labs)&nbsp;</li>
-                            <li> <Check fontSize="small" color="success" className="mr-2 " /><strong>66 different cryptos, </strong>including Ethereum and ERC-20 tokens (BC.Game is one of our favorite <a href="https://casinosblockchain.io/best-ethereum-casinos/" target="_blank" rel="noreferrer noopener">Ethereum casinos</a>)</li>
+                            <li> <Check fontSize="small" color="success" className="mr-2 " /><strong>66 different cryptos, </strong>including Ethereum and ERC-20 tokens (BC.Game is one of our favorite <a href="/best-ethereum-casinos/" target="_blank" rel="noreferrer noopener">Ethereum casinos</a>)</li>
                         </ul>
                         <p>We are also very impressed with the <strong>social aspect of BC.Game. </strong>Online casinos usually have a chatroom, but BC.Game takes it to the next level. Use the players’ chatroom to interact with other visitors, win rewards, or even ‘make it rain’ if you win big. It’s a fun and unique aspect of the experience.</p>
                         <p>Is there a catch? Unfortunately, there is one.&nbsp;</p>
                         <p>While BC.Game offers <strong>exciting bonuses </strong>like spin-the-wheel and wager-free promos, there is <strong>no traditional welcome bonus</strong>. Are you getting the short end of the stick? We don’t think so. The casino still <strong>gives you plenty of extra games</strong> where you could potentially win more than a depost-match could ever give you. Still, if you prefer a traditional welcome bonus, BC.Game might not be the place for you.&nbsp;</p>
                         <p>Ultimately, BC.Game is <strong>fun, safe, and value-packed </strong>thanks to the low house edge and additional perks. Since it supports <strong>ETH and ERC-20 tokens</strong> like<strong> </strong>Chainlink, BC.Game is also the perfect casino for all MetaMask enthusiasts out there.&nbsp;</p>
-                        <div className="mt-4">
+                        <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             <SiteRankBlogTable
                                 key={0}
                                 siteIndex={0}
@@ -144,8 +144,8 @@ const MainContent = () => {
                             <img src={StakeCasino} className="w-full h-auto" alt="StakeCasino" />
                         </a>
                         <p className="mt-4"><em>All the games you ever wished for (and more), plus plenty of no-strings-attached bonuses. That’s Stake for you.&nbsp;</em></p>
-                        <p>Second on our list, <a href="https://casinosblockchain.io/stake-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/stake-bitcoin-casino-review/" rel="noreferrer noopener">Stake Casino</a> stands out with its <strong>vast game selection </strong>and <strong>transparent bonus scheme. </strong>Just like BC.Game, Stake doesn’t offer a welcome bonus. Instead, they opt for <strong>regular rewards and promotions</strong>, all wager-free and available for instant withdrawal.</p>
-                        <p>Stake is one of the top <a href="https://casinosblockchain.io/best-ethereum-casinos/" target="_blank" rel="noreferrer noopener">Ethereum casinos that accept MetaMask</a>. Its standout features include:&nbsp;</p>
+                        <p>Second on our list, <a href="/stake-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="/stake-bitcoin-casino-review/" rel="noreferrer noopener">Stake Casino</a> stands out with its <strong>vast game selection </strong>and <strong>transparent bonus scheme. </strong>Just like BC.Game, Stake doesn’t offer a welcome bonus. Instead, they opt for <strong>regular rewards and promotions</strong>, all wager-free and available for instant withdrawal.</p>
+                        <p>Stake is one of the top <a href="/best-ethereum-casinos/" target="_blank" rel="noreferrer noopener">Ethereum casinos that accept MetaMask</a>. Its standout features include:&nbsp;</p>
                         <ul className="pl-4 list-none"><li><Check fontSize="small" color="success" className="mr-2 " /><strong>Top-notch sportsbook </strong>including niche sports like MMA, along with American football, soccer, and more</li><li><Check fontSize="small" color="success" className="mr-2 " /><strong>Provably fair</strong>, low house edge original games</li><li><Check fontSize="small" color="success" className="mr-2 " /><strong>2000+ slot games </strong>from all major providers</li><li><Check fontSize="small" color="success" className="mr-2 " /><strong>Multiple cryptos </strong>to choose from, including Ethereum</li><li><Check fontSize="small" color="success" className="mr-2 " /><strong>Accredited safety </strong>with the Crypto Gambling Foundation seal of approval</li></ul>
                         <p>Right now, Stake Casino is <strong>our favorite for sports betting</strong> for its vast selection and excellent odds. From American football and basketball to Dota 2 and everything in-between, it’s the best sportsbook out there.&nbsp;</p>
                         <p>But, once again, there are <strong>some downsides:</strong></p>
@@ -159,7 +159,7 @@ const MainContent = () => {
                         <img src={TrueFlip} className="w-full h-auto" alt="TrueFlip" />
                         <p className="mt-2 text-sm">With 1600+ games, you’ll never run out of new things to play. And did we mention True Flip even has its own token? </p>
                         <p><em>With 1600+ games, you’ll never run out of new things to play. And did we mention True Flip even has its own token?&nbsp;</em></p>
-                        <p>Ranking third, <a className="text-blue-600" href="https://casinosblockchain.io/trueflip-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/trueflip-casino-review/" rel="noreferrer noopener">True Flip</a> is a <strong>crypto and fiat casino </strong>with an impressive background in blockchain. Not only do they accept a <strong>range of cryptocurrencies </strong>(including MetaMask-friendly ones), but True Flip also created their proprietary token. Not ready for crypto? You can also deposit from your <strong>e-wallet or credit card </strong>in fiat currency.&nbsp;</p>
+                        <p>Ranking third, <a className="text-blue-600" href="/trueflip-casino-review/" target="_blank" data-type="URL" data-id="/trueflip-casino-review/" rel="noreferrer noopener">True Flip</a> is a <strong>crypto and fiat casino </strong>with an impressive background in blockchain. Not only do they accept a <strong>range of cryptocurrencies </strong>(including MetaMask-friendly ones), but True Flip also created their proprietary token. Not ready for crypto? You can also deposit from your <strong>e-wallet or credit card </strong>in fiat currency.&nbsp;</p>
                         <p>It gets better, too. Unlike our first two picks, True Flip has a <strong>no deposit bonus</strong> and a <strong>generous weekly cashback</strong>. </p>
                         <div className="w-full h-[180px] p-10 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <div className="h2 text-white text-lg md:text-2xl">
@@ -177,7 +177,7 @@ const MainContent = () => {
                         <div className="h3">Cloudbet</div>
                         <img src={Cloudbet2} className="w-full h-auto" alt="Cloudbet2" />
                         <p className="mt-2"><em>Almost a decade in the game, Cloudbet remains one of the Internet’s favorite casinos.</em></p>
-                        <p>The crypto world is new – and so is crypto gambling. Bitcoin was only invented in 2008. Founded in 2013, <a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet </a>was one of the crypto casino pioneers. And, they have plenty more to offer:&nbsp;</p>
+                        <p>The crypto world is new – and so is crypto gambling. Bitcoin was only invented in 2008. Founded in 2013, <a href="/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet </a>was one of the crypto casino pioneers. And, they have plenty more to offer:&nbsp;</p>
                         <p>✔️ It accepts <strong>23 different cryptos</strong> and fiat currency<strong>.&nbsp;</strong></p>
                         <p>✔️ You get a 100% match on your first deposit – <strong>up to 5 BTC</strong>.</p>
                         <p>✔️ You get a 100% match on your first deposit – <strong>up to 5 BTC</strong>.</p>
@@ -192,7 +192,7 @@ const MainContent = () => {
                         <div className="h3">Rocketpot</div>
                         <img src={DailyFreeRoll} className="w-full h-auto" alt="DailyFreeRoll" />
                         <p className="mt-2"><em>Play the day away! With a 10% daily cashback, Rocketpot gives you double value for your money.</em></p>
-                        <p>Next on the top-ten list, <a className="text-blue-600" href="https://casinosblockchain.io/rocketpot-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/rocketpot-review/" rel="noreferrer noopener">Rocketpot </a>is a <strong>newcomer on the crypto casino scene</strong>, but they’re definitely making a splash. With <strong>10% daily cashback </strong>on your net losses and <strong>3000+ games</strong>, they’re becoming a crypto gambling powerhouse. Oh, and let’s not forget the <strong>300+ different table games</strong> either.&nbsp;</p>
+                        <p>Next on the top-ten list, <a className="text-blue-600" href="/rocketpot-review/" target="_blank" data-type="URL" data-id="/rocketpot-review/" rel="noreferrer noopener">Rocketpot </a>is a <strong>newcomer on the crypto casino scene</strong>, but they’re definitely making a splash. With <strong>10% daily cashback </strong>on your net losses and <strong>3000+ games</strong>, they’re becoming a crypto gambling powerhouse. Oh, and let’s not forget the <strong>300+ different table games</strong> either.&nbsp;</p>
                         <div className="w-full h-[250px] p-10 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <p className="text-sm text-white">Rocketpot is a crypto-only space</p>
                             <div className="h2 text-white text-lg md:text-xl">
@@ -206,7 +206,7 @@ const MainContent = () => {
                         <div className="h3">BitStarz</div>
                         <img src={BizstarzHomePage} className="w-full h-auto" alt="BizstarzHomePage" />
                         <p className="mt-4"><em>Award-winning casino BizStarz offers exciting play and generous bonuses. Who wouldn’t be a fan?&nbsp;</em></p>
-                        <p><a href="https://casinosblockchain.io/bitstarz-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/bitstarz-review/" rel="noreferrer noopener">BitStarz </a>is, pun intended, almost star. With multiple online gambling awards under its belt, the company is one of the Internet’s <strong>largest crypto casinos</strong>. With <strong>sleek, user-friendly design </strong>and a <strong>head-spinning selection </strong>of games, it’s no wonder they’re a top pick on so many casino reviews. On top of that, you get <strong>generous welcome bonus </strong>(double your deposit up to 1BTC) and <strong>cheeky promo games </strong>like Slot Wars and Table Wars.&nbsp;</p>
+                        <p><a href="/bitstarz-review/" target="_blank" data-type="URL" data-id="/bitstarz-review/" rel="noreferrer noopener">BitStarz </a>is, pun intended, almost star. With multiple online gambling awards under its belt, the company is one of the Internet’s <strong>largest crypto casinos</strong>. With <strong>sleek, user-friendly design </strong>and a <strong>head-spinning selection </strong>of games, it’s no wonder they’re a top pick on so many casino reviews. On top of that, you get <strong>generous welcome bonus </strong>(double your deposit up to 1BTC) and <strong>cheeky promo games </strong>like Slot Wars and Table Wars.&nbsp;</p>
                         <p>Unlike other casinos in our selection, BitStarz gives <strong>equal attention to crypto and fiat. </strong>They don’t, however, have many MetaMask tokens. Right now, they accept: </p>
                         <ul className="flex flex-wrap list-none justify-start mb-2 gap-4">
                             <li>✔️ <strong>Bitcoin</strong></li>
@@ -232,7 +232,7 @@ const MainContent = () => {
                         <div className="h3">King Billy Casino</div>
                         <img src={kingbillyCasino} className="w-full h-auto" alt="kingbillyCasino" />
                         <p className="mt-4"><em>Don’t let the medieval theme fool you – this is a blockchain-enthusiastic casino. Long live the king!</em></p>
-                        <p><a href="https://casinosblockchain.io/king-billy-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/king-billy-casino-review/" rel="noreferrer noopener">King Billy</a> has been on our radar for a while now. It consistently <strong>ranks high on our selections</strong>, wins <strong>industry-leading awards</strong>, and <strong>grows in players </strong>by the minute.&nbsp;</p>
+                        <p><a href="/king-billy-casino-review/" target="_blank" data-type="URL" data-id="/king-billy-casino-review/" rel="noreferrer noopener">King Billy</a> has been on our radar for a while now. It consistently <strong>ranks high on our selections</strong>, wins <strong>industry-leading awards</strong>, and <strong>grows in players </strong>by the minute.&nbsp;</p>
                         <p>What is their secret?&nbsp;</p>
                         <p>For starters, King Billy gives you <strong>up to 5 BTC </strong>in welcome bonuses alone!&nbsp;</p>
                         <p>The platform also has a <strong>unique take on the online betting scene. </strong>Instead of looking super-futuristic, they have a medieval theme complete with crowns, scrolls, and quills.&nbsp;</p>
@@ -241,7 +241,7 @@ const MainContent = () => {
                         <div className="h3">mBit</div>
                         <img src={mBitCasino} className="w-full h-auto" alt="mBitCasino" />
                         <p className="mt-4"><em>Backed by a major mother company, mBit is well-loved for its lavish bonuses and iron-clad safety. Did we mention the excellent VIP program, too? </em></p>
-                        <p>Another <strong>big player in the (new) crypto game. </strong>Not only does <a className="text-blue-600" href="https://casinosblockchain.io/mbit-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/mbit-bitcoin-casino-review/" rel="noreferrer noopener">mBit </a>have seven years of experience, but their mother company owns <strong>35 other online casinos. </strong>We love new and exciting companies; however, we know <strong>experience means security. </strong>Whether you’re gambling in BTC or ETH, mBit has your back.&nbsp;</p>
+                        <p>Another <strong>big player in the (new) crypto game. </strong>Not only does <a className="text-blue-600" href="/mbit-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="/mbit-bitcoin-casino-review/" rel="noreferrer noopener">mBit </a>have seven years of experience, but their mother company owns <strong>35 other online casinos. </strong>We love new and exciting companies; however, we know <strong>experience means security. </strong>Whether you’re gambling in BTC or ETH, mBit has your back.&nbsp;</p>
                         <p>But let’s talk about the exciting stuff, too.&nbsp;</p>
                         <p>It all starts with the <strong>generous welcome bonus</strong>:</p>
                         <div className="w-full h-[150px] p-10 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
@@ -255,7 +255,7 @@ const MainContent = () => {
                         <div className="h3">EarnBet</div>
                         <img src={EarnBetHomepage} className="w-full h-auto" alt="EarnBetHomepage" />
                         <p className="mt-4"><em>The world’s first decentralized casino – here’s what that means for players like you:  </em></p>
-                        <p>Blockchain technology is exciting because it allows us to <strong>decentralize virtually everything</strong>. Why not casinos? <a className="text-blue-600" href="https://casinosblockchain.io/earnbet-review/" target="_blank" rel="noreferrer noopener">EarnBet </a>is here to fill that gap.&nbsp;</p>
+                        <p>Blockchain technology is exciting because it allows us to <strong>decentralize virtually everything</strong>. Why not casinos? <a className="text-blue-600" href="/earnbet-review/" target="_blank" rel="noreferrer noopener">EarnBet </a>is here to fill that gap.&nbsp;</p>
                         <p>Founded in 2016, EarnBet takes <strong>casino Dapps to the next level. </strong>This is a <strong>complete online casino </strong>with all your favorite games and even a welcome bonus.&nbsp;</p>
                         <p>The twist? You also <strong>earn BET tokens </strong>as you bet – and <strong>BET holders get the casino’s profit. </strong>It’s almost hard to get your head around it. The house always wins, but with EarnBet, you <strong>get a share of the casino’s money.
                         </strong>Talk about a breakthrough!</p>
@@ -266,7 +266,7 @@ const MainContent = () => {
                         <img src={OnlineCasino} className="w-full h-auto" alt="OnlineCasino" />
                         <p className="mt-2 text-sm">2000+ exciting games, no-fee withdrawals, and plenty of bonuses – Bao delivers over and over again. </p>
                         <p><em>2000+ exciting games, no-fee withdrawals, and plenty of bonuses – Bao delivers over and over again.&nbsp;</em></p>
-                        <p>When it comes to <strong>game variety</strong>, <a href="https://casinosblockchain.io/bao-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/bao-casino-review/" rel="noreferrer noopener">Bao Casino</a> doesn’t skimp. The Cyprus-based site boasts <strong>over 2000 titles </strong>from big-name developers and up-and-coming producers alike. Bao Casino boasts a <strong>huge slots collection, big-win jackpots, </strong>and a range of <strong>live casino games </strong>to enjoy.&nbsp;</p>
+                        <p>When it comes to <strong>game variety</strong>, <a href="/bao-casino-review/" target="_blank" data-type="URL" data-id="/bao-casino-review/" rel="noreferrer noopener">Bao Casino</a> doesn’t skimp. The Cyprus-based site boasts <strong>over 2000 titles </strong>from big-name developers and up-and-coming producers alike. Bao Casino boasts a <strong>huge slots collection, big-win jackpots, </strong>and a range of <strong>live casino games </strong>to enjoy.&nbsp;</p>
                         <p>But, there is a catch. Bao’s portfolio may be impressive, but <strong>crypto gambling is limited </strong>to certain brands. If you want more options, you’d still go back to fiat.&nbsp;</p>
                         <p>So should you gamble crypto? We vote yes and here’s why:&nbsp;</p>
                         <div className="w-full h-[150px] p-16 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
@@ -297,7 +297,7 @@ const MainContent = () => {
                                 The MetaMask terms of use don’t restrict gambling or any other activities.
                             </div>
                         </div>
-                        <p className="mt-4">As long as you don’t break local laws (e.g., by visiting an online casino if you’re underage), you are good to go.&nbsp;MetaMask is also a popular gambling wallet at <a className="text-blue-600" href="https://casinosblockchain.io/metaverse-gambling/" target="_blank" rel="noreferrer noopener">Metaverse casinos</a>. </p>
+                        <p className="mt-4">As long as you don’t break local laws (e.g., by visiting an online casino if you’re underage), you are good to go.&nbsp;MetaMask is also a popular gambling wallet at <a className="text-blue-600" href="/metaverse-gambling/" target="_blank" rel="noreferrer noopener">Metaverse casinos</a>. </p>
                         <div className="h3">Is MetaMask a Secure Wallet?</div>
                         <p>MetaMask is free and user-friendly. But will it protect your precious crypto?&nbsp;</p>
                         <p>For the most part, yes.&nbsp;</p>
@@ -316,7 +316,7 @@ const MainContent = () => {
                     </section>
                     <section id="getting-started">
                         <div className="h2">Getting Started at MetaMask Casinos</div>
-                        <p>MetaMask is safe, and it’s one of your best options if you want to <a className="text-blue-600" href="https://casinosblockchain.io/is-crypto-gambling-legal/" target="_blank" rel="noreferrer noopener">gamble with crypto legally</a>, without breaking laws or service <em>Terms and conditions</em>. Plus, it’s also one of the <strong>easiest wallets to use. </strong>Let’s go through the steps of setting it up together:&nbsp;</p>
+                        <p>MetaMask is safe, and it’s one of your best options if you want to <a className="text-blue-600" href="/is-crypto-gambling-legal/" target="_blank" rel="noreferrer noopener">gamble with crypto legally</a>, without breaking laws or service <em>Terms and conditions</em>. Plus, it’s also one of the <strong>easiest wallets to use. </strong>Let’s go through the steps of setting it up together:&nbsp;</p>
                         <div className="h3">Install the App or Extension</div>
                         <img src={MetaMaskHomePage} className="w-full h-auto" alt="MetaMaskHomePage" />
                         <p className="mt-4"><em>Follow the download link from the official MetaMask.io page to avoid scammers.</em></p>
@@ -338,7 +338,7 @@ const MainContent = () => {
                         <ul className="is-style-checked-list"><li>Create a new wallet</li><li>Import using seed phrase&nbsp;</li><li>Sync with MetaMask extension</li></ul>
                         <p>To create your wallet, you follow the <strong>same steps as on desktop</strong>. Start with a secure password. Then, unlock and write down your seed phrase. Confirm the phrase, and you’re good to go.&nbsp;</p>
                         <div className="h3">Making Casino Deposits With MetaMask</div>
-                        <p>Your MetaMask wallet can hold <strong>any ERC-20 token</strong> – Ethereum, Chainlink, <a className="text-blue-600" href="https://casinosblockchain.io/tether-casinos/" target="_blank" rel="noreferrer noopener">Tether</a>, and more. To make a casino deposit, first copy your casino’s address. You’ll see this when you first sign up.&nbsp;</p>
+                        <p>Your MetaMask wallet can hold <strong>any ERC-20 token</strong> – Ethereum, Chainlink, <a className="text-blue-600" href="/tether-casinos/" target="_blank" rel="noreferrer noopener">Tether</a>, and more. To make a casino deposit, first copy your casino’s address. You’ll see this when you first sign up.&nbsp;</p>
                         <div className="w-full h-[150px] p-16 flex justify-center  flex-col bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <div className="h3 text-white md:text-xl my-0">
                                 Go to MetaMask &gt; Send. Paste the address, then confirm the transaction. All done!.
@@ -490,7 +490,7 @@ bg-white shadow-md shadow-slate-600 rounded-md sticky top-5">
 
 const MainPage3 = () => {
     return (
-        <div className="h-full w-full flex flex-col items-center">
+        <div className="h-full w-full flex flex-col items-center bg-[#F8F9FC]">
             <div className="w-full h-32 bg-[#000331]" />
             <div className=" flex h-full w-full flex-col xl:w-11/12 justify-center xl:mt-[-5rem]">
                 <MainContent />

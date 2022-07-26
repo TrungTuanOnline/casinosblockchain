@@ -1,8 +1,8 @@
 import Footer from "../../components/Common/Footer"
 import Topbar from "../../components/Common/Topbar"
+import Content from "../../components/Cryptocurrencies/Bitcoin/Content"
 import Header from "../../components/Cryptocurrencies/Bitcoin/Header"
-import Content from "../../components/Games/Crash/Content"
-import SiteInfos from "../../components/Games/Crash/Siteinfos"
+import SiteInfos from "../../components/Cryptocurrencies/Bitcoin/Siteinfos"
 
 const Bitcoin = () => {
     return (

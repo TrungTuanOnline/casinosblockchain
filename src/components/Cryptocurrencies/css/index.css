@@ -188,3 +188,28 @@ img {
         width: 75%;
     }
 }
+
+table thead {
+    border-radius: 6px 6px 0;
+    background: #262847;
+}
+
+table thead th {
+    text-align: left;
+    font-family: Rubik, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 13px 16px;
+    letter-spacing: -0.171429px;
+    color: #80869e;
+}
+
+table thead th:first-child {
+    border-top-left-radius: 6px;
+}
+
+table thead th:last-child {
+    text-align: right;
+    border-top-right-radius: 6px;
+}

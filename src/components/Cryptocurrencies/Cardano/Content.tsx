@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import { ExpandMore } from "@mui/icons-material";
 
-import BitcoinFaucetsScaled from "../../Assets/images/bitcoin-faucets-scaled.jpg"
-import BetFuryWideLogo from "../../Assets/images/Content/BetFury-Wide-Logo.jpg"
-import BetfuryBoxes from "../../Assets/images/Content/betfury-boxes.png"
-import DuckDice from "../../Assets/images/Content/duck-dice-wide-logo.png"
-import Cryptoskull from "../../Assets/images/Content/cryptoskull-logo.png"
-import BcgameSpin from "../../Assets/images/Content/bcgame-spin.png"
-import Cloudbet from "../../Assets/images/Content/Cloudbet.jpg"
+import BitcoinFaucetsScaled from "../../../Assets/images/bitcoin-faucets-scaled.jpg"
+import BetFuryWideLogo from "../../../Assets/images/Content/BetFury-Wide-Logo.jpg"
+import BetfuryBoxes from "../../../Assets/images/Content/betfury-boxes.png"
+import DuckDice from "../../../Assets/images/Content/duck-dice-wide-logo.png"
+import Cryptoskull from "../../../Assets/images/Content/cryptoskull-logo.png"
+import BcgameSpin from "../../../Assets/images/Content/bcgame-spin.png"
+import Cloudbet from "../../../Assets/images/Content/Cloudbet.jpg"
 
 
-import backgroundImg from "../../Assets/images/Header.svg"
+import backgroundImg from "../../../Assets/images/Header.svg"
 
-import { ISiteRankBlogCardObj } from "../../Interfaces"
+import { ISiteRankBlogCardObj } from "../../../Interfaces";
 
-import { siteDatas } from "../../Interfaces/SiteDatas";
-import SiteRankBlogTable from "../Card/SiteRankBlogTable";
+import { siteDatas } from "../../../Interfaces/SiteDatas";
+import SiteRankBlogTable from "../../Card/SiteRankBlogTable";
 
 const dummyInfos: Array<ISiteRankBlogCardObj> = [siteDatas[15], siteDatas[16]];
 
@@ -363,7 +363,7 @@ const MainContent = () => {
     )
 }
 
-const Faucets = () => {
+const Content = () => {
     return (
         <div className="h-full w-full flex flex-col items-center bg-[#F8F9FC]">
             <div className="w-full h-32 bg-[#000331]" />
@@ -378,4 +378,4 @@ const Faucets = () => {
     )
 }
 
-export default Faucets;
+export default Content;

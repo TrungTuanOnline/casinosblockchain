@@ -78,8 +78,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Casinos />} />
 
-        <Route path='/bitcoin-free-spins' element={<BitcoinFaucets />} />
-        <Route path='/are-bitcoin-faucets-worth-it' element={<BitcoinFreeSpins />} />
+        <Route path='/bitcoin-free-spins' element={<BitcoinFreeSpins />} />
+        <Route path='/are-bitcoin-faucets-worth-it' element={<BitcoinFaucets />} />
 
         <Route path='/best-bitcoin-casinos' element={<Bitcoin />} />
         <Route path='/best-ethereum-casinos' element={<Ethereum />} />
