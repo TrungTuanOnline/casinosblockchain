@@ -121,12 +121,12 @@ const MainContent = () => {
                         <p><strong>Most Bitcoin gambling websites originally offered free faucets alongside the other games.</strong></p>
                         <p>Today, most Bitcoin casinos – like BC.Game and Stake – have “closed the tap” and discontinued their faucets. Why? It wasn’t a single reason:</p>
                         <ol className="is-style-dotted-list"><li>The casinos were looking to invest in other areas of their product.</li><li>Blockchain casino bonuses became more common and rewarding, replacing the need for free faucets.</li><li>Frequent faucet abuse from highly complex bots affected the casinos more and more.</li></ol>
-                        <p>And so, most Bitcoin casinos with faucets became obsolete, <a href="https://casinosblockchain.io/bitcoin-no-deposit-bonuses/#free-faucets" target="_blank" rel="noreferrer noopener" className="text-blue-600">as we’ve mentioned before</a>. But not all. A few casinos still have free faucets. </p>
+                        <p>And so, most Bitcoin casinos with faucets became obsolete, <a href="/bitcoin-no-deposit-bonuses/#free-faucets" target="_blank" rel="noreferrer noopener" className="text-blue-600">as we’ve mentioned before</a>. But not all. A few casinos still have free faucets. </p>
                         <p className="mt-10">Our favourite is, by far, <a aria-label=" (opens in a new tab)" href="/go/betfury/" target="_blank" rel="noreferrer noopener" className="rank-math-link text-blue-600">Betfury</a>. Not only does the brand provide a Bitcoin faucet paying out a variable amount of Satoshi every 20 minutes, but it also comes with a variety of unlockable other faucets (for a price) that give out other coins and offer you more flexibility.</p>
                         <p><strong>Just remember: the main purpose of faucets at Bitcoin gambling sites like Betfury is not to hand out free money. They exist to advertise the brand and its games. </strong></p>
                         <p>Time-consuming as it is, a faucet can be a handy test for a new casino! Let’s find out why.</p>
                         <img src={BetFuryWideLogo} className="w-full h-auto" alt="FaucetImages" />
-                        <p className="mt-10">With more than 1,000 games and promotions aplenty, there are many reasons <a className="text-blue-600" href="https://casinosblockchain.io/betfury-casino-review/" target="_blank" rel="noreferrer noopener">why BetFury is one of our favorite gambling Dapps</a>.</p>
+                        <p className="mt-10">With more than 1,000 games and promotions aplenty, there are many reasons <a className="text-blue-600" href="/betfury-casino-review/" target="_blank" rel="noreferrer noopener">why BetFury is one of our favorite gambling Dapps</a>.</p>
                         <p>However, one thing that makes BetFury really unique is the free Bitcoin faucet, <strong>giving out small amounts of BTC several times per day</strong>. They’ve recently revamped the faucet, too, to feature a more appealing design: </p>
                         <p className="mt-10"><strong>Meet the BetFury Boxes!</strong></p>
                         <img src={BetfuryBoxes} className="w-full h-auto" alt="FaucetImages" />
@@ -147,7 +147,7 @@ const MainContent = () => {
                             />
                         </div>
                         <img src={DuckDice} className="w-full h-auto mt-10" alt="FaucetImages" />
-                        <p className="mt-10 "><a href="https://casinosblockchain.io/duckdice-review/" className="text-blue-600 rank-math-link">DuckDice</a> is an alternative to Betfury with a free faucet where you can win tokens after competing against the computer on a thrilling tic-tac-toe game.</p>
+                        <p className="mt-10 "><a href="/duckdice-review/" className="text-blue-600 rank-math-link">DuckDice</a> is an alternative to Betfury with a free faucet where you can win tokens after competing against the computer on a thrilling tic-tac-toe game.</p>
                         <p>To get started with the faucet: </p>
                         <ul className="is-style-dotted-list"><li><strong>Enter Faucet Mode. </strong><br />You’ll find the mode switcher in the top left corner of the game field.</li><li><strong>Play the tic-tac-toe game. </strong><br />The faucet features a fun game, which you have to win to make coins. </li><li><strong>Withdraw your earnings. </strong><br />After the game (if you won), you can cash out to the Main Mode balance. There, you can use them to make more bets or withdraw them completely. </li></ul>
                         <p>One things we love about the DuckDice crypto faucet is it’s available in a huge range of currencies – from BTC and ETH to Dogecoin and even AVAX. </p>
@@ -196,7 +196,7 @@ const MainContent = () => {
                         <p>We’re so glad you asked:</p>
                         <div className="h3">Daily &amp; Weekly Promotions</div>
                         <img src={BcgameSpin} className="w-full h-auto my-4" alt="FaucetImages" />
-                        <p><a href="https://casinosblockchain.io/bc-game-review/" target="_blank" rel="noreferrer noopener" className="text-blue-600">BC.Game’s</a> Lucky Wheel spin is our favorite in this category. Just register and you’re in to win <strong>up to 5 BTC </strong>every day!</p>
+                        <p><a href="/bc-game-review/" target="_blank" rel="noreferrer noopener" className="text-blue-600">BC.Game’s</a> Lucky Wheel spin is our favorite in this category. Just register and you’re in to win <strong>up to 5 BTC </strong>every day!</p>
                         <p>Another one of our favorites is Stake’s <strong>weekly giveaway </strong>where you can make up to $5,000. Once again, that’s just for playing, you don’t have to wager anything extra. </p>
                         <p>With these regular promotions, the element of luck is still there. You might not win big (although with the Lucky Wheel you always win <em>something</em>), but you still make more than the faucet offers. Plus, they don’t waste nearly as much time as faucets do. </p>
                         <div className="my-10 border-t border-gray-300 shadow-gray-500 shadow-md ">
@@ -304,7 +304,7 @@ const MainContent = () => {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <div className="text-gray-600 text-sm">
-                                    <div>Bitcoin casino faucets like <a className="text-blue-700" href="https://casinosblockchain.io/go/betfury/">BetFury</a> are best for extending the fun. Still, we don't recommend relying on them for extra income. </div>
+                                    <div>Bitcoin casino faucets like <a className="text-blue-700" href="/go/betfury/">BetFury</a> are best for extending the fun. Still, we don't recommend relying on them for extra income. </div>
                                 </div>
                             </AccordionDetails>
                         </Accordion>

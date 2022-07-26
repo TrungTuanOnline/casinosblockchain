@@ -246,7 +246,7 @@ const MainContent = () => {
                             </li>
                         </ul>
                         <p><strong>So, what type of wallet do we recommend?</strong> </p>
-                        <p>Well, if it were your life savings, definitely go for a hardware wallet. However, if you’ll be betting with your BTC (or even trading them through a strategy like <a href="https://casinosblockchain.io/bitcoin-spread-betting/" target="_blank" rel="noreferrer noopener">spread betting</a>), a complicated (and pricey) option doesn’t make sense.</p>
+                        <p>Well, if it were your life savings, definitely go for a hardware wallet. However, if you’ll be betting with your BTC (or even trading them through a strategy like <a href="/bitcoin-spread-betting/" target="_blank" rel="noreferrer noopener">spread betting</a>), a complicated (and pricey) option doesn’t make sense.</p>
                         <div className="w-full h-[220px] p-10 mb-4 bg-cover rounded-lg" style={{ backgroundImage: `url(${backgroundImg}),radial-gradient(100% 100% at 100% 100%, #562d81 0%, #1d228e 100%)` }}>
                             <p className="uppercase text-[8px]  md:text-xs text-white opacity-50">Choose a convenient Bitcoin gambling wallet</p>
                             <div className="h2 text-white text-lg md:text-2xl">
@@ -409,7 +409,7 @@ const MainContent = () => {
                         <p>So where do we spend out Bitcoin? Here are our top three picks for BTC casinos – and why we love them:</p>
                         <div className="h3">BC.Game</div>
                         <img src={BcGame} className="w-full h-auto" alt="BcGame" />
-                        <p className="mt-3"><a href="https://casinosblockchain.io/bc-game-review/" target="_blank" className="text-[#3e47e0]" rel="noreferrer noopener">BC.Game</a> is a fresh new casino with a <strong>huge selection of games and thrilling daily promotions</strong>.</p>
+                        <p className="mt-3"><a href="/bc-game-review/" target="_blank" className="text-[#3e47e0]" rel="noreferrer noopener">BC.Game</a> is a fresh new casino with a <strong>huge selection of games and thrilling daily promotions</strong>.</p>
                         <p >Their library includes slots, card games, dice, and more. They also support live dealers and have a pretty <strong>significant social aspect</strong>. Use the players’ chat to connect with other gamblers, share tips, and brag about your wins.</p>
                         <p>The casino also has a <strong>loyalty program that gives back</strong> to regular players. The more you play, the higher up you go in the VIP ladder. You get better promos and more bonuses the higher you go.</p>
                         <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
@@ -423,7 +423,7 @@ const MainContent = () => {
                         <a href="https://stake.com/registration" target-="_blank" rel="noreferrer">
                             <img src={CasinoStake} className="w-full h-auto" alt="CasinoStake" />
                         </a>
-                        <p className="mt-3">Drake loves <a href="https://casinosblockchain.io/stake-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/stake-bitcoin-casino-review/" rel="noreferrer noopener">Stake </a>and we love Stake!</p>
+                        <p className="mt-3">Drake loves <a href="/stake-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="/stake-bitcoin-casino-review/" rel="noreferrer noopener">Stake </a>and we love Stake!</p>
                         <p>Stake casino is currently <strong>one of the biggest crypto gambling sites</strong> – and for a good reason. They boast over 3000 games and a sleek website that’s super easy to navigate. </p>
                         <p>Just like BC.Game, Stake also has a <strong>VIP program</strong> that rewards loyal customers with cashback, bonuses, and more. Even better – they also have a <strong>sportsbook</strong>, which BC.Game is yet to develop.</p>
                         <p>And we weren’t joking about the Drake collab either.</p>
@@ -438,7 +438,7 @@ const MainContent = () => {
                         <a href="https://www.cloudbet.com/en/landing/100-free-spins/casinosblockchain/?af_token=aa938b8c991e47071094b255abd00cfd" target-="_blank" rel="noreferrer">
                             <img src={Cloudbet1} className="w-full h-auto" alt="Cloudbet1" />
                         </a>
-                        <p className="mt-3">Finally, our third choice is <a href="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="https://casinosblockchain.io/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet</a>. They are one of the <strong>oldest crypto gambling sites</strong> and have a very solid reputation in the community.</p>
+                        <p className="mt-3">Finally, our third choice is <a href="/cloudbet-bitcoin-casino-review/" target="_blank" data-type="URL" data-id="/cloudbet-bitcoin-casino-review/" rel="noreferrer noopener">Cloudbet</a>. They are one of the <strong>oldest crypto gambling sites</strong> and have a very solid reputation in the community.</p>
                         <p>But don’t let age fool you – the selection of <strong>games, bonuses, and promotions </strong>is just as impressive. Much like Stake, Cloudbet also has a <strong>sports betting product</strong>. So if you like to mix things up, they are a great choice.</p>
                         <div className="mt-4 border-t border-gray-300 shadow-gray-500 shadow-md">
                             <SiteRankBlogTable
