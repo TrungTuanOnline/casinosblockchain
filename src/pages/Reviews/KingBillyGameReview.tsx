@@ -1776,7 +1776,7 @@ const KingBillyGameReview = () => {
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        Definitely! Besides Bitcoin, you can deposit at <a href={"https://" + siteData.link} target="" className="text-blue-600">King Billy Casino</a> using Bitcoin Cash, Litecoin, Ethereum, and Tether, as well as multiple fiat currencies.
+                                        Definitely! Besides Bitcoin, you can deposit at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">King Billy Casino</a> using Bitcoin Cash, Litecoin, Ethereum, and Tether, as well as multiple fiat currencies.
                                     </div>
                                 }
                             </div>
@@ -1789,7 +1789,7 @@ const KingBillyGameReview = () => {
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        Yes. King Billy Casino's sign up bonus offers <a href={"https://" + siteData.link} target="" className="text-blue-600">up to 5 Bitcoin and 200 free spins</a> on your first four deposits
+                                        Yes. King Billy Casino's sign up bonus offers <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">up to 5 Bitcoin and 200 free spins</a> on your first four deposits
                                     </div>
                                 }
                             </div>
@@ -1802,7 +1802,7 @@ const KingBillyGameReview = () => {
                                 </div>
                                 {openFAQ4 &&
                                     <div className="text-black mt-5">
-                                        Yes! <a href={"https://" + siteData.link} target="" className="text-blue-600">King Billy Casino</a> is a legitimate online casino, which holds a gambling license issued by the government of Curaçao. Most of the reviews about the casino are positive, including ours.
+                                        Yes! <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">King Billy Casino</a> is a legitimate online casino, which holds a gambling license issued by the government of Curaçao. Most of the reviews about the casino are positive, including ours.
                                     </div>
                                 }
                             </div>

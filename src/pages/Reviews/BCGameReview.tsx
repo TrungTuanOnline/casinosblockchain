@@ -2501,7 +2501,7 @@ const BCGameReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes, <a href={"https://" + siteData.link} target="" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
+                                        Yes, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> is licensed and reputable. They also have provably fair games, which are impossible to be rigged.
                                     </div>
                                 }
                             </div>
@@ -2514,7 +2514,7 @@ const BCGameReview = () => {
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        BC.Game supports a wide range of cryptocurrencies, including Bitcoin, Ethereum, Dogecoin, Ripple, Tether, and more. Unfortunately, you cannot play with fiat money at this casino.
+                                        <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> supports a wide range of cryptocurrencies, including Bitcoin, Ethereum, Dogecoin, Ripple, Tether, and more. Unfortunately, you cannot play with fiat money at this casino.
                                     </div>
                                 }
                             </div>
@@ -2527,7 +2527,7 @@ const BCGameReview = () => {
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        Yes, there is a traditional deposit bonus at BC.Game on a regular basis, you can spin a wheel every day and win a random prize, including up to 5 BTC. The best part? You can do that right after sign up, even before your first deposit. There are also limited offers from time to time, where you can indeed unlock a deposit bonus paid in BCD (the casino's own token).
+                                        Yes, there is a traditional deposit bonus at <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> on a regular basis, you can spin a wheel every day and win a random prize, including up to 5 BTC. The best part? You can do that right after sign up, even before your first deposit. There are also limited offers from time to time, where you can indeed unlock a deposit bonus paid in BCD (the casino's own token).
                                     </div>
                                 }
                             </div>
@@ -2540,7 +2540,7 @@ const BCGameReview = () => {
                                 </div>
                                 {openFAQ4 &&
                                     <div className="text-black mt-5">
-                                        Along with the Curaçao license, BC.Game offers a few safety reassurances to its players. For instance, this casino is provably fair and holds a Crypto Gambling Foundation seal of approval.
+                                        Along with the Curaçao license, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">BC.Game</a> offers a few safety reassurances to its players. For instance, this casino is provably fair and holds a Crypto Gambling Foundation seal of approval.
                                     </div>
                                 }
                             </div>

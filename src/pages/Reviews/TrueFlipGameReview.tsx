@@ -1229,7 +1229,7 @@ const TrueFlipGameReview = () => {
                                         TrueLab - True Flip Original Games
                                     </div>
                                     <div>
-                                        The first thing to catch our attention when opening the casino games slots section was the selection of games by <a href="https://truelab.games/" target="" className="text-blue-600 font-bold">TrueLab</a>. This is the game-developing sister company of True Flip Casino that creates dedicated games.
+                                        The first thing to catch our attention when opening the casino games slots section was the selection of games by <a href="https://truelab.games/" target="_blank" rel="noreferrer" className="text-blue-600 font-bold">TrueLab</a>. This is the game-developing sister company of True Flip Casino that creates dedicated games.
                                     </div>
                                     <div>
                                         Original casino games can be a bit hit or miss, but we found TrueLab's to be very well produced. We believe them to be an excellent addition to True Flip's already impressive portfolio.
@@ -1533,7 +1533,7 @@ const TrueFlipGameReview = () => {
                             <div className="flex flex-col xl:flex-row gap-20 items-center xl:items-start">
                                 <div className="flex flex-col gap-y-5">
                                     <div>
-                                        A casino that takes pride in its blockchain background should definitely have its own cryptocurrency. This casino does, and it's called the <a href="https://coinmarketcap.com/currencies/trueflip/" target="" className="text-blue-600">True Flip Token</a>. Token holders get a few benefits, including an exclusive entry into a quarterly game.
+                                        A casino that takes pride in its blockchain background should definitely have its own cryptocurrency. This casino does, and it's called the <a href="https://coinmarketcap.com/currencies/trueflip/" target="_blank" rel="noreferrer" className="text-blue-600">True Flip Token</a>. Token holders get a few benefits, including an exclusive entry into a quarterly game.
                                     </div>
                                     <div>
                                         Other than their own and Bitcoin, True Flip Casino accepts several other cryptocurrencies and fiat currencies, including:
@@ -1824,7 +1824,7 @@ const TrueFlipGameReview = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        The customer support team is available round-the-clock by email at support@trueflip.io. You can also choose to contact the casino by phone or <a href="https://t.me/truefliplotto" target="" className="text-blue-600 font-bold">Telegram</a>.
+                                        The customer support team is available round-the-clock by email at support@trueflip.io. You can also choose to contact the casino by phone or <a href="https://t.me/truefliplotto" target="_blank" rel="noreferrer" className="text-blue-600 font-bold">Telegram</a>.
                                     </div>
                                     <div>
                                         Our preferred method, however, is the live chat, where you can be sure to get a quick answer any time of the day.
@@ -1956,7 +1956,7 @@ const TrueFlipGameReview = () => {
                                 </div>
                                 {openFAQ1 &&
                                     <div className="text-black mt-5">
-                                        Yes, <a href={"https://" + siteData.link} target="" className="text-blue-600">True Flip</a> is a legitimate casino which holds a reputable gambling license from the government of Curaçao. Its pristine reputation has helped establish it as one of the world's leading Bitcoin casinos.
+                                        Yes, <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">True Flip</a> is a legitimate casino which holds a reputable gambling license from the government of Curaçao. Its pristine reputation has helped establish it as one of the world's leading Bitcoin casinos.
                                     </div>
                                 }
                             </div>
@@ -1969,7 +1969,7 @@ const TrueFlipGameReview = () => {
                                 </div>
                                 {openFAQ2 &&
                                     <div className="text-black mt-5">
-                                        <a href={"https://" + siteData.link} target="" className="text-blue-600">True Flip</a> is a truly unique casino, which offers its own cryptocurrency, as well as original games that are developed in-house. Additionally, True Flip has roots in the blockchain industry, making it very crypto-friendly.
+                                        <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">True Flip</a> is a truly unique casino, which offers its own cryptocurrency, as well as original games that are developed in-house. Additionally, True Flip has roots in the blockchain industry, making it very crypto-friendly.
                                     </div>
                                 }
                             </div>
@@ -1982,7 +1982,7 @@ const TrueFlipGameReview = () => {
                                 </div>
                                 {openFAQ3 &&
                                     <div className="text-black mt-5">
-                                        Yes, True Flip offers a no-deposit welcome bonus. Just for completing your Citizen ID you get <a href={"https://" + siteData.link} target="" className="text-blue-600">30 free spins</a> at the exciting Day & Night game. There are also many regular promotions available.
+                                        Yes, True Flip offers a no-deposit welcome bonus. Just for completing your Citizen ID you get <a href={"https://" + siteData.link} target="_blank" rel="noreferrer" className="text-blue-600">30 free spins</a> at the exciting Day & Night game. There are also many regular promotions available.
                                     </div>
                                 }
                             </div>
