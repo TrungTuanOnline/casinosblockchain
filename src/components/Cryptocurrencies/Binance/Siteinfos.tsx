@@ -7,7 +7,7 @@ const SiteInfos = () => {
     const [openSubInfoIndex, setOpenSubInfoIndex] = useState<null | number>(null);
     const [showSiteNumbers, setShowSiteNumbers] = useState(10);
 
-    const dummyInfos = [siteDatas[0], siteDatas[1], siteDatas[2], siteDatas[3], siteDatas[4], siteDatas[5], siteDatas[6], siteDatas[7], siteDatas[8], siteDatas[9]];
+    const dummyInfos = [siteDatas[0], siteDatas[3], siteDatas[2], siteDatas[4], siteDatas[9], siteDatas[15], siteDatas[16], siteDatas[23]];
 
     return (
         <div className="bg-gray-100 flex items-center justify-center pb-10">

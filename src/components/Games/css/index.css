@@ -328,3 +328,17 @@ ul.is-style-checked-list_bubbles li::before {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDExIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMy43MDcxMSA1LjI5Mjg5TDkgMEwxMC40MTQyIDEuNDE0MjFMMy43MDcxMSA4LjEyMTMyTDAgNC40MTQyMUwxLjQxNDIxIDNMMy43MDcxMSA1LjI5Mjg5WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyIiB4MT0iMTAuNDE0MiIgeTE9IjQuMDYwNjYiIHgyPSIwIiB5Mj0iNC4wNjA2NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNERCQzI0Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzJEQ0E2MSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=);
     background-size: cover;
 }
+
+.wp-block-columns {
+    display: flex;
+    margin-bottom: 1.75em;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 782px) {
+    .wp-block-columns {
+        flex-wrap: nowrap;
+    }
+}
