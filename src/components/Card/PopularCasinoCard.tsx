@@ -2,12 +2,12 @@ import { IPopularCasinoObj } from "../../Interfaces";
 import { Button } from '@mui/material';
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
-import slotsImg from "../../Assets/images/slots.png";
-import routletteImg from "../../Assets/images/roulette.png";
-import diceImg from "../../Assets/images/dice.png";
-import crashImg from "../../Assets/images/crash.png";
-import pokerImg from "../../Assets/images/poker.png";
-import plinkoImg from "../../Assets/images/plinko.png";
+import slotsImg from "../../Assets/images/games/slots.png";
+import routletteImg from "../../Assets/images/games/roulette.png";
+import diceImg from "../../Assets/images/games/dice.png";
+import crashImg from "../../Assets/images/games/crash.png";
+import pokerImg from "../../Assets/images/games/poker.png";
+import plinkoImg from "../../Assets/images/games/plinko.png";
 
 interface IProps {
     data: IPopularCasinoObj
