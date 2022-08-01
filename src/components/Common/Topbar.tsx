@@ -9,23 +9,23 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { Link } from 'react-router-dom';
 import { US, FR, ID, KR, PT, ES, TR, VN } from 'country-flag-icons/react/1x1';
 
-import bitcoinCryptoImg from "../../Assets/images/cryptocurrency/bitcoin.png";
-import etherCryptoImg from "../../Assets/images/cryptocurrency/ether.png";
-import tetherCryptoImg from "../../Assets/images/cryptocurrency/tether.png";
-import dogecoinCryptoImg from "../../Assets/images/cryptocurrency/dogecoin.png";
-import litecoinCryptoImg from "../../Assets/images/cryptocurrency/litecoin.png";
-import rippleCryptoImg from "../../Assets/images/cryptocurrency/ripple.png";
-import bnbCryptoImg from "../../Assets/images/cryptocurrency/bnb.png";
-import cardanoCryptoImg from "../../Assets/images/cryptocurrency/cardano.png";
+import bitcoinCryptoImg     from "../../Assets/images/cryptocurrency/bitcoin.png";
+import etherCryptoImg       from "../../Assets/images/cryptocurrency/ether.png";
+import tetherCryptoImg      from "../../Assets/images/cryptocurrency/tether.png";
+import dogecoinCryptoImg    from "../../Assets/images/cryptocurrency/dogecoin.png";
+import litecoinCryptoImg    from "../../Assets/images/cryptocurrency/litecoin.png";
+import rippleCryptoImg      from "../../Assets/images/cryptocurrency/ripple.png";
+import bnbCryptoImg         from "../../Assets/images/cryptocurrency/bnb.png";
+import cardanoCryptoImg     from "../../Assets/images/cryptocurrency/cardano.png";
 
-import crashGameImg from "../../Assets/images/games/crash.png";
-import jackpotGameImg from "../../Assets/images/games/jackpot.png";
-import slotsGameImg from "../../Assets/images/games/slots.png";
-import rouletteGameImg from "../../Assets/images/games/roulette.png";
+import crashGameImg     from "../../Assets/images/games/crash.png";
+import jackpotGameImg   from "../../Assets/images/games/jackpot.png";
+import slotsGameImg     from "../../Assets/images/games/slots.png";
+import rouletteGameImg  from "../../Assets/images/games/roulette.png";
 import blackjackGameImg from "../../Assets/images/games/blackjack.png";
-import diceGameImg from "../../Assets/images/games/dice.png";
-import plinkoGameImg from "../../Assets/images/games/plinko.png";
-import pokerGameImg from "../../Assets/images/games/poker.png";
+import diceGameImg      from "../../Assets/images/games/dice.png";
+import plinkoGameImg    from "../../Assets/images/games/plinko.png";
+import pokerGameImg     from "../../Assets/images/games/poker.png";
 
 const useStyles = makeStyles({
     menuPaper: {
@@ -420,7 +420,7 @@ const Topbar = () => {
                             </div>
                         }
                     </div>
-                    <div className="relative">
+                    {/* <div className="relative">
                         <Link to="/game-providers">
                             <Button
                                 className="text-white hover:text-amber-500"
@@ -428,7 +428,7 @@ const Topbar = () => {
                                 {t("title7")}
                             </Button>
                         </Link>
-                    </div>
+                    </div> */}
                     <div className="relative">
                         <Button
                             className="text-white hover:text-amber-500"
