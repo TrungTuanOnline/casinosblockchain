@@ -6,7 +6,7 @@ import SiteInfos from "../../components/Cryptocurrencies/Bitcoin/Siteinfos"
 
 const Bitcoin = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

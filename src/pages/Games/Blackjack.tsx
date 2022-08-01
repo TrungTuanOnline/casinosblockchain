@@ -7,7 +7,7 @@ import SiteInfos from "../../components/Games/Blackjack/Siteinfos";
 
 const Blackjack = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

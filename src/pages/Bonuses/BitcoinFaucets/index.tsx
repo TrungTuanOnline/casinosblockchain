@@ -4,7 +4,7 @@ import Footer from "../../../components/Common/Footer"
 
 const BitcoinFaucets = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Faucets />
             <Footer />

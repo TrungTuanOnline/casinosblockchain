@@ -6,7 +6,7 @@ import SiteInfos from "../../components/Cryptocurrencies/Binance/Siteinfos"
 
 const Binance = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />
