@@ -10,7 +10,7 @@ export interface ISiteRankBlogCardObj {
 export interface IPopularCasinoObj {
     name: string,
     about: string,
-    // link: string
+    link: string
 }
 
 export interface IPopularCasinoObj {

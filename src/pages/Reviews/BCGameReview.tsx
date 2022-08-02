@@ -33,6 +33,7 @@ import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlin
 import TopBar from "../../components/Common/Topbar";
 import Footer from "../../components/Common/Footer";
 import { siteDatas } from "../../Interfaces/SiteDatas";
+import { useNavigate } from "react-router-dom";
 
 // crypto images
 import avalancheCryptoImg from "../../Assets/images/cryptocurrency/avalanche.png";
@@ -220,48 +221,59 @@ const cryptocurrenciesObj: Array<any> = [
 const gamesObj: Array<any> = [
     {
         img: baccaratGameImg,
-        name: "Baccarat"
+        name: "Baccarat",
+        link: "/bitcoin-baccarat"
     },
     {
         img: blackjackGameImg,
-        name: "Blackjack"
+        name: "Blackjack",
+        link: "/blackjack-bitcoin-casino"
     },
     {
         img: crashGameImg,
-        name: "Crash"
+        name: "Crash",
+        link: "/crash-crypto-game"
     },
     {
         img: diceGameImg,
-        name: "Dice"
+        name: "Dice",
+        link: "/dice-bitcoin-casino"
     },
     {
         img: kenoGameImg,
-        name: "Keno"
+        name: "Keno",
+        link: "/keno-bitcoin"
     },
     {
         img: liveCasinoGameImg,
-        name: "Live Casino"
+        name: "Live Casino",
+        link: "/bitcoin-live-casino"
     },
     {
         img: plinkoGameImg,
-        name: "Plinko"
+        name: "Plinko",
+        link: "/plinko-casino"
     },
     {
         img: pokerGameImg,
-        name: "Poker"
+        name: "Poker",
+        link: "/bitcoin-poker-sites"
     },
     {
         img: rouletteGameImg,
-        name: "Roulette"
+        name: "Roulette",
+        link: "/roulette-bitcoin-casino"
     },
     {
         img: slotsGameImg,
-        name: "Slots"
+        name: "Slots",
+        link: "/slots-bitcoin-casino"
     }
 ]
 
 const BCGameReview = () => {
     const siteData = siteDatas[0];
+    const router = useNavigate();
 
     const [openFAQ1, setOpenFAQ1] = useState(false);
     const [openFAQ2, setOpenFAQ2] = useState(false);
@@ -419,7 +431,7 @@ const BCGameReview = () => {
                                             {
                                                 gamesObj.map((data: any, index: number) => {
                                                     return (
-                                                        <div key={index} className="flex flex-col gap-2 justify-center items-center w-24 py-1 border">
+                                                        <div key={index} className="flex flex-col gap-2 justify-center items-center w-24 py-1 border cursor-pointer" onClick={() => {router(data.link)}}>
                                                             <div>
                                                                 <img
                                                                     src={data.img}

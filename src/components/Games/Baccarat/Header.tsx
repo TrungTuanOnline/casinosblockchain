@@ -1,6 +1,6 @@
 import "../css/index.css"
 
-import BaccaratSvg from "../../../Assets/images/games/baccarat-logo.svg"
+import BaccaratSvg from "../../../Assets/images/games/baccarat.png"
 
 const Header = () => {
     return (
