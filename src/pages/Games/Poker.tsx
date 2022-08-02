@@ -7,7 +7,7 @@ import SiteInfos from "../../components/Games/Poker/Siteinfos";
 
 const Poker = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

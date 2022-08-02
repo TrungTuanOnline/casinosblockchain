@@ -6,7 +6,7 @@ import SiteInfos from "../../components/Cryptocurrencies/Litecoin/Siteinfos"
 
 const Litecoin = () => {
     return (
-        <div>
+       <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

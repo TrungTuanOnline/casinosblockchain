@@ -11,7 +11,7 @@ import Footer from "../../components/Common/Footer";
 
 const Casinos = () => {
     return (
-        <Box className="">
+        <Box className="bg-gray-100">
             <TopBar />
             <Header />
             <SiteInfos />

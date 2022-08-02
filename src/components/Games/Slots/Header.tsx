@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="container">
                     <div className="row">
                         <div className="tax-header__bg-icon">
-                            <img src={SlotsLogo} alt="Crash" />
+                            <img src={SlotsLogo} alt="SlotsLogo" />
                         </div>
                         <div className="tax-header__title">
                             <div className="h1 text-6xl text-white">Slots</div>

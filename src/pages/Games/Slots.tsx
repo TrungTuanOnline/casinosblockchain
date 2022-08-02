@@ -7,7 +7,7 @@ import SiteInfos from "../../components/Games/Slots/Siteinfos";
 
 const Slots = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

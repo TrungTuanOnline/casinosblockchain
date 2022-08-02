@@ -6,7 +6,7 @@ import SiteInfos from "../../components/Cryptocurrencies/Ripple/Siteinfos"
 
 const Ripple = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

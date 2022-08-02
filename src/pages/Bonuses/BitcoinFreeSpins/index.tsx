@@ -4,7 +4,7 @@ import Topbar from "../../../components/Common/Topbar"
 
 const BitcoinFreeSpins = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <FreeSpins />
             <Footer />

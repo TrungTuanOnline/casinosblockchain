@@ -342,3 +342,12 @@ ul.is-style-checked-list_bubbles li::before {
         flex-wrap: nowrap;
     }
 }
+
+.wp-block-image {
+    margin: 0 0 1em;
+}
+
+.wp-block-image .alignleft {
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+}

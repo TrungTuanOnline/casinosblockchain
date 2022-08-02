@@ -7,7 +7,7 @@ import SiteInfos from "../../components/Games/Crash/Siteinfos";
 
 const Crash = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />
