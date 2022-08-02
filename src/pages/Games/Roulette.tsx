@@ -7,7 +7,7 @@ import Header from "../../components/Games/Roulette/Header";
 
 const Roulette = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

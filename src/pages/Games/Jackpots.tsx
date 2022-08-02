@@ -7,7 +7,7 @@ import SiteInfos from "../../components/Games/Jackpots/Siteinfos";
 
 const Jackpots = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />

@@ -4,7 +4,7 @@ import MainPage2 from "../../../components/Guides/Guide2"
 
 const Guide2 = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <MainPage2 />
         </div>

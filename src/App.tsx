@@ -27,6 +27,14 @@ import Blackjack from './pages/Games/Blackjack';
 import Dice from './pages/Games/Dice';
 import Plinko from './pages/Games/Plinko';
 import Poker from './pages/Games/Poker';
+import Baccarat from './pages/Games/Baccarat';
+import Keno from './pages/Games/Keno';
+import SportsBetting from './pages/Games/SportsBetting';
+import LiveCasino from './pages/Games/LiveCasino';
+import Lottery from "./pages/Games/Lottery"
+import Sicbo from './pages/Games/Sicbo';
+
+
 
 // Providers
 import Providers from './pages/Providers';
@@ -98,6 +106,13 @@ function App() {
         <Route path='/dice-bitcoin-casino' element={<Dice />} />
         <Route path='/plinko-casino' element={<Plinko />} />
         <Route path='/bitcoin-poker-sites' element={<Poker />} />
+        <Route path='/bitcoin-baccarat' element={<Baccarat />} />
+        <Route path='/keno-bitcoin' element={<Keno />} />
+        <Route path='/bitcoin-sports-betting' element={<SportsBetting />} />
+        <Route path='/bitcoin-live-casino' element={<LiveCasino />} />
+        <Route path='/lottery-bitcoin-sites' element={<Lottery />} />
+        <Route path='/sic-bo-bitcoin' element={<Sicbo />} />
+
 
         <Route path='/game-providers' element={<Providers />} />
 

@@ -7,7 +7,7 @@ import SiteInfos from "../../components/Games/Plinko/Siteinfos";
 
 const Plinko = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <Topbar />
             <Header />
             <SiteInfos />
