@@ -8,27 +8,33 @@ import { IPopularCasinoObj } from "../../Interfaces";
 const PopularCasinoInfos: Array<IPopularCasinoObj> = [
     {
         name: "Slots",
-        about: "Slots are by far the most popular casino game, which is not surprising considering the large variety of themes available. Whether you’re into burgers, leprechauns, or something else entirely, you’ll find a game that suits you. And yes, all the best slots are available to play with cryptocurrencies – and with bonuses too!"
+        about: "Slots are by far the most popular casino game, which is not surprising considering the large variety of themes available. Whether you’re into burgers, leprechauns, or something else entirely, you’ll find a game that suits you. And yes, all the best slots are available to play with cryptocurrencies – and with bonuses too!",
+        link: "/slots-bitcoin-casino"
     },
     {
         name: "Roulette",
-        about: "As one of the oldest forms of gambling out there, Roulette is the game that can’t be left out of any casino. Invented in France many years ago, it soon gained worldwide recognition. Nowadays, Bitcoin roulettes thrill players across most crypto casinos and casino Dapps. Roulette might be a classic, but still hasn’t lost its charm!"
+        about: "As one of the oldest forms of gambling out there, Roulette is the game that can’t be left out of any casino. Invented in France many years ago, it soon gained worldwide recognition. Nowadays, Bitcoin roulettes thrill players across most crypto casinos and casino Dapps. Roulette might be a classic, but still hasn’t lost its charm!",
+        link: "/roulette-bitcoin-casino"
     },
     {
         name: "Dice",
-        about: "Looking for the best Bitcoin dice games? Your search is over! In this article, we’ll cover the top BTC dice casinos and Dapps. From exciting virtual betting to live tables and everything in-between, we’ve got you govered"
+        about: "Looking for the best Bitcoin dice games? Your search is over! In this article, we’ll cover the top BTC dice casinos and Dapps. From exciting virtual betting to live tables and everything in-between, we’ve got you govered",
+        link: "/dice-bitcoin-casino"
     },
     {
         name: "Crash",
-        about: "Crash is a cryptocurrency-inspired casino game, available in all the best blockchain casinos and Dapps. Easy-to-play, yet exciting, check out Crash today for a chance at vast profits… But be careful not to crash!"
+        about: "Crash is a cryptocurrency-inspired casino game, available in all the best blockchain casinos and Dapps. Easy-to-play, yet exciting, check out Crash today for a chance at vast profits… But be careful not to crash!",
+        link: "/crash-crypto-game"
     },
     {
         name: "Poker",
-        about: "Can you master a poker face? Poker is that infamous casino game you can play professionally, but only if you’ve got nerves of steel. A similar mindset can come in handy at a blockchain casino. Whether you play with Bitcoin, Ethereum, or something else, keeping your cool can take you to victory."
+        about: "Can you master a poker face? Poker is that infamous casino game you can play professionally, but only if you’ve got nerves of steel. A similar mindset can come in handy at a blockchain casino. Whether you play with Bitcoin, Ethereum, or something else, keeping your cool can take you to victory.",
+        link: ""
     },
     {
         name: "Plinko",
-        about: "Nostalgia meets blockchain in Plinko. Drop the ball and keep your fingers crossed! If Lady Luck is on your side, there are juicy prizes ahead. Did we mention Plinko is provably fair, too?"
+        about: "Nostalgia meets blockchain in Plinko. Drop the ball and keep your fingers crossed! If Lady Luck is on your side, there are juicy prizes ahead. Did we mention Plinko is provably fair, too?",
+        link: ""
     }
 ];
 
