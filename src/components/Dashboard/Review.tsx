@@ -29,12 +29,12 @@ const PopularCasinoInfos: Array<IPopularCasinoObj> = [
     {
         name: "Poker",
         about: "Can you master a poker face? Poker is that infamous casino game you can play professionally, but only if you’ve got nerves of steel. A similar mindset can come in handy at a blockchain casino. Whether you play with Bitcoin, Ethereum, or something else, keeping your cool can take you to victory.",
-        link: ""
+        link: "/bitcoin-poker-sites"
     },
     {
         name: "Plinko",
         about: "Nostalgia meets blockchain in Plinko. Drop the ball and keep your fingers crossed! If Lady Luck is on your side, there are juicy prizes ahead. Did we mention Plinko is provably fair, too?",
-        link: ""
+        link: "/plinko-casino"
     }
 ];
 

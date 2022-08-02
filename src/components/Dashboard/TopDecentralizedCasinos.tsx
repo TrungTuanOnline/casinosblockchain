@@ -45,8 +45,8 @@ const TopDecentralizedCasinos = () => {
                             <div className="flex justify-center -mt-2">
                                 <Button
                                     className="text-black text-xs"
-                                // href="/"
-                                // target="_BLANK"
+                                    href="https://earnbet.io"
+                                    target="_BLANK"
                                 >
                                     earnbet.io
                                 </Button>
@@ -61,7 +61,7 @@ const TopDecentralizedCasinos = () => {
                                     variant="contained"
                                     color="primary"
                                     startIcon={<OpenInNewIcon />}
-                                    href="/"
+                                    href="https://earnbet.io"
                                     target="_BLANK"
                                 >
                                     VISIT WEBSITE
@@ -70,8 +70,8 @@ const TopDecentralizedCasinos = () => {
                             <div className="flex justify-center mt-3">
                                 <Button
                                     className="text-black text-sm w-4/5"
-                                // href="/"
-                                // target="_BLANK"
+                                    href="/review/earnbet.io"
+                                    target="_BLANK"
                                 >
                                     READ MORE
                                 </Button>
@@ -92,8 +92,8 @@ const TopDecentralizedCasinos = () => {
                             <div className="flex justify-center -mt-2">
                                 <Button
                                     className="text-black text-xs"
-                                // href="/"
-                                // target="_BLANK"
+                                    href="https://betfury.io"
+                                    target="_BLANK"
                                 >
                                     betfury.io
                                 </Button>
@@ -108,7 +108,7 @@ const TopDecentralizedCasinos = () => {
                                     variant="contained"
                                     color="primary"
                                     startIcon={<OpenInNewIcon />}
-                                    href="/"
+                                    href="https://betfury.io"
                                     target="_BLANK"
                                 >
                                     VISIT WEBSITE
@@ -117,8 +117,8 @@ const TopDecentralizedCasinos = () => {
                             <div className="flex justify-center mt-3">
                                 <Button
                                     className="text-black text-sm w-4/5"
-                                // href="/"
-                                // target="_BLANK"
+                                    href="/review/betfury.io"
+                                    target="_BLANK"
                                 >
                                     READ MORE
                                 </Button>
@@ -139,8 +139,8 @@ const TopDecentralizedCasinos = () => {
                             <div className="flex justify-center -mt-2">
                                 <Button
                                     className="text-black text-xs"
-                                // href="/"
-                                // target="_BLANK"
+                                    href="https://tron.wink.org"
+                                    target="_BLANK"
                                 >
                                     tron.wink.org
                                 </Button>
@@ -155,7 +155,7 @@ const TopDecentralizedCasinos = () => {
                                     variant="contained"
                                     color="primary"
                                     startIcon={<OpenInNewIcon />}
-                                    href="/"
+                                    href="https://tron.wink.org"
                                     target="_BLANK"
                                 >
                                     VISIT WEBSITE
@@ -164,8 +164,8 @@ const TopDecentralizedCasinos = () => {
                             <div className="flex justify-center mt-3">
                                 <Button
                                     className="text-black text-sm w-4/5"
-                                // href="/"
-                                // target="_BLANK"
+                                    href="/review/tron.wink.org"
+                                    target="_BLANK"
                                 >
                                     READ MORE
                                 </Button>

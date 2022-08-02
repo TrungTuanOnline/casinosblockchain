@@ -35,8 +35,8 @@ const PopularCasinoCard = (props: IProps) => {
                 <Button
                     className="text-blue text-sm w-full flex justify-between"
                     endIcon={<KeyboardArrowRight className="w-4" />}
-                // href="/"
-                // target="_BLANK"
+                    href={data.link}
+                    target="_BLANK"
                 >
                     READ MORE
                 </Button>
